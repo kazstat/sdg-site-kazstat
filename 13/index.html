@@ -85,7 +85,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190408094113">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190408115501">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -93,16 +93,16 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190408094113"></head>
-<body class="language-en">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190408115501"></head>
+<body class="language-ru">
 <!-- <div class="container"> -->
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag">Alpha</strong>
-    This is a development website. We welcome your <a href="mailto:test@example.com">feedback</a>.
+    <strong class="phase-tag">Альфа</strong>
+    Это сайт находится в разработке. Мы рады вашим отзывам.
   </div>
 </div>
 
@@ -112,34 +112,52 @@ var translations = {
   <div class="container">
 
     <a class="navbar-brand" href="/sdg-site-kazstat/" id="home">
-      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
     </a>
 
   <div class='hidden visible-xs float-right'>
-    <ul id='accessibility-nav' class='contrast-switcher'></ul></div>
+    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+      <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">русский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/en/13/">English</a></li></ul>
+
+    </div></div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu">Menu</span></li>
-        <li><span data-target="search">Search</span></li>
+        <li><span data-target="menu">Меню</span></li>
+        <li><span data-target="search">Поиск</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/sdg-site-kazstat/reporting-status">Reporting Status</a>
+            <a href="/sdg-site-kazstat/reporting-status">Состояние отчётности</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/about">About</a>
+            <a href="/sdg-site-kazstat/about">О нас</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/guidance">Guidance</a>
+            <a href="/sdg-site-kazstat/guidance">Руководство</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/faq">FAQ</a>
-          </li></ul>
+            <a href="/sdg-site-kazstat/faq">Часто задаваемые вопросы</a>
+          </li><li>
+          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">русский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/en/13/">English</a></li></ul>
+
+        </li></ul>
 
       <div id="search" class="menu-target">
   <label for="indicator_search">
-    <i class="fa fa-search" aria-hidden="true"></i><span>Search:</span>
+    <i class="fa fa-search" aria-hidden="true"></i><span>Поиск:</span>
   </label>
-  <input id="indicator_search" title="Indicator search" placeholder="Indicator search" data-url="/sdg-site-kazstat/indicators.json" data-pageurl="/sdg-site-kazstat/search/?q=" />
+  <input id="indicator_search" title="Поиск показателя" placeholder="Поиск показателя" data-url="/sdg-site-kazstat/indicators.json" data-pageurl="/sdg-site-kazstat/search/?q=" />
 </div>
 
 
@@ -155,11 +173,11 @@ var translations = {
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/13.png" alt="Climate action - Goal 13" />
+        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/13.png" alt="Борьба с изменением климата - Цель 13" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 13: </span>Take urgent action to combat climate change and its impacts
+          <span class="hidden-sm hidden-md hidden-lg">Цель 13: </span>Принятие срочных мер по борьбе с изменением климата и его последствиями
         </h1>
       </div>
     </div>
@@ -171,9 +189,9 @@ var translations = {
   
 
   <ol class="breadcrumb">
-  <li><a href="/sdg-site-kazstat/">Home</a></li>
+  <li><a href="/sdg-site-kazstat/">Главная</a></li>
   
-      <li class="active">Goal 13</li>
+      <li class="active">Цель 13</li>
   
 </ol>
 
@@ -192,10 +210,12 @@ var translations = {
             <span>
               13.1.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
+            Число погибших, пропавших без вести и пострадавших
+непосредственно в результате бедствий
+на 100 000 человек
             
           </a>
         </div>
@@ -214,10 +234,13 @@ var translations = {
             <span>
               13.1.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015–2030
+            Число стран, принявших и осуществляющих
+национальные стратегии снижения риска бедствий в
+соответствии с Сендайской рамочной программой по
+снижению риска бедствий на 2015–2030 годы
             
           </a>
         </div>
@@ -236,10 +259,13 @@ var translations = {
             <span>
               13.1.3
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies
+            Доля местных органов власти, принявших и
+осуществляющих местные стратегии снижения риска
+бедствий в соответствии с национальными стратегиями
+снижения риска бедствий 
             
           </a>
         </div>
@@ -258,10 +284,23 @@ var translations = {
             <span>
               13.2.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries that have communicated the establishment or operationalization of an integrated policy/strategy/plan which increases their ability to adapt to the adverse impacts of climate change, and foster climate resilience and low greenhouse gas emissions development in a manner that does not threaten food production (including a national adaptation plan, nationally determined contribution, national communication, biennial update report or other)
+            Число стран, сообщивших о создании или
+введении в действие комплексной политики/
+стратегии/плана, повышающих их способность адаптироваться
+к неблагоприятным последствиям изменения
+климата и содействующих развитию их потенциала
+противодействия климатическим изменениям и
+снижению выбросов парниковых газов таким образом,
+чтобы это не ставило под угрозу производство
+продовольствия (включая национальный адаптационный
+план, определяемый на национальном уровне
+вклад, национальную систему информирования населения,
+подготовку двухгодичного обновленного доклада
+или другое)
+
             
           </a>
         </div>
@@ -280,10 +319,14 @@ var translations = {
             <span>
               13.3.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries that have integrated mitigation, adaptation, impact reduction and early warning into primary, secondary and tertiary curricula
+            Число стран, включивших вопросы смягчения
+остроты и ослабления последствий изменения
+климата, адаптации к ним и раннего предупреждения
+в учебные программы начальной и средней школы и
+высших учебных заведений
             
           </a>
         </div>
@@ -302,10 +345,14 @@ var translations = {
             <span>
               13.3.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries that have communicated the strengthening of institutional, systemic and individual capacity-building to implement adaptation, mitigation and technology transfer, and development actions
+            Число стран, сообщивших об укреплении
+институциональных, системных и индивидуальных
+возможностей для осуществления мер в области
+адаптации к климатическим изменениям, смягчения
+их последствий и передачи и развития технологии
             
           </a>
         </div>
@@ -324,10 +371,12 @@ var translations = {
             <span>
               13.a.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Mobilized amount of United States dollars per year between 2020 and 2025 accountable towards the $100 billion commitment
+            Сумма (в долл. США), мобилизованная
+за год с 2020 по 2025 год в соответствии с обязательством
+по мобилизации 100 млрд. долл. США
             
           </a>
         </div>
@@ -346,10 +395,18 @@ var translations = {
             <span>
               13.b.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of least developed countries and small island developing States that are receiving specialized support, and amount of support, including finance, technology and capacity-building, for mechanisms for raising capacities for effective climate change-related planning and management, including focusing on women, youth and local and marginalized communities
+            Число наименее развитых стран и малых
+островных развивающихся государств, которые получают
+специализированную поддержку, в том числе
+ориентированную на женщин, молодежь и местные и
+маргинализированные общины, и величина такой
+поддержки, включая финансирование, технологии и
+укрепление потенциала, предоставляемой для создания
+механизмов, расширяющих возможности в части
+планирования и управления, связанных с изменением климата
             
           </a>
         </div>
@@ -363,7 +420,7 @@ var translations = {
   <div class="container">
     <div class="row">
       <div class="col-xs-9">
-        <a href="mailto:test@example.com">Contact us</a>
+        <a href="mailto:test@example.com">Свяжитесь с нами</a>
         
           | <a class="twitter-follow-button" href="https://twitter.com/MyTwitterAccount" data-show-count="false">
               @MyTwitterAccount
@@ -371,7 +428,7 @@ var translations = {
         
       </div>
       <div class="col-xs-3 text-right">
-        <a href="/sdg-site-kazstat/faq/">FAQ</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
+        <a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
       </div>
     </div>
   </div>
@@ -402,7 +459,7 @@ var translations = {
 <script>
   var remoteDataBaseUrl = 'https://kazstat.github.io/sdg-site-kazstat';
 </script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190408094113'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190408115501'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

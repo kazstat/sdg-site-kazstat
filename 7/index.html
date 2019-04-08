@@ -85,7 +85,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190408094113">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190408115501">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -93,16 +93,16 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190408094113"></head>
-<body class="language-en">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190408115501"></head>
+<body class="language-ru">
 <!-- <div class="container"> -->
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag">Alpha</strong>
-    This is a development website. We welcome your <a href="mailto:test@example.com">feedback</a>.
+    <strong class="phase-tag">Альфа</strong>
+    Это сайт находится в разработке. Мы рады вашим отзывам.
   </div>
 </div>
 
@@ -112,34 +112,52 @@ var translations = {
   <div class="container">
 
     <a class="navbar-brand" href="/sdg-site-kazstat/" id="home">
-      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
     </a>
 
   <div class='hidden visible-xs float-right'>
-    <ul id='accessibility-nav' class='contrast-switcher'></ul></div>
+    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+      <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">русский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/en/7/">English</a></li></ul>
+
+    </div></div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu">Menu</span></li>
-        <li><span data-target="search">Search</span></li>
+        <li><span data-target="menu">Меню</span></li>
+        <li><span data-target="search">Поиск</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/sdg-site-kazstat/reporting-status">Reporting Status</a>
+            <a href="/sdg-site-kazstat/reporting-status">Состояние отчётности</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/about">About</a>
+            <a href="/sdg-site-kazstat/about">О нас</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/guidance">Guidance</a>
+            <a href="/sdg-site-kazstat/guidance">Руководство</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/faq">FAQ</a>
-          </li></ul>
+            <a href="/sdg-site-kazstat/faq">Часто задаваемые вопросы</a>
+          </li><li>
+          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">русский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/en/7/">English</a></li></ul>
+
+        </li></ul>
 
       <div id="search" class="menu-target">
   <label for="indicator_search">
-    <i class="fa fa-search" aria-hidden="true"></i><span>Search:</span>
+    <i class="fa fa-search" aria-hidden="true"></i><span>Поиск:</span>
   </label>
-  <input id="indicator_search" title="Indicator search" placeholder="Indicator search" data-url="/sdg-site-kazstat/indicators.json" data-pageurl="/sdg-site-kazstat/search/?q=" />
+  <input id="indicator_search" title="Поиск показателя" placeholder="Поиск показателя" data-url="/sdg-site-kazstat/indicators.json" data-pageurl="/sdg-site-kazstat/search/?q=" />
 </div>
 
 
@@ -155,11 +173,12 @@ var translations = {
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/7.png" alt="Affordable and clean energy - Goal 7" />
+        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/7.png" alt="Недорогостоящая и чистая энергия - Цель 7" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 7: </span>Ensure access to affordable, reliable, sustainable and modern energy for all
+          <span class="hidden-sm hidden-md hidden-lg">Цель 7: </span>Обеспечение доступа к недорогим, надежным, устойчивым и современным источникам
+энергии для всех
         </h1>
       </div>
     </div>
@@ -171,9 +190,9 @@ var translations = {
   
 
   <ol class="breadcrumb">
-  <li><a href="/sdg-site-kazstat/">Home</a></li>
+  <li><a href="/sdg-site-kazstat/">Главная</a></li>
   
-      <li class="active">Goal 7</li>
+      <li class="active">Цель 7</li>
   
 </ol>
 
@@ -192,10 +211,10 @@ var translations = {
             <span>
               7.1.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Proportion of population with access to electricity
+            Доля населения, имеющего доступ к электроэнергии
             
           </a>
         </div>
@@ -214,10 +233,11 @@ var translations = {
             <span>
               7.1.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Proportion of population with primary reliance on clean fuels and technology
+            Доля населения, использующего в основном
+чистые виды топлива и технологии
             
           </a>
         </div>
@@ -236,10 +256,11 @@ var translations = {
             <span>
               7.2.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Renewable energy share in the total final energy consumption
+            Доля возобновляемых источников энергии в
+общем объеме конечного энергопотребления
             
           </a>
         </div>
@@ -258,10 +279,11 @@ var translations = {
             <span>
               7.3.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Energy intensity measured in terms of primary energy and GDP
+            Энергоемкость, рассчитываемая как отношение
+расхода первичной энергии к ВВП
             
           </a>
         </div>
@@ -280,10 +302,14 @@ var translations = {
             <span>
               7.a.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            International financial flows to developing countries in support of clean energy research and development and renewable energy production, including in hybrid systems
+            Объем международных финансовых потоков,
+поступающих в развивающиеся страны для поддержки
+исследований и разработок в области «чистой»
+энергии и развития энергетики на возобновляемых
+источниках, включая комбинированные системы
             
           </a>
         </div>
@@ -302,10 +328,15 @@ var translations = {
             <span>
               7.b.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Investments in energy efficiency as a proportion of GDP and the amount of foreign direct investment in financial transfer for infrastructure and technology to sustainable development services
+            Капиталовложения в обеспечение энергоэффективности
+в процентном отношении к ВВП и доля прямых иностранных инвестиций в финансовых
+средствах, поступающих в отрасли обслуживания,
+обеспечивающие устойчивое развитие, на цели расширения
+их инфраструктуры и модернизации технологии
+
             
           </a>
         </div>
@@ -321,7 +352,7 @@ var translations = {
   <div class="container">
     <div class="row">
       <div class="col-xs-9">
-        <a href="mailto:test@example.com">Contact us</a>
+        <a href="mailto:test@example.com">Свяжитесь с нами</a>
         
           | <a class="twitter-follow-button" href="https://twitter.com/MyTwitterAccount" data-show-count="false">
               @MyTwitterAccount
@@ -329,7 +360,7 @@ var translations = {
         
       </div>
       <div class="col-xs-3 text-right">
-        <a href="/sdg-site-kazstat/faq/">FAQ</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
+        <a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
       </div>
     </div>
   </div>
@@ -360,7 +391,7 @@ var translations = {
 <script>
   var remoteDataBaseUrl = 'https://kazstat.github.io/sdg-site-kazstat';
 </script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190408094113'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190408115501'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

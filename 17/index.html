@@ -85,7 +85,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190408094113">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190408115501">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -93,16 +93,16 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190408094113"></head>
-<body class="language-en">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190408115501"></head>
+<body class="language-ru">
 <!-- <div class="container"> -->
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag">Alpha</strong>
-    This is a development website. We welcome your <a href="mailto:test@example.com">feedback</a>.
+    <strong class="phase-tag">Альфа</strong>
+    Это сайт находится в разработке. Мы рады вашим отзывам.
   </div>
 </div>
 
@@ -112,34 +112,52 @@ var translations = {
   <div class="container">
 
     <a class="navbar-brand" href="/sdg-site-kazstat/" id="home">
-      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
     </a>
 
   <div class='hidden visible-xs float-right'>
-    <ul id='accessibility-nav' class='contrast-switcher'></ul></div>
+    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+      <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">русский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/en/17/">English</a></li></ul>
+
+    </div></div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu">Menu</span></li>
-        <li><span data-target="search">Search</span></li>
+        <li><span data-target="menu">Меню</span></li>
+        <li><span data-target="search">Поиск</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/sdg-site-kazstat/reporting-status">Reporting Status</a>
+            <a href="/sdg-site-kazstat/reporting-status">Состояние отчётности</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/about">About</a>
+            <a href="/sdg-site-kazstat/about">О нас</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/guidance">Guidance</a>
+            <a href="/sdg-site-kazstat/guidance">Руководство</a>
           </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/faq">FAQ</a>
-          </li></ul>
+            <a href="/sdg-site-kazstat/faq">Часто задаваемые вопросы</a>
+          </li><li>
+          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">русский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/en/17/">English</a></li></ul>
+
+        </li></ul>
 
       <div id="search" class="menu-target">
   <label for="indicator_search">
-    <i class="fa fa-search" aria-hidden="true"></i><span>Search:</span>
+    <i class="fa fa-search" aria-hidden="true"></i><span>Поиск:</span>
   </label>
-  <input id="indicator_search" title="Indicator search" placeholder="Indicator search" data-url="/sdg-site-kazstat/indicators.json" data-pageurl="/sdg-site-kazstat/search/?q=" />
+  <input id="indicator_search" title="Поиск показателя" placeholder="Поиск показателя" data-url="/sdg-site-kazstat/indicators.json" data-pageurl="/sdg-site-kazstat/search/?q=" />
 </div>
 
 
@@ -155,11 +173,12 @@ var translations = {
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/17.png" alt="Partnerships for the goals - Goal 17" />
+        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/17.png" alt="Партнерство в интересах устойчивого развития - Цель 17" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 17: </span>Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development
+          <span class="hidden-sm hidden-md hidden-lg">Цель 17: </span>Укрепление средств осуществления и активизация работы в рамках Глобального
+партнерства в интересах устойчивого развития
         </h1>
       </div>
     </div>
@@ -171,9 +190,9 @@ var translations = {
   
 
   <ol class="breadcrumb">
-  <li><a href="/sdg-site-kazstat/">Home</a></li>
+  <li><a href="/sdg-site-kazstat/">Главная</a></li>
   
-      <li class="active">Goal 17</li>
+      <li class="active">Цель 17</li>
   
 </ol>
 
@@ -192,10 +211,11 @@ var translations = {
             <span>
               17.1.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Total government revenue as a proportion of GDP, by source
+            Общий объем государственных доходов в
+процентном отношении к ВВП в разбивке по источникам
             
           </a>
         </div>
@@ -214,10 +234,11 @@ var translations = {
             <span>
               17.1.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Proportion of domestic budget funded by domestic taxes
+            Доля национального бюджета, финансируемая
+внутренними налогами
             
           </a>
         </div>
@@ -236,10 +257,14 @@ var translations = {
             <span>
               17.2.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Net official development assistance, total and to least developed countries, as a proportion of the Organization for Economic Cooperation and Development (OECD) Development Assistance Committee donors’ gross national income (GNI)
+            Чистый объем официальной помощи в целях
+развития (как суммарной, так и выделяемой наименее
+развитым странам) в процентном отношении к
+валовому национальному доходу доноров — членов
+Комитета содействия развитию ОЭСР
             
           </a>
         </div>
@@ -258,10 +283,12 @@ var translations = {
             <span>
               17.3.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Foreign direct investment (FDI), official development assistance and South-South cooperation as a proportion of total domestic budget
+            Прямые иностранные инвестиции (ПИИ),
+официальная помощь в целях развития и сотрудничество
+Юг-Юг в процентном отношении к совокупному национальному бюджету
             
           </a>
         </div>
@@ -280,10 +307,11 @@ var translations = {
             <span>
               17.3.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Volume of remittances (in United States dollars) as a proportion of total GDP
+            Объем переводов (в долларах США) в процентном
+отношении к ВВП
             
           </a>
         </div>
@@ -302,10 +330,11 @@ var translations = {
             <span>
               17.4.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Debt service as a proportion of exports of goods and services
+            Расходы на обслуживание долга в процентном
+отношении к экспорту товаров и услуг
             
           </a>
         </div>
@@ -324,10 +353,12 @@ var translations = {
             <span>
               17.5.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries that adopt and implement investment promotion regimes for least developed countries
+            Число стран, в которых приняты и действуют
+режимы поощрения инвестиций в интересах
+наименее развитых стран
             
           </a>
         </div>
@@ -346,10 +377,12 @@ var translations = {
             <span>
               17.6.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of science and/or technology cooperation agreements and programmes between countries, by type of cooperation
+            Число соглашений и программ научного
+и/или технического сотрудничества между странами
+в разбивке по видам сотрудничества
             
           </a>
         </div>
@@ -368,10 +401,11 @@ var translations = {
             <span>
               17.6.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Fixed Internet broadband subscriptions per 100 inhabitants, by speed
+            Число стационарных абонентов широкополосного
+Интернета в разбивке по скорости
             
           </a>
         </div>
@@ -390,10 +424,14 @@ var translations = {
             <span>
               17.7.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Total amount of approved funding for developing countries to promote the development, transfer, dissemination and diffusion of environmentally sound technologies
+            Общая сумма утвержденного финансирования
+для развивающихся стран в целях содействия
+разработке, передаче, распространению и освоению
+экологически безопасных технологий
+
             
           </a>
         </div>
@@ -412,10 +450,10 @@ var translations = {
             <span>
               17.8.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Proportion of individuals using the Internet
+            Доля населения, пользующегося Интернетом
             
           </a>
         </div>
@@ -434,10 +472,13 @@ var translations = {
             <span>
               17.9.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Dollar value of financial and technical assistance (including through North-South, South‐South and triangular cooperation) committed to developing countries
+            Долларовый объем финансовой и технической
+помощи развивающимся странам(в том числе
+оказываемой по линии Север — Юг, Юг — Юг и в
+рамках трехстороннего сотрудничества)
             
           </a>
         </div>
@@ -456,10 +497,11 @@ var translations = {
             <span>
               17.10.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Worldwide weighted tariff-average
+            Средневзвешенный мировой уровень тарифов
+
             
           </a>
         </div>
@@ -478,10 +520,11 @@ var translations = {
             <span>
               17.11.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Developing countries’ and least developed countries’ share of global exports
+             Доля развивающихся стран и наименее развитых
+стран в мировом экспорте
             
           </a>
         </div>
@@ -500,10 +543,12 @@ var translations = {
             <span>
               17.12.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Average tariffs faced by developing countries, least developed countries and small island developing States
+            Средний уровень тарифов, применяемых в
+отношении развивающихся стран, наименее развитых
+стран и малых островных развивающихся государств
             
           </a>
         </div>
@@ -522,10 +567,11 @@ var translations = {
             <span>
               17.13.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Macroeconomic Dashboard
+            Единый набор контрольных макроэкономических
+показателей
             
           </a>
         </div>
@@ -544,10 +590,13 @@ var translations = {
             <span>
               17.14.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries with mechanisms in place to enhance policy coherence of sustainable development
+            Число стран, в которых созданы механизмы
+для повышения согласованности политики в области
+устойчивого развития
+
             
           </a>
         </div>
@@ -566,10 +615,14 @@ var translations = {
             <span>
               17.15.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Extent of use of country-owned results frameworks and planning tools by providers of development cooperation
+            Масштабы использования подготовленных
+странами ориентировочных перечней результатов и
+инструментов планирования участниками процесса
+сотрудничества в целях развития
+
             
           </a>
         </div>
@@ -588,10 +641,14 @@ var translations = {
             <span>
               17.16.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries reporting progress in multi-stakeholder development effectiveness monitoring frameworks that support the achievement of the sustainable development goals
+            Число стран, сообщающих о прогрессе в
+деле применения механизмов контроля за эффективностью
+развития с участием многих заинтересованных
+сторон, которые служат подспорьем в достижении
+целей устойчивого развития
             
           </a>
         </div>
@@ -610,10 +667,12 @@ var translations = {
             <span>
               17.17.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Amount of United States dollars committed to (a) public-private partnerships and (b) civil society partnerships
+            Сумма (в долларах США), выделяемая на a)
+государственно-частные партнерства и b) партнерства
+организаций гражданского общества
             
           </a>
         </div>
@@ -632,10 +691,13 @@ var translations = {
             <span>
               17.18.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Proportion of sustainable development indicators produced at the national level with full disaggregation when relevant to the target, in accordance with the Fundamental Principles of Official Statistics
+            Доля показателей устойчивого развития, разработанных
+на национальном уровне с полной дезагрегацией
+по соответствующим признакам согласно
+Основополагающим принципам официальной статистики
             
           </a>
         </div>
@@ -654,10 +716,12 @@ var translations = {
             <span>
               17.18.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries that have national statistical legislation that complies with the Fundamental Principles of Official Statistics
+             Число, стран, имеющих национальное статистическое
+законодательство, соответствующее Основополагающим
+принципам официальной статистики
             
           </a>
         </div>
@@ -676,10 +740,13 @@ var translations = {
             <span>
               17.18.3
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Number of countries with a national statistical plan that is fully funded and under implementation, by source of funding
+            Число стран, имеющих полностью финансированный
+и осуществляемый национальный статистический
+план, в разбивке по источникам финансирования
+
             
           </a>
         </div>
@@ -698,10 +765,13 @@ var translations = {
             <span>
               17.19.1
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Dollar value of all resources made available to strengthen statistical capacity in developing countries
+            Долларовая стоимость всех ресурсов, выделенных
+на наращивание потенциала развивающихся
+стран в области статистики
+
             
           </a>
         </div>
@@ -720,10 +790,14 @@ var translations = {
             <span>
               17.19.2
               <span class="status notstarted">
-                Exploring data sources
+                Исследование источников данных
               </span>
             </span>
-            Proportion of countries that (a) have conducted at least one population and housing census in the last 10 years; and (b) have achieved 100 per cent birth registration and 80 per cent death registration
+            Доля стран, которые a) провели хотя бы одну
+перепись населения и жилищного фонда в течение
+последних 10 лет; и b) достигли цели регистрации
+рождений в 100 процентах случаев и регистрации
+смерти в 80 процентах случаев
             
           </a>
         </div>
@@ -739,7 +813,7 @@ var translations = {
   <div class="container">
     <div class="row">
       <div class="col-xs-9">
-        <a href="mailto:test@example.com">Contact us</a>
+        <a href="mailto:test@example.com">Свяжитесь с нами</a>
         
           | <a class="twitter-follow-button" href="https://twitter.com/MyTwitterAccount" data-show-count="false">
               @MyTwitterAccount
@@ -747,7 +821,7 @@ var translations = {
         
       </div>
       <div class="col-xs-3 text-right">
-        <a href="/sdg-site-kazstat/faq/">FAQ</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
+        <a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
       </div>
     </div>
   </div>
@@ -778,7 +852,7 @@ var translations = {
 <script>
   var remoteDataBaseUrl = 'https://kazstat.github.io/sdg-site-kazstat';
 </script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190408094113'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190408115501'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
