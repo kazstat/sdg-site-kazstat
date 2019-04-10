@@ -4,7 +4,7 @@
 <div id="main-content" class="container goal-tiles" role="main">
 
     {% assign country_name = site.country.name | t %}
-    <h1>Казахстан: данные для целей в области устойчивого развития</h1>
+    <h1>{{ t.custom.frontpage_heading }}</h1>
 
     <p>{{ t.frontpage.instructions | replace_first: '%before_link', '<span style="display:none" id="jump-to-search"><a href="javascript:void(0)">' | replace_first: '%after_link', '</a></span>' | replace_first: '%name', country_name }}</p>
     {%- assign goals = site.goals | where: 'language', current_language -%}
