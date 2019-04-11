@@ -89,10 +89,10 @@ workflows:
                 - gh-pages
   deploy:
     jobs:
-      #- deploy_prod:
-      #    filters:
-      #      branches:
-      #        only: master
+      - deploy_prod:
+          filters:
+            branches:
+              only: master
       - deploy_staging:
           filters:
             branches:
