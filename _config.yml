@@ -41,6 +41,8 @@ analytics:
 # Social media accounts.
 #twitter: ''
 
+facebook: 'Facebook'
+
 # Replace the email addresses below.
 email_contacts:
   questions: test@example.com
