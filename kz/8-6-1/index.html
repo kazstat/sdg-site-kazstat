@@ -1,0 +1,9423 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we do it for them here.
+    var originalKey = key;
+    if (!key.includes('.') && this.data) {
+      key = 'data.' + key.toLowerCase();
+    }
+
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+        
+        <title>
+        Көрсеткіш 8.6.1 - Мақсат 8 - Достойна работа и экономический рост
+        </title>
+        <meta name="description" content="">
+        <meta property="og:description" content="">
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+        <link rel="canonical" href="/">
+
+        
+
+        <!--[if IE 9]>
+        <script src="/sdg-site-kazstat/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <!-- Favicons ================================================== -->
+        <!-- 128x128 -->
+        <link rel="shortcut icon" type="image/ico" href="/sdg-site-kazstat/assets/img/favicons/favicon.ico">
+        <link rel="icon" type="image/png" href="/sdg-site-kazstat/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
+        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+        -->
+
+        
+
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190412091112">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190412091112"></head>
+<body class="language-kz">
+<!-- <div class="container"> -->
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Басты мазмұнына өту</a>
+<div id="disclaimer">
+  <div class="container">
+  <div class="alert alert-danger" role="alert">
+    <strong class="phase-tag">Альфа</strong>
+    Бұл сайт әзірленуде. Біз сіздердің пікірлеріңізге қуаныштымыз
+  </div>
+</div>
+
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <a class="navbar-brand" href="/sdg-site-kazstat/kz/" id="home">
+      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Тұрақты даму мақсаттары шеңберінде - Біздің өмірді көркейту үшін 17 мақсат" />
+    </a>
+
+  <div class='hidden visible-xs float-right'>
+    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+      <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">Қазақ</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/8-6-1/">Pусский</a></li><li><a href="/sdg-site-kazstat/en/8-6-1/">English</a></li></ul>
+
+    </div></div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li><span data-target="menu">Меню</span></li>
+        <li><span data-target="search">Іздеу</span></li>
+      </ul>
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+            <a href="/sdg-site-kazstat/kz/reporting-status">Есептіліктің жағдайы</a>
+          </li><li class="nav-link ">
+            <a href="/sdg-site-kazstat/kz/about">Біз туралы</a>
+          </li><li class="nav-link ">
+            <a href="/sdg-site-kazstat/kz/guidance">Басшылық</a>
+          </li><li class="nav-link ">
+            <a href="/sdg-site-kazstat/kz/faq">Жиі қойылатын сұрақтар</a>
+          </li><li>
+          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">Қазақ</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/8-6-1/">Pусский</a></li><li><a href="/sdg-site-kazstat/en/8-6-1/">English</a></li></ul>
+
+        </li></ul>
+
+      <div id="search" class="menu-target">
+  <label for="indicator_search">
+    <i class="fa fa-search" aria-hidden="true"></i><span>Іздеу:</span>
+  </label>
+  <input id="indicator_search" title="Көрсеткішті іздеу" placeholder="Көрсеткішті іздеу" data-url="/sdg-site-kazstat/kz/indicators.json" data-pageurl="/sdg-site-kazstat/kz/search/?q=" />
+</div>
+
+
+    </nav>
+  </div>
+
+</header>
+
+<script type="text/template" id="item_template">
+  <% _.each(series, function(seriesItem) { %>
+    <div class="variable-selector<% if(allowedFields.indexOf(seriesItem.field) == -1) { %> disallowed child<% }%>" data-field="<%=seriesItem.field%>">
+      <button class='accessBtn' tabindex='0'><h5><%=translations.t(seriesItem.field)%><i class="fa fa-chevron-down"></i></h5></button>
+      <div class="bar">
+        <div class="selected"></div>
+      </div>
+      <div class="variable-options">
+        <div>
+          <button data-type="select">Барлығын белгілеу</button>
+          <button data-type="clear">Барлығын тазарту</button>
+        </div>
+        <% _.each(seriesItem.values, function(item) { %>
+          <label><input type="checkbox" value="<%=item.value%>" data-field="<%=seriesItem.field%>" /><%=translations.t(item.value)%></label>
+        <% }); %>
+      </div>
+
+      <% if(allowedFields.indexOf(seriesItem.field) == -1) { %>
+        <div class="variable-hint">Таңдаған кезде қолжетімді
+        </div>
+        <div class="no-data-hint">
+          Жоғарыда фильтрлар бар болғандықтан нұсқалар жоқ
+        </div>
+      <% }%>
+
+    </div>
+  <% }); %>
+</script>
+
+<script type="text/template" id="units_template">
+  <% if(units.length) { %>
+    <h5>Бірліктер түрі</h5>
+    <% _.each(units, function(unitsItem, index) { %>
+      <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <% if(!index) { %>checked="checked"<% } %> /> <%=translations.t(unitsItem)%></label>
+    <% }); %>
+  <% } %>
+</script>
+
+<script>translations['indicator'] = {"chart":"График","clear_all":"Барлығын тазарту","clear_selections":"Белгіленгенді тазарту","dataset_size_warning":"Графикте көрсету үшін, кестеде тым көп деректер. Барлығын көру ушін белгіленгенді жойыңыздар","download_chart":"CSV графигін жүктеу","download_csv":"CSV жүктеу","download_csv_title":"CSV нысанында жүктеу","download_headline":"CSV тақырыптарын жүктеу","download_headline_title":"CSV тақырыптарының деректерін жүктеу","download_source":"Бастапқы CSV жүктеу","download_source_title":"Бастапқы деректерді CSV нысанында жүктеу","download_table":"Кестелік CSV жүктеу","edit":"Редакциялау","edit_data":"Деректерді редакциялау","edit_metadata":"Метадеректерді редакциялау","footnote":"Ескерту","geographical_area":"Географиялық аудан","global_metadata":"Жаһандық метадеректер","global_metadata_blurb":"В этой таблице представлена информация для метаданных показателей ЦУР, определенных Статистической комиссией ООН. Полные глобальные метаданные представлены Статистическим отделом ООН.","legend_help":"Графиктен жолдарды алып тастау үшін легендаға басыңыз","loading_map":"Картаны жүктеу","map":"Карта","national_metadata":"Ұлттық метадеректер","national_metadata_blurb":"Бұл кестеде статистикада бар, ТДМ-ң тиісті жаһандық көрсеткішіне ен жақын, нақты көрсеткіш үшін метадеректер ұсынылған. Жаһандық көрсеткіш толығымен қолжетімді болған жағдайда бұл кесте бойынша ұлттық әдіснама және спецификалық метадеректер туралы ақпаратты алу үшін консультация жүргізу керек екеніне көңіл бөлу керек","no_data_hint":"Жоғарыда фильтрлар бар болғандықтан нұсқалар жоқ","select_all":"Барлығын белгілеу","series_help":"Деректерді түрлі бөліністерді көру үшін , төмендегі түсетін менюдан категорияларды таңдаңыз. Бірнешесі қолжетімді болмайды, одан жоғары деңгейді таңдамағанша","source":"Көз","sources":"Көздер","sub_categories":"Субкатегориялар","table":"Кесте","unit_of_measurement":"Өлшем бірлігі","units_type":"Бірліктер түрі","variable_hint":"Таңдаған кезде қолжетімді","view_indicator_list":"Осы мақсаттың көрсеткіштерінің тізімін көру"};</script>
+
+<script>translations['data'] = null;</script>
+
+
+<div class="heading indicator goal-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 col-md-3 col-lg-2">
+        <a href="/sdg-site-kazstat/kz/8" title="Осы мақсаттың көрсеткіштерінің тізімін көру">
+          <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kz/8.png" alt="Лайықты жұмыс пен экономикалық өсу - Мақсат 8" />
+        </a>
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10">
+        <h1>
+          <a href="/sdg-site-kazstat/kz/8">
+            <span class="hidden-sm hidden-md hidden-lg">Мақсат 8: </span>Барлығы үшін алға бағытталған, ауқымды және тұрақты экономикалық өсуге, толық және өнімді жұмысбастылыққа және лайықты жұмысқа жәрдемдесу
+          </a>
+        </h1>
+        <h2>Көрсеткіш 8.6.1: Оқымайтын, жұмыс істемейтін және кәсіби машық алмайтын жастар (15-тен 24 жасқа дейін) үлесі</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content" class="container goal-8">
+  <ol class="breadcrumb">
+  <li><a href="/sdg-site-kazstat/kz/">Басты бет</a></li>
+  
+      <li><a href="/sdg-site-kazstat/kz/8" title="Содействие поступательному, всеохватному и устойчивому экономическому росту,
+полной и производительной занятости и достойной работе для всех">Мақсат 8</a></li>
+      <li class="active">Көрсеткіш 8.6.1</li>
+  
+</ol>
+
+  <div class="row" id="page-content-row">
+    <div class="col-xs-12">
+      <div id="page-content">
+  
+
+</div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Доля молодежи (в возрасте от 15 до 24 лет), которая не учится, не работает и не приобретает профессиональных навыков</h2>
+    </div>
+  </div>
+
+  <div class="row" id="indicatorData" data-indicatorid='indicator_8-6-1' data-id="8-6-1" data-country="Казахстан"
+  data-charttitle="Доля молодежи (в возрасте от 15 до 24 лет), которая не учится, не работает и не приобретает профессиональных навыков" data-measurementunit="процентах" data-datasource="" data-geographicalarea="Казахстан" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+    
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Субкатегориялар</h4>
+          <p>Деректерді түрлі бөліністерді көру үшін , төмендегі түсетін менюдан категорияларды таңдаңыз. Бірнешесі қолжетімді болмайды, одан жоғары деңгейді таңдамағанша</p>
+        </span>
+        <p>Графиктен жолдарды алып тастау үшін легендаға басыңыз</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
+    
+
+      
+      
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/headline/8-6-1.csv" class="btn btn-primary btn-download" download="indicator_8-6-1.csv" tabindex="0" role="button">CSV тақырыптарын жүктеу</a>
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/data/8-6-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_8-6-1.csv' tabindex='0' role='button'>Бастапқы CSV жүктеу</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.7246551142</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.1160227566</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.8955148257</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.7551106479</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.9633585701</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.8736474995</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.1998521736</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3604949985</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.4475262369</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.2322378489</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.2341576507</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.9291094091</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.7551439347</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.9721857696</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.1096473395</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8485242612</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.5</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3720722214</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.0186059988</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.9975185949</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.8940765414</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.5799490685</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.2105910384</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.5639295759</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.6922776182</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.49317587</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.3304521277</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.9537788882</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.3003621895</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6776186224</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0249229605</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0816864295</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.238249834</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.7</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.0766071959</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.2833464692</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.3851381395</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8446220878</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.588728538</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.8525115906</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.6771783289</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.2670123956</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.9</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8572816451</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.2045018711</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.9757709865</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.3247891282</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.5172395828</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.5226140481</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.4583735133</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.7185477853</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.7</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1690001867</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2949181837</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.4658294156</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.1749087177</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.5072279098</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.5222133987</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.3090179553</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.078030099</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.5755186984</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.6109374507</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.108279462</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.8361809438</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.4178030041</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.6426642049</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.1320263241</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3815299693</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3132653584</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.6796110294</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.8452071916</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3927064529</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.462852735</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.9467894831</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.2498868377</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.5646128333</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1228792938</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7704529842</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7872726067</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.3301258063</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8181158141</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.2865537963</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.8904215529</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.0192110122</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.3047980891</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5945791775</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.7719685159</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.7740585774</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.4295278772</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.6082148499</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.491498055</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.4672482929</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.9203759835</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.4809668221</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.1417521323</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.2565898285</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.6745891896</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.6469138767</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6433477755</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.9002920795</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.5</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.3698843752</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4441906479</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8963048649</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.9837144452</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.9555332403</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.0161530087</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.3035123054</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.0737664485</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.2</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.7448704385</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5499467344</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">0.374915355</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.4423314399</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.6813547385</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4272579289</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.294701326</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.0858208955</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.9258056019</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.4730961272</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8228908465</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.709321793</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4341531015</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.1047941269</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.1578947368</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.5479553783</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.2890168621</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.8545729807</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.9520533491</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7966006008</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.1572653702</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2548138766</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.6950683082</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.9978670379</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.101019544</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.4683860233</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3317634746</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.3148326677</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4453455327</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.1313315258</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.821131201</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.934028906</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.8</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7967320148</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.6110622652</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.7088521621</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.7891987063</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.2564803449</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.236834776</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.8936063098</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.4295601914</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7971318997</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.5368676276</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.2712250232</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.2258820884</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6256101735</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.0199264101</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.9234149915</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5347324156</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.9890232041</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.7599357688</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.8935378627</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.8296178839</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.0545339357</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.6063921308</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.381914961</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4784213261</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.4</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.9418968145</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.1490549738</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.3330737504</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.5592701394</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.795329322</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.7549528552</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.1823500731</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.6300863132</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.9456931172</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.5166443011</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.3334088897</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.5621135149</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.3109546726</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.3898675904</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.5013664596</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.1975671119</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.691427593</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.0824429599</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.9856232702</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.0795597748</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.2486772487</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.9860181764</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0790426482</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.7681123088</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.1438636707</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.6351825609</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2504592133</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.4813061499</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.3848126348</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8922568065</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.4157542421</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.542290189</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.9</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.1464948936</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.9835595984</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.989746271</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.384879831</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.793528993</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.0319969885</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.9033593778</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.5886826669</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.8106966617</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.740013755</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.1064540585</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.048022722</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.8896817357</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.4813872951</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.2573820763</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8527326573</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8085626358</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3465029245</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.9025352344</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8163905985</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.2628605412</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.3613481432</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.4988463643</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.9513309225</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.426731717</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.6657545107</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.526199364</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4253151181</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.9767738904</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">17.9028022279</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">15.9762069276</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.9586926676</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.8</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.1469833419</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.7405452946</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.3668962355</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.8858317045</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">15.8860992684</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">17.5538683407</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.214508847</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.0415537043</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.5829165551</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.2921736079</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.7787043472</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.1188267515</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.394454168</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0650397647</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7196242244</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6274195166</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.1874265097</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">15.5867316609</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.3332483847</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.8428232036</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">16.046407051</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.7954352576</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.9699213096</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.3094409778</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.4</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.6618480222</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.4313361438</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.7351721651</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.2824488173</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">15.1287948482</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.511275171</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">22.376660691</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.7093023256</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3238827952</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3487114222</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.3424463262</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.0945375658</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3589345092</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.1592657327</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.1745099931</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.790181869</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.9559132145</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.7909575453</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5962538211</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.4631157789</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6398017858</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.1810408238</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.9388962562</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1528021589</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.7186700767</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.3766271683</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.1008582372</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.0927150815</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.0815506383</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.536331508</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.1022802609</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.4943245884</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.9</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.303070761</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.3619225521</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.9515079834</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.7091396819</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.0170336466</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.2841906288</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.792100626</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1541005934</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.3</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.7533064503</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.6750323586</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.9603818926</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.8275272775</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.6366899558</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.7285137364</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.534897221</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.9907744029</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.5</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.356648152</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7883008357</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7866520515</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.5616018479</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.3080014183</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.350811873</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.0855261249</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.2923701646</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.216282473</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.1262077187</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.3770368083</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2734291191</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8501469148</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.8719050432</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.9618949537</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.1603904932</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.8</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.4374841161</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.2077517367</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.5976419883</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4717528008</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.4597511469</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.0325802682</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.1912888889</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.4659990259</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.9</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7893927748</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.3085725005</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.850844773</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.6052279388</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.5747571436</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.4738727777</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.0971416705</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.4100974983</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.0868064174</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.5907018946</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.9291921822</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.5482217238</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.4327567595</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.2047910428</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.8035040657</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.5014484068</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3056327125</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.008576738</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.6350637923</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.1752868974</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.9184386834</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3304096969</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.8349023465</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.965989076</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.4</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8899740869</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.5650604726</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.0810279728</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.5776990002</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.3168264695</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6130634739</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.1262275926</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.0764367009</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1102713202</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.2319507997</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.0503197577</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.6368498028</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.0646109634</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.5250790161</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.0967453689</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.0459558504</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.3</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3067434725</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.4454694513</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.2388176992</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.3483062312</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8064723908</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.2752545234</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.3524579877</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6075233746</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.5</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">0.2929431208</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8961163341</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">0.2101116218</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.2930447831</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6604160935</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.9627625363</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.359921703</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.2485989688</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.3</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.1929459445</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.6239862263</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.6919601636</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.5416289071</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.5649477198</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3435640574</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.292559343</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8871705203</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.2</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.8566326573</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.2972464065</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.0737495306</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.2287892512</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.9387354666</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.790685573</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3970399098</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.3391514378</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.7872096151</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.5927440901</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.1280161076</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.2407551956</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.1560797327</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.5645481742</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.476204323</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.9630159989</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">5.9</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.8081353644</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.285608002</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.3406475668</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.8129046417</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.7325636018</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.2708255788</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">14.7628829151</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.7526017324</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.6238501607</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.6645848775</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.1559890059</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7638092691</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.4410813068</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.6415077317</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.5852413366</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.7068328229</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.2222132444</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.9738722734</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.5625784592</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.0617791847</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.3581453072</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.8566611099</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.7077479243</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8842543722</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">4.3</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">3.9331285117</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">16.8981391175</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">18.5190874875</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.4645080946</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">18.5628873656</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.2915886644</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.7988560534</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0605523419</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.6</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.8635417296</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.9874778909</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.9706468792</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.9048284645</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.8496775628</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.4590359679</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.2884973789</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.1981600981</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.0878052008</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.6164193995</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.1863566623</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">2.1068472536</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">1.9552965533</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">12.6913970008</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">13.4086277174</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.2744140625</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">10.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">6.8175883101</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.6496882242</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.1838809338</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.4964580874</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">7.0442052751</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">9.6947454637</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3419288293</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">8.3927223946</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процентах</td>
+          
+          
+          
+          <td class="table-value">11.2</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+
+</div>
+
+      
+
+      <section>
+
+        
+        <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">График</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Кесте</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Карта</a>
+            </li></ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+    
+    
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> Графикте көрсету үшін, кестеде тым көп деректер. Барлығын көру ушін белгіленгенді жойыңыздар
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>
+
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/sdg-site-kazstat/assets/img/loading.gif" alt="Картаны жүктеу" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="nav-item active">
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Ұлттық метадеректер</a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Жаһандық метадеректер</a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Көздер</a>
+          </li>
+          
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Редакциялау</a>
+          </li>
+          
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="metadata">
+            <!-- National Metadata -->
+            <div > <!-- formerly class="collapsible expanded" -->
+              <!-- <h3 tabindex='0'>National Metadata</h3> -->
+              <article>
+                <p>
+                  
+                  
+                  Бұл кестеде статистикада бар, ТДМ-ң тиісті жаһандық көрсеткішіне ен жақын, нақты көрсеткіш үшін метадеректер ұсынылған. Жаһандық көрсеткіш толығымен қолжетімді болған жағдайда бұл кесте бойынша ұлттық әдіснама және спецификалық метадеректер туралы ақпаратты алу үшін консультация жүргізу керек екеніне көңіл бөлу керек
+                </p>
+                <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Көрсеткіш қолжетімді </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Көрсеткіштің сипаттамасы </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Географиялық қамту </th>
+        <td>
+          
+            Казахстан
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Өлшем бірлігі </th>
+        <td>
+          
+            процентах
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Анықтама </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Есептеулер </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Басқа ақпарат </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Деректер соңғы рет жаңартылды </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/bef1cf21fdb92f942558b35f8b1c07e344d16147" target="_blank">
+                2019-04-11: see changes on GitHub <span class="visuallyhidden">Жаңа қосымша бетте ашылады</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Метадеректер соңғы рет жаңартылды </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/bef1cf21fdb92f942558b35f8b1c07e344d16147" target="_blank">
+                2019-04-11: see changes on GitHub <span class="visuallyhidden">Жаңа қосымша бетте ашылады</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+              </article>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="globalmetadata">
+            <!-- Global Metadata -->
+            <div> <!-- formerly <div class="collapsible expanded"> -->
+              <!-- <h3 tabindex='0'>Global Metadata</h3> -->
+              <article>
+                <p>В этой таблице представлена информация для метаданных показателей ЦУР, определенных Статистической комиссией ООН. Полные глобальные метаданные представлены Статистическим отделом ООН.</p>
+                <table class="table table-hover">
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Көрсеткіштің атауы </th>
+        <td>
+          
+            Доля молодежи (в возрасте от 15 до 24 лет), которая не учится, не работает и не приобретает профессиональных навыков
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Көрсеткіштің нөмірі </th>
+        <td>
+          
+            8.6.1
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Міндеттің атауы </th>
+        <td>
+          
+            By 2020, substantially reduce the proportion of youth not in employment, education or training
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Міндеттің нөмірі </th>
+        <td>
+          
+            8.6
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Жаһандық көрсеткіштің сипаттамасы </th>
+        <td>
+          
+            This proportion of youth (aged 15-24 years) not in education, employment or training, also known as "the NEET rate", conveys the number of young persons not in education, employment or training as a percentage of the total youth population.
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">БҰҰ-мен тағайындалған деңгейі </th>
+        <td>
+          
+            1
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">БҰҰ депозитарлық мекемесі </th>
+        <td>
+          
+            International Labour Organization (ILO)
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">БҰҰ метадеректеріне сілтеме </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-08-06-01.pdf" target="_blank">
+                United Nations Sustainable Development Goals Metadata (PDF 382 KB) <span class="visuallyhidden">Жаңа қосымша бетте ашылады</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+              </article>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="sources">
+            <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+  <div class="row no-gutters">
+  
+   
+    
+    <div class="col-md-6">
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Ұйым </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Мерзімділік </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Ең ерте қолжетімді деректер </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Географиялық қамту </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Дереккөздерге сілтеме </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Жарияланымның күні </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Келесі жарияланым </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Статистикалық жіктелім </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Байланысу ақпараты </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Басқа ақпарат </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
+
+          </div>
+          
+          <div role="tabpanel" class="tab-pane" id="edit">
+            <div class="edit-container">
+              <a class="btn btn-primary" href="http://prose.io/#kazstat/sdg-data-kazstat/edit/develop/data/indicator_8-6-1.csv">Деректерді редакциялау</a>
+              <a class="btn btn-primary" href="http://prose.io/#kazstat/sdg-data-kazstat/edit/develop/meta/8-6-1.md">Метадеректерді редакциялау</a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9">
+        <a href="mailto:test@example.com">Бізбен хабарласыңыз</a>
+        
+          | <a href="https://facebook.com/statgov.kz" target="_blank">
+              @statgov.kz
+            </a>
+        
+      </div>
+      <div class="col-xs-3 text-right">
+        <a href="/sdg-site-kazstat/faq/">Жиі қойылатын сұрақтар</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
+<!-- Google Analytics -->
+
+<!-- /.container </div> -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
+<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
+<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+<script>
+  var remoteDataBaseUrl = 'https://kazstat.github.io/sdg-data-kazstat';
+</script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190412091112'></script>
+<script>
+$(function() {
+    if($('#indicatorData').length) {
+      var domData = $('#indicatorData').data();
+
+      $('.async-loading').each(function(i, obj) {
+          $(obj).append($('<img />').attr('src', $(obj).data('img')));
+      });
+
+      $.ajax({
+        url: 'https://kazstat.github.io/sdg-data-kazstat/comb/' + domData.id + '.json',
+        success: function(res) {
+
+          $('.async-loading').remove();
+          $('.async-loaded').show();
+
+          var model = new indicatorModel({
+            data: res.data,
+            edgesData: res.edges,
+            geoCodeRegEx: domData.geocoderegex,
+            showMap: domData.showmap,
+            country: domData.country,
+            indicatorId: domData.indicatorid,
+            shortIndicatorId: domData.id,
+            chartTitle: domData.charttitle,
+            measurementUnit: domData.measurementunit,
+            dataSource: domData.datasource,
+            geographicalArea: domData.geographicalarea,
+            showData: domData.showdata,
+            footnote: domData.footnote,
+            graphType: domData.graphtype
+          }),
+          view  = new indicatorView(model, {
+            rootElement: '#indicatorData',
+            legendElement: '#plotLegend',
+            maxChartHeight: 600,
+            tableColumnDefs: [
+              { maxCharCount: 25 }, // nowrap
+              { maxCharCount: 35, width: 200 },
+              { maxCharCount: Infinity, width: 250 }
+            ]
+          }),
+          controller = new indicatorController(model, view);
+          controller.initialise();
+        }
+      });
+    }
+
+    var switcher = new accessibilitySwitcher();
+
+
+});
+</script>
+
+
+
+
+</body>
+</html>
+
+
