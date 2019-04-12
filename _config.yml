@@ -102,7 +102,7 @@ non_global_metadata: indicator.national_metadata
 languages:
   - ru
   - en
-
+  - kz
 # This makes sure that all pages have a language.
 defaults:
   -
