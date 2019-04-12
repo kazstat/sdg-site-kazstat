@@ -23,7 +23,7 @@ sed -i -e 's/Host gh-prod/Host gh-prod\n  HostName github.com/g' ~/.ssh/config
 git clone git@gh-prod:$GH_ORG_PROD/sdg-kazstat.github.io.git out
 
 cd out
-git checkout gh-pages || git checkout --orphan gh-pages
+git checkout master || git checkout --orphan master
 git rm -rfq .
 cd ..
 
@@ -36,4 +36,4 @@ cd out
 git add -A
 git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
-git push origin gh-pages
+git push origin master
