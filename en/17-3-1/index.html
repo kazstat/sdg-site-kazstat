@@ -94,7 +94,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190524000117">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190525000051">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -102,7 +102,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190524000117"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190525000051"></head>
 <body class="language-en">
 <!-- <div class="container"> -->
 
@@ -265,15 +265,1577 @@ var translations = {
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_17-3-1' data-id="17-3-1" data-country="Казахстан"
-  data-charttitle="meta.name-17-3-1" data-measurementunit="процентах" data-datasource="" data-geographicalarea="Казахстан" data-footnote="" data-showdata="false" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="meta.name-17-3-1" data-measurementunit="процент" data-datasource="" data-geographicalarea="Казахстан" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
     
-    <div class="col-md-12">
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Sub-categories</h4>
+          <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+        </span>
+        <p>Click on the legend to remove individual lines from the chart.</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
     
+
+      
+      
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/headline/17-3-1.csv" class="btn btn-primary btn-download" download="indicator_17-3-1.csv" tabindex="0" role="button">Download Headline CSV</a>
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/data/17-3-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_17-3-1.csv' tabindex='0' role='button'>Download Source CSV</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">20.3</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15.9</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">5.7</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">7.09</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">4.17</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1.45</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">3.67</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1.52</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">3.76</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">3.12</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1.22</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15.03</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">13.74</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">13.89</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">10.18</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">10.75</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">8.33</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15.56</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">12.87</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">23725.5328442732</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15169.501879679</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">21046.4134079615</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">20899.4855287796</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">-13.19906</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15.62678</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">253.38455</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">74.99448</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1418.9309</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">367.97854</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1200.97734</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1997.88333</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">235.3059</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">131.19776</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">99.92902</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">175.539</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">9135.6714135793</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">6820.9810677409</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">8581.573300304</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">7668.5450037584</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1628.10237</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1396.7453</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1356.78257</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1201.6102</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">94.37473</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">-30.90072</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">149.599</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">85.52843</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">71.12025</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">31.70208</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">304.23569</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">461.7872</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">335.15974</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">14.40863</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">358.09765</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">-120.26878</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">359.04342</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">169.21308</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">206.78115</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">99.29908</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1609.36454</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">227.04216</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">450.22523</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">623.14186</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">346.91643</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">792.71403</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">472.41042</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">593.76484</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">6.72221</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">-13.48079</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">2.53991</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">18.01179</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">128.76013</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">170.42156</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">207.98848</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">151.40366</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">2638.50016</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">1796.1106</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">2458.5033</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">2927.62632</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">676.06448</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">424.00141</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">208.08627</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">583.74077</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">4949.1903306939</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">2742.5318019381</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">4671.0697876575</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">4015.9699250212</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">105.5049</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">113.20859</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">64.22974</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">340.90842</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+
+</div>
 
       
 
       <section>
 
+        
+        <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Chart</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Table</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Map</a>
+            </li></ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+    
+    
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>
+
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/sdg-site-kazstat/assets/img/loading.gif" alt="Loading map" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
         
 
         <!-- Nav tabs -->
@@ -323,6 +1885,30 @@ var translations = {
   
       
       <tr>
+        <th scope="row">Availability </th>
+        <td>
+          
+            1
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Classification </th>
+        <td>
+          
+            2 уровень
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
         <th scope="row">Indicator available </th>
         <td>
           
@@ -362,7 +1948,7 @@ var translations = {
         <th scope="row">Unit of measurement </th>
         <td>
           
-            процентах
+            процент
           
         </td>
         </tr>
@@ -416,8 +2002,8 @@ var translations = {
             
 
             
-              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/c668a137c13a542f480233edcff3476972c2b897" target="_blank">
-                2018-10-20: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/9667e8c5e00978b8c656b02b304f8d6ab1c74c3f" target="_blank">
+                2019-05-18: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -441,8 +2027,8 @@ var translations = {
             
 
             
-              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/bef1cf21fdb92f942558b35f8b1c07e344d16147" target="_blank">
-                2019-04-11: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/9667e8c5e00978b8c656b02b304f8d6ab1c74c3f" target="_blank">
+                2019-05-18: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -754,6 +2340,8 @@ var translations = {
   
   
   
+  
+  
 </table>
 
               </article>
@@ -772,6 +2360,8 @@ var translations = {
     <div class="col-md-6">
       
       <table class="table table-hover">
+  
+  
   
   
   
@@ -1061,7 +2651,7 @@ var translations = {
 <script>
   var remoteDataBaseUrl = 'https://kazstat.github.io/sdg-data-kazstat';
 </script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190524000117'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190525000051'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
