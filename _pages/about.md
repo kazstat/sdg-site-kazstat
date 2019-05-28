@@ -1,6 +1,7 @@
 ---
 title: About
 permalink: /about/
+language: kz
 layout: page
 ---
 
