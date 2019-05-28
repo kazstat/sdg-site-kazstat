@@ -1,0 +1,91 @@
+{%- include multilingual.html -%}
+{% include head.html %}
+{% include header.html %}
+{% assign goal_number = page.sdg_goal %}
+{% assign translated_goal = t.global_goals[goal_number] %}
+
+<div class="heading goal-{{page.sdg_goal}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 col-md-3 col-lg-2">
+        <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ translated_goal.short }} - {{ t.general.goal }} {{ goal_number }}" />
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10">
+        <h1>
+          <span class="hidden-sm hidden-md hidden-lg">{{ t.general.goal }} {{ goal_number }}: </span>{{ translated_goal.title }}
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content" class="container goal-indicators goal-{{page.sdg_goal}} goal-by-target">
+
+  {{ content }}
+  {% include components/breadcrumb.html %}
+
+  {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
+  {% for group in goal_indicators %}
+    {% assign target_id = group.name %}
+    {% assign translated_target = t.global_targets[target_id] %}
+    <div class="indicator-cards target">
+      <span>
+        <h2>{{ t.general.target }} {{ target_id }}</h2>
+      </span>
+      {{ translated_target.title }}
+    </div>
+    {% for indicator in group.items %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if forloop.first or loopindex == 1 %}
+    <div class="indicator-cards row">
+    {% endif %}
+
+      {% assign status_css = indicator.reporting_status | slugify %}
+      {% if indicator.reporting_status == 'notapplicable' %}
+        {% assign status_desc = t.status.not_applicable %}
+      {% endif %}
+      {% if indicator.reporting_status == 'notstarted' %}
+        {% assign status_desc = t.status.exploring_data_sources %}
+      {% endif %}
+      {% if indicator.reporting_status == 'inprogress' %}
+        {% assign status_desc = t.status.statistics_in_progress %}
+      {% endif %}
+      {% if indicator.reporting_status == 'complete' %}
+        {% assign status_desc = t.status.reported_online %}
+      {% endif %}
+      {% assign tag_classes = "" | split: "," %}
+      {% if indicator.tags %}
+        {% for tag in indicator.tags %}
+          {% assign tag_slug = "indicator-" | append: tag | slugify %}
+          {% assign tag_classes = tag_classes | push: tag_slug %}
+        {% endfor %}
+      {% endif %}
+
+      <div class="col-md-6 col-lg-6 {{ tag_classes }}">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ indicator.indicator | slugify }}">
+          <span>
+            {{ indicator.indicator }}
+            <span class="status {{ status_css }}">
+              {{ status_desc }}
+            </span>
+          </span>
+          {{ indicator.indicator | get_indicator_name }}
+          {% if indicator.tags %}
+            <ul class="tags">
+            {% for tag in indicator.tags %}
+              {% assign tag_class = tag | slugify %}
+              <li class="tag-{{ tag_class }} warning">{{ tag | t }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </a>
+      </div>
+
+    {% if forloop.last or loopindex == 0 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>
+
+{% include footer.html %}
