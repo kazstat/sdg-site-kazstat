@@ -1,6 +1,7 @@
 ---
 layout: categories
 permalink: /categories/
+language: kz
 title: Categories
 ---
 ## Posts by Category

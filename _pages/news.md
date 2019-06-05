@@ -2,6 +2,7 @@
 layout: news
 title: News & Events
 permalink: /news/
+language: kz
 ---
 
 ## News and Events
