@@ -11,6 +11,7 @@
 
 # Replace this title as needed.
 title: Indicators For The Sustainable Development Goals
+frontpage_heading: custom.frontpage_heading
 # Replace the baseurl with the name of this repository.
 baseurl: "/sdg-site-kazstat"
 url: ""
@@ -122,8 +123,16 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
-remote_theme: open-sdg/open-sdg@0.5.0
+remote_theme: open-sdg/open-sdg@0.6.0
 
 # Apply any custom CSS.
 custom_css:
   - /assets/css/custom.css
+
+create_goals:
+  layout: goal
+
+create_indicators:
+  layout: indicator
+
+create_pages: true
