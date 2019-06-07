@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CString.prototype.includes"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://kazstat.github.io/sdg-data-kazstat',
+
+  // A hook which can be replaced to modify the configuration for Chart.js.
+  // To see where this is used, see indicatorView.js createPlot() and updatePlot().
+  // To see an example of replacing it, see binary.html.
+  chartConfigAlter: function(config) {
+    // Alterations go here.
+    return config;
+  },
+};
+
+// For backwards compatibility, some of these might need to be global.
+// @TODO: Remove these eventually.
+var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
+
+</script>
+
         <script>
 // JavaScript container for translation data.
 var translations = {
@@ -46,7 +71,6 @@ var translations = {
 };
 </script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <!-- Basic Page Needs
         ================================================== -->
         <meta charset="utf-8">
@@ -82,10 +106,10 @@ var translations = {
         
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190607000044">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190607104525">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -93,7 +117,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190607000044"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190607104525"></head>
 <body class="language-ru">
 <!-- <div class="container"> -->
 
@@ -187,7 +211,6 @@ var translations = {
 <div id="main-content" class="container goal-indicators goal-12">
 
   
-
   <ol class="breadcrumb">
   <li><a href="/sdg-site-kazstat/ru/">Главная</a></li>
   
@@ -197,9 +220,12 @@ var translations = {
 
   
   
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -213,11 +239,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Число стран, имеющих национальный план
-действий по переходу к рациональным моделям потребления
-и производства или включивших рациональное
-потребление и производство в качестве приоритета
-или задачи в национальную стратегию
+            Число стран, имеющих национальный план действий по переходу к рациональным моделям потребления и производства или включивших рациональное потребление и производство в качестве приоритета или задачи в национальную стратегию
             
               <ul class="tags">
               
@@ -227,9 +249,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -243,9 +268,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Совокупные ресурсозатраты и ресурсозатраты
-на душу населения и в процентном отношении
-к ВВП
+            Совокупные ресурсозатраты и ресурсозатраты на душу населения и в процентном отношении к ВВП
             
               <ul class="tags">
               
@@ -255,9 +278,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -271,11 +297,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Совокупное внутреннее материальное потребление
-и внутреннее материальное потребление
-на душу населения и в процентном отношении к
-ВВП
-
+            Совокупное внутреннее материальное потребление и внутреннее материальное потребление на душу населения и в процентном отношении к ВВП
             
               <ul class="tags">
               
@@ -285,9 +307,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -311,9 +336,12 @@ var translations = {
         </div>
     </div>
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -327,12 +355,7 @@ var translations = {
                 Сообщалось в интернете
               </span>
             </span>
-            Число сторон международных многосторонних
-экологических соглашений по опасным и иным
-химических веществам и отходам, выполняющих
-свои обязательства и обязанности по передаче информации
-в соответствии с требованиями каждого
-соглашения
+            Выполнение обязательств по передаче информации и выполнения обязательств в соответствии с требованиями Базельской конвенции
             
               <ul class="tags">
               
@@ -342,9 +365,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -358,9 +384,7 @@ var translations = {
                 Сообщалось в интернете
               </span>
             </span>
-            Образование опасных отходов на душу населения
-и доля обрабатываемых опасных отходов в разбивке
-по видам обработки
+            Образование опасных отходов
             
               <ul class="tags">
               
@@ -373,9 +397,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -389,9 +416,7 @@ var translations = {
                 Сообщалось в интернете
               </span>
             </span>
-            Национальный уровень переработки отходов,
-масса утилизированных материалов в тоннах
-
+            Доля переработки и утилизации отходов производства к их образованию
             
               <ul class="tags">
               
@@ -404,9 +429,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -420,8 +448,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Число компаний, публикующих отчеты о рациональном
-использовании ресурсов
+            Число компаний, публикующих отчеты о рациональном использовании ресурсов
             
               <ul class="tags">
               
@@ -431,9 +458,12 @@ var translations = {
         </div>
     </div>
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -447,9 +477,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Число стран, осуществляющих стратегии и
-планы действий по экологизации государственных
-закупок
+            Число стран, осуществляющих стратегии и планы действий по экологизации государственных закупок
             
               <ul class="tags">
               
@@ -459,9 +487,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -475,12 +506,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Статус i) воспитания в духе всемирной гражданственности
-и ii) пропаганды устойчивого развития
-(включая просвещение по проблеме изменения
-климата) a) в национальной политике в сфере образования;
-b) в учебных программах; c) в программах
-подготовки учителей; и d) в системе аттестации учащихся
+            Статус i) воспитания в духе всемирной гражданственности и ii) пропаганды устойчивого развития (включая просвещение по проблеме изменения климата) в: a) национальной политике в сфере образования, b) учебных программах, c) программах подготовки учителей и d) системе аттестации учащихся
             
               <ul class="tags">
               
@@ -490,9 +516,12 @@ b) в учебных программах; c) в программах
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -506,11 +535,7 @@ b) в учебных программах; c) в программах
                 Исследование источников данных
               </span>
             </span>
-            Объем помощи развивающимся странам в
-сфере научно-исследовательских и опытно-конструкторских
-работ в интересах обеспечения рационального
-потребления и производства и внедрения экологически
-безопасных технологий
+            Объем помощи развивающимся странам в сфере научных исследований и опытно-конструкторских разработок в интересах обеспечения рационального потребления и производства и внедрения экологически безопасных технологий
             
               <ul class="tags">
               
@@ -520,9 +545,12 @@ b) в учебных программах; c) в программах
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -536,10 +564,7 @@ b) в учебных программах; c) в программах
                 Исследование источников данных
               </span>
             </span>
-            Число стратегий или директив и осуществляемых
-планов действий в области устойчивого туризма
-с согласованными инструментами мониторинга
-и оценки
+            Число стратегий или директив и осуществляемых планов действий в области устойчивого туризма с согласованными инструментами мониторинга и оценки
             
               <ul class="tags">
               
@@ -549,9 +574,12 @@ b) в учебных программах; c) в программах
         </div>
     </div>
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -565,10 +593,7 @@ b) в учебных программах; c) в программах
                 Исследование источников данных
               </span>
             </span>
-            Сумма субсидий на ископаемое топливо на
-единицу ВВП (производство и потребление) и их
-доля в совокупных национальных расходах на ископаемое
-топливо
+            Сумма субсидий на ископаемое топливо на единицу ВВП (производство и потребление) и их доля в совокупных национальных расходах на ископаемое топливо
             
               <ul class="tags">
               
@@ -587,16 +612,18 @@ b) в учебных программах; c) в программах
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
-      <div class="col-xs-9">
-        <a href="mailto:test@example.com">Свяжитесь с нами</a>
-        
-          | <a href="https://facebook.com/statgov.kz" target="_blank">
-              @statgov.kz
-            </a>
-        
-      </div>
-      <div class="col-xs-3 text-right">
-        <a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
+      <div class="col-xs-12">
+        <div id="footerLinks">
+          <ul>
+            <li><a href="mailto:test@example.com">Свяжитесь с нами</a></li>
+            
+            
+            <li><a href="https://facebook.com/statgov.kz" target="_blank">@statgov.kz</a></li>
+            
+            <li><a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a></li>
+            <li><a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -609,7 +636,7 @@ b) в учебных программах; c) в программах
 <!-- /.container </div> -->
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
@@ -624,10 +651,8 @@ b) в учебных программах; c) в программах
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-<script>
-  var remoteDataBaseUrl = 'https://kazstat.github.io/sdg-data-kazstat';
-</script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190607000044'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190607104525'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
@@ -638,7 +663,7 @@ $(function() {
       });
 
       $.ajax({
-        url: 'https://kazstat.github.io/sdg-data-kazstat/comb/' + domData.id + '.json',
+        url: opensdg.remoteDataBaseUrl + '/comb/' + domData.id + '.json',
         success: function(res) {
 
           $('.async-loading').remove();
@@ -658,7 +683,8 @@ $(function() {
             geographicalArea: domData.geographicalarea,
             showData: domData.showdata,
             footnote: domData.footnote,
-            graphType: domData.graphtype
+            graphType: domData.graphtype,
+            startValues: domData.startvalues
           }),
           view  = new indicatorView(model, {
             rootElement: '#indicatorData',

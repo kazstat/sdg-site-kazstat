@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CString.prototype.includes"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://kazstat.github.io/sdg-data-kazstat',
+
+  // A hook which can be replaced to modify the configuration for Chart.js.
+  // To see where this is used, see indicatorView.js createPlot() and updatePlot().
+  // To see an example of replacing it, see binary.html.
+  chartConfigAlter: function(config) {
+    // Alterations go here.
+    return config;
+  },
+};
+
+// For backwards compatibility, some of these might need to be global.
+// @TODO: Remove these eventually.
+var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
+
+</script>
+
         <script>
 // JavaScript container for translation data.
 var translations = {
@@ -46,7 +71,6 @@ var translations = {
 };
 </script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <!-- Basic Page Needs
         ================================================== -->
         <meta charset="utf-8">
@@ -82,10 +106,10 @@ var translations = {
         
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190607000044">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190607104525">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -93,7 +117,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190607000044"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190607104525"></head>
 <body class="language-ru">
 <!-- <div class="container"> -->
 
@@ -189,7 +213,6 @@ var translations = {
 <div id="main-content" class="container goal-indicators goal-6">
 
   
-
   <ol class="breadcrumb">
   <li><a href="/sdg-site-kazstat/ru/">Главная</a></li>
   
@@ -199,9 +222,12 @@ var translations = {
 
   
   
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -215,9 +241,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Доля населения, пользующегося услугами
-водоснабжения, организованного с соблюдением требований
-безопасности
+            Обеспеченность централизованным водоснабжением в РК, процентах
             
               <ul class="tags">
               
@@ -230,9 +254,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -246,10 +273,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Доля населения, использующего a) организованные
-с соблюдением требований безопасности
-услуги санитарии и b) устройства для мытья рук с
-мылом и водой
+            Доля населения охваченного очисткой сточных вод по РК
             
               <ul class="tags">
               
@@ -262,9 +286,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -278,7 +305,7 @@ var translations = {
                 Сообщалось в интернете
               </span>
             </span>
-            Доля безопасно очищаемых сточных вод
+            Доля нормативно очищенных сточных вод в общем объеме пропущенных сточных вод через очистные сооружения в городской местности
             
               <ul class="tags">
               
@@ -291,9 +318,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -307,7 +337,7 @@ var translations = {
                 Сообщалось в интернете
               </span>
             </span>
-            Доля водоемов с хорошим качеством воды
+            Доля водных объектов с хорошим качеством воды «нормативно чистая»
             
               <ul class="tags">
               
@@ -320,9 +350,12 @@ var translations = {
         </div>
     </div>
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -336,7 +369,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Динамика изменения эффективности водопользования
+            Динамика изменения эффективности водопользования по видам экономической деятельности
             
               <ul class="tags">
               
@@ -346,9 +379,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -362,9 +398,7 @@ var translations = {
                 Сообщалось в интернете
               </span>
             </span>
-            Уровень нагрузки на водные ресурсы: забор
-пресной воды в процентном отношении к имеющимся
-запасам пресной воды
+            Уровень нагрузки на водные ресурсы: забор пресной воды в процентном отношении к имеющимся запасам пресной воды
             
               <ul class="tags">
               
@@ -374,9 +408,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -390,8 +427,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Степень внедрения комплексного управления
-водными ресурсами (от 0 до 100)
+            Степень внедрения комплексного управления водными ресурсами (от 0 до 100)
             
               <ul class="tags">
               
@@ -401,9 +437,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -417,9 +456,7 @@ var translations = {
                 Сообщалось в интернете
               </span>
             </span>
-            Доля трансграничных водных бассейнов,
-охваченных действующими договоренностями о сотрудничестве
-в области водопользования
+            Доля трансграничных водных бассейнов, охваченных действующими договоренностями о сотрудничестве в области водопользования
             
               <ul class="tags">
               
@@ -429,9 +466,12 @@ var translations = {
         </div>
     </div>
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -445,8 +485,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Динамика изменения площади связанных с
-водой экосистем
+            Динамика изменения площади, связанных с водой, экосистем
             
               <ul class="tags">
               
@@ -456,9 +495,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -472,10 +514,7 @@ var translations = {
                 Исследование источников данных
               </span>
             </span>
-            Объем официальной помощи в целях развития,
-выделенной на водоснабжение и санитарию в
-рамках координируемой государственной программы
-расходов
+            Объем официальной помощи в целях развития, выделенной на водоснабжение и санитарию в рамках координируемой государственной программы расходов
             
               <ul class="tags">
               
@@ -485,9 +524,12 @@ var translations = {
         </div>
     
     
+
     
-    
-    
+      
+      
+      
+      
     
     
     
@@ -519,16 +561,18 @@ var translations = {
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
-      <div class="col-xs-9">
-        <a href="mailto:test@example.com">Свяжитесь с нами</a>
-        
-          | <a href="https://facebook.com/statgov.kz" target="_blank">
-              @statgov.kz
-            </a>
-        
-      </div>
-      <div class="col-xs-3 text-right">
-        <a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a> | <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
+      <div class="col-xs-12">
+        <div id="footerLinks">
+          <ul>
+            <li><a href="mailto:test@example.com">Свяжитесь с нами</a></li>
+            
+            
+            <li><a href="https://facebook.com/statgov.kz" target="_blank">@statgov.kz</a></li>
+            
+            <li><a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a></li>
+            <li><a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -541,7 +585,7 @@ var translations = {
 <!-- /.container </div> -->
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
@@ -556,10 +600,8 @@ var translations = {
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-<script>
-  var remoteDataBaseUrl = 'https://kazstat.github.io/sdg-data-kazstat';
-</script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190607000044'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190607104525'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
@@ -570,7 +612,7 @@ $(function() {
       });
 
       $.ajax({
-        url: 'https://kazstat.github.io/sdg-data-kazstat/comb/' + domData.id + '.json',
+        url: opensdg.remoteDataBaseUrl + '/comb/' + domData.id + '.json',
         success: function(res) {
 
           $('.async-loading').remove();
@@ -590,7 +632,8 @@ $(function() {
             geographicalArea: domData.geographicalarea,
             showData: domData.showdata,
             footnote: domData.footnote,
-            graphType: domData.graphtype
+            graphType: domData.graphtype,
+            startValues: domData.startvalues
           }),
           view  = new indicatorView(model, {
             rootElement: '#indicatorData',
