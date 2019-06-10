@@ -130,7 +130,7 @@ custom_css:
   - /assets/css/custom.css
 
 create_goals:
-  layout: goal
+  layout: goal-by-target-grid
 
 create_indicators:
   layout: indicator
