@@ -120,7 +120,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190610000144">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190610210423">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -128,7 +128,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190610000144"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190610210423"></head>
 <body class="language-kz">
 <!-- <div class="container"> -->
 
@@ -291,16 +291,197 @@ var translations = {
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_17-17-1' data-id="17-17-1" data-country="Казахстан"
   data-charttitle="Объем грантового финансирования, государственного социального заказа НПО, по видам направлений, в млн.тенге" data-measurementunit="" data-datasource=""
-  data-geographicalarea="Казахстан" data-footnote="" data-showdata="false" data-graphtype="line"
+  data-geographicalarea="Казахстан" data-footnote="" data-showdata="true" data-graphtype="line"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
-    <div class="col-md-12">
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Субкатегориялар</h4>
+          <p>Деректерді түрлі бөліністерді көру үшін , төмендегі түсетін менюдан категорияларды таңдаңыз. Бірнешесі қолжетімді болмайды, одан жоғары деңгейді таңдамағанша</p>
+        </span>
+        <p>Графиктен жолдарды алып тастау үшін легендаға басыңыз</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
     
+
+      
+      
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/headline/17-17-1.csv" class="btn btn-primary btn-download" download="indicator_17-17-1.csv" tabindex="0" role="button">CSV тақырыптарын жүктеу</a>
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/data/17-17-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_17-17-1.csv' tabindex='0' role='button'>Бастапқы CSV жүктеу</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>млн. тенге</td>
+          
+          
+          
+          <td class="table-value">8.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>млн. тенге</td>
+          
+          
+          
+          <td class="table-value">10.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>млн. тенге</td>
+          
+          
+          
+          <td class="table-value">1.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>млн. тенге</td>
+          
+          
+          
+          <td class="table-value">2.0</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+
+</div>
 
       
 
       <section>
 
+        
+        <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+>График</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+>Кесте</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
+>Карта</a>
+            </li></ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> Графикте көрсету үшін, кестеде тым көп деректер. Барлығын көру ушін белгіленгенді жойыңыздар
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>
+
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/sdg-site-kazstat/assets/img/loading.gif" alt="Картаны жүктеу" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
         
 
         <!-- Nav tabs -->
@@ -377,7 +558,19 @@ data-event-label="Change to Sources tab"
         <th scope="row">Classification </th>
         <td>
           
-            2 уровень
+            2
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Customisation </th>
+        <td>
+          
+            Альтернативный национальный
           
         </td>
         </tr>
@@ -504,8 +697,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/9667e8c5e00978b8c656b02b304f8d6ab1c74c3f" target="_blank">
-                2019-05-18: see changes on GitHub <span class="visuallyhidden">Жаңа қосымша бетте ашылады</span>
+              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/89ef0cdaad97f3e70bd743680bc977f5ffb30447" target="_blank">
+                2019-06-10: see changes on GitHub <span class="visuallyhidden">Жаңа қосымша бетте ашылады</span>
               </a>
             
 
@@ -517,6 +710,24 @@ data-event-label="Change to Sources tab"
   
       
       
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -819,6 +1030,25 @@ data-event-label="Change to Sources tab"
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </table>
 
               </article>
@@ -874,9 +1104,46 @@ data-event-label="Change to Sources tab"
   
   
   
+  
       
       <tr>
         <th scope="row">Ұйым </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Compilation </th>
+        <td>
+          
+            Министерство национальной экономики РК
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Implementation </th>
+        <td>
+          
+            Министерство национальной экономики РК
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Data </th>
         <td>
           
             
@@ -1063,6 +1330,21 @@ data-event-label="Change to Sources tab"
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </table>
 
     </div>
@@ -1128,7 +1410,7 @@ data-event-label="Change to Sources tab"
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190610000144'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190610210423'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
