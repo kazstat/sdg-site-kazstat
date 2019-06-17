@@ -34,7 +34,7 @@ mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
 cd out
 
 # Create the CNAME file which Github Pages needs for custom domains.
-echo "sdg.stat.kz" > CNAME
+#echo "sdg.stat.kz" > CNAME
 
 git add -A
 git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
