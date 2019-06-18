@@ -35,10 +35,7 @@
       {{ translated_target.title }}
     </div>
     {% for indicator in group.items %}
-    {% assign loopindex = forloop.index | modulo: 2 %}
-    {% if forloop.first or loopindex == 1 %}
     <div class="indicator-cards row">
-    {% endif %}
 
       {% assign status_css = indicator.reporting_status | slugify %}
       {% if indicator.reporting_status == 'notapplicable' %}
@@ -61,7 +58,7 @@
         {% endfor %}
       {% endif %}
 
-      <div class="col-md-6 col-lg-6 {{ tag_classes }}">
+      <div class="col-md-12 col-lg-12 {{ tag_classes }}">
         <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ indicator.indicator | slugify }}">
           <span>
             {{ indicator.indicator }}
@@ -81,9 +78,7 @@
         </a>
       </div>
 
-    {% if forloop.last or loopindex == 0 %}
     </div>
-    {% endif %}
     {% endfor %}
   {% endfor %}
 </div>
