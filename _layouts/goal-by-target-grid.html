@@ -34,6 +34,15 @@
       </span>
       {{ translated_target.title }}
     </div>
+    {% assign infographic = target_id | replace: ".", "-" %}
+    {% if t.infographics[infographic] %}
+    <div class="infographic">
+      <img
+        src="{{ t.infographics[infographic].image }}"
+        alt="{{ t.infographics[infographic].alt | escape }}"
+      />
+    </div>
+    {% endif %}
     {% for indicator in group.items %}
     <div class="indicator-cards row">
 
