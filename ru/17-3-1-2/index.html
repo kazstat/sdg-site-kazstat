@@ -1,0 +1,1601 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CString.prototype.includes"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://kazstat.github.io/sdg-data-kazstat',
+
+  // A hook which can be replaced to modify the configuration for Chart.js.
+  // To see where this is used, see indicatorView.js createPlot() and updatePlot().
+  // To see an example of replacing it, see binary.html.
+  chartConfigAlter: function(config) {
+    // Alterations go here.
+    return config;
+  },
+};
+
+// For backwards compatibility, some of these might need to be global.
+// @TODO: Remove these eventually.
+var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+        
+        <title>
+        Показатель 17.3.1.2 - Цель 17 - Тұрақты даму мүдделеріндегі әріптестіктер
+        </title>
+        <meta name="description" content="">
+        <meta property="og:description" content="">
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+        <link rel="canonical" href="/">
+
+        
+
+        <!--[if IE 9]>
+        <script src="/sdg-site-kazstat/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <!-- Favicons ================================================== -->
+        <!-- 128x128 -->
+        <link rel="shortcut icon" type="image/ico" href="/sdg-site-kazstat/assets/img/favicons/favicon.ico">
+        <link rel="icon" type="image/png" href="/sdg-site-kazstat/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
+        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+        -->
+
+        
+
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190619123123">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190619123123"></head>
+<body class="language-ru">
+<!-- <div class="container"> -->
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
+<div id="disclaimer">
+  <div class="container">
+  <div class="alert alert-danger" role="alert">
+    <strong class="phase-tag">Альфа</strong>
+    Это сайт находится в разработке. Мы рады вашим отзывам.
+  </div>
+</div>
+
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <a class="navbar-brand" href="/sdg-site-kazstat/ru/" id="home">
+      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
+    </a>
+
+  <div class='hidden visible-xs float-right'>
+    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+      <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">Pусский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/17-3-1-2/">Қазақ</a></li><li><a href="/sdg-site-kazstat/en/17-3-1-2/">English</a></li></ul>
+
+    </div></div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li><span data-target="menu">Меню</span></li>
+        <li><span data-target="search">Поиск</span></li>
+      </ul>
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+            <a href="/sdg-site-kazstat/ru/reporting-status">Состояние отчётности</a>
+          </li><li class="nav-link ">
+            <a href="/sdg-site-kazstat/ru/about">О нас</a>
+          </li><li class="nav-link ">
+            <a href="/sdg-site-kazstat/ru/guidance">Руководство</a>
+          </li><li class="nav-link ">
+            <a href="/sdg-site-kazstat/ru/faq">Часто задаваемые вопросы</a>
+          </li><li>
+          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  <span class="language-toggle-text">Pусский</span>
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/17-3-1-2/">Қазақ</a></li><li><a href="/sdg-site-kazstat/en/17-3-1-2/">English</a></li></ul>
+
+        </li></ul>
+
+      <div id="search" class="menu-target">
+  <label for="indicator_search">
+    <i class="fa fa-search" aria-hidden="true"></i><span>Поиск:</span>
+  </label>
+  <input id="indicator_search" title="Поиск показателя" placeholder="Поиск показателя" data-url="/sdg-site-kazstat/ru/indicators.json" data-pageurl="/sdg-site-kazstat/ru/search/?q=" />
+</div>
+
+
+    </nav>
+  </div>
+
+</header>
+
+<script type="text/template" id="item_template">
+  <% _.each(series, function(seriesItem) { %>
+    <div class="variable-selector<% if(allowedFields.indexOf(seriesItem.field) == -1) { %> disallowed child<% }%>" data-field="<%=seriesItem.field%>">
+      <button class='accessBtn' tabindex='0' aria-expanded='false'><h5><%=translations.t(seriesItem.field)%><i class="fa fa-chevron-down"></i></h5></button>
+      <div class="bar">
+        <div class="selected"></div>
+      </div>
+      <div class="variable-options">
+        <div>
+          <button data-type="select">Выделить всё</button>
+          <button data-type="clear">Очистить всё</button>
+        </div>
+        <% _.each(seriesItem.values, function(item) { %>
+          <label><input type="checkbox" value="<%=item.value%>" data-field="<%=seriesItem.field%>" /><%=translations.t(item.value)%></label>
+        <% }); %>
+      </div>
+
+      <% if(allowedFields.indexOf(seriesItem.field) == -1) { %>
+        <div class="variable-hint">Доступно, когда выбрано
+        </div>
+        <div class="no-data-hint">
+          Нет имеющихся вариантов из-за фильтров наверху.
+        </div>
+      <% }%>
+
+    </div>
+  <% }); %>
+</script>
+
+<script type="text/template" id="units_template">
+  <% if(units.length) { %>
+    <h5>Вид единиц</h5>
+    <% _.each(units, function(unitsItem, index) { %>
+      <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <% if(!index) { %>checked="checked"<% } %> /> <%=translations.t(unitsItem)%></label>
+    <% }); %>
+  <% } %>
+</script>
+
+<script>translations['indicator'] = {"chart":"График","clear_all":"Очистить всё","clear_selections":"Очистить выделенное","dataset_size_warning":"В таблице слишком много данных, чтобы показать в графике. Чтобы увидеть все, удалите выделенное.","download_chart":"Скачать график CSV","download_csv":"Скачать CSV","download_csv_title":"Скачать в формате CSV","download_headline":"Скачать заголовки CSV","download_headline_title":"Скачать данные заголовков в формате CSV","download_source":"Скачать исходные CSV","download_source_title":"Скачать исходные данные в формате CSV","download_table":"Скачать табличные CSV","edit":"Редактировать","edit_data":"Редактировать данные","edit_metadata":"Редактировать метаданные","footnote":"Сноска","geographical_area":"Географический район","global_metadata":"Глобальные метаданные","global_metadata_blurb":"В этой таблице представлена информация для метаданных показателей ЦУР, определенных Статистической комиссией ООН. Полные глобальные метаданные представлены Статистическим отделом ООН.","legend_help":"Нажмите на легенду, чтобы убрать линии из графика.","loading_map":"Загрузка карты","map":"Карта","national_metadata":"Национальные метаданные","national_metadata_blurb":"В этой таблице представлены метаданные для фактического показателя, доступного из статистики ближайшей к соответствующему глобальному индикатору ЦУР. Обратите внимание, что даже если глобальный индикатор ЦУР полностью доступен из статистики, по этой таблице следует проконсультироваться для получения информации о национальной методологии и других специфичных метаданных.","no_data_hint":"Нет имеющихся вариантов из-за фильтров наверху.","select_all":"Выделить всё","series_help":"Выберите категории из выпадающего меню внизу, чтобы увидеть разные разбивки данных. Несколько не будет доступно, пока более высокий уровень не выбран. ","source":"Источник","sources":"Источники","sub_categories":"Субкатегории","table":"Таблица","unit_of_measurement":"Единица измерения","units_type":"Вид единиц","variable_hint":"Доступно, когда выбрано","view_indicator_list":"Посмотреть список индикаторов этой цели"};</script>
+
+<script>translations['data'] = {"Доход":"Доход","1,9 долларов США по ППС в  день":"1,9 долларов США по ППС в  день","3,2 долларов США по ППС в  день":"3,2 долларов США по ППС в  день","5,5 долларов США по ППС в  день":"5,5 долларов США по ППС в  день","Пол":"Пол","мужчины":"мужчины","женщины":"женщины","Местность":"Местность","городская местность":"городская местность","сельская местность":"сельская местность","Регионы":"Регионы","Акмолинская":"Акмолинская","Актюбинская":"Актюбинская","Алматинская":"Алматинская","Атырауская":"Атырауская","Западно-Казахстанская":"Западно-Казахстанская","Жамбылская":"Жамбылская","Карагандинская":"Карагандинская","Костанайская":"Костанайская","Кызылординская":"Кызылординская","Мангистауская":"Мангистауская","Южно-Казахстанская":"Южно-Казахстанская","Павлодарская":"Павлодарская","Северо-Казахстанская":"Северо-Казахстанская","Туркестанская":"Туркестанская","Восточно-Казахстанская":"Восточно-Казахстанская","г.Нур-Султан":"г.Нур-Султан","г.Алматы":"г.Алматы","г.Шымкент":"г.Шымкент","Социальные пособия":"Социальные пособия","Численность получателей пособий на рождение ребенка и по уходу за ребенком до 1 года":"Численность получателей пособий на рождение ребенка и по уходу за ребенком до 1 года","Численность населения, охваченного социальными выплатами по причине потери работы":"Численность населения, охваченного социальными выплатами по причине потери работы","Численность населения, охваченного пенсионными выплатами":"Численность населения, охваченного пенсионными выплатами","Пенсионные выплаты":"Пенсионные выплаты","государственная базовая пенсионная выплата":"государственная базовая пенсионная выплата","пенсионные выплаты по возрасту и за выслугу лет":"пенсионные выплаты по возрасту и за выслугу лет","Численность получателей адресной социальной помощи":"Численность получателей адресной социальной помощи","Республика Казахстан":"Республика Казахстан","Жертвы чрезвычайных ситуаций":"Жертвы чрезвычайных ситуаций","пострадало":"пострадало","Продовольственная безопасность":"Продовольственная безопасность","умеренное и острое отсутствие продовольственной безопасности":"умеренное и острое отсутствие продовольственной безопасности","острое отсутствие продовольственной безопасности":"острое отсутствие продовольственной безопасности","Степень отклонения":"Степень отклонения","умеренная и сильная степень отклонения от нормы":"умеренная и сильная степень отклонения от нормы","сильная степень отклонения от нормы":"сильная степень отклонения от нормы","Охраняемые виды":"Охраняемые виды","тугайный благородный олень":"тугайный благородный олень","Виды сайгаков":"Виды сайгаков","кулан":"кулан","джейран":"джейран","архар":"архар","Официальная помощь для развития":"Официальная помощь для развития","Казахстан-получатель":"Казахстан-получатель","Казахстан-донор":"Казахстан-донор","мальчики и девочки":"мальчики и девочки","городское население":"городское население","сельское население":"сельское население","мальчики":"мальчики","девочки":"девочки","Образование":"Образование","по уровню образования":"по уровню образования","высшее":"высшее","незаконченное высшее":"незаконченное высшее","среднее специальное":"среднее специальное","среднее общее":"среднее общее","неполное среднее":"неполное среднее","начальное и ниже":"начальное и ниже","не указавшие":"не указавшие","Брачное состояние":"Брачное состояние","по брачному состоянию матери":"по брачному состоянию матери","состоял (а) в браке":"состоял (а) в браке","не состоял (а) в браке":"не состоял (а) в браке","вдовец (вдова)":"вдовец (вдова)","разведен(а)":"разведен(а)","не указано":"не указано","по гражданству матери":"по гражданству матери","гражданство":"гражданство","Казахстан":"Казахстан","не Казахстан":"не Казахстан","по брачному состоянию":"по брачному состоянию","по гражданству":"по гражданству","здравоохранение":"здравоохранение","Заболеваемость психическими и поведенческими расстройствами в результате употребления алкоголя":"Заболеваемость психическими и поведенческими расстройствами в результате употребления алкоголя","Заболеваемость психическими и поведенческими расстройствами в результате употребления наркотических веществ":"Заболеваемость психическими и поведенческими расстройствами в результате употребления наркотических веществ","Возраст":"Возраст","возраст":"возраст","15-19":"15-19","20-24":"20-24","25-29":"25-29","30-34":"30-34","35-39":"35-39","40-44":"40-44","45-49":"45-49","Вид экономической деятельности":"Вид экономической деятельности","образование":"образование","нет образования/Начальное":"нет образования/Начальное","начальное/не законченное среднее":"начальное/не законченное среднее","основное среднее":"основное среднее","общее среднее":"общее среднее","техническое и профессиональное":"техническое и профессиональное","квинтиль индекса благосостояния":"квинтиль индекса благосостояния","беднейший":"беднейший","второй":"второй","средний":"средний","четвертый":"четвертый","богатейший":"богатейший","в возрасте от 10 до -14 лет":"в возрасте от 10 до -14 лет","все население":"все население","36-47 месяцев":"36-47 месяцев","48-59 месяцев":"48-59 месяцев","образование матери":"образование матери","нет":"нет","национальность":"национальность","национальность главы домохозяйства":"национальность главы домохозяйства","казахи":"казахи","русские":"русские","другие":"другие","5 лет":"5 лет","6 лет":"6 лет","7 лет и старше":"7 лет и старше","пропуск/НЗ":"пропуск/НЗ","в возрасте 15-24 лет":"в возрасте 15-24 лет","в возрасте 15 лет и старше":"в возрасте 15 лет и старше","начальное образование":"начальное образование","среднее образование":"среднее образование","основное среднее образование":"основное среднее образование","общее среднее образование":"общее среднее образование","невозможно определить":"невозможно определить","ДО":"ДО","ОСО":"ОСО","женщины в возрасте 18-75 лет":"женщины в возрасте 18-75 лет","Период времени":"Период времени","в течение жизни":"в течение жизни","Вид насилия":"Вид насилия","физическое насилие":"физическое насилие","сексуальное насилие":"сексуальное насилие","физическое насилие и/или сексуальное насилие":"физическое насилие и/или сексуальное насилие","в последние 12 месяцев":"в последние 12 месяцев","вид насилия":"вид насилия","сексуальное насилие, совершенное лицом, не являющимся партнером":"сексуальное насилие, совершенное лицом, не являющимся партнером","изнасилование, совершенное лицом, не являющимся партнером":"изнасилование, совершенное лицом, не являющимся партнером","попытка изнасилования или иное сексуальное насилие":"попытка изнасилования или иное сексуальное насилие","любое сексуальное насилие":"любое сексуальное насилие","16-24":"16-24","25-28":"25-28","29-34":"29-34","35-44":"35-44","45-54":"45-54","55-64":"55-64","65 и старше":"65 и старше","сельским хозяйством, лесным хозяйством и рыболовством":"сельским хозяйством, лесным хозяйством и рыболовством","обрабатывающей промышленностью":"обрабатывающей промышленностью","предприятиями электроэнергетики":"предприятиями электроэнергетики","прочими видами деятельности":"прочими видами деятельности","с учетом больших ГЭС":"с учетом больших ГЭС","Вид собственности":"Вид собственности","по государственным предприятиям и организациям":"по государственным предприятиям и организациям","по предприятиям и организациям частной собственности":"по предприятиям и организациям частной собственности","по предприятиям и организациям  иностранной собственности":"по предприятиям и организациям  иностранной собственности","по видам экономической деятельности":"по видам экономической деятельности","сельское, лесное и рыбное хозяйство":"сельское, лесное и рыбное хозяйство","промышленность":"промышленность","строительство":"строительство","оптовая и розничная торговля; ремонт автомобилей и мотоциклов":"оптовая и розничная торговля; ремонт автомобилей и мотоциклов","транспорт и складирование":"транспорт и складирование","услуги по проживанию и питанию":"услуги по проживанию и питанию","информация и связь":"информация и связь","финансовая и страховая деятельность":"финансовая и страховая деятельность","операции с недвижимым имуществом":"операции с недвижимым имуществом","техническая деятельность":"техническая деятельность","деятельность в области администрированного и вспомогательного обслуживания":"деятельность в области администрированного и вспомогательного обслуживания","государственное управление и оборона; обязательное социальное обеспечение":"государственное управление и оборона; обязательное социальное обеспечение","здравоохранение и социальные услуги":"здравоохранение и социальные услуги","искусство, развлечение и отдых":"искусство, развлечение и отдых","предоставление прочих видов услуг":"предоставление прочих видов услуг","Объем, не распределенный по областям":"Объем, не распределенный по областям","Расходы бюджета":"Расходы бюджета","Дефицит государственного бюджета":"Дефицит государственного бюджета","Вид частиц РМ":"Вид частиц РМ","взвешенные частицы РМ-2,5":"взвешенные частицы РМ-2,5","Город":"Город","г.Кокшетау":"г.Кокшетау","г.Степногорск":"г.Степногорск","СКФМ «Боровое»":"СКФМ «Боровое»","ЩБКЗ":"ЩБКЗ","п.Сарыбулак":"п.Сарыбулак","г.Актобе":"г.Актобе","г.Талдыкорган":"г.Талдыкорган","г.Атырау":"г.Атырау","г.Кульсары":"г.Кульсары","г.Усть-Каменогорск":"г.Усть-Каменогорск","г.Риддер":"г.Риддер","г.Семей":"г.Семей","п.Глубокое":"п.Глубокое","г.Зыряновск":"г.Зыряновск","г.Тараз":"г.Тараз","г.Жанатас":"г.Жанатас","г.Каратау":"г.Каратау","г.Чу":"г.Чу","п.Кордай":"п.Кордай","г.Уральск":"г.Уральск","г.Аксай":"г.Аксай","п.Березовка":"п.Березовка","п.Январцево":"п.Январцево","г.Караганда":"г.Караганда","г.Балхаш":"г.Балхаш","г.Жезказган":"г.Жезказган","г.Сарань":"г.Сарань","г.Темиртау":"г.Темиртау","г.Костанай":"г.Костанай","г.Рудный":"г.Рудный","п.Карабалык":"п.Карабалык","г.Аркалык":"г.Аркалык","г.Житикара":"г.Житикара","г.Лисаковск":"г.Лисаковск","г.Кызылорда":"г.Кызылорда","п.Акай":"п.Акай","п.Торетам":"п.Торетам","г.Актау":"г.Актау","г.Жанаозен":"г.Жанаозен","п.Бейнеу":"п.Бейнеу","г.Павлодар":"г.Павлодар","г.Экибастуз":"г.Экибастуз","г.Аксу":"г.Аксу","г.Петропавловск":"г.Петропавловск","г.Туркестан":"г.Туркестан","г.Кентау":"г.Кентау","взвешенные частицы РМ-10":"взвешенные частицы РМ-10","Охраняемые рыбные ресурсы":"Охраняемые рыбные ресурсы","из них ценных видов, являющихся объектами рыболовства, количество":"из них ценных видов, являющихся объектами рыболовства, количество","редких и находящихся под угрозой исчезновения видов":"редких и находящихся под угрозой исчезновения видов","Браконьерство":"Браконьерство","выявлено нарушений":"выявлено нарушений","наложено штрафов на сумму":"наложено штрафов на сумму","взыскано":"взыскано","виды растений":"виды растений","виды животных":"виды животных","Уральская популяция":"Уральская популяция","Устюртская популяция":"Устюртская популяция","Бетпакдалинская популяция":"Бетпакдалинская популяция","Степень безопасности":"Степень безопасности","в полной безопасности":"в полной безопасности","достаточно безопасно":"достаточно безопасно","не безопасно":"не безопасно","узбеки":"узбеки","украинцы":"украинцы","уйгуры":"уйгуры","другие национальности":"другие национальности","50-54":"50-54","55-59":"55-59","60+":"60+","преступления":"преступления","задержано":"задержано","избраны меры пресечения в виде ареста":"избраны меры пресечения в виде ареста","Государственные услуги общего характера":"Государственные услуги общего характера","Оборона":"Оборона","Общественный порядок, безопастность, провавая, судебная, уголовно-исполнительская деятельность":"Общественный порядок, безопастность, провавая, судебная, уголовно-исполнительская деятельность","Здравоохранение":"Здравоохранение","Социальная помощь и социальное обеспечение":"Социальная помощь и социальное обеспечение","Жилищно-комунальная хозяйство":"Жилищно-комунальная хозяйство","Культура, спорт, туризм и информационное пространство":"Культура, спорт, туризм и информационное пространство","Топливно-энергетический комплекс недропользования":"Топливно-энергетический комплекс недропользования","Сельское, водное, лесное, рыбное хозяйство, особо охраняемые природные территории, охрана окружающей среды и животного мира, земельные отношения":"Сельское, водное, лесное, рыбное хозяйство, особо охраняемые природные территории, охрана окружающей среды и животного мира, земельные отношения","Промышленность, архитектураная, градостраительная и строительная деятельность":"Промышленность, архитектураная, градостраительная и строительная деятельность","Транспорт и коммуникация":"Транспорт и коммуникация","Прочие":"Прочие","Обслуживание долга":"Обслуживание долга","Трансферты":"Трансферты","Доходы бюджета":"Доходы бюджета","Налоговые поступления":"Налоговые поступления","Корпоративный подоходный налог":"Корпоративный подоходный налог","Доля к ВВП, в процентах":"Доля к ВВП, в процентах","Индивидуальный подоходный налог":"Индивидуальный подоходный налог","Социальный налог":"Социальный налог","Hалоги на имущество":"Hалоги на имущество","Земельный налог":"Земельный налог","Hалог на транспортные средства":"Hалог на транспортные средства","Единый земельный налог":"Единый земельный налог","Налог на добавленную стоимость":"Налог на добавленную стоимость","Поступления за использование природных и других ресурсов":"Поступления за использование природных и других ресурсов","Сборы за регистрацию":"Сборы за регистрацию","Налог на игорный бизнес":"Налог на игорный бизнес","Налоги на международную торговлю и внешние операции":"Налоги на международную торговлю и внешние операции","Акцизы":"Акцизы","Государственная пошлина":"Государственная пошлина","ВВП":"ВВП","Всего доходы КБ":"Всего доходы КБ","Доля в общем объеме доходов КБ, в процентах":"Доля в общем объеме доходов КБ, в процентах","Скорость интернета":"Скорость интернета","от 256 кБит/сек до менее 2 Мбит/сек":"от 256 кБит/сек до менее 2 Мбит/сек","от 2 Мбит/сек до менее 10 Мбит/сек":"от 2 Мбит/сек до менее 10 Мбит/сек","Страны":"Страны","развивающихся стран":"развивающихся стран","наименее развитых стран":"наименее развитых стран","природного характера":"природного характера","техногенного характера":"техногенного характера","процент":"процент","человек":"человек","на 100000 человек":"на 100000 человек","тыс.тенге":"тыс.тенге","млн.долларов США":"млн.долларов США","на 100 тыс.родившихся живыми":"на 100 тыс.родившихся живыми","на 1000 родившихся":"на 1000 родившихся","на 1000 неинфицированных":"на 1000 неинфицированных","на 100 000 человек":"на 100 000 человек","на 100 000 населения":"на 100 000 населения","на 1 000 женщин":"на 1 000 женщин"," в данной возрастной группе":" в данной возрастной группе","на 1000 населения":"на 1000 населения","тнэ на тыс.долл. США в ценах  2010 года":"тнэ на тыс.долл. США в ценах  2010 года","в процентах к ":"в процентах к ","2005 году":"2005 году","предыдущему году":"предыдущему году","тенге":"тенге","на 1000 работников":"на 1000 работников","на 100 000 взрослых":"на 100 000 взрослых","млн.тонн":"млн.тонн","процент, в ценах 2010 года":"процент, в ценах 2010 года","количество":"количество","кв.м.":"кв.м.","мг/метр куб":"мг/метр куб","млн.тонн/год":"млн.тонн/год","единиц":"единиц","тыс.гектаров":"тыс.гектаров","тыс.гектар":"тыс.гектар","млн.тенге":"млн.тенге","тыс.единиц":"тыс.единиц"};</script>
+
+
+<div class="heading indicator goal-17">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 col-md-3 col-lg-2">
+        <a href="/sdg-site-kazstat/ru/17" title="Посмотреть список индикаторов этой цели">
+          <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/17.png" alt="Партнерство в интересах устойчивого развития - Цель 17" />
+        </a>
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10">
+        <h1>
+          <a href="/sdg-site-kazstat/ru/17">
+            <span class="hidden-sm hidden-md hidden-lg">Цель 17: </span>Укрепление средств осуществления и активизация работы в рамках Глобального
+партнерства в интересах устойчивого развития
+          </a>
+        </h1>
+        <h2>Показатель 17.3.1.2: meta.name-17-3-1-2</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content" class="container goal-17">
+  <ol class="breadcrumb">
+  <li><a href="/sdg-site-kazstat/ru/">Главная</a></li>
+  
+      <li><a href="/sdg-site-kazstat/ru/17" title="Тұрақты даму мүдделеріндегі жаһандық әріптестіктердің шектерінде жүзеге асыру құралдарын нығайту және жұмысты жандандыру">Цель 17</a></li>
+      <li class="active">Показатель 17.3.1.2</li>
+  
+</ol>
+
+  <div class="row" id="page-content-row">
+    <div class="col-xs-12">
+      <div id="page-content">
+  
+
+</div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>meta.name-17-3-1-2</h2>
+    </div>
+  </div>
+
+  <div class="row" id="indicatorData" data-indicatorid='indicator_17-3-1-2' data-id="17-3-1-2" data-country="Казахстан"
+  data-charttitle="meta.name-17-3-1-2" data-measurementunit="процент" data-datasource=""
+  data-geographicalarea="Казахстан" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geocoderegex="" data-showmap="" data-startvalues="">
+    
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Субкатегории</h4>
+          <p>Выберите категории из выпадающего меню внизу, чтобы увидеть разные разбивки данных. Несколько не будет доступно, пока более высокий уровень не выбран. </p>
+        </span>
+        <p>Нажмите на легенду, чтобы убрать линии из графика.</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
+    
+
+      
+      
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/headline/17-3-1-2.csv" class="btn btn-primary btn-download" download="indicator_17-3-1-2.csv" tabindex="0" role="button">Скачать заголовки CSV</a>
+
+    <a href="https://kazstat.github.io/sdg-data-kazstat/data/17-3-1-2.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_17-3-1-2.csv' tabindex='0' role='button'>Скачать исходные CSV</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15.03</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">13.74</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">13.89</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">10.18</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">10.75</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">8.33</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15.56</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">12.87</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">23725.5328442732</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">15169.501879679</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">21046.4134079615</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>процент</td>
+          
+          
+          
+          <td class="table-value">20899.4855287796</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+
+</div>
+
+      
+
+      <section>
+
+        
+        <p class="async-loading" data-img="/sdg-site-kazstat/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+>График</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+>Таблица</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
+>Карта</a>
+            </li></ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> В таблице слишком много данных, чтобы показать в графике. Чтобы увидеть все, удалите выделенное.
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>
+
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/sdg-site-kazstat/assets/img/loading.gif" alt="Загрузка карты" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="nav-item active">
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to National Metadata tab"
+>Национальные метаданные</a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to Global Metadata tab"
+>Глобальные метаданные</a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to Sources tab"
+>Источники</a>
+          </li>
+          
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Редактировать</a>
+          </li>
+          
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="metadata">
+            <!-- National Metadata -->
+            <div > <!-- formerly class="collapsible expanded" -->
+              <!-- <h3 tabindex='0'>National Metadata</h3> -->
+              <article>
+                <p>
+                  
+                  
+                  В этой таблице представлены метаданные для фактического показателя, доступного из статистики ближайшей к соответствующему глобальному индикатору ЦУР. Обратите внимание, что даже если глобальный индикатор ЦУР полностью доступен из статистики, по этой таблице следует проконсультироваться для получения информации о национальной методологии и других специфичных метаданных.
+                </p>
+                <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Availability </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Classification </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Customisation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Показатель доступен </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Описание показателя </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Географический охват </th>
+        <td>
+          
+            Казахстан
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Единица измерения </th>
+        <td>
+          
+            процент
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Определения </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Расчёты </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Другая информация </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Последний раз данные обновлялись </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/0ab488a12488d7001c82fc941f898b3727da6c55" target="_blank">
+                2019-06-19: see changes on GitHub <span class="visuallyhidden">открывается в новой вкладке</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row"> Последний раз метаданные обновлялись </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/kazstat/sdg-data-kazstat/commit/e15e5547cbbc2e45e1d97bc50293397549368f1f" target="_blank">
+                2019-06-19: see changes on GitHub <span class="visuallyhidden">открывается в новой вкладке</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+              </article>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="globalmetadata">
+            <!-- Global Metadata -->
+            <div> <!-- formerly <div class="collapsible expanded"> -->
+              <!-- <h3 tabindex='0'>Global Metadata</h3> -->
+              <article>
+                <p>В этой таблице представлена информация для метаданных показателей ЦУР, определенных Статистической комиссией ООН. Полные глобальные метаданные представлены Статистическим отделом ООН.</p>
+                <table class="table table-hover">
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Название показателя </th>
+        <td>
+          
+            meta.name-17-3-1-2
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Номер показателя </th>
+        <td>
+          
+            17.3.1.2
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Название задачи </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Номер задачи </th>
+        <td>
+          
+            17.3
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Описание глобального показателя </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Назначенный ООН уровень </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Депозитарное учреждение ООН  </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Ссылка на метаданные ООН </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+              </article>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="sources">
+            <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+  <div class="row no-gutters">
+  
+   
+    
+    <div class="col-md-6">
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Организация </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Compilation </th>
+        <td>
+          
+            Национальный банк РК, Министерство национальной экономики РК
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Implementation </th>
+        <td>
+          
+            Министерство иностранных дел РК, Министерство национальной экономики РК, 
+Министерство финансов РК,
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Data </th>
+        <td>
+          
+            14.23
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Периодичность </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Самые ранние доступные данные </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Географический охват </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Ссылка на источник данных </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Дата выпуска </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Следующий  выпуск </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Статистическая классификация </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Контактные данные </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Другая информация </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
+
+          </div>
+          
+          <div role="tabpanel" class="tab-pane" id="edit">
+            <div class="edit-container">
+              <a class="btn btn-primary" href="http://prose.io/#kazstat/sdg-data-kazstat/edit/develop/data/indicator_17-3-1-2.csv">Редактировать данные</a>
+              <a class="btn btn-primary" href="http://prose.io/#kazstat/sdg-data-kazstat/edit/develop/meta/17-3-1-2.md">Редактировать метаданные</a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="footerLinks">
+          <ul>
+            <li><a href="mailto:test@example.com">Свяжитесь с нами</a></li>
+            
+            
+            <li><a href="https://facebook.com/statgov.kz" target="_blank">@statgov.kz</a></li>
+            
+            <li><a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a></li>
+            <li><a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
+<!-- Google Analytics -->
+
+<!-- /.container </div> -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
+<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
+<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190619123123'></script>
+<script>
+$(function() {
+    if($('#indicatorData').length) {
+      var domData = $('#indicatorData').data();
+
+      $('.async-loading').each(function(i, obj) {
+          $(obj).append($('<img />').attr('src', $(obj).data('img')));
+      });
+
+      $.ajax({
+        url: opensdg.remoteDataBaseUrl + '/comb/' + domData.id + '.json',
+        success: function(res) {
+
+          $('.async-loading').remove();
+          $('.async-loaded').show();
+
+          var model = new indicatorModel({
+            data: res.data,
+            edgesData: res.edges,
+            geoCodeRegEx: domData.geocoderegex,
+            showMap: domData.showmap,
+            country: domData.country,
+            indicatorId: domData.indicatorid,
+            shortIndicatorId: domData.id,
+            chartTitle: domData.charttitle,
+            measurementUnit: domData.measurementunit,
+            dataSource: domData.datasource,
+            geographicalArea: domData.geographicalarea,
+            showData: domData.showdata,
+            footnote: domData.footnote,
+            graphType: domData.graphtype,
+            startValues: domData.startvalues
+          }),
+          view  = new indicatorView(model, {
+            rootElement: '#indicatorData',
+            legendElement: '#plotLegend',
+            maxChartHeight: 600,
+            tableColumnDefs: [
+              { maxCharCount: 25 }, // nowrap
+              { maxCharCount: 35, width: 200 },
+              { maxCharCount: Infinity, width: 250 }
+            ]
+          }),
+          controller = new indicatorController(model, view);
+          controller.initialise();
+        }
+      });
+    }
+
+    var switcher = new accessibilitySwitcher();
+
+
+});
+</script>
+
+
+
+
+</body>
+</html>
+
+
