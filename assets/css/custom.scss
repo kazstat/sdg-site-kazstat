@@ -6,15 +6,6 @@
     margin-bottom: 30px;
   }
 }
-#main-content.goal-tiles {
-  .row {
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-  }
-  &>div:first-of-type {
-    border-top: 2px solid black;
-  }
-  &>div:last-of-type {
-    border-bottom: 2px solid black;
-  }
+.infographic img {
+  max-width: 100%;
 }
