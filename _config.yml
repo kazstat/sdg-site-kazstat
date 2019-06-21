@@ -34,7 +34,7 @@ jekyll_get_json:
     # Replace my-github-org and open-sdg-data-starter as needed.
     json: 'https://kazstat.github.io/sdg-data-kazstat/stats/reporting.json'
   - data: translations
-    json: 'https://open-sdg.github.io/sdg-translations/translations-0.5.1.json'
+    json: 'https://open-sdg.github.io/sdg-translations/translations-0.6.0.json'
 
 analytics:
   ga_prod: ''
@@ -123,7 +123,7 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
-remote_theme: brockfanning/open-sdg@less-fuzzy-data-translation
+remote_theme: open-sdg/open-sdg@0.6.3
 
 # Apply any custom CSS.
 custom_css:
