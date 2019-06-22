@@ -1,27 +1,54 @@
-"3.2.2.1": "Coefficient of infant mortality"
-"4.2.2.1": "Readiness for school (percentage of children attending the first grade of primary school who attended a pre-school in the previous year)"
-"4.5.1.1": "The proportion of pre-school organizations that created conditions for the education and training of children with special educational needs"
-"4.5.1.2": "The proportion of schools that created conditions for inclusive education"
-"4.5.1.3": "The proportion of Technical and Professional Education (TPE) organizations that created equal conditions and barrier-free access for students with special educational needs"
-"4.5.1.4": "The proportion of universities that created equal conditions and barrier-free access for students with special educational needs"
-"5.2.1.1": "Reductions in reported incidents of domestic violence against women"
-"5.2.1.2": "Reductions in reported incidents of domestic violence against children"
-"5.3.1.1": "The proportion of women married when they were below 15 yrs old"
-"5.3.1.2": "The proportion of women married when they were below 18 yrs old"
-"7.1.2.1": "Household consumption of natural gas"
-"7.1.2.2": "The proportion of households using renewable energy sources: 1) solar, 2) wind energy, 3) fuel from organic waste"
-"7.b.1.1": "The proportion of enterprises using energy efficiency systems"
-"9.2.1.1": "Productivity growth in manufacturing"
-"9.2.1.2": "Growth in the value of exports of manufacturing enterprises"
-"9.5.1.1": "Share of business expenses in the total amount of R & D expenses"
-"11.2.1.1": "The proportion of local roads that are in good and satisfactory condition"
-"11.2.1.2": "The proportion of public transport vehicles adapted to the needs of people with disabilities"
-"12.5.1.1": "Municipal solid waste that was recycled and disposed (as a percentage of total waste)"
-"15.2.1.1": "Ground biomass reserves in forests"
-"16.1.4.1": "The proportion of crimes committed on streets"
-"16.3.2.1": "The number of people who received free legal assistance guaranteed by the state"
-"16.4.2.1": "Crimes committed as part/member of an Organized Criminal Group (as percentage of the total number of criminal offenses)"
-"16.5.2.1": "Public perceptions of corruption"
-"16.6.2.1": "The proportion of restated rights for service recipients (on the basis of violations found during inspections on appeals from these recipients)"
-"17.3.1.1": "The proportion of the gross outflow of direct investment to GDP (in percent, and related to Kazakh investors) "
-"17.3.1.2": "The ratio of the gross inflow of direct investment into Kazakhstan from foreign direct investors (in percent)"
+"3-2-2-1":
+  title: "Coefficient of infant mortality"
+"4-2-2-1":
+  title: "Readiness for school (percentage of children attending the first grade of primary school who attended a pre-school in the previous year)"
+"4-5-1-1":
+  title: "The proportion of pre-school organizations that created conditions for the education and training of children with special educational needs"
+"4-5-1-2":
+  title: "The proportion of schools that created conditions for inclusive education"
+"4-5-1-3":
+  title: "The proportion of Technical and Professional Education (TPE) organizations that created equal conditions and barrier-free access for students with special educational needs"
+"4-5-1-4":
+  title: "The proportion of universities that created equal conditions and barrier-free access for students with special educational needs"
+"5-2-1-1":
+  title: "Reductions in reported incidents of domestic violence against women"
+"5-2-1-2":
+  title: "Reductions in reported incidents of domestic violence against children"
+"5-3-1-1":
+  title: "The proportion of women married when they were below 15 yrs old"
+"5-3-1-2":
+  title: "The proportion of women married when they were below 18 yrs old"
+"7-1-2-1":
+  title: "Household consumption of natural gas"
+"7-1-2-2":
+  title: "The proportion of households using renewable energy sources: 1) solar, 2) wind energy, 3) fuel from organic waste"
+"7-b-1-1":
+  title: "The proportion of enterprises using energy efficiency systems"
+"9-2-1-1":
+  title: "Productivity growth in manufacturing"
+"9-2-1-2":
+  title: "Growth in the value of exports of manufacturing enterprises"
+"9-5-1-1":
+  title: "Share of business expenses in the total amount of R & D expenses"
+"11-2-1-1":
+  title: "The proportion of local roads that are in good and satisfactory condition"
+"11-2-1-2":
+  title: "The proportion of public transport vehicles adapted to the needs of people with disabilities"
+"12-5-1-1":
+  title: "Municipal solid waste that was recycled and disposed (as a percentage of total waste)"
+"15-2-1-1":
+  title: "Ground biomass reserves in forests"
+"16-1-4-1":
+  title: "The proportion of crimes committed on streets"
+"16-3-2-1":
+  title: "The number of people who received free legal assistance guaranteed by the state"
+"16-4-2-1":
+  title: "Crimes committed as part/member of an Organized Criminal Group (as percentage of the total number of criminal offenses)"
+"16-5-2-1":
+  title: "Public perceptions of corruption"
+"16-6-2-1":
+  title: "The proportion of restated rights for service recipients (on the basis of violations found during inspections on appeals from these recipients)"
+"17-3-1-1":
+  title: "The proportion of the gross outflow of direct investment to GDP (in percent, and related to Kazakh investors) "
+"17-3-1-2":
+  title: "The ratio of the gross inflow of direct investment into Kazakhstan from foreign direct investors (in percent)"
