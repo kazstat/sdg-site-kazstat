@@ -1,21 +1,3 @@
-1-1:
-  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
-  alt: "Инфографика"
-1-2:
-  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
-  alt: "Инфографика"
-1-3:
-  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
-  alt: "Инфографика"
-1-4:
-  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
-  alt: "Инфографика"
-1-5:
-  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
-  alt: "Инфографика"
-1-a:
-  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
-  alt: "Инфографика"
-1-b:
-  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
-  alt: "Инфографика"
+#1-1:
+#  image: "https://via.placeholder.com/1140x360.png?text=Инфографика"
+#  alt: "Инфографика"
