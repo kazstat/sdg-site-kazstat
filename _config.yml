@@ -46,9 +46,9 @@ facebook: 'statgov.kz'
 
 # Replace the email addresses below.
 email_contacts:
-  questions: test@example.com
-  suggestions: test@example.com
-  functional: test@example.com
+  questions: ai.dosanova@economy.gov.kz
+  suggestions: as.abraeva@economy.gov.kz
+  functional: ai.dosanova@economy.gov.kz
 
 # Github Repo for Data
 # Replace this value as needed.
