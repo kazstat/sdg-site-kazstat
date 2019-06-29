@@ -81,7 +81,7 @@
           "status": "complete"
         },{
           "id": "1-4-2",
-          "title": "Доля взрослого населения, владеющего землей (количество собственников и землепользователей)",
+          "title": "The proportion of population which possess land rights (e.g. ownership and explotation rights)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/1-4-2",
@@ -108,7 +108,7 @@
       "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
       "indicators": [{
           "id": "2-3-1",
-          "title": "Производительность труда в сельском хозяйстве",
+          "title": "Productivity in the agricultural sector",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/2-3-1",
@@ -136,7 +136,7 @@
           "status": "notstarted"
         },{
           "id": "2-4-1",
-          "title": "Удельный вес внедренной технологий точечного земледелия в общей посевной площади РК",
+          "title": "Areas which introduced site-specific management technologies (as a percentage of the total sowing area)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/2-4-1",
@@ -150,7 +150,7 @@
           "status": "complete"
         },{
           "id": "2-5-2",
-          "title": "Прирост численности редких и исчезающих видов копытных животных, в том числе                               сайгаков,                                                   тугайный благородный олень,                                  кулан, джейран, архар",
+          "title": "Increase in the number of rare and endangered species, including saiga, the bactrian deer (latin: Cervus elaphus bactrianus), onager (latin Equus hemionus), goitered gazelle (latin: Gazella subgutturosa) and argali (latin: Ovis ammon)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/2-5-2",
@@ -226,7 +226,7 @@
           "status": "notstarted"
         },{
           "id": "3-b-3",
-          "title": "Доля медицинских учреждений постоянно располагающих набором основных необходимых и доступных лекарственных средств",
+          "title": "The proportion of health facilities which have a permanent stock of essential and affordable drugs and medicines",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/3-b-3",
@@ -296,7 +296,7 @@
           "status": "notstarted"
         },{
           "id": "3-5-1",
-          "title": "Заболеваемость психическими и поведенческими расстройствами, вследствии употребления психоактивных веществ",
+          "title": "Incidence of mental and behavioral disorders, as a result of substance use",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/3-5-1",
@@ -407,14 +407,14 @@
       "title": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
       "indicators": [{
           "id": "4-7-1-2",
-          "title": "Доля обучающихся в организациях ТиПО, вовлеченных в общественно-полезную деятельность",
+          "title": "The proportion of college students (enrolled in technical and vocational training) which are involved in socially-beneficial activities",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/4-7-1-2",
           "status": "complete"
         },{
           "id": "4-3-1-2",
-          "title": "Доля граждан с техническим и профессиональным образованием в возрасте 18-28 лет в структуре занятого населения данного возраста",
+          "title": "Citizens (age 18-28) who received technical and professional (vocational) training as a proportion of total economically active population of the same age",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/4-3-1-2",
@@ -442,7 +442,7 @@
           "status": "complete"
         },{
           "id": "4-3-1-1",
-          "title": "Охват молодежи типичного возраста (14-24) техническим и профессиональным образованием",
+          "title": "Young people (age 14-24) who received technical and professional (vocational) training",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/4-3-1-1",
@@ -463,7 +463,7 @@
           "status": "complete"
         },{
           "id": "4-7-1-1",
-          "title": "Доля студентов вузов, вовлеченных в общественно-полезную деятельность",
+          "title": "The proportion of university students who participate in socially-beneficial activities",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/4-7-1-1",
@@ -477,7 +477,7 @@
           "status": "complete"
         },{
           "id": "4-3-1-3",
-          "title": "Доля граждан с высшим образованием в возрасте 22-28 лет в структуре занятого населения данного возраста",
+          "title": "Citizens (age 22-28) with higher education as a proportion of economically active population of the same age",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/4-3-1-3",
@@ -533,7 +533,7 @@
           "status": "complete"
         },{
           "id": "4-7-1-3",
-          "title": "Доля детей, охваченных обновленным содержанием образования",
+          "title": "The proportion of children enrolled in schools which are offering renovated training curriculum",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/4-7-1-3",
@@ -616,7 +616,7 @@
           "status": "complete"
         },{
           "id": "5-b-1",
-          "title": "Доля  пользователей мобильным телефоном в возрасте 6 лет старше",
+          "title": "The proportion of mobile phone users (age 6 and above)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/5-b-1",
@@ -706,7 +706,7 @@
           "status": "complete"
         },{
           "id": "6-b-1",
-          "title": "Доля местных административных единиц, в которых действуют правила и процедуры участия граждан в управлении водными ресурсами и санитарией",
+          "title": "The proportion of local administrative units which adopted rules and procedures regulating citizens' participation in management of water resources and sanitation facilities",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/6-b-1",
@@ -727,7 +727,7 @@
           "status": "complete"
         },{
           "id": "6-2-1",
-          "title": "Доля населения охваченного очисткой сточных вод по РК",
+          "title": "The proportion of Kazakhstan's population which has access to the wastewater treatment facilities",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/6-2-1",
@@ -803,7 +803,7 @@
           "status": "notstarted"
         },{
           "id": "7-b-1",
-          "title": "Инвестиции в основной капитал по формам собственности",
+          "title": "Investments in fixed assets based on the ownership type",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/7-b-1",
@@ -817,7 +817,7 @@
           "status": "complete"
         },{
           "id": "7-1-2",
-          "title": "Уровень газификации населения",
+          "title": "The proportion of population using natural gas in daily life",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/7-1-2",
@@ -851,7 +851,7 @@
           "status": "complete"
         },{
           "id": "8-b-1",
-          "title": "Доля молодежи, трудоустроенной на постоянные рабочие места, из числа обратившихся в центры занятости населения",
+          "title": "The proportion of young people who applied to employment centers and were able to get permanent job positions",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/8-b-1",
@@ -865,7 +865,7 @@
           "status": "complete"
         },{
           "id": "8-8-2",
-          "title": "Удельный вес предприятий, охваченных системой коллективно-договорных отношений, среди крупных и средних предприятий",
+          "title": "The proportion of enterprises which adopted systems of collective-contracts (as a percentage of all medium and large enterprises)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/8-8-2",
@@ -1136,7 +1136,7 @@
           "status": "complete"
         },{
           "id": "10-5-1",
-          "title": "Отношение государственного долга к ВВП",
+          "title": "Ratio of Government Debt to GDP",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/10-5-1",
@@ -1198,7 +1198,7 @@
           "status": "complete"
         },{
           "id": "11-4-1",
-          "title": "Доля отреставрированных памятников истории и культуры республиканского значения от общего количества памятников истории и культуры республиканского значения",
+          "title": "The proportion of restored monuments and exhibits which have cultural and historical significance",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/11-4-1",
@@ -1226,7 +1226,7 @@
           "status": "complete"
         },{
           "id": "11-6-1",
-          "title": "Обеспечение населения услугами по сбору и вывозу отходов",
+          "title": "Providing the public with waste collection and disposal services",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/11-6-1",
@@ -1372,7 +1372,7 @@
           "status": "complete"
         },{
           "id": "12-5-1",
-          "title": "Доля переработки и утилизации отходов производства к их образованию",
+          "title": "The proportion of waste that was recycled and disposed (as a percentage of total waste)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/12-5-1",
@@ -1420,14 +1420,14 @@
           "status": "complete"
         },{
           "id": "13-1-3",
-          "title": "Доля местных органов власти, принявших и осуществляющих местные стратегии снижения риска бедствий в соответствии с национальными стратегиями снижения риска бедствий",
+          "title": "The proportion of local administrative units which adopted and implemented regional strategies designed to mitigate risks associated with disasters (these strategies were designed in accordance with national strategies)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/13-1-3",
           "status": "complete"
         },{
           "id": "13-3-1",
-          "title": "Доля детей, охваченных обновленным содержанием образования",
+          "title": "The proportion of children enrolled in schools which are offering renovated training curriculum",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/13-3-1",
@@ -1468,7 +1468,7 @@
           "status": "notstarted"
         },{
           "id": "14-5-1",
-          "title": "Доля охраняемых морских районов",
+          "title": "The proportion of protected marine areas",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/14-5-1",
@@ -1489,7 +1489,7 @@
           "status": "notstarted"
         },{
           "id": "14-4-1",
-          "title": "Сохранение рыбных ресурсов и других водных животных",
+          "title": "Conservation of fish resources and other aquatic animals",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/14-4-1",
@@ -1510,7 +1510,7 @@
           "status": "complete"
         },{
           "id": "14-7-1",
-          "title": "Доля 'Рыболовства и аквакультуры' в ВВП",
+          "title": "The share of fishing and aqua-culture in GDP",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/14-7-1",
@@ -1537,14 +1537,14 @@
           "status": "complete"
         },{
           "id": "15-3-1",
-          "title": "Площадь деградированных земель в процентном отношении к общей площади суши",
+          "title": "Degraded land as a percentage of the total land area",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/15-3-1",
           "status": "complete"
         },{
           "id": "15-5-1",
-          "title": "В перечень редких и находящихся под угрозой исчезновения видов растений и животных внесены:",
+          "title": "Rare and endangered animals and plants included in the list:",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/15-5-1",
@@ -1572,7 +1572,7 @@
           "status": "complete"
         },{
           "id": "15-4-2",
-          "title": "Площадь горных лесов",
+          "title": "Area of mountain forests",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/15-4-2",
@@ -1614,14 +1614,14 @@
           "status": "complete"
         },{
           "id": "15-7-1",
-          "title": "1. Количество редких и диких копытных животных (тугайный благородный олень, кулан, джейран, архар); 2. Количество сайгаков; 3. Количество редких видов рыб 4. Количество редких видов птиц",
+          "title": "1. Number of rare ungulata species (the bactrian deer, onager, , goitered gazelle and argali); 2. Number of saigaks; 3. Number of rare species of fish; 4. Number of rare species of birds",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/15-7-1",
           "status": "complete"
         },{
           "id": "15-c-1",
-          "title": "Увеличение численности сайгаков, тысяч особей",
+          "title": "Increase in the number of saigaks, thousands of species",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/15-c-1",
@@ -1857,7 +1857,7 @@
           "status": "complete"
         },{
           "id": "17-9-1",
-          "title": "Долларовый объем финансовой и технической помощи развивающимся странам (в том числе оказываемой по линии Север-Юг, Юг-Юг и в рамках трехсторонего сотрудничества)",
+          "title": "US dollar amount of all financial and technical assistance provided to developing countries (including North-South, South-South and trilateral partnerships)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/17-9-1",
@@ -1892,7 +1892,7 @@
           "status": "complete"
         },{
           "id": "17-17-1",
-          "title": "Объем грантового финансирования, государственного социального заказа НПО, по видам направлений, в млн.тенге",
+          "title": "Total amount of grants, government contracts to buy social services from Non-government Organizations (NGOs), based on service areas (in millions of tenge)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/17-17-1",
@@ -2018,7 +2018,7 @@
           "status": "notstarted"
         },{
           "id": "17-10-1",
-          "title": "Средневзвешенный уровень тарифов Казахстана",
+          "title": "Level of tariffs in Kazakhstan (weighted average)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/en/17-10-1",
