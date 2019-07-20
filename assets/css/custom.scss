@@ -10,49 +10,65 @@
   max-width: 100%;
 }
 
-header, footer {
-  position: relative;
-}
+// Custom frame for frontpage.
+body.layout-frontpage {
 
-@media only screen and (min-width: 768px) {
-  header::after {
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 158px;
-    background:
-      url(../img/frame-upper-left.png) left 0px bottom 0px no-repeat,
-      url(../img/frame-upper-right.png) right 0px bottom 0px no-repeat,
-      transparent;
+  background: white;
+
+  header, footer {
+    position: relative;
   }
 
-  footer::before {
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 158px;
-    bottom: 100%;
-    background:
-      url(../img/frame-lower-left.png) left 0px top 0px no-repeat,
-      url(../img/frame-lower-right.png) right 0px top 0px no-repeat,
-      transparent;
+  @media only screen and (min-width: 768px) {
+    header::after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 158px;
+      background:
+        url(../img/frame-upper-left.png) left 0px bottom 0px no-repeat,
+        url(../img/frame-upper-right.png) right 0px bottom 0px no-repeat,
+        transparent;
+    }
+
+    footer::before {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 158px;
+      bottom: 100%;
+      background:
+        url(../img/frame-lower-left.png) left 0px top 0px no-repeat,
+        url(../img/frame-lower-right.png) right 0px top 0px no-repeat,
+        transparent;
+    }
+  }
+
+  #main-content > h1, #main-content > p {
+    text-align: center;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.contrast-high {
+
+    background: black;
+
+    @media only screen and (min-width: 768px) {
+      header::after {
+        background:
+          url(../img/high-contrast/frame-upper-left.png) left 0px bottom 0px no-repeat,
+          url(../img/high-contrast/frame-upper-right.png) right 0px bottom 0px no-repeat,
+          transparent;
+      }
+
+      footer::before {
+        background:
+          url(../img/high-contrast/frame-lower-left.png) left 0px top 0px no-repeat,
+          url(../img/high-contrast/frame-lower-right.png) right 0px top 0px no-repeat,
+          transparent;
+      }
+    }
   }
 }
-
-#main-content > h1, #main-content > p {
-  text-align: center;
-  max-width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*
-#main-content {
-	background:
-    url(../img/frame-upper-left.png) left 0px top 0px no-repeat,
-    url(../img/frame-upper-right.png) right 0px top 0px no-repeat,
-    url(../img/frame-lower-left.png) left 0px bottom 0px no-repeat,
-    url(../img/frame-lower-right.png) right 0px bottom 0px no-repeat,
-    white;
-}
-*/
