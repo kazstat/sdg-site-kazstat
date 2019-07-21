@@ -8,6 +8,8 @@
 "Местность": "Area"
 "городская местность": "Urban areas"
 "сельская местность": "Rural areas"
+
+# Regions
 "Регионы": "Regions"
 "Акмолинская": "Akmola"
 "Актюбинская": "Aktobe"
@@ -27,6 +29,7 @@
 "г_Нур-Султан": "Nur-Sultan city"
 "г_Алматы": "Almaty city"
 "г_Шымкент": "Shymkent city"
+
 "Социальные пособия": "Social benefits"
 "Численность получателей пособий на рождение ребенка и по уходу за ребенком до 1 года": "Number of Beneficiaries: (social benefits related to newborns and child care of infants less than 1 year old)"
 "Численность населения, охваченного социальными выплатами по причине потери работы": "Number of Beneficiaries: (unemployment benefits)"
