@@ -18,23 +18,9 @@ url: ""
 data_dir: data
 environment: staging
 # Replace my-github-org and open-sdg-data-starter as needed.
-remotedatabaseurl: "https://kazstat.github.io/sdg-data-kazstat"
-
-jekyll_get_json:
-  - data: meta
-    # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://kazstat.github.io/sdg-data-kazstat/meta/all.json'
-  - data: headlines
-    # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://kazstat.github.io/sdg-data-kazstat/headline/all.json'
-  - data: schema
-    # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://kazstat.github.io/sdg-data-kazstat/meta/schema.json'
-  - data: reporting
-    # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://kazstat.github.io/sdg-data-kazstat/stats/reporting.json'
-  - data: translations
-    json: 'https://open-sdg.github.io/sdg-translations/translations-0.6.0.json'
+remote_data_prefix: "https://kazstat.github.io/sdg-data-kazstat"
+remote_translations:
+  - https://open-sdg.github.io/sdg-translations/translations-0.6.0.json
 
 analytics:
   ga_prod: ''
@@ -119,7 +105,6 @@ goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
 # Tell Jekyll to use the Remote Theme plugin.
 plugins:
   - jekyll-remote-theme
-  - jekyll-get-json
   - jekyll-open-sdg-plugins
 
 # Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
