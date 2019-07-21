@@ -296,6 +296,8 @@
 "наименее развитых стран": "developed countries"
 "природного характера": "natural origin"
 "техногенного характера": "technological origin"
+
+# Units
 "процент": "Percent"
 "человек": "Number of individuals"
 "на 100000 человек": "per 100000 persons"
@@ -323,7 +325,7 @@
 "кв_м": "square meters"
 "мг/метр куб": "mg per cube meters"
 "млн_тонн/год": "millions tonnes annually"
-"единиц":
+"единиц": "units"
 "тыс_гектаров": "thousands hectares"
 "тыс_гектар": "thousands hectares"
 "млн_тенге": "millions tenge"
