@@ -134,7 +134,7 @@
   source_data_1: 'Administrative
 
     data'
-  source_implementation_1: "Ministry of Finance of the Republic of Kazakhstan, \n\
+  source_implementation_1: "Ministry of Finance of the Republic of Kazakhstan,
     Ministry of National economy of the Republic of Kazakhstan"
 17-1-2:
   source_compilation_1: 'Ministry of Finance of the Republic of Kazakhstan
@@ -205,9 +205,9 @@
     Ministry of National economy of the Republic of Kazakhstan
   source_implementation_1: Ministry of Foreign Affairs of the  Republic of Kazakhstan
 17-3-2:
-  source_compilation_1: "National Bank of the Republic of Kazakhstan , Committee on\
-    \ Statistics  of the Ministry of National economy of the Republic of Kazakhstan\
-    \ \n(data on GDP)"
+  source_compilation_1: "National Bank of the Republic of Kazakhstan , Committee on
+    Statistics  of the Ministry of National economy of the Republic of Kazakhstan
+     (data on GDP)"
   source_implementation_1: Ministry of Labor and Social Protection of Population of
     the Republic of Kazakhstan
 17-4-1:
@@ -414,7 +414,7 @@
   source_implementation_1: Ministry of Education and science of the Republic of Kazakhstan
 4-2-2:
   source_compilation_1: Ministry of Education and science of the Republic of Kazakhstan
-  source_data_1: "Administrative\n  data (NED) National education database"
+  source_data_1: "Administrative   data (NED) National education database"
   source_implementation_1: Ministry of Education and science of the Republic of Kazakhstan
 4-3-1-1:
   source_compilation_1: Ministry of National economy of the Republic of Kazakhstan
@@ -568,16 +568,16 @@
   source_compilation_1: Committee on Statistics of the Ministry of National economy
     of the Republic of Kazakhstan
   source_data_1: Form 1-invest "Report on investments in fixed capital"
-  source_implementation_1: "Ministry of National economy of the Republic of Kazakhstan,\
-    \ \nMinistry of Foreign Affairs of the Republic of Kazakhstan"
+  source_implementation_1: "Ministry of National economy of the Republic of Kazakhstan,
+     Ministry of Foreign Affairs of the Republic of Kazakhstan"
 8-1-1:
   source_compilation_1: Committee on Statistics of the Ministry of National Economy
     of the Republic of Kazakhstan
   source_data_1: GDP at current, constant prices and population changes
   source_implementation_1: Ministry of National Economy of the Republic of Kazakhstan
 8-10-1:
-  source_compilation_1: "National Bank of the Republic of Kazakhstan, \nCommittee\
-    \ on Statistics of the Ministry of National Economy of the Republic of Kazakhstan"
+  source_compilation_1: "National Bank of the Republic of Kazakhstan,  Committee
+    on Statistics of the Ministry of National Economy of the Republic of Kazakhstan"
   source_implementation_1: National Bank of the Republic of Kazakhstan
 8-10-2:
   source_compilation_1: GlobalFindex, World Bank
@@ -592,9 +592,9 @@
   source_compilation_1: Committee on Statistics of the Ministry of National Economy
     of the Republic of Kazakhstan
   source_data_1: Sample Employment Survey
-  source_implementation_1: "Ministry of Labor and Social Protection of Population\
-    \ of the Republic of Kazakhstan, \nMinistry of National Economy of the Republic\
-    \ of Kazakhstan"
+  source_implementation_1: "Ministry of Labor and Social Protection of Population
+    of the Republic of Kazakhstan,  Ministry of National Economy of the Republic
+    of Kazakhstan"
 8-5-1:
   source_compilation_1: Committee on Statistics of the Ministry of National Economy
     of the Republic of Kazakhstan
@@ -611,17 +611,17 @@
   source_compilation_1: Committee on Statistics of the Ministry of National Economy
     of the Republic of Kazakhstan
   source_data_1: Sample Employment Survey
-  source_implementation_1: "Ministry of Labor and Social Protection of Population\
-    \ of the Republic of Kazakhstan, \nMinistry of Education and Science of the Republic\
-    \ of Kazakhstan ,\nMinistry of Information and Social Development of the Republic\
-    \ of Kazakhstan"
+  source_implementation_1: "Ministry of Labor and Social Protection of Population
+    of the Republic of Kazakhstan,  Ministry of Education and Science of the Republic
+    of Kazakhstan , Ministry of Information and Social Development of the Republic
+    of Kazakhstan"
 8-7-1:
   source_compilation_1: Committee on Statistics of the Ministry of National Economy
     of the Republic of Kazakhstan
   source_data_1: Sample Employment Survey
-  source_implementation_1: "Ministry of Labor and Social Protection of Population\
-    \ of the Republic of Kazakhstan, \nMinistry of Education and Science of the Republic\
-    \ of Kazakhstan"
+  source_implementation_1: "Ministry of Labor and Social Protection of Population
+    of the Republic of Kazakhstan,  Ministry of Education and Science of the Republic
+    of Kazakhstan"
 8-8-1:
   source_compilation_1: Ministry of Labor and Social Protection of Population of the
     Republic of Kazakhstan, Local Executive  Bodies
@@ -642,14 +642,700 @@
   source_compilation_1: Committee on Statistics of the Ministry of National Economy
     of the Republic of Kazakhstan
   source_data_1: Bulletin "Tourism Satellite Account"
-  source_implementation_1: "Ministry of Culture and Sport of the Republic of Kazakhstan,\
-    \ \nMinistry of Labor and Social Protection of Population of the Republic of Kazakhstan"
+  source_implementation_1: "Ministry of Culture and Sport of the Republic of Kazakhstan,
+     Ministry of Labor and Social Protection of Population of the Republic of Kazakhstan"
 8-a-1:
   source_compilation_1: Organisation for economic co-operation and development
   source_implementation_1: Ministry of National Economy of the Republic of Kazakhstan,
 8-b-1:
   source_compilation_1: Ministry of Labor and Social Protection of Population of the
     Republic of Kazakhstan, Local Executive  Bodies
-  source_implementation_1: "Ministry of Labor and Social Protection of Population\
-    \ of the Republic of Kazakhstan, \nMinistry of Information and Social Development\
-    \ of the Republic of Kazakhstan"
+  source_implementation_1: "Ministry of Labor and Social Protection of Population
+    of the Republic of Kazakhstan,  Ministry of Information and Social Development
+    of the Republic of Kazakhstan"
+
+# Still needs translation
+1-2-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство труда и социальной защиты населения РК
+1-4-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: По итогам Переписи населения 2020 года
+  source_implementation_1: Министерство национальной экономики РК, Министерство индустрии
+    и инфраструктурного развития РК
+1-a-1:
+  source_compilation_1: Министерство финансов РК
+  source_implementation_1: Министерство труда и социальной защиты населения РК, Министерство
+    финансов РК
+1-a-2:
+  source_compilation_1: Министерство финансов РК
+  source_implementation_1: Министерство финансов РК, Министерство образования и науки
+    РК, Министерство здравоохранения РК
+1-a-3:
+  source_compilation_1: Министерство финансов РК
+  source_implementation_1: Министерство финансов РК, Министерство национальной экономики
+    РК
+1-b-1:
+  source_compilation_1: Министерство труда и социальной защиты населения РК
+  source_implementation_1: Министерство труда и социальной защиты населения РК
+10-1-1:
+  source_compilation_1: Комитет по статистике   Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство труда и социальной защиты населения РК, Министерство
+    национальной экономики РК
+10-2-1:
+  source_compilation_1: Комитет по статистике   Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство труда и социальной защиты населения РК, Министерство
+    национальной экономики РК
+10-3-1:
+  source_compilation_1: Национальный центр по правам человека РК
+  source_implementation_1: Национальный центр по правам человека РК, все заинтересованные
+    ГО
+10-4-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Оплата труда и ВВП в текущих ценах
+  source_implementation_1: Министерство труда и социальной защиты населения РК, Министерство
+    национальной экономики РК
+10-5-1:
+  source_compilation_1: Министерство финансов РК
+  source_implementation_1: Министерство финансов РК,  Министерство национальной экономики
+    РК, Национальный банк РК
+10-6-1:
+  source_compilation_1: Министерство иностранных дел РК
+  source_implementation_1: Министерство иностранных дел РК
+10-7-1:
+  source_compilation_1: Министерство труда и социальной защиты населения РК
+  source_implementation_1: Министерство труда и социальной защиты населения РК
+10-7-2:
+  source_compilation_1: Министерство труда и социальной защиты населения РК, Министерство
+    внутренних дел РК
+  source_implementation_1: Министерство труда и социальной защиты населения РК, Министерство
+    внутренних дел РК, Министерство иностранных дел РК
+10-a-1:
+  source_compilation_1: Министерство национальной экономики РК
+  source_data_1: Сайт Евразийской экономической комиссии
+  source_implementation_1: Министерство национальной экономики РК
+10-b-1:
+  source_compilation_1: ОЭСР
+  source_implementation_1: Министерство национальной экономики РК, Министерство финансов
+    РК,  Национальный банк РК
+10-c-1:
+  source_compilation_1: Национальный банк РК, Международные финансовые организации
+  source_implementation_1: Национальный банк РК
+11-1-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК, Местные исполнительные органы
+  source_data_1: Информационная система "Статистический регистр жилищного фонда"
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК,
+    Местные исполнительные органы
+11-2-1:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК
+  source_data_1: Местные исполнительные органы, данные обследований
+11-2-1-1:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК, Местные
+    исполнительные органы
+  source_data_1: Местные исполнительные органы, Министерство индустрии и инфраструктурного
+    развития РК
+11-2-1-2:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК, Местные
+    исполнительные органы, Министерство труда и социальной защиты населения РК
+  source_data_1: Местные исполнительные органы
+11-3-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК, Министерство индустрии и инфраструктурного развития РК
+  source_implementation_1: Министерство национальной экономики РК, Министерство индустрии
+    и инфраструктурного развития РК
+11-3-2:
+  source_compilation_1: МИИР РК, МИО
+  source_implementation_1: МИИР РК, МИО
+11-4-1:
+  source_compilation_1: Министерство культуры и спорта РК
+  source_implementation_1: Министерство культуры и спорта РК
+11-5-1:
+  source_compilation_1: Комитет по чрезвычайным ситуациям Министерство внутренних
+    дел РК
+  source_data_1: Сводные оперативные данные
+  source_implementation_1: Комитет по чрезвычайным ситуациям Министерство внутренних
+    дел РК
+11-5-2:
+  source_compilation_1: Местные исполнительные органы
+  source_implementation_1: Комитет по чрезвычайным ситуациям Министерство внутренних
+    дел РК
+11-6-1:
+  source_compilation_1: Министерство национальной экономики РК, Местные исполнительные
+    органы
+  source_implementation_1: Министерство энергетики РК
+11-6-2:
+  source_compilation_1: Министерство энергетики РК (РГП "Казгидромет")
+  source_data_1: МЭ РК (РГП "Казгидромет")
+  source_implementation_1: Министерство энергетики РК
+11-7-1:
+  source_compilation_1: Местные исполнительные органы, Министерство индустрии и инфраструктурного
+    развития РК (КДС)
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+11-7-2:
+  source_compilation_1: Комитет по правовой статистике и специальным учетам Генеральной
+    Прокуратуры РК, Комитет по статистике Министерство национальной экономики РК
+  source_implementation_1: Министерство внутренних дел РК, Генеральная Прокуратура
+    РК
+11-a-1:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+11-b-1:
+  source_compilation_1: Комитет по чрезвычайным ситуациям Министерства внутренних
+    дел РК
+  source_data_1: КЧС является национальным координатором по реализации данной программы
+    с 2017г.
+  source_implementation_1: Министерство внутренних дел РК
+11-b-2:
+  source_compilation_1: Местные исполнительные органы, Министерство национальной экономики
+    РК
+  source_data_1: Административные данные
+  source_implementation_1: Министерство внутренних дел РК, Местные исполнительные
+    органы, Министерство национальной экономики РК
+11-c-1:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+12-1-1:
+  source_compilation_1: "Министерство энергетики РК (ДУО),  Министерство национальной
+    экономики РК,  Министерство индустрии и инфраструктурного развития РК"
+  source_implementation_1: "Министерство энергетики РК (ДУО),  Министерство национальной
+    экономики РК,  Министерство индустрии и инфраструктурного развития РК"
+12-2-1:
+  source_compilation_1: Комитет по статистике Министерство национальной экономики
+    РК
+  source_implementation_1: Министерство национальной экономики, Министерство энергетики,
+    Министерство индустрии и инфраструктурного развития, Министерство сельского хозяйства,
+    Местные исполнительные органы
+12-2-2:
+  source_compilation_1: Комитет по статистике Министерство национальной экономики
+    РК
+  source_implementation_1: Министерство национальной экономики, Министерство энергетики,
+    Министерство индустрии и инфраструктурного развития, Министерство сельского хозяйства,
+    Местные исполнительные органы
+12-3-1:
+  source_compilation_1: Министерство сельского хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+12-4-1:
+  source_compilation_1: Министерство энергетики РК, Министерство иностранных дел РК
+  source_implementation_1: Министерство энергетики РК, Министерство иностранных дел
+    РК, Министерство юстиции РК
+12-4-2:
+  source_compilation_1: Министерство энергетики РК (ДУО), Местные исполнительные органы
+  source_implementation_1: Министерство энергетики РК (ДУО), Местные исполнительные
+    органы
+12-5-1:
+  source_compilation_1: Министерство энергетики (ДУО), Местные исполнительные органы
+  source_implementation_1: Министерство энергетики, Местные исполнительные органы
+12-5-1-1:
+  source_compilation_1: Министерство энергетики (ДУО), Местные исполнительные органы
+  source_implementation_1: Министерство энергетики, Местные исполнительные органы
+12-6-1:
+  source_compilation_1: Министерство энергетики (ДЗЭ), Министерство индустрии и инфраструктурного
+    развития, Министерство сельского хозяйства, Местные исполнительные органы
+  source_implementation_1: Министерство энергетики, Министерство индустрии и инфраструктурного
+    развития, Министерство сельского хозяйства, Местные исполнительные органы
+12-7-1:
+  source_compilation_1: Министерство финансов РК
+  source_implementation_1: Министерство финансов РК, Министерство энергетики РК
+12-8-1:
+  source_compilation_1: Министерство образования и науки РК
+  source_implementation_1: Министерство образования и науки РК
+12-a-1:
+  source_compilation_1: Министерство финансов РК, Министерство иностранных дел РК,
+    Министерство образования и науки РК
+  source_implementation_1: Министерство образования и науки РК, Министерство иностранных
+    дел РК, Министерство индустрии и инфраструктурного развития (ЖКХ), Министерство
+    национальной экономики РК, Министерство сельского хозяйства РК, Местные исполнительные
+    органы
+12-b-1:
+  source_compilation_1: Министерство культуры и спорта РК, Министерство энергетики
+    РК
+  source_implementation_1: Министерство культуры и спорта РК, Министерство сельского
+    хозяйства РК
+12-c-1:
+  source_compilation_1: Министерство энергетики РК, Министерство индустрии и инфраструктурного
+    развития, Комитет по статистике Министерства национальной экономики (в части ВВП)
+  source_implementation_1: Министерство энергетики РК, Министерство индустрии и инфраструктурного
+    развития
+13-1-1:
+  source_compilation_1: Комитет по чрезвычайным ситуациям Министерство внутренних
+    дел Республики Казахстан
+  source_data_1: Сводные оперативные данные
+  source_implementation_1: Комитет по чрезвычайным ситуациям Министерство внутренних
+    дел Республики Казахстан
+13-1-2:
+  source_compilation_1: Комитет по чрезвычайным ситуациям Министерства внутренних
+    дел РК
+  source_data_1: КЧС является национальным координатором по реализации данной программы
+    с 2017г.
+  source_implementation_1: Комитет по чрезвычайным ситуациям Министерства внутренних
+    дел РК
+13-1-3:
+  source_compilation_1: Местные исполнительные органы, Министерство национальной экономики
+    РК
+  source_data_1: Административные данные
+  source_implementation_1: Министерство внутренних дел РК, Местные исполнительные
+    органы, Министерство национальной экономики РК
+13-2-1:
+  source_compilation_1: Министерство энергетики РК (ДИК)
+  source_implementation_1: Министерство энергетики РК (ДИК)
+13-3-1:
+  source_compilation_1: Министерство образования и науки РК, Министерство труда и
+    социальной защиты населения, Министерство внутренних дел РК (КЧС)
+  source_implementation_1: Министерство образования и науки РК, Министерство труда
+    и социальной защиты населения, Министерство внутренних дел РК (КЧС)
+13-3-2:
+  source_compilation_1: Министерство энергетики РК, Министерство сельского хозяйства
+    РК
+  source_implementation_1: Министерство энергетики РК, Министерство сельского хозяйства
+    РК
+13-a-1:
+  source_compilation_1: Министерство энергетики РК, Министерство иностранных дел РК
+  source_implementation_1: Министерство иностранных дел РК, Министерство энергетики
+    РК
+13-b-1:
+  source_compilation_1: Министерство энергетики РК, Министерство иностранных дел РК
+  source_implementation_1: Министерство энергетики РК, Министерство иностранных дел
+    РК
+14-1-1:
+  source_compilation_1: Министерство энергетики РК
+  source_implementation_1: Министерство энергетики РК, Министерство индустрии и инфраструктурного
+    развития РК
+14-2-1:
+  source_compilation_1: Министерство сельского хозяйства РК (КЛХЖМ), Министерство
+    энергетики РК
+  source_implementation_1: Министерство сельского хозяйства РК, Министерство энергетики
+    РК, Министерство национальной экономики РК
+14-3-1:
+  source_compilation_1: Министерство энергетики РК (РГП Казгидромет)
+  source_implementation_1: "Министерство энергетики РК,  Комитет по водным ресурсам
+    Министерство сельского хозяйства РК"
+14-4-1:
+  source_compilation_1: Комитет лесного хозяйства и животного мира Министерства сельского
+    хозяйства РК
+  source_implementation_1: Комитет лесного хозяйства и животного мира Министерства
+    сельского хозяйства РК
+14-5-1:
+  source_compilation_1: Министерство сельского хозяйства РК (КЛХЖМ)
+  source_implementation_1: Министерство сельского хозяйства РК
+14-6-1:
+  source_compilation_1: Министерство сельского хозяйства РК
+  source_implementation_1: Комитет лесного хозяйства и животного мира Министерства
+    сельского хозяйства РК
+14-7-1:
+  source_compilation_1: Комитет по статистике  Министерства национальной экономики
+    РК, Министерство сельского хозяйства РК
+  source_data_1: Данные отраслевой статистики (1-рыба) и ВВП в текущих ценах
+  source_implementation_1: Министерство сельского хозяйства РК
+14-a-1:
+  source_compilation_1: Министерство образования и науки РК
+  source_implementation_1: Министерство образования и науки РК
+14-b-1:
+  source_compilation_1: Министерство сельского хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+14-c-1:
+  source_compilation_1: Министерство иностранных дел РК, Министерство энергетики РК,
+    Министерство сельского хозяйства РК
+  source_implementation_1: Министерство иностранных дел РК, Министерство энергетики
+    РК, Министерство сельского хозяйства РК
+15-1-1:
+  source_compilation_1: Комитет лесного хозяйства и животного мира Министерство сельского
+    хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+15-1-2:
+  source_compilation_1: Комитет лесного хозяйства и животного мира Министерство сельского
+    хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+15-2-1:
+  source_compilation_1: Комитет лесного хозяйства и животного мира Министерство сельского
+    хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+15-3-1:
+  source_compilation_1: Министерство сельского хозяйства РК (КУЗР)
+  source_implementation_1: Министерство сельского хозяйства РК
+15-4-1:
+  source_compilation_1: Комитет лесного хозяйства и животного мира Министерство сельского
+    хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+15-4-2:
+  source_compilation_1: Комитет лесного хозяйства и животного мира Министерство сельского
+    хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+15-5-1:
+  source_compilation_1: Комитет лесного хозяйства и животного мира Министерство сельского
+    хозяйства РК
+  source_implementation_1: Министерство сельского хозяйства РК
+15-6-1:
+  source_compilation_1: КЛХЖМ Министерство сельского хозяйства РК, Министерство образования
+    и науки РК
+  source_implementation_1: Министерство сельского хозяйства РК
+15-7-1:
+  source_compilation_1: КЛХЖМ Министерство сельского хозяйства РК, Министерство образования
+    и науки РК
+  source_implementation_1: Министерство сельского хозяйства  РК, Министерство образования
+    и науки РК
+15-8-1:
+  source_compilation_1: Министерство образования и науки, Министерство сельского хозяйства
+    РК (КЛХЖМ, Управление леса и ООПТ), Местные исполнительные органы
+  source_implementation_1: Министерство образования и науки, Министерство сельского
+    хозяйства РК, Местные исполнительные органы
+15-9-1:
+  source_compilation_1: Министерство сельского хозяйства РК, Министерство образования
+    и науки РК
+  source_implementation_1: Министерство сельского хозяйства РК, Министерство образования
+    и науки РК
+15-a-1:
+  source_compilation_1: ОЭСР
+  source_implementation_1: Министерство сельского хозяйства РК, Министерство энергетики
+    РК, Министерство иностранных дел РК, Министерство финансов РК
+15-b-1:
+  source_compilation_1: Министерство сельского хозяйства РК, Министерство финансов
+    РК
+  source_data_1: В соответствии с подпунктом 8) статьи 53 Бюджетного кодекса РК на
+    содержание особо охраняемых природных территорий финансируется из республиканского
+    бюджета.
+  source_implementation_1: Министерство сельского хозяйства РК, Министерство энергетики
+    РК, Министерство иностранных дел РК, Министерство финансов РК
+15-c-1:
+  source_compilation_1: Министерство сельского хозяйства РК КЛХЖМ, Министерство образования
+    и науки РК
+  source_implementation_1: Министерство сельского хозяйства РК, Министерство образования
+    и науки РК
+16-1-2:
+  source_compilation_1: Комитет по правовой статистике и специальным учетам Генеральной
+    прокуратуры РК
+  source_implementation_1: Министерство внутренних дел РК, Генеральная прокуратура
+    РК,
+16-1-3:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК, Комитет по правовой статистике и специальным учетам Генеральной прокуратуры
+    РК
+  source_implementation_1: Генеральная прокуратура РК, Министерство внутренних дел
+    РК
+16-1-4-1:
+  source_compilation_1: Комитет по правовой статистике и специальным учетам Генеральной
+    прокуратуры Генеральной Прокуратуры РК
+  source_implementation_1: Министерство внутренних дел РК
+16-10-1:
+  source_compilation_1: Комитет по правовой статистике и специальным учетам Генеральной
+    прокуратуры Генеральная прокуратура РК
+  source_implementation_1: Верховный суд РК, Генеральная прокуратура РК
+16-2-3:
+  source_compilation_1: Комитет по статистике Министерство национальной экономики
+    РК
+  source_implementation_1: Министерство внутренних дел РК, Министерство здравоохранения
+    РК, Министерство образования и науки РК, Генеральная прокуратура РК, Министерство
+    труда и социальной защиты населения РК
+16-3-1:
+  source_compilation_1: Министерство внутренних дел РК
+  source_implementation_1: Верховный суд РК, Министерство внутренних дел РК, Генеральная
+    прокуратура РК
+16-3-2-1:
+  source_compilation_1: Министерство юстиции РК
+  source_implementation_1: Министерство юстиции РК
+16-4-1:
+  source_compilation_1: Комитет по правовой статистике и специальным учетам Генеральной
+    прокуратуры РК, Агентство РК по делам государственной службы и противодействию
+    коррупции
+  source_implementation_1: Министерство финансов РК, НБ РК, Агентство РК по делам
+    государственной службы и противодействию коррупции, Генеральная прокуратура РК,
+    Министерство национальной экономики РК
+16-4-2-1:
+  source_compilation_1: Комитет по правовой статистике и специальным учетам Генеральной
+    прокуратуры РК
+  source_data_1: Статистические данные формы 1-М "О зарегистрированных уголовных правонарушениях"
+  source_implementation_1: Министерство внутренних дел РК, ГР РК, Комитет национальной
+    безопасности, Агентство РК по делам государственной службы и противодействию коррупции,
+    Министерство финансов РК (СЭР)
+16-5-2-1:
+  source_compilation_1: Агентство РК по делам государственной службы и противодействию
+    коррупции, Международные рейтинги
+  source_implementation_1: Агентство РК по делам государственной службы и противодействию
+    коррупции
+16-6-2-1:
+  source_compilation_1: Агентство РК по делам государственной службы и противодействию
+    коррупции
+  source_implementation_1: Верховный суд,  заинтересованные Государственные органы,
+    оказывающие госуслуги
+16-7-1:
+  source_compilation_1: Агентство РК по делам государственной службы и противодействию
+    коррупции
+  source_implementation_1: Агентство РК по делам государственной службы и противодействию
+    коррупции
+16-7-2:
+  source_compilation_1: Агентство РК по делам государственной службы и противодействию
+    коррупции
+  source_implementation_1: Агентство РК по делам государственной службы и противодействию
+    коррупции
+16-b-1:
+  source_compilation_1: "Национальный центр по правам человека РК, Министерство образования
+    и науки РК,  Министерство труда и социальной защиты населения РК"
+  source_implementation_1: "Национальный центр по правам человека, Министерство образования
+    и науки РК,  Министерство труда и социальной защиты населения РК"
+17-13-1:
+  source_compilation_1: Национальный банк РК, Министерство финансов РК, Министерство
+    труда и социальной защиты населения, Министерство энергетики РК, КС Министерство
+    национальной экономики РК
+  source_implementation_1: Национальный банк РК, Министерство финансов РК, Министерство
+    труда и социальной защиты населения, Министерство энергетики РК, КС Министерство
+    национальной экономики РК
+17-15-1:
+  source_compilation_1: Министерство национальной экономики РК, Министерство иностранных
+    дел РК
+  source_implementation_1: Министерство национальной экономики РК, Министерство иностранных
+    дел РК
+17-18-1:
+  source_compilation_1: Комитет по статистике Министерство национальной экономики
+    РК
+  source_implementation_1: Комитет по статистике Министерство национальной экономики
+    РК
+17-3-1-1:
+  source_compilation_1: Национальный банк РК, Комитет по статистике Министерство национальной
+    экономики РК
+  source_implementation_1: Министерство иностранных дел РК, Министерство национальной
+    экономики РК, Министерство финансов РК
+17-3-1-2:
+  source_compilation_1: Национальный банк РК, Министерство национальной экономики
+    РК
+  source_implementation_1: "Министерство иностранных дел РК, Министерство национальной
+    экономики РК,  Министерство финансов РК,"
+17-5-1:
+  source_compilation_1: Министерство иностранных дел РК
+  source_implementation_1: Министерство иностранных дел РК
+17-7-1:
+  source_compilation_1: Министерство энергетики РК, Министерство финансов РК, Министерство
+    национальной экономики РК
+  source_implementation_1: Министерство энергетики РК, (МЦ"Центр зеленых технологий")
+2-3-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство сельского хозяйства РК
+3-2-2-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Информационная система «Регистрационный пункт ЗАГС» Местные исполнительные
+    органы (РАГС), Информационная система "Регистр прикрепленного населения" Министерство
+    зравоохранения  РК, Информационная система Судебных органов "Торелик" Верховный
+    суд РК
+  source_implementation_1: Министерство здравоохранения РК
+3-3-3:
+  source_compilation_1: Министерство здравоохранения РК
+  source_implementation_1: Министерство здравоохранения РК
+3-3-5:
+  source_compilation_1: Министерство здравоохранения РК
+  source_implementation_1: Министерство здравоохранения РК
+3-5-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Единовременное обследование МICS
+  source_implementation_1: Министерство здравоохранения РК
+3-8-1:
+  source_compilation_1: Министерство здравоохранения РК
+  source_data_1: Административные  данные
+  source_implementation_1: Министерство здравоохранения РК
+3-8-2:
+  source_compilation_1: Комитет по статистике  Министерства национальной экономики
+    РК
+  source_data_1: Выборочное обследование домашних хозяйств по оценке уровня жизни
+  source_implementation_1: Министерство здравоохранения РК
+3-9-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Информационная система «Регистрационный пункт ЗАГС» Местный исполнительный
+    орган (РАГС), Информационная система "Регистр прикрепленного населения" Министерство
+    зравоохранения  РК, Информационная система Судебных органов "Торелик" Верховный
+    суд РК
+  source_implementation_1: Министерство здравоохранения РК
+3-d-1:
+  source_compilation_1: Комитет охраны общкственного здоровья Министерства здравоохранения
+    РК
+  source_data_1: Административные  данные
+  source_implementation_1: Министерство здравоохранения РК
+4-2-2-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Единовременное обследование MICS
+  source_implementation_1: Министерство образования и науки РК
+4-5-1-1:
+  source_compilation_1: Министерство образования и науки РК
+  source_implementation_1: Министерство образования и науки РК
+4-6-1:
+  source_compilation_1: 'Исследование ОЭСР, МОН РК'
+  source_implementation_1: Министерство образования и науки РК
+5-1-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство труда и социальной защиты РК, Министерство
+    здравоохранения РК, Министерство информации и общественного развития РК
+5-2-1-1:
+  source_compilation_1: Министерство внутренних дел РК, Комитет по правовой статистике
+    и специальным учетам Генеральной Прокуратуры РК
+  source_implementation_1: Министерство внутренних дел РК
+5-2-1-2:
+  source_compilation_1: Министерство внутренних дел РК, Комитет по правовой статистике
+    и специальным учетам Генеральной Прокуратуры РК
+  source_implementation_1: Министерство внутренних дел РК
+5-3-1-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство информации и общественного развития РК
+5-3-1-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство информации и общественного развития РК
+5-6-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство здравоохранения РК
+5-6-2:
+  source_compilation_1: Министерство здравоохранения РК
+  source_implementation_1: Министерство здравоохранения РК
+6-1-1:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+6-2-1:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+6-3-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Статистическая форма 1-ВК
+  source_implementation_1: Министерство сельского хозяйства РК, Министерство индустрии
+    и инфраструктурного развития РК
+6-3-2:
+  source_compilation_1: Министерство энергетики РК (Казгидромет-поверхностные), Министерство
+    индустрии и инфраструктурного развития РК  (Комитет геологии -подземные), Министерство
+    здравоохранения РК (КООЗ-культурно бытовые)
+  source_implementation_1: Министерство сельского хозяйства РК, Министерство индустрии
+    и инфраструктурного развития РК, Министерство здравоохранения РК
+6-4-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК, Министерство энергетики РК (Казгидромет), Министерство сельского хозяйства
+    РК (КВР)
+  source_data_1: Расчет осуществляется на основе 2-ТП(водхоз), формируемый КВР МСХ
+    РК
+  source_implementation_1: Министерство энергетики РК, Министерство сельского хозяйства
+    РК
+6-4-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК, Министерство сельского хозяйства РК (КВР)
+  source_implementation_1: Министерство сельского хозяйства РК
+6-5-1:
+  source_compilation_1: Министерство сельского хозяйства РК (КУВР)
+  source_implementation_1: Министерство сельского хозяйства РК (КУВР)
+6-5-2:
+  source_compilation_1: Министерство сельского хозяйства РК (КУВР), Министерство энергетики
+    РК (Казгидромет)
+  source_implementation_1: Министерство сельского хозяйства РК (КУВР)
+6-6-1:
+  source_compilation_1: Министерство сельского хозяйства РК (КЛОХ),  Министерство
+    энергетики РК (Казгидромет), Министерство индустрии и инфраструктурного развития
+    РК (КГ)
+  source_implementation_1: Министерство сельского хозяйства РК (КЛОХ),  Министерство
+    энергетики РК (Казгидромет), Министерство индустрии и инфраструктурного развития
+    РК (КГ)
+6-a-1:
+  source_compilation_1: ОЭСР
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+    (ЖКХ), Министерство национальной экономики РК, Министерство сельского хозяйства
+    РК, Местные исполнительные органы
+6-b-1:
+  source_compilation_1: Министерство сельского хозяйства РК (КУВР)
+  source_implementation_1: Министерство сельского хозяйства РК (КУВР)
+7-a-1:
+  source_compilation_1: Министерство энергетики РК
+  source_implementation_1: Министерство энергетики РК
+7-b-1-1:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+8-4-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: 'предполагаемые: 1-П, 29-СХ год, А-005, 24-СХ год, А-008, 1-ТС-мес,
+    адм данные КГД.'
+  source_implementation_1: Министерство национальной экономики РК, Министерство индустрии
+    и инфраструктурного развития РК, Министерство энергетики РК, Министерство сельского
+    хозяйства РК, Местные исполнительные органы
+8-4-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: 'предполагаемые: 1-П, 29-СХ год, А-005, 24-СХ год, А-008, 1-ТС-мес,
+    адм данные КГД.'
+  source_implementation_1: Министерство национальной экономики РК
+9-1-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Отчет о работе транспорта
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК,
+    Местные исполнительные органы
+9-2-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: ВДС обрабатывающей промышленности и ВВП в текущих и постоянных ценах
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК,
+    Местные исполнительные органы
+9-2-1-1:
+  source_compilation_1: Комитет по статистике (Управление национальных счетов) Министерства
+    национальной экономики РК
+  source_data_1: ВДС обрабатывающей промышленности в постоянных ценах, численность
+    населения
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+9-2-1-2:
+  source_compilation_1: Министерство индустрии и инфраструктурного развития РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+9-2-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Выборочное обследование  занятости населения
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК,
+    Местные исполнительные органы
+9-3-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК,
+    Министерство сельского хозяйства РК, Министерство национальной экономики РК
+9-3-2:
+  source_compilation_1: Национальный банк РК
+  source_implementation_1: Министерство национальной экономики РК
+9-4-1:
+  source_compilation_1: Комитет по статистике  Министерства национальной экономики
+    РК, Министерство энергетики РК
+  source_implementation_1: Министерство энергетики РК
+9-5-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Отчет о научно-исследовательских и опытно–конструкторских работах
+  source_implementation_1: Министерство образования и науки РК (Комитет по науке),
+    Министерство индустрии и инфраструктурного развития РК, Все отраслевые государственные
+    органы
+9-5-1-1:
+  source_compilation_1: Министерство образования и науки РК (Комитет по науке)
+  source_implementation_1: Министерство образования и науки РК (Комитет по науке),
+    Министерство индустрии и инфраструктурного развития РК, Все отраслевые государственные
+    органы
+9-5-2:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Отчет о научно-исследовательских и опытно–конструкторских работах
+  source_implementation_1: Министерство образования и науки РК (Комитет по науке),
+    Министерство индустрии и инфраструктурного развития РК, Все отраслевые государственные
+    органы
+9-a-1:
+  source_compilation_1: ОЭСР
+  source_implementation_1: Министерство национальной экономики РК, Министерство иностранных
+    дел РК
+9-b-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_implementation_1: Министерство индустрии и инфраструктурного развития РК
+9-c-1:
+  source_compilation_1: Комитет по статистике Министерства национальной экономики
+    РК
+  source_data_1: Выборочное обследование по использованию ИКТ домашними хозяйствами
+  source_implementation_1: Министерство цифрового развития, оборонной и аэрокосмической
+    промышленности РК
