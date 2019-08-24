@@ -37,6 +37,7 @@ forced to the global name.
 
   <div class="row" id="page-content-row">
     <div class="col-xs-12">
+      {% include components/data-notice.html %}
       {% include components/indicator-content.html %}
     </div>
   </div>
@@ -47,8 +48,20 @@ forced to the global name.
     </div>
   </div>
 
+  {% assign sources_list = '' | split: ',' %}
+  {% for i in (1..12) %}
+    {% assign src_active = "source_active_" | append: i %}
+    {% if meta[src_active] == true %}
+      {% assign src_org = "source_organisation_" | append: i %}
+      {% assign src_org_translated = meta[src_org] | t %}
+      {% assign sources_list = sources_list | push: src_org_translated  %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign uniqSources = sources_list | uniq | join: ", " %}
+
   <div class="row" id="indicatorData" data-indicatorid='{{dataset_name}}' data-id="{{meta.indicator | slugify }}" data-country="{{ meta.national_geographical_coverage | t }}"
-  data-charttitle="{{ meta.graph_title | t }}" data-measurementunit="{{ meta.computation_units | t }}" data-datasource="{{ meta.source_organisation_1 | t }}"
+  data-charttitle="{{ meta.graph_title | t }}" data-measurementunit="{{ meta.computation_units | t }}" data-datasource="{{ uniqSources }}"
   data-geographicalarea="{{ meta.national_geographical_coverage | t }}" data-footnote="{{ meta.data_footnote | t }}" data-showdata="{{ show_data }}" data-graphtype="{{ meta.graph_type }}"
   data-geocoderegex="{{ meta.data_geocode_regex }}" data-showmap="{{ meta.data_show_map }}" data-startvalues="{{ meta.data_start_values | join: '|' }}">
     {% if show_data %}
@@ -89,9 +102,10 @@ forced to the global name.
             <li role="presentation" class="nav-item map" style="display:none">
               <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" {% include autotrack.html preset="tab_data_map" category="Tab change" action="Change data view" label="Change to Map tab" %}>{{ t.indicator.map }}</a>
             </li>
-            {%- if meta.embedded_map_html -%}
+            {%- if meta.embedded_feature_url -%}
             <li role="presentation" class="nav-item embedded-map">
-              <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#embeddedmapview" aria-controls="embeddedmapview" role="tab" {% include autotrack.html preset="tab_data_embed" category="Tab change" action="Change data view" label="Change to embedded item tab" %}>{{ t.indicator.map }}</a>
+              <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#embeddedmapview" aria-controls="embeddedmapview" role="tab" {% include autotrack.html preset="tab_data_embed" category="Tab change" action="Change data view" label="Change to embedded item tab" %}>{{ meta.embedded_feature_tab_title }}</a>
+            </li>
           </li>
             {%- endif -%}
           </ul>
@@ -109,9 +123,19 @@ forced to the global name.
                 <img src="{{ site.baseurl }}/assets/img/loading.gif" alt="{{ t.indicator.loading_map }}" />
               </div>
             </div>
-            {% if meta.embedded_map_html %}
+            {% if meta.embedded_feature_url %}
             <div role="tabpanel" class="tab-pane" id="embeddedmapview" class="embedded-map">
-              {{ meta.embedded_map_html }}
+              <div role="tabpanel" class="tab-pane" id="embeddedmapview" >
+              <div class="row">
+              <div class="col-xs-12">
+                <h3 tabindex="0">{{ meta.embedded_feature_title }}</h3>
+              </div>
+            </div>
+              <div class="embedded-map" id="embeddedmapframe">
+                <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+                <script>document.querySelector("li.nav-item.embedded-map").addEventListener("click",function(){ var pymParent = new pym.Parent('embeddedmapframe', '{{ meta.embedded_feature_url }}', {});})</script>
+
+              </div>
             </div>
             {% endif %}
           </div>

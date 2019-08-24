@@ -1,13 +1,7 @@
 # Jekyll configuration for Open SDG platform
-#
-# You will need to change all of the capitalized variables below according
-# to your Github setup. For example, if your site and data repositories are:
-# -- https://github.com/my-awesome-github-org/my-awesome-site-repo
-# -- https://github.com/my-awesome-github-org/my-awesome-data-repo
-# Then you would want to make these replacements throughout this file:
-# -- replace "my-github-org" with "my-awesome-github-org"
-# -- replace "open-sdg-site-starter" with "my-awesome-site-repo"
-# -- replace "open-sdg-data-starter" with "my-awesome-data-repo"
+
+# Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
+remote_theme: open-sdg/open-sdg@0.8.1
 
 # Replace this title as needed.
 title: Indicators For The Sustainable Development Goals
@@ -21,7 +15,7 @@ environment: staging
 # Replace my-github-org and open-sdg-data-starter as needed.
 remote_data_prefix: "https://kazstat.github.io/sdg-data-kazstat"
 remote_translations:
-  - https://open-sdg.github.io/sdg-translations/translations-0.6.0.json
+  - https://open-sdg.github.io/sdg-translations/translations-0.7.0.json
 
 analytics:
   ga_prod: ''
@@ -107,9 +101,6 @@ goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
 plugins:
   - jekyll-remote-theme
   - jekyll-open-sdg-plugins
-
-# Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
-remote_theme: brockfanning/open-sdg@kazstat-launch
 
 # Apply any custom CSS.
 custom_css:
