@@ -2,7 +2,8 @@
 <html lang="en" class="no-js">
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CString.prototype.includes"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
 // This is where we initialise any global variables, namespaced in "opensdg".
@@ -89,7 +90,17 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
         
-        <title>Indicators For The Sustainable Development Goals</title>
+
+        
+        
+        <title>
+          
+            
+        Цель 17 - 
+        
+          
+        </title>
+        
         <meta name="description" content="">
         <meta property="og:description" content="">
         
@@ -113,22 +124,24 @@ var translations = {
         
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190824000124">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190824142427">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
-        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
-        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190824000124"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190824142427"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-ru layout-goal-by-target-grid">
 <!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","high_contrast":"высокий контраст","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир"};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
@@ -163,7 +176,13 @@ var translations = {
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu">Меню</span></li>
+        <li id="menuToggle"
+            aria-label="Menu toggle. Click to expand or collapse the menu."
+            aria-haspopup="true"
+            aria-expanded="false">
+          <span data-target="menu" tabindex="0"
+          role="navigation">Меню</span>
+        </li>
         <li><span data-target="search">Поиск</span></li>
       </ul>
 
@@ -189,7 +208,7 @@ var translations = {
       <div id="search" class="menu-target">
   <input id="indicator_search" title="Поиск показателя" placeholder="Поиск показателя" data-url="/sdg-site-kazstat/ru/indicators.json" data-pageurl="/sdg-site-kazstat/ru/search/?q=" />
   <label for="indicator_search">
-    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button><span>Поиск:</span>
+    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Поиск показателя></i></button><span>Поиск:</span>
   </label>
 </div>
 
@@ -256,7 +275,7 @@ var translations = {
           <span>
             17.1.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Общий объем государственных доходов в
@@ -286,7 +305,7 @@ var translations = {
           <span>
             17.1.2
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Доля национального бюджета, финансируемая
@@ -328,7 +347,7 @@ var translations = {
           <span>
             17.2.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Чистый объем официальной помощи в целях
@@ -373,7 +392,7 @@ var translations = {
           <span>
             17.3.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Прямые иностранные инвестиции (ПИИ),
@@ -404,7 +423,7 @@ var translations = {
           <span>
             17.3.1.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Отношение валового оттока прямых инвестиций за границу от казахстанских прямых инвесторов к ВВП, в процентах
@@ -433,7 +452,7 @@ var translations = {
           <span>
             17.3.1.2
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Отношение валового притока прямых инвестиций в Казахстан от иностранных прямых инвесторов, в процентах
@@ -462,7 +481,7 @@ var translations = {
           <span>
             17.3.2
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Объем переводов (в долларах США) в процентном
@@ -504,7 +523,7 @@ var translations = {
           <span>
             17.4.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Расходы на обслуживание долга в процентном
@@ -546,7 +565,7 @@ var translations = {
           <span>
             17.5.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Число стран, в которых приняты и действуют
@@ -589,7 +608,7 @@ var translations = {
           <span>
             17.6.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Число соглашений и программ научного
@@ -620,7 +639,7 @@ var translations = {
           <span>
             17.6.2
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Число стационарных абонентов широкополосного
@@ -662,7 +681,7 @@ var translations = {
           <span>
             17.7.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Общая сумма утвержденного финансирования
@@ -707,7 +726,7 @@ var translations = {
           <span>
             17.8.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Доля населения, пользующегося Интернетом
@@ -748,7 +767,7 @@ var translations = {
           <span>
             17.9.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Долларовый объем финансовой и технической помощи развивающимся странам (в том числе оказываемой по линии Север-Юг, Юг-Юг и в рамках трехсторонего сотрудничества)
@@ -789,7 +808,7 @@ var translations = {
           <span>
             17.10.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Средневзвешенный уровень тарифов Казахстана
@@ -830,7 +849,7 @@ var translations = {
           <span>
             17.11.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
            Доля развивающихся стран и наименее развитых
@@ -872,7 +891,7 @@ var translations = {
           <span>
             17.12.1
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Средний уровень тарифов, применяемых в
@@ -915,7 +934,7 @@ var translations = {
           <span>
             17.13.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Единый набор контрольных макроэкономических
@@ -957,7 +976,7 @@ var translations = {
           <span>
             17.14.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Число стран, в которых созданы механизмы
@@ -1001,7 +1020,7 @@ var translations = {
           <span>
             17.15.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Масштабы использования подготовленных
@@ -1046,7 +1065,7 @@ var translations = {
           <span>
             17.16.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Число стран, сообщающих о прогрессе в
@@ -1091,7 +1110,7 @@ var translations = {
           <span>
             17.17.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Объем грантового финансирования, государственного социального заказа НПО, по видам направлений, в млн.тенге
@@ -1132,7 +1151,7 @@ var translations = {
           <span>
             17.18.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Доля показателей устойчивого развития, разработанных
@@ -1164,7 +1183,7 @@ var translations = {
           <span>
             17.18.2
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
            Число, стран, имеющих национальное статистическое
@@ -1195,7 +1214,7 @@ var translations = {
           <span>
             17.18.3
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Число стран, имеющих полностью финансированный
@@ -1239,7 +1258,7 @@ var translations = {
           <span>
             17.19.1
             <span class="status notstarted">
-              Исследование источников данных
+              В процессе разработки
             </span>
           </span>
           Долларовая стоимость всех ресурсов, выделенных
@@ -1271,7 +1290,7 @@ var translations = {
           <span>
             17.19.2
             <span class="status complete">
-              Сообщалось в интернете
+              Опубликован
             </span>
           </span>
           Доля стран, которые a) провели хотя бы одну
@@ -1301,7 +1320,7 @@ var translations = {
             <li><a href="mailto:as.abraeva@economy.gov.kz">Свяжитесь с нами</a></li>
             
             
-            <li><a href="https://facebook.com/statgov.kz" target="_blank">@statgov.kz</a></li>
+            <li><a href="https://facebook.com/statgov.kz" target="_blank">Facebook: @statgov.kz</a></li>
             
             <li><a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a></li>
             <li><a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a></li>
@@ -1325,7 +1344,6 @@ var translations = {
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
@@ -1335,7 +1353,9 @@ var translations = {
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190824000124'></script><script src="/sdg-site-kazstat/assets/js/custom.js?v=20190824000124"></script><script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190824142427'></script><script src="/sdg-site-kazstat/assets/js/custom.js?v=20190824142427"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1371,7 +1391,7 @@ $(function() {
           view  = new indicatorView(model, {
             rootElement: '#indicatorData',
             legendElement: '#plotLegend',
-            maxChartHeight: 600,
+            maxChartHeight: 420,
             tableColumnDefs: [
               { maxCharCount: 25 }, // nowrap
               { maxCharCount: 35, width: 200 },

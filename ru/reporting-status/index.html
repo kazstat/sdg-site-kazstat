@@ -3,7 +3,8 @@
 <html lang="en" class="no-js">
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CString.prototype.includes"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
 // This is where we initialise any global variables, namespaced in "opensdg".
@@ -90,7 +91,15 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
         
-        <title>Indicators For The Sustainable Development Goals</title>
+
+        
+        
+        <title>
+          
+            Indicators For The Sustainable Development Goals
+          
+        </title>
+        
         <meta name="description" content="">
         <meta property="og:description" content="">
         
@@ -114,22 +123,24 @@ var translations = {
         
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190824000124">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20190824142427">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
-        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
-        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190824000124"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20190824142427"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-ru layout-reportingstatus">
 <!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","high_contrast":"высокий контраст","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир"};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
@@ -164,7 +175,13 @@ var translations = {
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu">Меню</span></li>
+        <li id="menuToggle"
+            aria-label="Menu toggle. Click to expand or collapse the menu."
+            aria-haspopup="true"
+            aria-expanded="false">
+          <span data-target="menu" tabindex="0"
+          role="navigation">Меню</span>
+        </li>
         <li><span data-target="search">Поиск</span></li>
       </ul>
 
@@ -190,7 +207,7 @@ var translations = {
       <div id="search" class="menu-target">
   <input id="indicator_search" title="Поиск показателя" placeholder="Поиск показателя" data-url="/sdg-site-kazstat/ru/indicators.json" data-pageurl="/sdg-site-kazstat/ru/search/?q=" />
   <label for="indicator_search">
-    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button><span>Поиск:</span>
+    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Поиск показателя></i></button><span>Поиск:</span>
   </label>
 </div>
 
@@ -203,22 +220,22 @@ var translations = {
 
 <div id="main-content" class="container reportingstatus">
 
-  <h1>Состояние отчётности </h1><div class="goal goal-overall">
+  <h1>Статус отчётности</h1><div class="goal goal-overall">
       <div class="details">
         <h2 class="status-goal">
             Общее состояние отчётности <span class="total"><span>275</span> показатели</span>
         </h2>
         <div class="summary">
           <div class="statuses"><div>
-              <span class="status complete">186</span><strong>Сообщалось в интернете</strong><span class="value">68%</span>
+              <span class="status complete">186</span><strong>Опубликован</strong><span class="value">68%</span>
             </div><div>
               <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
             </div><div>
-              <span class="status notstarted">89</span><strong>Исследование источников данных</strong><span class="value">32%</span>
+              <span class="status notstarted">89</span><strong>В процессе разработки</strong><span class="value">32%</span>
             </div><br style="clear:both;">
           </div>
         </div>
-        <div class="goal-stats"><span class="complete" style="width:68%" title="Сообщалось в интернете: 68%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:32%" title="Исследование источников данных: 32%"></span></div>
+        <div class="goal-stats"><span class="complete" style="width:68%" title="Опубликован: 68%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:32%" title="В процессе разработки: 32%"></span></div>
 
       </div>
     <!--</li>-->
@@ -238,15 +255,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">10</span><strong>Сообщалось в интернете</strong><span class="value">71%</span>
+                <span class="status complete">10</span><strong>Опубликован</strong><span class="value">71%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">4</span><strong>Исследование источников данных</strong><span class="value">29%</span>
+                <span class="status notstarted">4</span><strong>В процессе разработки</strong><span class="value">29%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:71%" title="Сообщалось в интернете: 71%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:29%" title="Исследование источников данных: 29%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:71%" title="Опубликован: 71%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:29%" title="В процессе разработки: 29%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -265,15 +282,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">9</span><strong>Сообщалось в интернете</strong><span class="value">69%</span>
+                <span class="status complete">9</span><strong>Опубликован</strong><span class="value">69%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">4</span><strong>Исследование источников данных</strong><span class="value">31%</span>
+                <span class="status notstarted">4</span><strong>В процессе разработки</strong><span class="value">31%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:69%" title="Сообщалось в интернете: 69%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:31%" title="Исследование источников данных: 31%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:69%" title="Опубликован: 69%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:31%" title="В процессе разработки: 31%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -292,15 +309,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">20</span><strong>Сообщалось в интернете</strong><span class="value">71%</span>
+                <span class="status complete">20</span><strong>Опубликован</strong><span class="value">71%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">8</span><strong>Исследование источников данных</strong><span class="value">29%</span>
+                <span class="status notstarted">8</span><strong>В процессе разработки</strong><span class="value">29%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:71%" title="Сообщалось в интернете: 71%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:29%" title="Исследование источников данных: 29%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:71%" title="Опубликован: 71%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:29%" title="В процессе разработки: 29%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -319,15 +336,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">19</span><strong>Сообщалось в интернете</strong><span class="value">95%</span>
+                <span class="status complete">19</span><strong>Опубликован</strong><span class="value">95%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">1</span><strong>Исследование источников данных</strong><span class="value">5%</span>
+                <span class="status notstarted">1</span><strong>В процессе разработки</strong><span class="value">5%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:95%" title="Сообщалось в интернете: 95%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:5%" title="Исследование источников данных: 5%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:95%" title="Опубликован: 95%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:5%" title="В процессе разработки: 5%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -346,15 +363,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">12</span><strong>Сообщалось в интернете</strong><span class="value">67%</span>
+                <span class="status complete">12</span><strong>Опубликован</strong><span class="value">67%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">6</span><strong>Исследование источников данных</strong><span class="value">33%</span>
+                <span class="status notstarted">6</span><strong>В процессе разработки</strong><span class="value">33%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:67%" title="Сообщалось в интернете: 67%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:33%" title="Исследование источников данных: 33%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:67%" title="Опубликован: 67%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:33%" title="В процессе разработки: 33%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -373,15 +390,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">9</span><strong>Сообщалось в интернете</strong><span class="value">82%</span>
+                <span class="status complete">9</span><strong>Опубликован</strong><span class="value">82%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">2</span><strong>Исследование источников данных</strong><span class="value">18%</span>
+                <span class="status notstarted">2</span><strong>В процессе разработки</strong><span class="value">18%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:82%" title="Сообщалось в интернете: 82%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:18%" title="Исследование источников данных: 18%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:82%" title="Опубликован: 82%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:18%" title="В процессе разработки: 18%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -400,15 +417,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">7</span><strong>Сообщалось в интернете</strong><span class="value">78%</span>
+                <span class="status complete">7</span><strong>Опубликован</strong><span class="value">78%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">2</span><strong>Исследование источников данных</strong><span class="value">22%</span>
+                <span class="status notstarted">2</span><strong>В процессе разработки</strong><span class="value">22%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:78%" title="Сообщалось в интернете: 78%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:22%" title="Исследование источников данных: 22%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:78%" title="Опубликован: 78%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:22%" title="В процессе разработки: 22%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -427,15 +444,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">15</span><strong>Сообщалось в интернете</strong><span class="value">88%</span>
+                <span class="status complete">15</span><strong>Опубликован</strong><span class="value">88%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">2</span><strong>Исследование источников данных</strong><span class="value">12%</span>
+                <span class="status notstarted">2</span><strong>В процессе разработки</strong><span class="value">12%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:88%" title="Сообщалось в интернете: 88%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:12%" title="Исследование источников данных: 12%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:88%" title="Опубликован: 88%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:12%" title="В процессе разработки: 12%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -454,15 +471,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">11</span><strong>Сообщалось в интернете</strong><span class="value">73%</span>
+                <span class="status complete">11</span><strong>Опубликован</strong><span class="value">73%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">4</span><strong>Исследование источников данных</strong><span class="value">27%</span>
+                <span class="status notstarted">4</span><strong>В процессе разработки</strong><span class="value">27%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:73%" title="Сообщалось в интернете: 73%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:27%" title="Исследование источников данных: 27%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:73%" title="Опубликован: 73%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:27%" title="В процессе разработки: 27%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -481,15 +498,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">7</span><strong>Сообщалось в интернете</strong><span class="value">64%</span>
+                <span class="status complete">7</span><strong>Опубликован</strong><span class="value">64%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">4</span><strong>Исследование источников данных</strong><span class="value">36%</span>
+                <span class="status notstarted">4</span><strong>В процессе разработки</strong><span class="value">36%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:64%" title="Сообщалось в интернете: 64%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:36%" title="Исследование источников данных: 36%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:64%" title="Опубликован: 64%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:36%" title="В процессе разработки: 36%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -508,15 +525,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">9</span><strong>Сообщалось в интернете</strong><span class="value">53%</span>
+                <span class="status complete">9</span><strong>Опубликован</strong><span class="value">53%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">8</span><strong>Исследование источников данных</strong><span class="value">47%</span>
+                <span class="status notstarted">8</span><strong>В процессе разработки</strong><span class="value">47%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:53%" title="Сообщалось в интернете: 53%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:47%" title="Исследование источников данных: 47%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:53%" title="Опубликован: 53%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:47%" title="В процессе разработки: 47%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -535,15 +552,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">4</span><strong>Сообщалось в интернете</strong><span class="value">29%</span>
+                <span class="status complete">4</span><strong>Опубликован</strong><span class="value">29%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">10</span><strong>Исследование источников данных</strong><span class="value">71%</span>
+                <span class="status notstarted">10</span><strong>В процессе разработки</strong><span class="value">71%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:29%" title="Сообщалось в интернете: 29%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:71%" title="Исследование источников данных: 71%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:29%" title="Опубликован: 29%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:71%" title="В процессе разработки: 71%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -562,15 +579,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Сообщалось в интернете</strong><span class="value">38%</span>
+                <span class="status complete">3</span><strong>Опубликован</strong><span class="value">38%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">5</span><strong>Исследование источников данных</strong><span class="value">62%</span>
+                <span class="status notstarted">5</span><strong>В процессе разработки</strong><span class="value">62%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:38%" title="Сообщалось в интернете: 38%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:62%" title="Исследование источников данных: 62%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:38%" title="Опубликован: 38%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:62%" title="В процессе разработки: 62%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -589,15 +606,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">5</span><strong>Сообщалось в интернете</strong><span class="value">50%</span>
+                <span class="status complete">5</span><strong>Опубликован</strong><span class="value">50%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">5</span><strong>Исследование источников данных</strong><span class="value">50%</span>
+                <span class="status notstarted">5</span><strong>В процессе разработки</strong><span class="value">50%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:50%" title="Сообщалось в интернете: 50%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:50%" title="Исследование источников данных: 50%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:50%" title="Опубликован: 50%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:50%" title="В процессе разработки: 50%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -616,15 +633,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">12</span><strong>Сообщалось в интернете</strong><span class="value">80%</span>
+                <span class="status complete">12</span><strong>Опубликован</strong><span class="value">80%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">3</span><strong>Исследование источников данных</strong><span class="value">20%</span>
+                <span class="status notstarted">3</span><strong>В процессе разработки</strong><span class="value">20%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:80%" title="Сообщалось в интернете: 80%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:20%" title="Исследование источников данных: 20%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:80%" title="Опубликован: 80%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:20%" title="В процессе разработки: 20%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -643,15 +660,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">18</span><strong>Сообщалось в интернете</strong><span class="value">64%</span>
+                <span class="status complete">18</span><strong>Опубликован</strong><span class="value">64%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">10</span><strong>Исследование источников данных</strong><span class="value">36%</span>
+                <span class="status notstarted">10</span><strong>В процессе разработки</strong><span class="value">36%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:64%" title="Сообщалось в интернете: 64%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:36%" title="Исследование источников данных: 36%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:64%" title="Опубликован: 64%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:36%" title="В процессе разработки: 36%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -670,15 +687,15 @@ var translations = {
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">16</span><strong>Сообщалось в интернете</strong><span class="value">59%</span>
+                <span class="status complete">16</span><strong>Опубликован</strong><span class="value">59%</span>
               </div><div>
                 <span class="status inprogress">0</span><strong>Статистика в процессе выполнения</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">11</span><strong>Исследование источников данных</strong><span class="value">41%</span>
+                <span class="status notstarted">11</span><strong>В процессе разработки</strong><span class="value">41%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:59%" title="Сообщалось в интернете: 59%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:41%" title="Исследование источников данных: 41%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:59%" title="Опубликован: 59%"></span><span class="inprogress" style="width:0%" title="Статистика в процессе выполнения: 0%"></span><span class="notstarted" style="width:41%" title="В процессе разработки: 41%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -696,7 +713,7 @@ var translations = {
             <li><a href="mailto:as.abraeva@economy.gov.kz">Свяжитесь с нами</a></li>
             
             
-            <li><a href="https://facebook.com/statgov.kz" target="_blank">@statgov.kz</a></li>
+            <li><a href="https://facebook.com/statgov.kz" target="_blank">Facebook: @statgov.kz</a></li>
             
             <li><a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a></li>
             <li><a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a></li>
@@ -720,7 +737,6 @@ var translations = {
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
@@ -730,7 +746,9 @@ var translations = {
 <script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190824000124'></script><script src="/sdg-site-kazstat/assets/js/custom.js?v=20190824000124"></script><script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20190824142427'></script><script src="/sdg-site-kazstat/assets/js/custom.js?v=20190824142427"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -766,7 +784,7 @@ $(function() {
           view  = new indicatorView(model, {
             rootElement: '#indicatorData',
             legendElement: '#plotLegend',
-            maxChartHeight: 600,
+            maxChartHeight: 420,
             tableColumnDefs: [
               { maxCharCount: 25 }, // nowrap
               { maxCharCount: 35, width: 200 },
