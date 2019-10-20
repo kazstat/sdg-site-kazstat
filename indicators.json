@@ -837,7 +837,7 @@
       "title": "Барлығы үшін алға бағытталған, ауқымды және тұрақты экономикалық өсуге, толық және өнімді жұмысбастылыққа және лайықты жұмысқа жәрдемдесу",
       "indicators": [{
           "id": "8-5-2",
-          "title": "national_indicators.8-5-2.title",
+          "title": "Жұмыссыздық деңгейі, жынысы, жасы бойынша топтастыру",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-5-2",
@@ -851,7 +851,7 @@
           "status": "complete"
         },{
           "id": "8-7-1",
-          "title": "national_indicators.8-7-1.title",
+          "title": "15-17 жас аралығындағы қызмет етушілер үлесі, жыныс және жасы бойынша топтастыру",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-7-1",
@@ -879,14 +879,14 @@
           "status": "notstarted"
         },{
           "id": "8-9-1",
-          "title": "national_indicators.8-9-1.title",
+          "title": "Тікелей туризмде пайда болатын ЖҚҚ үлесі",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-9-1",
           "status": "complete"
         },{
           "id": "8-3-1",
-          "title": "national_indicators.8-3-1.title",
+          "title": "Бейресми қызметтегілердің жалпы санынан ауыл шаруашылық емес салалардағы бейресми қызметтегілер үлесі, жынысы бойынша топтастыру",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-3-1",
@@ -900,7 +900,7 @@
           "status": "complete"
         },{
           "id": "8-9-2",
-          "title": "national_indicators.8-9-2.title",
+          "title": "Жұмыспен қамтылғандардың жалпы санындағы туризмдегі жұмыспен қамтылғандар үлесі",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-9-2",
@@ -914,14 +914,14 @@
           "status": "complete"
         },{
           "id": "8-8-1",
-          "title": "national_indicators.8-8-1.title",
+          "title": "Өндірістік жарақаттану деңгейі (1000 жұмысшыға)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-8-1",
           "status": "complete"
         },{
           "id": "8-5-1",
-          "title": "national_indicators.8-5-1.title",
+          "title": "Әйелдер мен ерекектердің жалпы орташа бір сағат бойынша табысы, СЭҚ, аумақ және жас бойынша",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-5-1",
@@ -949,7 +949,7 @@
           "status": "notstarted"
         },{
           "id": "8-6-1",
-          "title": "national_indicators.8-6-1.title",
+          "title": "Жұмыс істемейтін, білім алмайтын және кәсіби машыққа үйренбейтін жастардың үлесі (15 бастап 24 жасқа дейінгі)",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-6-1",
