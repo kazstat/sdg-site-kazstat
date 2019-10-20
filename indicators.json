@@ -768,21 +768,21 @@
       "title": "Қымбат емес, сенімді, тұрақты және заманауи энергия көздерінің барлығы үшін жаппай қолжетімділігін қамтамасыз ету",
       "indicators": [{
           "id": "7-1-2-1",
-          "title": "Халықтың газдандыру деңгейі",
+          "title": "Ас даярлық үшін табанды түрі отын пайдаланатын халықтың үлесі",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-1-2-1",
           "status": "complete"
         },{
           "id": "7-2-1",
-          "title": "national_indicators.7-2-1.title",
+          "title": "Электр энергиясын өндірудің жалпы көлеміндегі жаңғырмалы энергия көздерімен өндірілген электр энергиясының үлесі",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-2-1",
           "status": "complete"
         },{
           "id": "7-3-1",
-          "title": "national_indicators.7-3-1.title",
+          "title": "ЖІӨ энергиялық сыйымдылығы",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-3-1",
@@ -803,7 +803,7 @@
           "status": "notstarted"
         },{
           "id": "7-b-1",
-          "title": "Негізгі капиталға меншік нысандары бойынша инвестициялар.",
+          "title": "Негізгі капиталға меншік нысандары бойынша инвестициялар",
           "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-b-1",
