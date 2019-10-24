@@ -153,7 +153,7 @@
 "11-3-1":
   title: "Housing per person"
 "11-4-1":
-  title: "The number of monuments of history and culture of republican significance, on which research and restoration works have been completed, of the total number of monuments of history and culture of republican significance"
+  title: "The proportion of restored monuments and exhibits which have cultural and historical significance"
 "11-6-1":
   title: "Providing the public with waste collection and disposal services"
 "12-4-2":
@@ -188,6 +188,8 @@
   title: "list of rare and endangered"
 "15-7-1":
   title: "The number of rare and wild hoofed animals"
+"15-b-1":
+  title: "Maintenance of specially protected natural territories" 
 "15-c-1":
   title: "Increase in the number of saigas"
 "17-9-1":
