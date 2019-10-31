@@ -683,6 +683,7 @@ var indicatorDataStore = function(dataUrl) {
   this.chartTitle = options.chartTitle;
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
+  this.copyright = options.copyright;
   this.dataSource = options.dataSource;
   this.geographicalArea = options.geographicalArea;
   this.footnote = options.footnote;
@@ -827,6 +828,7 @@ var indicatorDataStore = function(dataUrl) {
     that.footerFields[translations.indicator.source] = that.dataSource;
     that.footerFields[translations.indicator.geographical_area] = that.geographicalArea;
     that.footerFields[translations.indicator.unit_of_measurement] = that.measurementUnit;
+    that.footerFields[translations.indicator.copyright] = that.copyright;
     that.footerFields[translations.indicator.footnote] = that.footnote;
     // Filter out the empty values.
     that.footerFields = _.pick(that.footerFields, _.identity);
@@ -1392,28 +1394,37 @@ var indicatorView = function (model, options) {
   });
 
   this._model.onNoHeadlineData.attach(function(sender, args) {
+    // Force a unit if necessary.
+    if (args && args.forceUnit) {
+      $('#units input[type="radio"]')
+        .filter('[value="' + args.forceUnit + '"]')
+        .first()
+        .click();
+    }
+    // Force particular minimum field selections if necessary. We have to delay
+    // this slightly to make it work...
     if (args && args.minimumFieldSelections && _.size(args.minimumFieldSelections)) {
-      // Force a unit if necessary.
-      if (args.forceUnit) {
-        $('#units input[type="radio"]')
-          .filter('[value="' + args.forceUnit + '"]')
-          .first()
-          .click();
+      function getClickFunction(fieldToSelect, fieldValue) {
+        return function() {
+          $('#fields .variable-options input[type="checkbox"]')
+            .filter('[data-field="' + fieldToSelect + '"]')
+            .filter('[value="' + fieldValue + '"]')
+            .filter(':not(:checked)')
+            .first()
+            .click();
+        }
       }
-      // If we have minimum field selections, impersonate a user and "click" on
-      // each item.
       for (var fieldToSelect in args.minimumFieldSelections) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
-        $('#fields .variable-options input[type="checkbox"]')
-          .filter('[data-field="' + fieldToSelect + '"]')
-          .filter('[value="' + fieldValue + '"]')
-          .first()
-          .click();
+        setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
       }
     }
     else {
       // Fallback behavior - just click on the first one, whatever it is.
-      $('#fields .variable-options :checkbox:eq(0)').trigger('click');
+      // Also needs to be delayed...
+      setTimeout(function() {
+        $('#fields .variable-options :checkbox:eq(0)').trigger('click');
+      }, 500);
     }
   });
 
@@ -1572,20 +1583,20 @@ var indicatorView = function (model, options) {
 
   $(this._rootElement).on('click', '.variable-selector', function(e) {
     var currentSelector = e.target;
-    
+
     var currentButton = getCurrentButtonFromCurrentSelector(currentSelector);
-    
+
     var options = $(this).find('.variable-options');
     var optionsAreVisible = options.is(':visible');
     $(options)[optionsAreVisible ? 'hide' : 'show']();
     currentButton.setAttribute("aria-expanded", optionsAreVisible ? "true" : "false");
-    
+
     var optionsVisibleAfterClick = options.is(':visible');
     currentButton.setAttribute("aria-expanded", optionsVisibleAfterClick ? "true" : "false");
 
     e.stopPropagation();
   });
-  
+
   function getCurrentButtonFromCurrentSelector(currentSelector){
     if(currentSelector.tagName === "H5"){
       return currentSelector.parentElement;
