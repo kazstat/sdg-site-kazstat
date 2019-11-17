@@ -115,8 +115,8 @@
   РК, Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan
 11-3-1-source_implementation_1: Ministry of National economy of the Republic of Kazakhstan, Ministry of Industry and Infrastructural Development of the Republic
   of Kazakhstan
-11-3-2-source_compilation_1: Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan, МИО
-11-3-2-source_implementation_1: Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan, МИО
+11-3-2-source_compilation_1: Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan, Local Executive  Bodies
+11-3-2-source_implementation_1: Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan, Local Executive  Bodies
 11-4-1-source_compilation_1: Ministry of Culture and Sport of the Republic of Kazakhstan
 11-4-1-source_implementation_1: Ministry of Culture and Sport of the Republic of Kazakhstan
 11-5-1-source_compilation_1: Committee for Emergency Situations of the Ministry of Internal Affairs 
@@ -161,13 +161,13 @@
   экономики РК,  Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan
 12-1-1-source_implementation_1: Министерство энергетики РК (ДУО),  Министерство национальной
   экономики РК,  Министерство индустрии и инфраструктурного развития РК
-12-2-1-source_compilation_1: Комитет по статистике Министерство национальной экономики
-  РК
-12-2-1-source_implementation_1: Министерство национальной экономики, Министерство
+12-2-1-source_compilation_1: Ministry of National economy of the Republic of Kazakhstan 
+  Committee on Statistics
+12-2-1-source_implementation_1: Ministry of National economy of the Republic of Kazakhstan, Министерство
   энергетики, Министерство индустрии и инфраструктурного развития, Министерство сельского
   хозяйства, Местные исполнительные органы
-12-2-2-source_compilation_1: Комитет по статистике Министерство национальной экономики
-  РК
+12-2-2-source_compilation_1: Ministry of National economy of the Republic of Kazakhstan 
+  Committee on Statistics
 12-2-2-source_implementation_1: Министерство национальной экономики, Министерство
   энергетики, Министерство индустрии и инфраструктурного развития, Министерство сельского
   хозяйства, Местные исполнительные органы
@@ -1004,8 +1004,8 @@
   Local  Executive Bodies
 8-4-2-source_compilation_1: Committee on Statistics of the Ministry of National Economy
   of the Republic of Kazakhstan
-8-4-2-source_data_1: 'предполагаемые: 1-П, 29-СХ год, А-005, 24-СХ год, А-008, 1-ТС-мес,
-  адм данные КГД.'
+8-4-2-source_data_1: 'prospective: 1-P, 29-CX year, A-005, 24-CX year, A-008, 1-TC-month,
+  adm data of QGD.'
 8-4-2-source_implementation_1: Ministry of National economy of the Republic of Kazakhstan
 8-5-1-source_compilation_1: Committee on Statistics of the Ministry of National Economy
   of the Republic of Kazakhstan
@@ -1104,11 +1104,11 @@
   of the Republic of Kazakhstan
 9-5-2-source_data_1: Research and Development Report
 9-5-2-source_implementation_1: Ministry of Education and Science of the Republic of Kazakhstan (Science Committee),
-  Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan, Все отраслевые государственные
-  органы
-9-a-1-source_compilation_1: ОЭСР
-9-a-1-source_implementation_1: Ministry of National economy of the Republic of Kazakhstan, Министерство
-  иностранных дел РК
+  Ministry of Industry and Infrastructural Development of the Republic of Kazakhstan, All sectoral government
+  bodies
+9-a-1-source_compilation_1: OECD
+9-a-1-source_implementation_1: Ministry of National economy of the Republic of Kazakhstan, Ministry
+  of foreign affairs Republic of Kazakhstan
 9-b-1-source_compilation_1: Committee on Statistics of the Ministry of National Economy
   of the Republic of Kazakhstan
 9-b-1-source_implementation_1: Ministry of Industry and Infrastructural Development of the Republic
