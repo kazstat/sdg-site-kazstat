@@ -899,49 +899,43 @@
 5-b-1-source_data_1: Sample survey on ICT use by households
 5-b-1-source_implementation_1: Ministry of Information and Communication of the Republic
   of Kazakhstan
-6-1-1-source_compilation_1: Министерство индустрии и инфраструктурного развития РК
-6-1-1-source_implementation_1: Министерство индустрии и инфраструктурного развития
-  РК
-6-2-1-source_compilation_1: Министерство индустрии и инфраструктурного развития РК
-6-2-1-source_implementation_1: Министерство индустрии и инфраструктурного развития
-  РК
-6-3-1-source_compilation_1: Комитет по статистике Министерства национальной экономики
-  РК
-6-3-1-source_data_1: Статистическая форма 1-ВК
-6-3-1-source_implementation_1: Министерство сельского хозяйства РК, Министерство индустрии
-  и инфраструктурного развития РК
-6-3-2-source_compilation_1: Министерство энергетики РК (Казгидромет-поверхностные),
-  Министерство индустрии и инфраструктурного развития РК  (Комитет геологии -подземные),
-  Министерство здравоохранения РК (КООЗ-культурно бытовые)
-6-3-2-source_implementation_1: Министерство сельского хозяйства РК, Министерство индустрии
-  и инфраструктурного развития РК, Министерство здравоохранения РК
-6-4-1-source_compilation_1: Комитет по статистике Министерства национальной экономики
-  РК, Министерство энергетики РК (Казгидромет), Министерство сельского хозяйства РК
-  (КВР)
-6-4-1-source_data_1: Расчет осуществляется на основе 2-ТП(водхоз), формируемый КВР
-  МСХ РК
-6-4-1-source_implementation_1: Министерство энергетики РК, Министерство сельского
-  хозяйства РК
-6-4-2-source_compilation_1: Комитет по статистике Министерства национальной экономики
-  РК, Министерство сельского хозяйства РК (КВР)
-6-4-2-source_implementation_1: Министерство сельского хозяйства РК
-6-5-1-source_compilation_1: Министерство сельского хозяйства РК (КУВР)
-6-5-1-source_implementation_1: Министерство сельского хозяйства РК (КУВР)
-6-5-2-source_compilation_1: Министерство сельского хозяйства РК (КУВР), Министерство
-  энергетики РК (Казгидромет)
-6-5-2-source_implementation_1: Министерство сельского хозяйства РК (КУВР)
-6-6-1-source_compilation_1: Министерство сельского хозяйства РК (КЛОХ),  Министерство
-  энергетики РК (Казгидромет), Министерство индустрии и инфраструктурного развития
-  РК (КГ)
-6-6-1-source_implementation_1: Министерство сельского хозяйства РК (КЛОХ),  Министерство
-  энергетики РК (Казгидромет), Министерство индустрии и инфраструктурного развития
-  РК (КГ)
-6-a-1-source_compilation_1: ОЭСР
-6-a-1-source_implementation_1: Министерство индустрии и инфраструктурного развития
-  РК (ЖКХ), Министерство национальной экономики РК, Министерство сельского хозяйства
-  РК, Местные исполнительные органы
-6-b-1-source_compilation_1: Министерство сельского хозяйства РК (КУВР)
-6-b-1-source_implementation_1: Министерство сельского хозяйства РК (КУВР)
+6-1-1-source_compilation_1: Ministry of Industry and Infrastructure Development of the Republic of the Kazakhstan 
+6-1-1-source_implementation_1: Ministry of Industry and Infrastructure Development of the Republic of the Kazakhstan 
+6-2-1-source_compilation_1: Ministry of Industry and Infrastructure Development of the Republic of the Kazakhstan 
+6-2-1-source_implementation_1: Ministry of Industry and Infrastructure Development of the Republic of the Kazakhstan 
+6-3-1-source_compilation_1: Committee on Statistics of the Ministry of National Economy of the Republic of Kazakhstan
+6-3-1-source_data_1: Statistical Form 1-VK
+6-3-1-source_implementation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan,
+  Ministry of Industry and Infrastructure Development of the Republic of Kazakhstan
+6-3-2-source_compilation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan (RSE Kazhydromet , Committee of Geology and Subsoil Use)
+  Ministry of Healthcare of the Republic of Kazakhstan (Committee for quality control and safety of goods and services) 
+6-3-2-source_implementation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan,
+  Ministry of Healthcare of the Republic of Kazakhstan
+6-4-1-source_compilation_1: Committee on Statistics of the Ministry of National Economy of the Republic of Kazakhstan
+  Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan (RSE Kazhydromet, Committee on Water Management)        
+6-4-1-source_data_1: The calculation is based on a 2-TP (water management), formed by the
+  Committee on Water Management  Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan 
+6-4-1-source_implementation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan
+6-4-2-source_compilation_1: Committee on Statistics of the Ministry of National Economy of the Republic of Kazakhstan,
+  Committee on Water Management Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan 
+6-4-2-source_implementation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan 
+6-5-1-source_compilation_1: Committee on Water Management Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan 
+6-5-1-source_implementation_1: Committee on Water Management Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan 
+6-5-2-source_compilation_1: Committee on Water Managment, RSE Kazhydromet Ministry of Ecology, 
+  Geology and Natural Resources of the Republic of Kazakhstan 
+6-5-2-source_implementation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan 
+6-6-1-source_compilation_1: Forestry and Hunting Committee, RSE Kazhydromet, 
+  Committee of Geology and Subsoil use Ministry of Ecology, 
+  Geology and Natural Resources of the Republic of Kazakhstan
+6-6-1-source_implementation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan 
+6-a-1-source_compilation_1: Organisation for Economic Cooperation and Development
+6-a-1-source_implementation_1: Ministry of Industry and Infrastructure Development of the Republic of Kazakhstan,
+  Ministry of National Economy of the Republic of Kazakhstan,
+  Ministry of Agriculture of the Republic of Kazakhstan, Local Executive Body 
+6-b-1-source_compilation_1: Kazakhstan Water Resources Committee, RSE Kazhydromet Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan, 
+  Committee on construction, housing and utilities services Ministry of Industry and Infrastructure Development of the Republic of Kazakhstan 
+6-b-1-source_implementation_1: Ministry of Ecology, Geology and Natural Resources of the Republic of Kazakhstan, 
+  Ministry of Industry and Infrastructure Development of the Republic of Kazakhstan
 7-1-1-source_compilation_1: Committee on Statistics of the Ministry of National Economy
   of the Republic of Kazakhstan
 7-1-1-source_data_1: Information System "Statistical Register of Housing"
