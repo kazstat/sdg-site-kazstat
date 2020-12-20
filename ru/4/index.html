@@ -1,14 +1,9 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -16,14 +11,12 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://kazstat.github.io/sdg-data-kazstat',
+  remoteDataBaseUrl: 'https://kazstat.github.io/sdg-data-kazstat/ru',
 
-  // A hook which can be replaced to modify the configuration for Chart.js.
-  // To see where this is used, see indicatorView.js createPlot() and updatePlot().
-  // To see an example of replacing it, see binary.html.
-  chartConfigAlter: function(config) {
-    // Alterations go here.
-    return config;
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
   },
 
   // A hook which can be replaced to alter whether/how the values that are
@@ -32,6 +25,8 @@ var opensdg = {
     // Alterations go here.
     return value;
   },
+
+  language: 'ru',
 };
 
 // For backwards compatibility, some of these might need to be global.
@@ -94,17 +89,11 @@ var translations = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Title and meta description
         ================================================== -->
-        
 
         
+    <title>Цель 4 - Качественное образование - Indicators For The Sustainable Development Goals</title>
 
-        <title>
-          
-            
-        Цель 4 - Качественное образование
-        
-          
-        </title>
+
 
         <meta name="description" content="">
         <meta property="og:description" content="">
@@ -132,7 +121,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20201220000559">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20201220040335">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -140,10 +129,10 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20201220000559"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
-<body class="language-ru layout-goal-by-target-grid">
+<body class="language-ru layout-goal-by-target">
 <!-- <div class="container"> -->
 
 <script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","high_contrast":"высокий контраст","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир"};</script>
@@ -151,8 +140,9 @@ var translations = {
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
   <div class="container">
-  <div class="alert alert-danger" role="alert">
+  <div class="disclaimer-alert">
     <strong class="phase-tag">Альфа</strong>
+    
     Это сайт находится в разработке. Мы рады вашим отзывам.
   </div>
 </div>
@@ -162,73 +152,159 @@ var translations = {
 <header role="banner">
   <div class="container">
 
-    <a class="navbar-brand" href="/sdg-site-kazstat/ru/" id="home">
-      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
-    </a>
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/sdg-site-kazstat/ru/" id="home">
+        <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
+      </a>
 
-  <div class='hidden visible-xs float-right'>
-    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
-      <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
-  <i class="fa fa-globe"></i>
-  <span class="language-toggle-text">Pусский</span>
-  <i class="language-toggle fa fa-chevron-down"></i>
-  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
-</a>
-<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/4/">Қазақ</a></li><li><a href="/sdg-site-kazstat/en/4/">English</a></li></ul>
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
+      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/sdg-site-kazstat/4/">
+              Қазақ
+            </a>
+          </li><li>
+            <a href="/sdg-site-kazstat/en/4/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
 
-    </div></div>
+        </div></div>
+    </div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
         <li id="menuToggle"
-            aria-label="Menu toggle. Click to expand or collapse the menu."
-            aria-haspopup="true"
-            aria-expanded="false">
-          <span data-target="menu" tabindex="0"
-          role="navigation">Меню</span>
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Меню</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/sdg-site-kazstat/ru/reporting-status">Состояние отчётности</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/ru/about">О нас</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/ru/faq">Часто задаваемые вопросы</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
+      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/sdg-site-kazstat/4/">
+              Қазақ
+            </a>
+          </li><li>
+            <a href="/sdg-site-kazstat/en/4/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li></ul>
+
         </li>
-        <li><span data-target="search">Поиск</span></li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Поиск</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/sdg-site-kazstat/ru/search">
+    <input type="text" name="q" id="indicator_search-mobile" title="Поиск" />
+    <label class="sr-only" for="indicator_search-mobile">Поиск</label>
+    <button aria-label="Поиск" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
       </ul>
 
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/sdg-site-kazstat/ru/reporting-status">Состояние отчётности</a>
-          </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/ru/about">О нас</a>
-          </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/ru/guidance">Руководство</a>
-          </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/ru/faq">Часто задаваемые вопросы</a>
-          </li><li>
-          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
-  <i class="fa fa-globe"></i>
-  <span class="language-toggle-text">Pусский</span>
-  <i class="language-toggle fa fa-chevron-down"></i>
-  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
-</a>
-<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/4/">Қазақ</a></li><li><a href="/sdg-site-kazstat/en/4/">English</a></li></ul>
-
-        </li></ul>
-
       <div id="search" class="menu-target">
-  <input id="indicator_search" title="Поиск показателя" placeholder="Поиск показателя" data-url="/sdg-site-kazstat/ru/indicators.json" data-pageurl="/sdg-site-kazstat/ru/search/?q=" />
-  <label for="indicator_search">
-    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Поиск показателя></i></button><span>Поиск:</span>
-  </label>
+  <form action="/sdg-site-kazstat/ru/search">
+    <input type="text" name="q" id="indicator_search" title="Поиск" />
+    <label class="sr-only" for="indicator_search">Поиск</label>
+    <button aria-label="Поиск" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
 </div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/sdg-site-kazstat/ru/reporting-status">Состояние отчётности</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/ru/about">О нас</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/ru/faq">Часто задаваемые вопросы</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
+      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/sdg-site-kazstat/4/">
+              Қазақ
+            </a>
+          </li><li>
+            <a href="/sdg-site-kazstat/en/4/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li></ul>
 
 
     </nav>
   </div>
 
 </header>
+<div id="top" tabindex=-1></div>
 
 
-<div class="heading goal-4">
+<div class="container">
+  <ol class="breadcrumb">
+  
+  <li><a href="/sdg-site-kazstat/ru/">Главная</a></li>
+  <li class="active">Цель 4</li>
+  
+</ol>
+
+</div>
+
+<div class="heading goal-banner goal-4">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2">
-        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/4.png" alt="Качественное образование - Цель 4" />
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/4.png" alt="Качественное образование - Цель 4" id="goal-4" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
@@ -240,31 +316,37 @@ var translations = {
   </div>
 </div>
 
-<div id="main-content" class="container goal-indicators goal-4 goal-by-target">
+<div id="main-content" class="container goal-indicators goal-4 goal-by-target" role="main">
 
   
-  <ol class="breadcrumb">
-  <li><a href="/sdg-site-kazstat/ru/">Главная</a></li>
-  
-      <li class="active">Цель 4</li>
-  
-</ol>
 
 
-  
-  
-    
-    
-    <div class="indicator-cards target">
-      <span>
-        <h2>Задача 4.1</h2>
-      </span>
-      
+
+  <div class="visible-md-block visible-lg-block">
+    <div class="col-md-6">
+      <h2>Задачи</h2>
     </div>
+    <div class="col-md-6">
+      <h2>Показатели</h2>
+    </div>
+  </div>
+
+  
+  
     
+    <div class="indicator-cards target goal-target col-md-6">
+      <span>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.1
+      </span>
+      К 2030 году обеспечить, чтобы все девочки и
+мальчики завершали получение бесплатного, равноправного
+и качественного начального и среднего образования,
+позволяющего добиться востребованных
+и эффективных результатов обучения
+    </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    <div class="indicator-cards row">
 
       
       
@@ -273,43 +355,69 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-1-1">
-          <span>
-            4.1.1
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.1.1
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-1-1">
           Доля детей и молодежи, приходящаяся на
 a) учащихся 2/3 классов; b) выпускников начальной
 школы; и c) выпускников младшей средней школы,
 которые достигли по меньшей мере минимального
 уровня владения навыками i) чтения и ii) математики
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.1.2
+          <span class="status notstarted">
+            В процессе разработки
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-1-2">
+          Процент завершения (начальное образование, неполное и полное среднее образование)
+        </a>
+        
+      </div>
+    
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.2</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.2
       </span>
-      
+      К 2030 году обеспечить всем девочкам и мальчикам
+доступ к качественным системам развития,
+ухода и дошкольного обучения детей младшего возраста,
+с тем чтобы они были готовы к получению
+начального образования
+
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -318,30 +426,28 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-2-1">
-          <span>
-            4.2.1
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.2.1
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-2-1">
           Доля детей в возрасте до пяти лет, которые
 развиваются без отклонений в плане здоровья, обучения
 и психосоциального благополучия, в разбивке по
 полу 
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -350,29 +456,27 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-2-2">
-          <span>
-            4.2.2
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.2.2
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-2-2">
           Уровень участия в организованных видах
 обучения (за один год до достижения официального
 возраста поступления в школу) в разбивке по полу
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -381,39 +485,40 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.2.2.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-2-2-1">
-          <span>
-            4.2.2.1
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Готовность к школе (процентная доля детей, посещающих первый класс начальной школы, которые в предыдущем году посещали дошкольное образовательное учреждение)
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.3</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.3
       </span>
-      
+      К 2030 году обеспечить для всех женщин и
+мужчин равный доступ к недорогому и качественному
+профессионально-техническому и высшему
+образованию, в том числе университетскому образованию
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -422,27 +527,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.3.1.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-3-1-1">
-          <span>
-            4.3.1.1
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Охват молодежи типичного возраста (14-24) техническим и профессиональным образованием
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -451,27 +554,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.3.1.2
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-3-1-2">
-          <span>
-            4.3.1.2
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Доля граждан с техническим и профессиональным образованием в возрасте 18-28 лет в структуре занятого населения данного возраста
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -480,39 +581,42 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-3-1-3">
-          <span>
-            4.3.1.3
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.3.1.3
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-3-1-3">
           Доля граждан с высшим образованием в возрасте 22-28 лет в структуре занятого населения данного возраста
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.4</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.4
       </span>
-      
+      К 2030 году существенно увеличить число молодых
+и взрослых людей, обладающих востребованными
+навыками, в том числе профессионально-техническими
+навыками, для трудоустройства, получения
+достойной работы и занятий предпринимательской
+деятельностью
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -521,30 +625,28 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-4-1">
-          <span>
-            4.4.1
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.4.1
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-4-1">
           Доля молодежи/взрослых, обладающей/ обладающих
 навыками в области информационно-коммуникационных
 технологий, в разбивке по видам
 навыков
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -553,39 +655,43 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.4.1.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-4-1-1">
-          <span>
-            4.4.1.1
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Уровень цифровой грамотности населения в возрасте 6-74 лет в разрезе областей
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.5</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.5
       </span>
-      
+      К 2030 году ликвидировать гендерное неравенство
+в сфере образования и обеспечить равный
+доступ к образованию и профессионально-технической
+подготовке всех уровней для уязвимых групп
+населения, в том числе инвалидов, представителей
+коренных народов и детей, находящихся в уязвимом
+положении
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -594,27 +700,31 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.5.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-5-1">
-          <span>
-            4.5.1
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
-          Индекс равноправия полов по уровням образования
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Индексы равенства (женщин и мужчин, городских
+и сельских жителей, нижней и верхней
+квинтили достатка и других групп, например инвалидов,
+коренных народов и людей, затронутых конфликтом,
+в зависимости от наличия данных) по всем
+касающимся образования показателям в настоящем
+перечне, которые могут быть дезагрегированы
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -623,27 +733,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.5.1.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-5-1-1">
-          <span>
-            4.5.1.1
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Доля дошкольных организаций, создавших условия для воспитания и обучения детей с особыми образовательными потребностями
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -652,27 +760,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.5.1.2
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-5-1-2">
-          <span>
-            4.5.1.2
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Доля школ, создавших условия для инклюзивного образования
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -681,27 +787,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.5.1.3
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-5-1-3">
-          <span>
-            4.5.1.3
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Доля организаций ТиПО, создавших равные условия и безбарьерный доступ для студентов  с особыми образовательными потребностями
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -710,39 +814,40 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-5-1-4">
-          <span>
-            4.5.1.4
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.5.1.4
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-5-1-4">
           Доля организаций вузов, создавших равные условия и безбарьерный доступ для обучения студентов  с особыми образовательными потребностями
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.6</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.6
       </span>
-      
+      К 2030 году обеспечить, чтобы все молодые
+люди и значительная доля взрослого населения, как
+мужчин, так и женщин, умели читать, писать и считать
+
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -751,42 +856,49 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-6-1">
-          <span>
-            4.6.1
-            <span class="status notstarted">
-              В процессе разработки
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.6.1
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-6-1">
           Доля населения в данной возрастной группе,
 достигшая, по меньшей мере, установленного уровня
 функциональной a) грамотности и b) математической
 грамотности, в разбивке по полу.
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.7</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.7
       </span>
-      
+      К 2030 году обеспечить, чтобы все учащиеся
+приобретали знания и навыки, необходимые для содействия
+устойчивому развитию, в том числе посредством
+обучения по вопросам устойчивого развития
+и устойчивого образа жизни, прав человека, гендерного
+равенства, пропаганды культуры мира и ненасилия,
+гражданства мира и осознания ценности
+культурного разнообразия и вклада культуры в
+устойчивое развитие
+
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -795,27 +907,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.7.1.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-7-1-1">
-          <span>
-            4.7.1.1
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Доля студентов вузов, вовлеченных в общественно-полезную деятельность
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -824,27 +934,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.7.1.2
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-7-1-2">
-          <span>
-            4.7.1.2
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Доля обучающихся в организациях ТиПО, вовлеченных в общественно-полезную деятельность
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -853,39 +961,41 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.7.1.3
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-7-1-3">
-          <span>
-            4.7.1.3
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
           Доля детей, охваченных обновленным содержанием образования
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.a</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.a
       </span>
-      
+      Создавать и совершенствовать учебные заведения,
+учитывающие интересы детей, особые нужды
+инвалидов и гендерные аспекты, и обеспечить безопасную,
+свободную от насилия и социальных барьеров
+и эффективную среду обучения для всех
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -894,39 +1004,115 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.a.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/ru/4-a-1">
-          <span>
-            4.a.1
-            <span class="status complete">
-              Опубликован
-            </span>
-          </span>
-          Доля школ, обеспеченных электроэнергией
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Доля школ, предлагающих основные услуги, в разбивке по типу уcлуг
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.a.1.1
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-a-1-1">
+          Доля модифицированных учебных кабинетов современным оборудованием в организациях среднего образования, от их обшего количества
+        </a>
+        
+      </div>
+    
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.a.1.2
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-a-1-2">
+          Доля 3-х сменных школ
+        </a>
+        
+      </div>
+    
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.a.1.3
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-a-1-3">
+          Доля аварийных школ
+        </a>
+        
+      </div>
+    
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.b</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.b
       </span>
-      
+      К 2020 году значительно увеличить во всем
+мире количество стипендий, предоставляемых развивающимся
+странам, особенно наименее развитым
+странам, малым островным развивающимся государствам
+и африканским странам, для получения
+высшего образования, включая профессионально-техническое
+образование и обучение по вопросам
+информационно-коммуникационных технологий,
+технические, инженерные и научные программы, в
+развитых странах и других развивающихся странах
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -935,41 +1121,44 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-b-1">
-          <span>
-            4.b.1
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.b.1
+          <span class="status complete">
+            Опубликован
           </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-b-1">
           Объем официальной помощи в целях развития,
 направляемой на выплату стипендий, в разбивке
 по отраслям и видам обучения
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Задача 4.c</h2>
+        <label class="hidden-md hidden-lg">Задача</label>
+        4.c
       </span>
-      
+      К 2030 году значительно увеличить число квалифицированных
+учителей, в том числе посредством
+международного сотрудничества в подготовке
+учителей в развивающихся странах, особенно в
+наименее развитых странах и малых островных развивающихся
+государствах
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -978,26 +1167,78 @@ a) учащихся 2/3 классов; b) выпускников начальн
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/ru/4-c-1">
-          <span>
-            4.c.1
-            <span class="status complete">
-              Опубликован
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.c.1
+          <span class="status complete">
+            Опубликован
           </span>
-          Доля учителей в дошкольных учреждениях, имеющих педагогическое образование
-          
-            <ul class="tags">
-            
-            </ul>
-          
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-c-1">
+          Доля учителей в a) дошкольных учреждениях;
+b) начальной школе; c) младшей средней
+школе; и d) старшей средней школе, прошедших до
+начала или во время работы по меньшей мере минимальную
+организованную профессиональную учительскую
+подготовку (например, педагогическую) на
+соответствующем уровне в данной стране
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.c.1.1
+          <span class="status notstarted">
+            В процессе разработки
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-c-1-1">
+          Доля педагогических работников организаций среднего образования, прошедших повышение квалификации по обновленному содержанию от их общего количества
+        </a>
+        
+      </div>
+    
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          4.c.1.2
+          <span class="status complete">
+            Опубликован
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/ru/4-c-1-2">
+          Доля педагогов с квалификационным уровнем мастера-исследователя, педагог-эксперта и педагог-модератора от общего количества педагогов среднего образования
+        </a>
+        
+      </div>
+    
+    </div>
   
 </div>
 
@@ -1007,14 +1248,25 @@ a) учащихся 2/3 классов; b) выпускников начальн
       <div class="col-xs-12">
         <div id="footerLinks">
           <ul>
-            <li><a href="mailto:as.abraeva@economy.gov.kz">Свяжитесь с нами</a></li>
+            <li><a href="https://open-sdg.org">Построен с использованием Open SDG</a></li>
             
+              <li>
+                
+                  <a href="mailto:ai.dosanova@economy.gov.kz" target="_blank">Свяжитесь с нами</a>
+                
+                </li>
+              <li>
+                
+                  <a href="https://facebook.com/statgov.kz" target="_blank">Facebook</a>
+                
+                </li>
+              <li>
+                <a href="/sdg-site-kazstat/ru/about/cookies-and-privacy/">Cookies</a>
+                
+                </li>
+              
             
-            <li><a href="https://facebook.com/statgov.kz" target="_blank">Facebook: @statgov.kz</a></li>
-            
-            <li><a href="/sdg-site-kazstat/faq/">Часто задаваемые вопросы</a></li>
-            <li><a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a></li>
-          </ul>
+            </ul>
         </div>
       </div>
     </div>
@@ -1026,73 +1278,88 @@ a) учащихся 2/3 классов; b) выпускников начальн
 <!-- Google Analytics -->
 
 <!-- /.container </div> -->
-<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20201220000559'></script><script src="/sdg-site-kazstat/assets/js/custom.js?v=20201220000559"></script><script>
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'скрывать';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Поиск';</script>
+
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20201220040335'></script>
+
+
+    
+    
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20201220040335"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
 
-      $('.async-loading').each(function(i, obj) {
-          $(obj).append($('<img />').attr('src', $(obj).data('img')));
-      });
+      if (domData.showdata) {
 
-      $.ajax({
-        url: opensdg.remoteDataBaseUrl + '/comb/' + domData.id + '.json',
-        success: function(res) {
+        $('.async-loading').each(function(i, obj) {
+            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
+        });
 
-          $('.async-loading').remove();
-          $('.async-loaded').show();
-
-          var model = new indicatorModel({
-            data: res.data,
-            edgesData: res.edges,
-            geoCodeRegEx: domData.geocoderegex,
-            showMap: domData.showmap,
-            country: domData.country,
-            indicatorId: domData.indicatorid,
-            shortIndicatorId: domData.id,
-            chartTitle: domData.charttitle,
-            measurementUnit: domData.measurementunit,
-            copyright: domData.copyright,
-            dataSource: domData.datasource,
-            geographicalArea: domData.geographicalarea,
-            showData: domData.showdata,
-            footnote: domData.footnote,
-            graphType: domData.graphtype,
-            startValues: domData.startvalues
-          }),
-          view  = new indicatorView(model, {
-            rootElement: '#indicatorData',
-            legendElement: '#plotLegend',
-            maxChartHeight: 420,
-            tableColumnDefs: [
-              { maxCharCount: 25 }, // nowrap
-              { maxCharCount: 35, width: 200 },
-              { maxCharCount: Infinity, width: 250 }
-            ]
-          }),
-          controller = new indicatorController(model, view);
-          controller.initialise();
+        var remoteUrl = '/comb/' + domData.id + '.json';
+        if (opensdg.remoteDataBaseUrl !== '/') {
+          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
         }
-      });
+
+        $.ajax({
+          url: remoteUrl,
+          success: function(res) {
+
+            $('.async-loading').remove();
+            $('.async-loaded').show();
+
+            var model = new indicatorModel({
+              data: res.data,
+              edgesData: res.edges,
+              showMap: domData.showmap,
+              country: domData.country,
+              indicatorId: domData.indicatorid,
+              shortIndicatorId: domData.id,
+              chartTitle: domData.charttitle,
+              chartTitles: domData.charttitles,
+              measurementUnit: domData.measurementunit,
+              showData: domData.showdata,
+              graphType: domData.graphtype,
+              startValues: domData.startvalues,
+              graphLimits: domData.graphlimits,
+              stackedDisaggregation: domData.stackeddisaggregation,
+              graphAnnotations: domData.graphannotations,
+              indicatorDownloads: domData.indicatordownloads,
+              compositeBreakdownLabel: domData.compositebreakdownlabel,
+            }),
+            view  = new indicatorView(model, {
+              rootElement: '#indicatorData',
+              legendElement: '#plotLegend',
+              maxChartHeight: 420,
+              tableColumnDefs: [
+                { maxCharCount: 25 }, // nowrap
+                { maxCharCount: 35, width: 200 },
+                { maxCharCount: Infinity, width: 250 }
+              ]
+            }),
+            controller = new indicatorController(model, view);
+            controller.initialise();
+          }
+        });
+      }
     }
 
     var switcher = new accessibilitySwitcher();

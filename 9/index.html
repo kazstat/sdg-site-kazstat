@@ -1,14 +1,9 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -16,14 +11,12 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://kazstat.github.io/sdg-data-kazstat',
+  remoteDataBaseUrl: 'https://kazstat.github.io/sdg-data-kazstat/kk',
 
-  // A hook which can be replaced to modify the configuration for Chart.js.
-  // To see where this is used, see indicatorView.js createPlot() and updatePlot().
-  // To see an example of replacing it, see binary.html.
-  chartConfigAlter: function(config) {
-    // Alterations go here.
-    return config;
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
   },
 
   // A hook which can be replaced to alter whether/how the values that are
@@ -32,6 +25,8 @@ var opensdg = {
     // Alterations go here.
     return value;
   },
+
+  language: 'kk',
 };
 
 // For backwards compatibility, some of these might need to be global.
@@ -94,17 +89,11 @@ var translations = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Title and meta description
         ================================================== -->
-        
 
         
+    <title>Мақсат 9 - Индустриализация, инновациялар мен инфрақұрылым - Indicators For The Sustainable Development Goals</title>
 
-        <title>
-          
-            
-        Мақсат 9 - Индустриализация, инновациялар мен инфрақұрылым
-        
-          
-        </title>
+
 
         <meta name="description" content="">
         <meta property="og:description" content="">
@@ -132,7 +121,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/default.css?v=20201220000559">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20201220040335">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -140,10 +129,10 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20201220000559"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
-<body class="language-kz layout-goal-by-target-grid">
+<body class="language-kk layout-goal-by-target">
 <!-- <div class="container"> -->
 
 <script>translations['header'] = {"alpha":"Альфа","default_contrast":"әдепкі контраст","disable_high_contrast":"Жоғары контрастты ажыратыңыз","disclaimer":"Бұл сайт әзірленуде. Біз сіздердің пікірлеріңізге қуаныштымыз","enable_high_contrast":"Жоғары контрастты қосыңыз","high_contrast":"жоғары контраст","skip_link":"Басты мазмұнына өту","tag_line":"Біздің өмірді көркейту үшін 17 мақсат"};</script>
@@ -151,8 +140,9 @@ var translations = {
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Басты мазмұнына өту</a>
 <div id="disclaimer">
   <div class="container">
-  <div class="alert alert-danger" role="alert">
+  <div class="disclaimer-alert">
     <strong class="phase-tag">Альфа</strong>
+    
     Бұл сайт әзірленуде. Біз сіздердің пікірлеріңізге қуаныштымыз
   </div>
 </div>
@@ -162,73 +152,159 @@ var translations = {
 <header role="banner">
   <div class="container">
 
-    <a class="navbar-brand" href="/sdg-site-kazstat/" id="home">
-      <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Тұрақты даму мақсаттары шеңберінде - Біздің өмірді көркейту үшін 17 мақсат" />
-    </a>
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/sdg-site-kazstat/" id="home">
+        <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Тұрақты даму мақсаттары шеңберінде - Біздің өмірді көркейту үшін 17 мақсат" />
+      </a>
 
-  <div class='hidden visible-xs float-right'>
-    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
-      <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
-  <i class="fa fa-globe"></i>
-  <span class="language-toggle-text">Қазақ</span>
-  <i class="language-toggle fa fa-chevron-down"></i>
-  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
-</a>
-<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/ru/9/">Pусский</a></li><li><a href="/sdg-site-kazstat/en/9/">English</a></li></ul>
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
+          <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Қазақ</span>
+      <span class="language-abbreviation">kz</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/sdg-site-kazstat/ru/9/">
+              Pусский
+            </a>
+          </li><li>
+            <a href="/sdg-site-kazstat/en/9/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
 
-    </div></div>
+        </div></div>
+    </div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
         <li id="menuToggle"
-            aria-label="Menu toggle. Click to expand or collapse the menu."
-            aria-haspopup="true"
-            aria-expanded="false">
-          <span data-target="menu" tabindex="0"
-          role="navigation">Меню</span>
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">Меню</button>
+          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/sdg-site-kazstat/reporting-status">Есептіліктің жағдайы</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/about">Біз туралы</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/faq">Жиі қойылатын сұрақтар</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Қазақ</span>
+      <span class="language-abbreviation">kz</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/sdg-site-kazstat/ru/9/">
+              Pусский
+            </a>
+          </li><li>
+            <a href="/sdg-site-kazstat/en/9/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li></ul>
+
         </li>
-        <li><span data-target="search">Іздеу</span></li>
+        <li id="searchToggle"
+            aria-label=""
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">Іздеу</button>
+          <div id="search-mobile" class="menu-target">
+  <form action="/sdg-site-kazstat/search">
+    <input type="text" name="q" id="indicator_search-mobile" title="Іздеу" />
+    <label class="sr-only" for="indicator_search-mobile">Іздеу</label>
+    <button aria-label="Іздеу" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+        </li>
       </ul>
 
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/sdg-site-kazstat/reporting-status">Есептіліктің жағдайы</a>
-          </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/about">Біз туралы</a>
-          </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/guidance">Басшылық</a>
-          </li><li class="nav-link ">
-            <a href="/sdg-site-kazstat/faq">Жиі қойылатын сұрақтар</a>
-          </li><li>
-          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
-  <i class="fa fa-globe"></i>
-  <span class="language-toggle-text">Қазақ</span>
-  <i class="language-toggle fa fa-chevron-down"></i>
-  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
-</a>
-<ul class="language-options language-toggle"><li><a href="/sdg-site-kazstat/ru/9/">Pусский</a></li><li><a href="/sdg-site-kazstat/en/9/">English</a></li></ul>
-
-        </li></ul>
-
       <div id="search" class="menu-target">
-  <input id="indicator_search" title="Көрсеткішті іздеу" placeholder="Көрсеткішті іздеу" data-url="/sdg-site-kazstat/indicators.json" data-pageurl="/sdg-site-kazstat/search/?q=" />
-  <label for="indicator_search">
-    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Көрсеткішті іздеу></i></button><span>Іздеу:</span>
-  </label>
+  <form action="/sdg-site-kazstat/search">
+    <input type="text" name="q" id="indicator_search" title="Іздеу" />
+    <label class="sr-only" for="indicator_search">Іздеу</label>
+    <button aria-label="Іздеу" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
 </div>
+
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/sdg-site-kazstat/reporting-status">Есептіліктің жағдайы</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/about">Біз туралы</a>
+    </li><li class="nav-link ">
+    <a href="/sdg-site-kazstat/faq">Жиі қойылатын сұрақтар</a>
+    </li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Қазақ</span>
+      <span class="language-abbreviation">kz</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li>
+            <a href="/sdg-site-kazstat/ru/9/">
+              Pусский
+            </a>
+          </li><li>
+            <a href="/sdg-site-kazstat/en/9/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+</li></ul>
 
 
     </nav>
   </div>
 
 </header>
+<div id="top" tabindex=-1></div>
 
 
-<div class="heading goal-9">
+<div class="container">
+  <ol class="breadcrumb">
+  
+  <li><a href="/sdg-site-kazstat/">Басты бет</a></li>
+  <li class="active">Мақсат 9</li>
+  
+</ol>
+
+</div>
+
+<div class="heading goal-banner goal-9">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2">
-        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kz/9.png" alt="Индустриализация, инновациялар мен инфрақұрылым - Мақсат 9" />
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/9.png" alt="Индустриализация, инновациялар мен инфрақұрылым - Мақсат 9" id="goal-9" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
@@ -239,31 +315,33 @@ var translations = {
   </div>
 </div>
 
-<div id="main-content" class="container goal-indicators goal-9 goal-by-target">
+<div id="main-content" class="container goal-indicators goal-9 goal-by-target" role="main">
 
   
-  <ol class="breadcrumb">
-  <li><a href="/sdg-site-kazstat/">Басты бет</a></li>
-  
-      <li class="active">Мақсат 9</li>
-  
-</ol>
 
 
-  
-  
-    
-    
-    <div class="indicator-cards target">
-      <span>
-        <h2>Міндет 9.1</h2>
-      </span>
-      
+
+  <div class="visible-md-block visible-lg-block">
+    <div class="col-md-6">
+      <h2>Міндеттер</h2>
     </div>
+    <div class="col-md-6">
+      <h2>Көрсеткіштер</h2>
+    </div>
+  </div>
+
+  
+  
     
+    <div class="indicator-cards target goal-target col-md-6">
+      <span>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.1
+      </span>
+      Экономикалық дамуды және адамдардың саулығын қолдау мақсатында барлығына бірдей қымбат емес және тең құқылы қолжетімділікті қамтамасыз етуге айрықша назар аудара отырып, аумақтық және трансшекаралық инфрақұрылыммен бірге сапалы, сенімді, тұрақты әрі берік инфрақұрылымды дамыту
+    </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    <div class="indicator-cards row">
 
       
       
@@ -272,27 +350,25 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.1.1
+          <span class="status notstarted">
+            Дереккөздерін зерттеу
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-1-1">
-          <span>
-            9.1.1
-            <span class="status notstarted">
-              Дереккөздерін зерттеу
-            </span>
-          </span>
-          Жыл бойғы жолдан 2 км шегінде тұратын ауыл  халқының үлесі 
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Бүкіл маусымдылық жолдан 2 км шегінде тұратын ауыл халқының үлесі
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -301,39 +377,64 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.1.2
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-1-2">
-          <span>
-            9.1.2
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
           Көлік түрлері бойынша бөліністегі жолаушылар және жүк тасымалының көлемі
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.1.2.1
+          <span class="status notstarted">
+            Дереккөздерін зерттеу
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/9-1-2-1">
+          national_indicators.9-1-2-1-title
+        </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
+      </div>
+    
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Міндет 9.2</h2>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.2
       </span>
-      
+      Жалпыны қамтитын және тұрақты индустрияландыруға ықпал ету және 2030 жылға дейін өндірістегі жұмыспен қамту деңгейін және ұлттық талаптарға сәйкес жалпы ішкі өнімдегі өнеркәсіптік өндіріс үлесін едәуір көтеру және ең нашар дамыған елдердегі сәйкес көрсеткіштерді екі есеге арттыру
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -342,27 +443,25 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.2.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-2-1">
-          <span>
-            9.2.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
-          Өңдеу өнеркәсібінің ЖІӨ-ге шаққандағы үлесі
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Өңдеуші өнеркәсіпте құрылатын қосылған құн, ЖІӨ-ге пайыздық қатынаста және халықтың жан басына шаққанда 
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -371,27 +470,25 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.2.1.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-2-1-1">
-          <span>
-            9.2.1.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
-          Өңдеуші өнекәсіптегі еңбек өнімділігінің өсуі
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          global_indicators.9-2-1-1-title
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -400,27 +497,25 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.2.1.2
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-2-1-2">
-          <span>
-            9.2.1.2
-            <span class="status notstarted">
-              Дереккөздерін зерттеу
-            </span>
-          </span>
-          Өндіруші өнеркәсіп өнімі экспорты құнының өсуі
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Өндірілетін тауарлар экспорты құнының өсуі
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -429,39 +524,37 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.2.2
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-2-2">
-          <span>
-            9.2.2
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
-          Қызмет етушілердің жалпы санынан өңдеуші өнеркәсіптегі қызмет етушілер
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Жалпы жұмыспен қамтудан пайызбен өңдеуші өнеркәсіптегі жұмыспен қамтылу
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Міндет 9.3</h2>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.3
       </span>
-      
+      Әсіресе дамушы елдерде ұсақ өнеркәсіптік және басқа кәсіпорындардың қаржылық қызметтерге, соның ішінде қымбат емес несиелерге қолжетімділігін арттыру және олардың өндіру-өткізу тізбектері мен нарықтарға бірігуін күшейту
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -470,27 +563,25 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.3.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-3-1">
-          <span>
-            9.3.1
-            <span class="status notstarted">
-              Дереккөздерін зерттеу
-            </span>
-          </span>
            Өнеркәісіптегі таза өнімінің жиынтық көлеміндегі ұсақ кәсіпорындардың үлесі 
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -499,39 +590,37 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.3.2
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-3-2">
-          <span>
-            9.3.2
-            <span class="status notstarted">
-              Дереккөздерін зерттеу
-            </span>
-          </span>
-          Кредиті немесе кредиттік желісі бар ұсақ кәсіпорындар үлесі
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Кредиті немесе кредиттік желісі бар ұсақ кәсіпорындар үлесі 
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Міндет 9.4</h2>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.4
       </span>
-      
+      2030 жылға дейін жеке мүмкіндіктеріне орай барлық мемлекеттердің қатысуымен инфрақұрылымды жетілдіру және қорларды пайдалану тиімділігін арттыру мен таза және экологиялық қауіпсіз технологиялар мен өнеркәсіптік үдерістерді анағұрлым кең пайдалану есебінен кәсіпорындарды тұрақты етіп қайта жабдықтау
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -540,39 +629,60 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.4.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-4-1">
-          <span>
-            9.4.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
           Қосылған құн бірлігіне CO2 шығарындылар 
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.4.1.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
+        <a href="/sdg-site-kazstat/9-4-1-1">
+          Халықтың жан басына шаққанда СО2 шығарындылары
+        </a>
+        
+      </div>
+    
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Міндет 9.5</h2>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.5
       </span>
-      
+      Барлық елдерде, әсіресе дамушы елдерде ғылыми зерттеулерді іске қосу, өнеркәсіптік бөлімдердің технологиялық әлеуетін өсіру, атап айтқанда 2030 жылға дейін инновациялық қызметті ынталандыру және ғылыми-зерттеу және тәжірибелік-құрастырымдық жұмыстар саласында (ҒЗТҚЖ) 1 миллион адам есебінен жұмысшылар санын, сондай-ақ ҒЗТҚЖ бойынша мемлекеттік және жеке шығындарды көбейту арқылы 
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -581,27 +691,25 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.5.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-5-1">
-          <span>
-            9.5.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
-          ЖІӨ-ге проценттік қатынастағы ҒЗТҚЖ-ға ішкі шығындар
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          ЖІӨ-дегі ҒЗТКЖ-ға шығыстардың үлесі
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -610,27 +718,25 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.5.1.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-5-1-1">
-          <span>
-            9.5.1.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
           ҒЗТКЖ-ға жалпы шығындардың жалпы көлеміндегі бизнес шығыстарының үлесі
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
-    <div class="indicator-cards row">
 
       
       
@@ -639,39 +745,37 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.5.2
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-5-2">
-          <span>
-            9.5.2
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
-          Миллиондаған адамға ҒЗТКЖ жүзеге асыратын ғылыми қызметкерлердің саны
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Миллион тұрғынға шаққандағы зерттеушілер саны (толық жұмыспен қамтылу баламасында
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Міндет 9.a</h2>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.a
       </span>
-      
+      Африка елдерін, ең төмен дамыған елдерді, дамушы елдерді, теңізге шықпайтын елдерді және шағын аралдық дамушы мемлекеттерді қаржылық, технологиялық және техникалық қолдау есебінен экологиялық тұрақты және берік инфрақұрылымның дамуына ықпал ету
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -680,39 +784,37 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.a.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-a-1">
-          <span>
-            9.a.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
           Инфрақұрылымға бағытталатын ресми халықаралық қолдаудың жиынтық көлемі (дамыту мақсатындағы ресми көмек және ресми қаржыландырудың басқа да ағындары) 
-          
-            <ul class="tags">
-            
-            </ul>
-          
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Міндет 9.b</h2>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.b
       </span>
-      
+      Дамушы елдердегі отандық технологиялар саласындағы талдамаларды, зерттеулерді және инновацияларды қолдау, соның ішінде негізінен, өнеркәсіпті әртараптандыруға және шикізат салаларында қосылған құнды ұлғайтуға қолайлы жағдай туғызатын, саяси климатты жасау арқылы 
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -721,39 +823,37 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.b.1
+          <span class="status complete">
+            Интернетте хабарланған
+          </span>
+        </span>
         <a href="/sdg-site-kazstat/9-b-1">
-          <span>
-            9.b.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
-          </span>
-          ЖҚҚ жалпы көлеміндегі орташа технологиялық және жоғары технологиялық салалардың ЖҚҚ үлесі
-          
-            <ul class="tags">
-            
-            </ul>
-          
+          Қосылған құнның жалпы көлеміндегі орташа технологиялық және жоғары технологиялық салалардың өнімдеріне қосылған құн үлесі 
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
     
-    
-    <div class="indicator-cards target">
+    <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <h2>Міндет 9.c</h2>
+        <label class="hidden-md hidden-lg">Міндет</label>
+        9.c
       </span>
-      
+      Ақпараттық-коммуникациялық технологияларға қолжетімділікті едәуір кеңейту және ең төмен дамыған елдерде Ғаламторға деген жалпыға ортақ және қымбат емес қолжетімділікті 2020 жылға дейін қамтамасыз етуге ұмтылу
     </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
     
-    
-    
-    <div class="indicator-cards row">
 
       
       
@@ -762,26 +862,26 @@ var translations = {
       
       
       
+      
 
-      <div class="col-md-12 col-lg-12 ">
-        <a href="/sdg-site-kazstat/9-c-1">
-          <span>
-            9.c.1
-            <span class="status complete">
-              Интернетте хабарланған
-            </span>
+      <div class="col-md-12  goal-indicator">
+        <span>
+          9.c.1
+          <span class="status complete">
+            Интернетте хабарланған
           </span>
-          Интернетке мобильді кең жолақты қатынау арқылы қол жетімді үй шаруашылықтарының үлесі
-          
-            <ul class="tags">
-            
-            </ul>
-          
+        </span>
+        <a href="/sdg-site-kazstat/9-c-1">
+          Технологиялар бойынша бөліністегі ұтқыр желілерімен қамтылған халық үлесі
         </a>
+        
+          <ul class="tags">
+          
+          </ul>
+        
       </div>
-
-    </div>
     
+    </div>
   
 </div>
 
@@ -791,14 +891,25 @@ var translations = {
       <div class="col-xs-12">
         <div id="footerLinks">
           <ul>
-            <li><a href="mailto:as.abraeva@economy.gov.kz">Бізбен хабарласыңыз</a></li>
+            <li><a href="https://open-sdg.org">Open SDG көмегімен салынған</a></li>
             
+              <li>
+                
+                  <a href="mailto:ai.dosanova@economy.gov.kz" target="_blank">Бізбен хабарласыңыз</a>
+                
+                </li>
+              <li>
+                
+                  <a href="https://facebook.com/statgov.kz" target="_blank">Facebook</a>
+                
+                </li>
+              <li>
+                <a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a>
+                
+                </li>
+              
             
-            <li><a href="https://facebook.com/statgov.kz" target="_blank">Facebook: @statgov.kz</a></li>
-            
-            <li><a href="/sdg-site-kazstat/faq/">Жиі қойылатын сұрақтар</a></li>
-            <li><a href="/sdg-site-kazstat/about/cookies-and-privacy/">Cookies</a></li>
-          </ul>
+            </ul>
         </div>
       </div>
     </div>
@@ -810,73 +921,88 @@ var translations = {
 <!-- Google Analytics -->
 
 <!-- /.container </div> -->
-<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20201220000559'></script><script src="/sdg-site-kazstat/assets/js/custom.js?v=20201220000559"></script><script>
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'жасыру';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Іздеу';</script>
+
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20201220040335'></script>
+
+
+    
+    
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20201220040335"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
 
-      $('.async-loading').each(function(i, obj) {
-          $(obj).append($('<img />').attr('src', $(obj).data('img')));
-      });
+      if (domData.showdata) {
 
-      $.ajax({
-        url: opensdg.remoteDataBaseUrl + '/comb/' + domData.id + '.json',
-        success: function(res) {
+        $('.async-loading').each(function(i, obj) {
+            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
+        });
 
-          $('.async-loading').remove();
-          $('.async-loaded').show();
-
-          var model = new indicatorModel({
-            data: res.data,
-            edgesData: res.edges,
-            geoCodeRegEx: domData.geocoderegex,
-            showMap: domData.showmap,
-            country: domData.country,
-            indicatorId: domData.indicatorid,
-            shortIndicatorId: domData.id,
-            chartTitle: domData.charttitle,
-            measurementUnit: domData.measurementunit,
-            copyright: domData.copyright,
-            dataSource: domData.datasource,
-            geographicalArea: domData.geographicalarea,
-            showData: domData.showdata,
-            footnote: domData.footnote,
-            graphType: domData.graphtype,
-            startValues: domData.startvalues
-          }),
-          view  = new indicatorView(model, {
-            rootElement: '#indicatorData',
-            legendElement: '#plotLegend',
-            maxChartHeight: 420,
-            tableColumnDefs: [
-              { maxCharCount: 25 }, // nowrap
-              { maxCharCount: 35, width: 200 },
-              { maxCharCount: Infinity, width: 250 }
-            ]
-          }),
-          controller = new indicatorController(model, view);
-          controller.initialise();
+        var remoteUrl = '/comb/' + domData.id + '.json';
+        if (opensdg.remoteDataBaseUrl !== '/') {
+          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
         }
-      });
+
+        $.ajax({
+          url: remoteUrl,
+          success: function(res) {
+
+            $('.async-loading').remove();
+            $('.async-loaded').show();
+
+            var model = new indicatorModel({
+              data: res.data,
+              edgesData: res.edges,
+              showMap: domData.showmap,
+              country: domData.country,
+              indicatorId: domData.indicatorid,
+              shortIndicatorId: domData.id,
+              chartTitle: domData.charttitle,
+              chartTitles: domData.charttitles,
+              measurementUnit: domData.measurementunit,
+              showData: domData.showdata,
+              graphType: domData.graphtype,
+              startValues: domData.startvalues,
+              graphLimits: domData.graphlimits,
+              stackedDisaggregation: domData.stackeddisaggregation,
+              graphAnnotations: domData.graphannotations,
+              indicatorDownloads: domData.indicatordownloads,
+              compositeBreakdownLabel: domData.compositebreakdownlabel,
+            }),
+            view  = new indicatorView(model, {
+              rootElement: '#indicatorData',
+              legendElement: '#plotLegend',
+              maxChartHeight: 420,
+              tableColumnDefs: [
+                { maxCharCount: 25 }, // nowrap
+                { maxCharCount: 35, width: 200 },
+                { maxCharCount: Infinity, width: 250 }
+              ]
+            }),
+            controller = new indicatorController(model, view);
+            controller.initialise();
+          }
+        });
+      }
     }
 
     var switcher = new accessibilitySwitcher();
