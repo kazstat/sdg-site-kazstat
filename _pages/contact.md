@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
-language: kz
+language: kk
 ---
 ### We are interested in your feedback regarding this website and its contents.
 

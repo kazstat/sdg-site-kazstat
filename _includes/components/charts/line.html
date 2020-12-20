@@ -1,0 +1,16 @@
+{% comment %}
+Because the "line" visualization is basic, nothing special needs to be done here,
+apart from providing the canvas tag and supporting graph limits. For details on
+the Chart.js configuration being used, see `createPlot()` in `indicatorView.js`.
+{% endcomment %}
+<canvas></canvas>
+{% include components/charts/graph_limits.html %}
+<script>
+opensdg.chartConfigAlter(function(config, info) {
+  // Force the "bar" type if there are less than 2 years of data.
+  if (info.labels.length < 2) {
+    var overrides = {type: 'bar'}
+    $.extend(true, config, overrides);
+  }
+});
+</script>
