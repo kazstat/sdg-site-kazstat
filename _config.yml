@@ -138,3 +138,5 @@ data_fields:
   series: SERIES
 
 series_toggle: true
+accessible_tabs: true
+accessible_charts: true
