@@ -1744,27 +1744,86 @@ function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
  * @param {string} defaultLabel
  * @param {Array} colors
  * @param {Array} selectableFields Field names
+ * @param {Array} colorAssignments Color/striping assignments for disaggregation combinations
  * @return {Array} Datasets suitable for Chart.js
  */
-function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields) {
-  var datasets = [], index = 0, dataset, color, background, border;
+function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments) {
+  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment;
+  var numColors = colors.length,
+      maxColorAssignments = numColors * 2;
+
+  prepareColorAssignments(colorAssignments, maxColorAssignments);
+  setAllColorAssignmentsReadyForEviction(colorAssignments);
+
   combinations.forEach(function(combination) {
     var filteredData = getDataMatchingCombination(data, combination, selectableFields);
     if (filteredData.length > 0) {
-      color = getColor(index, colors);
-      background = getBackground(index, colors);
-      border = getBorderDash(index, colors);
-      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border);
+      excess = (index >= maxColorAssignments);
+      if (excess) {
+        // This doesn't really matter: excess datasets won't be displayed.
+        color = getHeadlineColor();
+        striped = false;
+      }
+      else {
+        combinationKey = JSON.stringify(combination);
+        colorAssignment = getColorAssignmentByCombination(colorAssignments, combinationKey);
+        if (colorAssignment !== undefined) {
+          colorIndex = colorAssignment.colorIndex;
+          striped = colorAssignment.striped;
+          colorAssignment.readyForEviction = false;
+        }
+        else {
+          if (colorAssignmentsAreFull(colorAssignments)) {
+            evictColorAssignment(colorAssignments);
+          }
+          var openColorInfo = getOpenColorInfo(colorAssignments, colors);
+          colorIndex = openColorInfo.colorIndex;
+          striped = openColorInfo.striped;
+          colorAssignment = getAvailableColorAssignment(colorAssignments);
+          assignColor(colorAssignment, combinationKey, colorIndex, striped);
+        }
+      }
+
+      color = getColor(colorIndex, colors);
+      background = getBackground(color, striped);
+      border = getBorderDash(striped);
+
+      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess);
       datasets.push(dataset);
       index++;
     }
   }, this);
-  datasets.sort(function(a, b) { return a.label > b.label; });
+
+  datasets.sort(function(a, b) { return (a.label > b.label) ? 1 : -1; });
   if (headline.length > 0) {
     dataset = makeHeadlineDataset(years, headline, defaultLabel);
     datasets.unshift(dataset);
   }
   return datasets;
+}
+
+/**
+ * @param {Array} colorAssignments
+ * @param {int} maxColorAssignments
+ */
+function prepareColorAssignments(colorAssignments, maxColorAssignments) {
+  while (colorAssignments.length < maxColorAssignments) {
+    colorAssignments.push({
+      combination: null,
+      colorIndex: null,
+      striped: false,
+      readyForEviction: false,
+    });
+  }
+}
+
+/**
+ * @param {Array} colorAssignments
+ */
+function setAllColorAssignmentsReadyForEviction(colorAssignments) {
+  for (var i = 0; i < colorAssignments.length; i++) {
+    colorAssignments[i].readyForEviction = true;
+  }
 }
 
 /**
@@ -1782,32 +1841,113 @@ function getDataMatchingCombination(data, combination, selectableFields) {
 }
 
 /**
- * @param {int} datasetIndex
- * @param {Array} colors
- * @return Color from a list
+ * @param {Array} colorAssignments
+ * @param {string} combination
+ * @return {Object|undefined} Color assignment object if found.
  */
-function getColor(datasetIndex, colors) {
-  if (datasetIndex >= colors.length) {
-    // Support double the number of colors, because we'll use striped versions.
-    return '#' + colors[datasetIndex - colors.length];
-  } else {
-    return '#' + colors[datasetIndex];
-  }
+function getColorAssignmentByCombination(colorAssignments, combination) {
+  return colorAssignments.find(function(assignment) {
+    return assignment.combination === combination;
+  });
 }
 
 /**
- * @param {int} datasetIndex
+ * @param {Array} colorAssignments
+ * @return {boolean}
+ */
+function colorAssignmentsAreFull(colorAssignments) {
+  for (var i = 0; i < colorAssignments.length; i++) {
+    if (colorAssignments[i].combination === null) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * @param {Array} colorAssignments
+ */
+function evictColorAssignment(colorAssignments) {
+  for (var i = 0; i < colorAssignments.length; i++) {
+    if (colorAssignments[i].readyForEviction) {
+      colorAssignments[i].combination = null;
+      colorAssignments[i].colorIndex = null;
+      colorAssignments[i].striped = false;
+      colorAssignments[i].readyForEviction = false;
+      return;
+    }
+  }
+  throw 'Could not evict color assignment';
+}
+
+/**
+ * @param {Array} colorAssignments
  * @param {Array} colors
+ * @return {Object} Object with 'colorIndex' and 'striped' properties.
+ */
+function getOpenColorInfo(colorAssignments, colors) {
+  // First look for normal colors, then striped.
+  var stripedStates = [false, true];
+  for (var i = 0; i < stripedStates.length; i++) {
+    var stripedState = stripedStates[i];
+    var assignedColors = colorAssignments.filter(function(colorAssignment) {
+      return colorAssignment.striped === stripedState && colorAssignment.colorIndex !== null;
+    }).map(function(colorAssignment) {
+      return colorAssignment.colorIndex;
+    });
+    if (assignedColors.length < colors.length) {
+      for (var colorIndex = 0; colorIndex < colors.length; colorIndex++) {
+        if (!(assignedColors.includes(colorIndex))) {
+          return {
+            colorIndex: colorIndex,
+            striped: stripedState,
+          }
+        }
+      }
+    }
+  }
+  throw 'Could not find open color';
+}
+
+/**
+ * @param {Array} colorAssignments
+ * @return {Object|undefined} Color assignment object if found.
+ */
+function getAvailableColorAssignment(colorAssignments) {
+  return colorAssignments.find(function(assignment) {
+    return assignment.combination === null;
+  });
+}
+
+/**
+ * @param {Object} colorAssignment
+ * @param {string} combination
+ * @param {int} colorIndex
+ * @param {boolean} striped
+ */
+function assignColor(colorAssignment, combination, colorIndex, striped) {
+  colorAssignment.combination = combination;
+  colorAssignment.colorIndex = colorIndex;
+  colorAssignment.striped = striped;
+  colorAssignment.readyForEviction = false;
+}
+
+/**
+ * @param {int} colorIndex
+ * @param {Array} colors
+ * @return Color from a list
+ */
+function getColor(colorIndex, colors) {
+  return '#' + colors[colorIndex];
+}
+
+/**
+ * @param {string} color
+ * @param {boolean} striped
  * @return Background color or pattern
  */
-function getBackground(datasetIndex, colors) {
-  var color = getColor(datasetIndex, colors);
-
-  if (datasetIndex >= colors.length) {
-    color = getStripes(color);
-  }
-
-  return color;
+function getBackground(color, striped) {
+  return striped ? getStripes(color) : color;
 }
 
 /**
@@ -1822,12 +1962,11 @@ function getStripes(color) {
 }
 
 /**
- * @param {int} datasetIndex
- * @param {Array} colors
+ * @param {boolean} striped
  * @return {Array|undefined} An array produces dashed lines on the chart
  */
-function getBorderDash(datasetIndex, colors) {
-  return datasetIndex >= colors.length ? [5, 5] : undefined;
+function getBorderDash(striped) {
+  return striped ? [5, 5] : undefined;
 }
 
 /**
@@ -1840,7 +1979,7 @@ function getBorderDash(datasetIndex, colors) {
  * @param {Array} border
  * @return {Object} Dataset object for Chart.js
  */
-function makeDataset(years, rows, combination, labelFallback, color, background, border) {
+function makeDataset(years, rows, combination, labelFallback, color, background, border, excess) {
   var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
@@ -1852,6 +1991,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     borderDash: border,
     borderWidth: 2,
     data: prepareDataForDataset(years, rows),
+    excess: excess,
   });
 }
 
@@ -2143,6 +2283,7 @@ function sortData(rows, selectedUnit) {
   this.refreshSeries = function() {
     if (this.hasSerieses) {
       this.data = helpers.getDataBySeries(this.allData, this.selectedSeries);
+      this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
       this.fieldsBySeries = helpers.fieldsUsedBySeries(this.serieses, this.data, this.allColumns);
       this.dataHasSeriesSpecificFields = helpers.dataHasSeriesSpecificFields(this.fieldsBySeries);
     }
@@ -2170,16 +2311,17 @@ function sortData(rows, selectedUnit) {
   }
   else {
     this.data = this.allData;
+    this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
   }
 
   // calculate some initial values:
-  this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
   this.initialiseUnits();
   this.initialiseFields();
   this.colors = opensdg.chartColors(this.indicatorId);
   this.maxDatasetCount = 2 * this.colors.length;
+  this.colorAssignments = [];
 
   this.clearSelectedFields = function() {
     this.selectedFields = [];
@@ -2354,9 +2496,6 @@ function sortData(rows, selectedUnit) {
     if (this.hasUnits) {
       filteredData = helpers.getDataByUnit(filteredData, this.selectedUnit);
     }
-    if (this.hasSerieses) {
-      filteredData = helpers.getDataBySeries(filteredData, this.selectedSeries);
-    }
 
     filteredData = helpers.sortData(filteredData, this.selectedUnit);
     if (headline.length > 0) {
@@ -2364,7 +2503,7 @@ function sortData(rows, selectedUnit) {
     }
 
     var combinations = helpers.getCombinationData(this.selectedFields);
-    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, this.country, this.colors, this.selectableFields);
+    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, this.country, this.colors, this.selectableFields, this.colorAssignments);
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
 
     var datasetCountExceedsMax = false;
@@ -2383,7 +2522,7 @@ function sortData(rows, selectedUnit) {
 
     this.onDataComplete.notify({
       datasetCountExceedsMax: datasetCountExceedsMax,
-      datasets: datasetCountExceedsMax ? datasets.slice(0, this.maxDatasetCount) : datasets,
+      datasets: datasets.filter(function(dataset) { return dataset.excess !== true }),
       labels: this.years,
       headlineTable: helpers.getHeadlineTable(headline, this.selectedUnit),
       selectionsTable: selectionsTable,
@@ -2760,6 +2899,9 @@ var indicatorView = function (model, options) {
   this.updatePlot = function(chartInfo) {
     this.updateIndicatorDataViewStatus(view_obj._chartInstance.data.datasets, chartInfo.datasets);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
+    view_obj._chartInstance.data.labels = chartInfo.labels;
+    // TODO: Investigate assets/js/chartjs/rescaler.js and why "allLabels" is needed.
+    view_obj._chartInstance.data.allLabels = chartInfo.labels;
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
@@ -3529,6 +3671,9 @@ var indicatorSearch = function() {
       resultsCount: resultItems.length,
       didYouMean: (alternativeSearchTerms.length > 0) ? alternativeSearchTerms : false,
     }));
+
+    // Hide the normal header search.
+    $('#search').css('visibility', 'hidden');
   }
 
   // Helper function to make a search query "fuzzier", using the ~ syntax.
