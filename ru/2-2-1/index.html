@@ -121,7 +121,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210207062040">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210207063102">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -367,9 +367,8 @@ var translations = {
 <div class="container">
   <ol class="breadcrumb">
   
-  <li><a href="/sdg-site-kazstat/ru/">Главная</a></li>
+  
   <li><a href="/sdg-site-kazstat/ru/2" title="Ликвидация голода, обеспечение продовольственной безопасности и улучшение питания и содействие устойчивому развитию сельского хозяйства">Цель 2</a></li>
-  <li class="active">Показатель 2.2.1</li>
   
 </ol>
 
@@ -1828,13 +1827,15 @@ data-event-label="Change to Sources tab"
   <div role="tabpanel" class="tab-pane" id="edit">
     <div class="edit-container">
   
-  <a class="btn btn-primary" href="http://prose.io/#//edit//data/indicator_2-2-1.csv">Редактировать данные</a>
+  <a class="btn btn-primary" href="https://github.com/kazstat/sdg-data-kazstat/blob/develop/data/indicator_2-2-1.csv">Редактировать данные</a>
   
 
   
-  <a class="btn btn-primary" href="http://prose.io/#//edit//meta/2-2-1.md">Редактировать метаданные</a>
+  <a class="btn btn-primary" href="https://github.com/kazstat/sdg-data-kazstat/blob/develop/meta/2-2-1.csv">Редактировать метаданные</a>
   
 
+  
+  <a class="btn btn-primary" href="/sdg-site-kazstat/ru/config/2-2-1">Edit configuration</a>
   
 </div>
 
@@ -1872,6 +1873,8 @@ data-event-label="Change to Sources tab"
                 </li>
               
             
+            
+            <li><a href="/sdg-site-kazstat/ru/config">Configuration</a></li>
             </ul>
         </div>
       </div>
@@ -1904,12 +1907,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Поиск';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210207062040'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210207063102'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210207062040"></script><script>
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210207063102"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
