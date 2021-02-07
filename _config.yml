@@ -1,37 +1,9 @@
 # Jekyll configuration for Open SDG platform
 
-# Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
 remote_theme: brockfanning/open-sdg@kazakhstan-feature-set
-
-# Replace this title as needed.
 title: Indicators For The Sustainable Development Goals
-frontpage_heading: custom.frontpage_heading
-frontpage_instructions: custom.frontpage_instructions
-# Replace the baseurl with the name of this repository.
 baseurl: "/sdg-site-kazstat"
 url: ""
-environment: staging
-# Replace my-github-org and open-sdg-data-starter as needed.
-remote_data_prefix: "https://kazstat.github.io/sdg-data-kazstat"
-
-analytics:
-  ga_prod: ''
-
-frontpage_introduction_banner:
-  title: custom.frontpage_intro_title
-  description: custom.frontpage_intro_description
-  sidebar: custom.frontpage_intro_sidebar
-# Replace the email addresses below.
-email_contacts:
-  questions: ai.dosanova@economy.gov.kz
-  suggestions: as.abraeva@economy.gov.kz
-  functional: ai.dosanova@economy.gov.kz
-
-# International Support
-# Eg name: Australia and adjective: Australian
-country:
-  name: Kazakhstan
-  adjective: Kazakh
 
 # Pages
 collections:
@@ -46,71 +18,10 @@ collections:
   goals:
     output: true
 
-# Menu
-menu:
-  # Use these to customise the main navigation.
-  - path: /reporting-status
-    # The "translation_key" refers to the key in the SDG Translations repository.
-    translation_key: menu.reporting_status
-  - path: /about
-    translation_key: menu.about
-  - path: /faq
-    translation_key: menu.faq
-
-footer_menu:
-  - path: mailto:ai.dosanova@economy.gov.kz
-    translation_key: menu.contact_us
-  - path: https://facebook.com/statgov.kz
-    translation_key: general.facebook
-  - path: /about/cookies-and-privacy/
-    translation_key: menu.cookies
-
-# Configure the text (or "translation key") to be used on the
-# non-global metadata tab.
-non_global_metadata: indicator.national_metadata
-
-# The list of languages that are translated. The first one is the default.
-languages:
-  - kk
-  - ru
-  - en
-
-languages_public:
-  kk: kz
-
-# Set a base for all goal image URLs. Note that the full goal image path will be
-# the base below, completed with: /[language]/[number].png (eg, /fr/6.png).
-goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
-
 # Tell Jekyll to use the Remote Theme plugin.
 plugins:
   - jekyll-remote-theme
   - jekyll-open-sdg-plugins
-
-# Apply any custom Javascript.
-custom_js:
-  - /assets/js/custom.js
-
-create_goals:
-  layout: goal-by-target
-
-create_indicators:
-  layout: indicator
-
-create_pages: true
-
-# Mapping
-map_options:
-  tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
-  tileOptions:
-    id: mapbox.light
-    accessToken: pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg
-    attribution: <a href="https://www.mapbox.com">Mapbox</a>
-  minZoom: 3
-map_layers:
-  - min_zoom: 3
-    max_zoom: 10
-    label: REF_AREA.REF_AREA
 
 exclude:
   - vendor
@@ -122,21 +33,3 @@ exclude:
   - README.md
   - LICENSE
   - .sass-cache
-
-search_index_extra_fields:
-  - indicator_available
-  - source_compilation_1
-  - source_data_1
-  - source_implementation_1
-
-search_index_boost:
-  title: 10
-  indicator_available: 15
-
-data_fields:
-  units: UNIT_MEASURE
-  series: SERIES
-
-series_toggle: true
-accessible_tabs: true
-accessible_charts: true
