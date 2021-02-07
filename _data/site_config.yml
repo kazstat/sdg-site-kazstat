@@ -1,0 +1,160 @@
+accessible_charts: true
+accessible_tabs: true
+analytics:
+  ga_prod: ''
+breadcrumbs:
+  goal: []
+  indicator: []
+  post: []
+country:
+  name: Kazakhstan
+  adjective: Kazakh
+create_config_forms:
+  layout: config-builder
+create_goals:
+  layout: goal-by-target
+  goals: []
+create_indicators:
+  layout: indicator
+create_pages:
+  - filename: ''
+    folder: /
+    layout: frontpage
+    title: general.site_title
+  - filename: ''
+    folder: /reporting-status
+    layout: reportingstatus
+    title: status.reporting_status
+  - filename: indicators.json
+    folder: /
+    layout: indicator-json
+    title: ''
+  - filename: ''
+    folder: /search
+    layout: search
+    title: search.search
+custom_css: []
+custom_js:
+  - /assets/js/custom.js
+data_edit_url: >-
+  https://github.com/kazstat/sdg-data-kazstat/blob/develop/data/indicator_[id].csv
+data_fields:
+  units: UNIT_MEASURE
+  series: SERIES
+date_formats: []
+disclaimer:
+  phase: ''
+  message: ''
+email_contacts:
+  questions: ai.dosanova@economy.gov.kz
+  suggestions: as.abraeva@economy.gov.kz
+  functional: ai.dosanova@economy.gov.kz
+environment: staging
+footer_language_toggle: none
+footer_menu:
+  - path: 'mailto:ai.dosanova@economy.gov.kz'
+    translation_key: menu.contact_us
+  - path: 'https://facebook.com/statgov.kz'
+    translation_key: general.facebook
+  - path: /about/cookies-and-privacy/
+    translation_key: menu.cookies
+frontpage_cards: []
+frontpage_goals_grid:
+  title: ''
+  description: ''
+frontpage_heading: custom.frontpage_heading
+frontpage_instructions: custom.frontpage_instructions
+frontpage_introduction_banner:
+  title: custom.frontpage_intro_title
+  description: custom.frontpage_intro_description
+  sidebar: custom.frontpage_intro_sidebar
+goal_image_base: 'https://open-sdg.github.io/sdg-translations/assets/img/goals'
+goal_image_extension: ''
+goals_page:
+  title: ''
+  description: ''
+graph_color_set: default
+graph_color_list: []
+graph_color_number: 0
+header:
+  include: header-default.html
+header_language_toggle: dropdown
+hide_empty_metadata: false
+indicator_config_form:
+  dropdowns: []
+languages:
+  - kk
+  - ru
+  - en
+languages_public:
+  - language: kk
+    language_public: kz
+map_layers:
+  - subfolder: ''
+    label: REF_AREA.REF_AREA
+    min_zoom: 3
+    max_zoom: 10
+    staticBorders: false
+map_options:
+  minZoom: 3
+  maxZoom: 10
+  tileURL: >-
+    https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
+  tileOptions:
+    id: mapbox.light
+    accessToken: >-
+      pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg
+    attribution: '<a href="https://www.mapbox.com">Mapbox</a>'
+  colorRange: chroma.brewer.BuGn
+  noValueColor: '#f0f0f0'
+  styleNormal:
+    weight: 1
+    opacity: 1
+    fillOpacity: 0.7
+    color: '#888888'
+    dashArray: ''
+  styleHighlighted:
+    weight: 1
+    opacity: 1
+    fillOpacity: 0.7
+    color: '#111111'
+    dashArray: ''
+  styleStatic:
+    weight: 2
+    opacity: 1
+    fillOpacity: 0
+    color: '#172d44'
+    dashArray: '5,5'
+menu:
+  - path: /reporting-status
+    translation_key: menu.reporting_status
+  - path: /about
+    translation_key: menu.about
+  - path: /faq
+    translation_key: menu.faq
+metadata_edit_url: 'https://github.com/kazstat/sdg-data-kazstat/blob/develop/meta/[id].csv'
+metadata_tabs: []
+news:
+  category_links: false
+non_global_metadata: indicator.national_metadata
+remote_data_prefix: 'https://kazstat.github.io/sdg-data-kazstat'
+reporting_status:
+  title: ''
+  description: ''
+  disaggregation_tabs: false
+search_index_boost:
+  - field: title
+    boost: 10
+  - field: indicator_available
+    boost: 15
+search_index_extra_fields:
+  - indicator_available
+  - source_compilation_1
+  - source_data_1
+  - source_implementation_1
+series_toggle: true
+sharethis_property: ''
+site_config_form:
+  dropdowns: []
+validate_indicator_config: false
+validate_site_config: false
