@@ -82,6 +82,21 @@ header_language_toggle: dropdown
 hide_empty_metadata: false
 indicator_config_form:
   dropdowns: []
+  repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/indicator-config'
+  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=[key]'
+indicator_metadata_form:
+  dropdowns: []
+  repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/meta'
+  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=[key]'
+  language: ru
+  scopes:
+    - global
+    - national
+  exclude_fields:
+    - national_metadata_update_url
+    - national_metadata_update_url_text
+    - national_data_update_url
+    - national_data_update_url_text
 languages:
   - kk
   - ru
@@ -132,7 +147,7 @@ menu:
     translation_key: menu.about
   - path: /faq
     translation_key: menu.faq
-metadata_edit_url: 'https://github.com/kazstat/sdg-data-kazstat/blob/develop/meta/[id].csv'
+metadata_edit_url: metadata
 metadata_tabs: []
 news:
   category_links: false
@@ -156,5 +171,7 @@ series_toggle: true
 sharethis_property: ''
 site_config_form:
   dropdowns: []
+  repository_link: 'https://github.com/kazstat/sdg-site-kazstat/tree/develop/_data'
+  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=[key]'
 validate_indicator_config: false
 validate_site_config: false
