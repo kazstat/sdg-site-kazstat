@@ -94,7 +94,8 @@ opensdg.autotrack = function(preset, category, action, label) {
       var colorRangeParts = options.mapOptions.colorRange.split('.'),
           colorRange = window,
           overrideColorRange = true;
-      for (var colorRangePart of colorRangeParts) {
+      for (var i = 0; i < colorRangeParts.length; i++) {
+        var colorRangePart = colorRangeParts[i];
         if (typeof colorRange[colorRangePart] !== 'undefined') {
           colorRange = colorRange[colorRangePart];
         }
@@ -246,7 +247,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     // Get the data from a feature's properties, according to the current year.
     getData: function(props) {
       if (props.values && props.values.length && props.values[this.currentDisaggregation][this.currentYear]) {
-        return props.values[this.currentDisaggregation][this.currentYear];
+        return opensdg.dataRounding(props.values[this.currentDisaggregation][this.currentYear]);
       }
       return false;
     },
@@ -419,7 +420,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         plugin.map.addControl(L.Control.yearSlider({
           years: plugin.years,
           yearChangeCallback: function(e) {
-            plugin.currentYear = new Date(e.time).getFullYear();
+            plugin.currentYear = plugin.years[e.target._currentTimeIndex];
             plugin.updateColors();
             plugin.updateTooltips();
             plugin.selectionLegend.update();
@@ -1610,6 +1611,9 @@ function selectMinimumStartingFields(rows, selectableFieldNames, selectedUnit) {
  * @param {Array} fieldItemStates
  * @param {Array} rows
  * @return {Object} Arrays of parents keyed to children
+ *
+ * @TODO: This function can be a bottleneck in large datasets with a lot of
+ * disaggregation values. Can this be further optimized?
  */
 function validParentsByChild(edges, fieldItemStates, rows) {
   var parentFields = getParentFieldNames(edges);
@@ -1623,18 +1627,17 @@ function validParentsByChild(edges, fieldItemStates, rows) {
       return value.value;
     });
     var parentField = parentFields[fieldIndex];
+    var childRows = rows.filter(function(row) {
+      var childNotEmpty = row[childField];
+      var parentNotEmpty = row[parentField];
+      return childNotEmpty && parentNotEmpty;
+    })
     validParentsByChild[childField] = {};
     childValues.forEach(function(childValue) {
-      var rowsWithParentValues = rows.filter(function(row) {
-        var childMatch = row[childField] == childValue;
-        var parentNotEmpty = row[parentField];
-        return childMatch && parentNotEmpty;
+      var rowsWithParentValues = childRows.filter(function(row) {
+        return row[childField] == childValue;
       });
-      var parentValues = rowsWithParentValues.map(function(row) {
-        return row[parentField];
-      });
-      parentValues = parentValues.filter(isElementUniqueInArray);
-      validParentsByChild[childField][childValue] = parentValues;
+      validParentsByChild[childField][childValue] = getUniqueValuesByProperty(parentField, rowsWithParentValues);
     });
   });
   return validParentsByChild;
@@ -2890,6 +2893,12 @@ var indicatorView = function (model, options) {
     });
   };
 
+  this.alterTableConfig = function(config, info) {
+    opensdg.tableConfigAlterations.forEach(function(callback) {
+      callback(config, info);
+    });
+  };
+
   this.updateChartTitle = function(chartTitle) {
     if (typeof chartTitle !== 'undefined') {
       $('.chart-title').text(chartTitle);
@@ -3167,7 +3176,7 @@ var indicatorView = function (model, options) {
     }
   };
 
-  var initialiseDataTable = function(el) {
+  var initialiseDataTable = function(el, info) {
     var datatables_options = options.datatables_options || {
       paging: false,
       bInfo: false,
@@ -3179,6 +3188,7 @@ var indicatorView = function (model, options) {
 
     datatables_options.aaSorting = [];
 
+    view_obj.alterTableConfig(datatables_options, info);
     table.DataTable(datatables_options);
     table.removeAttr('role');
     table.find('thead th').removeAttr('rowspan').removeAttr('colspan').removeAttr('aria-label');
@@ -3324,7 +3334,9 @@ var indicatorView = function (model, options) {
 
   this.createIndicatorDownloadButtons = function(indicatorDownloads, indicatorId, el) {
     if (indicatorDownloads) {
-      for (var buttonLabel of Object.keys(indicatorDownloads)) {
+      var buttonLabels = Object.keys(indicatorDownloads);
+      for (var i = 0; i < buttonLabels.length; i++) {
+        var buttonLabel = buttonLabels[i];
         var href = indicatorDownloads[buttonLabel].href;
         var buttonLabelTranslated = translations.t(buttonLabel);
         var gaLabel = buttonLabel + ': ' + indicatorId;
@@ -3398,8 +3410,12 @@ var indicatorView = function (model, options) {
 
       $(el).append(currentTable);
 
-      // initialise data table
-      initialiseDataTable(el);
+      // initialise data table and provide some info for alterations.
+      var alterationInfo = {
+        table: table,
+        indicatorId: indicatorId,
+      };
+      initialiseDataTable(el, alterationInfo);
 
       $(el).removeClass('table-has-no-data');
       $('#selectionTableFooter').show();
@@ -3895,8 +3911,8 @@ $(function() {
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
       div.innerHTML = L.Util.template(controlTpl, {
-        lowValue: this.plugin.valueRange[0],
-        highValue: this.plugin.valueRange[1],
+        lowValue: opensdg.dataRounding(this.plugin.valueRange[0]),
+        highValue: opensdg.dataRounding(this.plugin.valueRange[1]),
         legendSwatches: swatches,
       });
       return div;
@@ -3985,7 +4001,14 @@ $(function() {
 
     // Hijack the displayed date format.
     _getDisplayDateFormat: function(date){
-      return date.getFullYear();
+      var time = date.toISOString().slice(0, 10);
+      var match = this.options.years.find(function(y) { return y.time == time; });
+      if (match) {
+        return match.display;
+      }
+      else {
+        return date.getFullYear();
+      }
     },
 
     // Override the _createButton method to prevent the date from being a link.
@@ -4060,6 +4083,7 @@ $(function() {
 
   // Helper function to compose the full widget.
   L.Control.yearSlider = function(options) {
+    var years = getYears(options.years);
     // Extend the defaults.
     options = L.Util.extend(defaultOptions, options);
     // Hardcode the timeDimension to year intervals.
@@ -4067,8 +4091,8 @@ $(function() {
       // We pad our years to at least January 2nd, so that timezone issues don't
       // cause any problems. This converts the array of years into a comma-
       // delimited string of YYYY-MM-DD dates.
-      times: options.years.join('-01-02,') + '-01-02',
-      currentTime: new Date(options.years[0] + '-01-02').getTime(),
+      times: years.map(function(y) { return y.time }).join(','),
+      currentTime: new Date(years[0].time).getTime(),
     });
     // Create the player.
     options.player = new L.TimeDimension.Player(options.playerOptions, options.timeDimension);
@@ -4076,9 +4100,45 @@ $(function() {
     if (typeof options.yearChangeCallback === 'function') {
       options.timeDimension.on('timeload', options.yearChangeCallback);
     };
+    // Pass in our years for later use.
+    options.years = years;
     // Return the control.
     return new L.Control.YearSlider(options);
   };
+
+  function isYear(year) {
+    var parsedInt = parseInt(year, 10);
+    return /^\d+$/.test(year) && parsedInt > 1900 && parsedInt < 3000;
+  }
+
+  function getYears(years) {
+    // Support an array of years or an array of strings starting with years.
+    var day = 2;
+    return years.map(function(year) {
+      var mapped = {
+        display: year,
+        time: year,
+      };
+      // Usually this is a year.
+      if (isYear(year)) {
+        mapped.time = year + '-01-02';
+        // Start over that day variable.
+        day = 2;
+      }
+      // Otherwise we get the year from the beginning of the string.
+      else {
+        for (var delimiter of ['-', '.', ' ', '/']) {
+          var parts = year.split(delimiter);
+          if (parts.length > 1 && isYear(parts[0])) {
+            mapped.time = parts[0] + '-01-0' + day;
+            day += 1;
+            break;
+          }
+        }
+      }
+      return mapped;
+    });
+  }
 }());
 /*
  * Leaflet fullscreenAccessible.
