@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210209060104">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210209061808">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -1057,7 +1057,7 @@ var translations = {
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.header_language_toggle'));propertyEditorAccessibilityFixes(editor.getEditor('root.hide_empty_metadata'));
       try {
-        var currentValue = normalizeCurrentValue('indicator_config_form', {"dropdowns":[],"repository_link":"https://github.com/kazstat/sdg-data-kazstat/tree/develop/indicator-config","translation_link":"https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=[key]"});
+        var currentValue = normalizeCurrentValue('indicator_config_form', {"dropdowns":[],"repository_link":"https://github.com/kazstat/sdg-data-kazstat/tree/develop/indicator-config","translation_link":"https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]"});
         var propertyEditor = editor.getEditor('root.indicator_config_form');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1073,7 +1073,7 @@ var translations = {
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicator_config_form'));
       try {
-        var currentValue = normalizeCurrentValue('indicator_metadata_form', {"dropdowns":[],"repository_link":"https://github.com/kazstat/sdg-data-kazstat/tree/develop/meta","translation_link":"https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=[key]","language":"ru","scopes":["global","national"],"exclude_fields":["national_metadata_update_url","national_metadata_update_url_text","national_data_update_url","national_data_update_url_text"]});
+        var currentValue = normalizeCurrentValue('indicator_metadata_form', {"dropdowns":[],"repository_link":"https://github.com/kazstat/sdg-data-kazstat/tree/develop/meta","translation_link":"https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]","language":"ru","scopes":["global","national"],"exclude_fields":["national_metadata_update_url","national_metadata_update_url_text","national_data_update_url","national_data_update_url_text"]});
         var propertyEditor = editor.getEditor('root.indicator_metadata_form');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1377,7 +1377,7 @@ var translations = {
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.sharethis_property'));
       try {
-        var currentValue = normalizeCurrentValue('site_config_form', {"dropdowns":[],"repository_link":"https://github.com/kazstat/sdg-site-kazstat/tree/develop/_data","translation_link":"https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=[key]"});
+        var currentValue = normalizeCurrentValue('site_config_form', {"dropdowns":[],"repository_link":"https://github.com/kazstat/sdg-site-kazstat/tree/develop/_data","translation_link":"https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]"});
         var propertyEditor = editor.getEditor('root.site_config_form');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1407,7 +1407,7 @@ var translations = {
 
     function getTranslationLink(propertyEditor) {
       var parts = propertyEditor.value.split('.');
-      var translationLink = 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=[key]';
+      var translationLink = 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]';
       translationLink = translationLink.replace('[id]', '');
       translationLink = translationLink.replace('[group]', parts[0]);
       translationLink = translationLink.replace('[key]', parts[1]);
@@ -1510,12 +1510,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Поиск';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210209060104'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210209061808'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210209060104"></script><script>
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210209061808"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
