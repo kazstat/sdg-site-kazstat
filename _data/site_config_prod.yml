@@ -1,0 +1,7 @@
+analytics:
+  ga_prod: ''
+disclaimer:
+  phase: ''
+  message: ''
+environment: production
+remote_data_prefix: 'https://sdg-stat-kz.github.io/data'

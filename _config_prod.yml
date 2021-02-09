@@ -1,21 +1,8 @@
 # Jekyll configuration for Open SDG platform
-#
-# You will need to change all of the Github-related variables below according
-# to your Github setup. For example, if your site and data repositories are:
-# -- https://github.com/my-awesome-github-org/my-awesome-site-repo
-# -- https://github.com/my-awesome-github-org/my-awesome-data-repo
-# Then you would want to make these replacements throughout this file:
-# -- replace "my-github-org" with "my-awesome-github-org"
-# -- replace "open-sdg-site-starter" with "my-awesome-site-repo"
-# -- replace "open-sdg-data-starter" with "my-awesome-data-repo"
-#
-# NOTE: This "production" version only contains differences from _config.yml.
 
+# For production we don't want a subfolder.
 baseurl: ""
-environment: production
-# Replace my-github-org and open-sdg-data-starter as needed.
-remote_data_prefix: "https://sdg-kazstat.github.io/sdg-data-kazstat-prod"
 
-analytics:
-  # For production, you likely want to enter a Google Analytics code below.
-  ga_prod: ''
+# This tells Open SDG to look in _data/site_config_prod.yml for
+# other configuration overrides.
+environment: production
