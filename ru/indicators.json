@@ -8,7 +8,7 @@
         {
           "id": "1-1-1",
           "title": "Доля населения, живущего за международной чертой бедности, в разбивке по полу, возрасту, статусу занятости и месту проживания (городское/сельское)",
-          "description": "national_indicator_description.1-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-1-1",
           "status": "complete"
@@ -16,7 +16,7 @@
         {
           "id": "1-2-1",
           "title": "Доля населения страны, живущего за официальной чертой бедности, в разбивке по полу и возрасту",
-          "description": "national_indicator_description.1-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-2-1",
           "status": "complete"
@@ -24,7 +24,7 @@
         {
           "id": "1-2-2",
           "title": "Доля мужчин, женщин и детей всех возрастов, живущих в нищете во всех ее проявлениях, согласно национальным определениям",
-          "description": "national_indicator_description.1-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-2-2",
           "status": "complete"
@@ -32,7 +32,7 @@
         {
           "id": "1-3-1",
           "title": "Доля населения, охватываемого минимальным уровнем/системами социальной защиты, в разбивке по полу, с выделением детей, безработных, пожилых, инвалидов, беременных, новорожденных, лиц, получивших трудовое увечье, и бедных и уязвимых",
-          "description": "national_indicator_description.1-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-3-1",
           "status": "complete"
@@ -40,7 +40,7 @@
         {
           "id": "1-4-1",
           "title": "Доля населения, живущего в домохозяйствах с доступом к базовым услугам",
-          "description": "national_indicator_description.1-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-4-1",
           "status": "notstarted"
@@ -48,7 +48,7 @@
         {
           "id": "1-4-2",
           "title": "Доля совокупного взрослого населения, обладающего гарантированными правами землевладения, a) которые подтверждены признанными законом документами, и b) считающего свои права на землю гарантированными, в разбивке по полу и по формам землевладения",
-          "description": "national_indicator_description.1-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-4-2",
           "status": "complete"
@@ -56,7 +56,7 @@
         {
           "id": "1-5-1",
           "title": "Число погибших, пропавших без вести и пострадавших непосредственно в результате бедствий на 100 000 человек",
-          "description": "national_indicator_description.1-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-5-1",
           "status": "complete"
@@ -64,7 +64,7 @@
         {
           "id": "1-5-2",
           "title": "Прямые экономические потери от бедствий в процентном отношении к мировому валовому внутреннему продукту (ВВП)",
-          "description": "national_indicator_description.1-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-5-2",
           "status": "complete"
@@ -72,7 +72,7 @@
         {
           "id": "1-5-3",
           "title": "Число стран, принявших и осуществляющих национальные стратегии снижения риска бедствий в соответствии с Сендайской рамочной программой по снижению риска бедствий на 2015–2030 годы",
-          "description": "national_indicator_description.1-5-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-5-3",
           "status": "complete"
@@ -80,7 +80,7 @@
         {
           "id": "1-5-4",
           "title": "Доля местных органов власти, принявших и осуществляющих местные стратегии снижения риска бедствий в соответствии с национальными стратегиями снижения риска бедствий",
-          "description": "national_indicator_description.1-5-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-5-4",
           "status": "complete"
@@ -88,7 +88,7 @@
         {
           "id": "1-a-1",
           "title": "Суммарный объем субсидий на официальную помощь в целях развития, полученных от всех доноров и направляемых на искоренение нищеты, в качестве доли от валового национального дохода страны-получателя",
-          "description": "national_indicator_description.1-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-a-1",
           "status": "notstarted"
@@ -96,7 +96,7 @@
         {
           "id": "1-a-2",
           "title": "Доля расходов на основные услуги (образование, здравоохранение и социальную защиту) в общей сумме государственных расходов",
-          "description": "national_indicator_description.1-a-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-a-2",
           "status": "complete"
@@ -104,7 +104,7 @@
         {
           "id": "1-b-1",
           "title": "Государственные социальные расходы в интересах малоимущих слоев населения",
-          "description": "national_indicator_description.1-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/1-b-1",
           "status": "complete"
@@ -120,7 +120,7 @@
         {
           "id": "2-1-1",
           "title": "Распространенность недоедания",
-          "description": "national_indicator_description.2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-1-1",
           "status": "complete"
@@ -128,7 +128,7 @@
         {
           "id": "2-1-2",
           "title": "Уровень умеренного или острого отсутствия продовольственной безопасности населения (по «Шкале восприятия отсутствия продовольственной безопасности»)",
-          "description": "national_indicator_description.2-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-1-2",
           "status": "complete"
@@ -136,7 +136,7 @@
         {
           "id": "2-1-2-1",
           "title": "Доля обеспеченности внутреннего рынка продовольственными товарами отечественного производства",
-          "description": "national_indicator_description.2-1-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-1-2-1",
           "status": "complete"
@@ -144,7 +144,7 @@
         {
           "id": "2-2-1",
           "title": "Распространенность задержки роста среди детей в возрасте до пяти лет (среднеквадратичное отклонение от медианного показателя роста к возрасту ребенка в соответствии с нормами роста детей, установленными Всемирной организацией здравоохранения (ВОЗ), <-2)",
-          "description": "national_indicator_description.2-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-2-1",
           "status": "complete"
@@ -152,7 +152,7 @@
         {
           "id": "2-2-2",
           "title": "Распространенность неполноценного питания среди детей в возрасте до пяти лет в разбивке по виду (истощение или ожирение) (среднеквадратичное отклонение от медианного показателя веса к возрасту в соответствии с нормами роста детей, установленными ВОЗ, >+2 или <-2)",
-          "description": "national_indicator_description.2-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-2-2",
           "status": "complete"
@@ -160,7 +160,7 @@
         {
           "id": "2-2-3",
           "title": "Распространенность анемии среди женщин в возрасте 15–49 лет в разбивке по статусу беременности",
-          "description": "national_indicator_description.2-2-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-2-3",
           "status": "complete"
@@ -168,7 +168,7 @@
         {
           "id": "2-3-1",
           "title": "Объем производства на производственную единицу в разбивке по классам размера предприятий фермерского хозяйства/скотоводства/лесного хозяйства",
-          "description": "national_indicator_description.2-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-3-1",
           "status": "complete"
@@ -176,7 +176,7 @@
         {
           "id": "2-3-2",
           "title": "Средний доход мелких производителей продовольственной продукции в разбивке по полу и статусу принадлежности к коренным народам",
-          "description": "national_indicator_description.2-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-3-2",
           "status": "notstarted"
@@ -184,7 +184,7 @@
         {
           "id": "2-4-1",
           "title": "Доля площади сельскохозяйственных угодий, на которых применяются продуктивные и неистощительные методы ведения сельского хозяйства",
-          "description": "national_indicator_description.2-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-4-1",
           "status": "complete"
@@ -192,7 +192,7 @@
         {
           "id": "2-4-1-1",
           "title": "Площадь орошаемых земель, на которых используются водосберегающие технологии (капельное орошение,дождевание)",
-          "description": "national_indicator_description.2-4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-4-1-1",
           "status": "complete"
@@ -200,7 +200,7 @@
         {
           "id": "2-5-1",
           "title": "Количество генетических ресурсов растительного и зоологического происхождения, предназначенных для производства продовольствия и сельского хозяйства, которые хранятся на специальных объектах либо среднесрочного, либо долгосрочного хранения",
-          "description": "national_indicator_description.2-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-5-1",
           "status": "complete"
@@ -208,7 +208,7 @@
         {
           "id": "2-5-2",
           "title": "Доля местных пород, относимых к категории находящихся под угрозой исчезновения",
-          "description": "national_indicator_description.2-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-5-2",
           "status": "complete"
@@ -216,7 +216,7 @@
         {
           "id": "2-a-1",
           "title": "Индекс ориентированности на сельское хозяйство, определяемый по структуре государственных расходов",
-          "description": "national_indicator_description.2-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-a-1",
           "status": "complete"
@@ -224,7 +224,7 @@
         {
           "id": "2-a-2",
           "title": "Совокупный приток официальных средств (официальная помощь в целях развития плюс прочие потоки официальных средств) в сельское хозяйство",
-          "description": "national_indicator_description.2-a-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-a-2",
           "status": "complete"
@@ -232,7 +232,7 @@
         {
           "id": "2-b-1",
           "title": "Субсидирование экспорта сельскохозяйственной продукции",
-          "description": "national_indicator_description.2-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-b-1",
           "status": "notapplicable"
@@ -240,7 +240,7 @@
         {
           "id": "2-c-1",
           "title": "Показатель ценовых аномалий на рынке продовольствия",
-          "description": "national_indicator_description.2-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/2-c-1",
           "status": "complete"
@@ -256,7 +256,7 @@
         {
           "id": "3-1-1",
           "title": "Коэффициент материнской смертности",
-          "description": "national_indicator_description.3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-1-1",
           "status": "complete"
@@ -264,7 +264,7 @@
         {
           "id": "3-1-2",
           "title": "Доля родов, принятых квалифицированными медицинскими работниками",
-          "description": "national_indicator_description.3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-1-2",
           "status": "complete"
@@ -272,7 +272,7 @@
         {
           "id": "3-2-1",
           "title": "Коэффициент смертности детей в возрасте до пяти лет",
-          "description": "national_indicator_description.3-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-2-1",
           "status": "complete"
@@ -280,7 +280,7 @@
         {
           "id": "3-2-2",
           "title": "Коэффициент неонатальной смертности",
-          "description": "national_indicator_description.3-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-2-2",
           "status": "complete"
@@ -288,7 +288,7 @@
         {
           "id": "3-3-1",
           "title": "Число новых заражений ВИЧ на 1000 неинфицированных в разбивке по полу, возрасту и принадлежности к основным группам населения",
-          "description": "national_indicator_description.3-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-3-1",
           "status": "complete"
@@ -296,7 +296,7 @@
         {
           "id": "3-3-1-1",
           "title": "Число вновь выявленных ВИЧ из числа потребителей инъекционных наркотиков",
-          "description": "national_indicator_description.3-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-3-1-1",
           "status": "complete"
@@ -304,7 +304,7 @@
         {
           "id": "3-3-2",
           "title": "Заболеваемость туберкулезом на 100 000 человек",
-          "description": "national_indicator_description.3-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-3-2",
           "status": "complete"
@@ -312,7 +312,7 @@
         {
           "id": "3-3-3",
           "title": "Заболеваемость малярией на 1000 человек",
-          "description": "national_indicator_description.3-3-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-3-3",
           "status": "notapplicable"
@@ -320,7 +320,7 @@
         {
           "id": "3-3-4",
           "title": "Заболеваемость гепатитом B на 100 000 человек",
-          "description": "national_indicator_description.3-3-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-3-4",
           "status": "complete"
@@ -328,7 +328,7 @@
         {
           "id": "3-3-5",
           "title": "Число людей, нуждающихся в лечении от «забытых» тропических болезней",
-          "description": "national_indicator_description.3-3-5",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-3-5",
           "status": "notapplicable"
@@ -336,7 +336,7 @@
         {
           "id": "3-4-1",
           "title": "Смертность от сердечно-сосудистых заболеваний, рака, диабета, хронических респираторных заболеваний",
-          "description": "national_indicator_description.3-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-4-1",
           "status": "complete"
@@ -344,7 +344,7 @@
         {
           "id": "3-4-2",
           "title": "Смертность от самоубийств",
-          "description": "national_indicator_description.3-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-4-2",
           "status": "complete"
@@ -352,7 +352,7 @@
         {
           "id": "3-5-1",
           "title": "Охват лечением расстройств, вызванных употреблением психоактивных веществ (медикаментозные, психосоциальные и реабилитационные услуги и услуги по последующему уходу)",
-          "description": "national_indicator_description.3-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-5-1",
           "status": "complete"
@@ -360,7 +360,7 @@
         {
           "id": "3-5-2",
           "title": "Злоупотребление алкоголем (определяемое в соответствии с национальными особенностями употребление алкоголя на душу населения в возрасте от 15 лет) в литрах чистого спирта в календарный год",
-          "description": "national_indicator_description.3-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-5-2",
           "status": "notstarted"
@@ -368,7 +368,7 @@
         {
           "id": "3-6-1",
           "title": "Смертность в результате дорожно-транспортных происшествий",
-          "description": "national_indicator_description.3-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-6-1",
           "status": "complete"
@@ -376,7 +376,7 @@
         {
           "id": "3-7-1",
           "title": "Доля женщин репродуктивного возраста (от 15 до 49 лет), чьи потребности по планированию семьи удовлетворяются современными методами",
-          "description": "national_indicator_description.3-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-7-1",
           "status": "complete"
@@ -384,7 +384,7 @@
         {
           "id": "3-7-2",
           "title": "Показатель рождаемости среди девушек-подростков (в возрасте от 10 до 14 лет; в возрасте от 15 до 19 лет) на 1000 женщин в данной возрастной группе",
-          "description": "national_indicator_description.3-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-7-2",
           "status": "complete"
@@ -392,7 +392,7 @@
         {
           "id": "3-7-2-1",
           "title": "Число абортов среди подростков (до 14 лет, 15-18 лет)",
-          "description": "national_indicator_description.3-7-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-7-2-1",
           "status": "complete"
@@ -400,7 +400,7 @@
         {
           "id": "3-8-1",
           "title": "Охват основными медико-санитарными услугами (определяемый как средний охват основными услугами по отслеживаемым процедурам, к которым относятся охрана репродуктивного здоровья, охрана здоровья матери и ребенка, лечение инфекционных заболеваний, лечение неинфекционных заболеваний и масштабы и доступность услуг для широких слоев населения и для находящихся в наиболее неблагоприятном положении групп населения)",
-          "description": "national_indicator_description.3-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-8-1",
           "status": "notstarted"
@@ -408,7 +408,7 @@
         {
           "id": "3-8-2",
           "title": "Доля населения с большим удельным весом семейных расходов на медицинскую помощь в общем объеме расходов или доходов домохозяйств",
-          "description": "national_indicator_description.3-8-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-8-2",
           "status": "complete"
@@ -416,7 +416,7 @@
         {
           "id": "3-9-1",
           "title": "Смертность от загрязнения воздуха в жилых помещениях и атмосферного воздуха",
-          "description": "national_indicator_description.3-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-9-1",
           "status": "notstarted"
@@ -424,7 +424,7 @@
         {
           "id": "3-9-2",
           "title": "Смертность от отсутствия безопасной воды, безопасной санитарии и гигиены (от отсутствия безопасных услуг в области водоснабжения, санитарии и гигиены (ВССГ) для всех)",
-          "description": "national_indicator_description.3-9-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-9-2",
           "status": "complete"
@@ -432,7 +432,7 @@
         {
           "id": "3-9-3",
           "title": "Смертность от неумышленного отравления",
-          "description": "national_indicator_description.3-9-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-9-3",
           "status": "complete"
@@ -440,7 +440,7 @@
         {
           "id": "3-a-1",
           "title": "Стандартизированная по возрасту распространенность употребления табака лицами в возрасте от 15 лет",
-          "description": "national_indicator_description.3-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-a-1",
           "status": "complete"
@@ -448,7 +448,7 @@
         {
           "id": "3-b-1",
           "title": "Доля целевой группы населения, охваченная иммунизацией всеми вакцинами, включенными в национальные программы",
-          "description": "national_indicator_description.3-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-b-1",
           "status": "complete"
@@ -456,7 +456,7 @@
         {
           "id": "3-b-2",
           "title": "Общий чистый объем официальной помощи в целях развития, направленной на медицинские исследования и в основные отрасли здравоохранения",
-          "description": "national_indicator_description.3-b-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-b-2",
           "status": "complete"
@@ -464,7 +464,7 @@
         {
           "id": "3-b-3",
           "title": "Доля медицинских учреждений, постоянно располагающих набором основных необходимых и доступных лекарственных средств",
-          "description": "national_indicator_description.3-b-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-b-3",
           "status": "complete"
@@ -472,7 +472,7 @@
         {
           "id": "3-c-1",
           "title": "Число медицинских работников на душу населения и их распределение",
-          "description": "national_indicator_description.3-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-c-1",
           "status": "complete"
@@ -480,7 +480,7 @@
         {
           "id": "3-d-1",
           "title": "Способность соблюдать Международные медико-санитарные правила (ММСП) и готовность к чрезвычайным ситуациям в области общественного здравоохранения",
-          "description": "national_indicator_description.3-d-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-d-1",
           "status": "notstarted"
@@ -488,7 +488,7 @@
         {
           "id": "3-d-2",
           "title": "Сократить процентную долю инфекций кровотока, вызываемых отдельными организмами, устойчивыми к противомикробным препаратам",
-          "description": "national_indicator_description.3-d-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/3-d-2",
           "status": "notstarted"
@@ -504,7 +504,7 @@
         {
           "id": "4-1-1",
           "title": "Доля детей и молодежи, приходящаяся на a) учащихся 2/3 классов; b) выпускников начальной школы; и c) выпускников младшей средней школы, которые достигли по меньшей мере минимального уровня владения навыками i) чтения и ii) математики",
-          "description": "national_indicator_description.4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-1-1",
           "status": "complete"
@@ -512,7 +512,7 @@
         {
           "id": "4-1-2",
           "title": "Процент завершения (начальное образование, неполное и полное среднее образование)",
-          "description": "national_indicator_description.4-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-1-2",
           "status": "notstarted"
@@ -520,7 +520,7 @@
         {
           "id": "4-2-1",
           "title": "Доля детей в возрасте до пяти лет, которые развиваются без отклонений в плане здоровья, обучения и психосоциального благополучия, в разбивке по полу",
-          "description": "national_indicator_description.4-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-2-1",
           "status": "complete"
@@ -528,7 +528,7 @@
         {
           "id": "4-2-2",
           "title": "Уровень участия в организованных видах обучения (за один год до достижения официального возраста поступления в школу) в разбивке по полу",
-          "description": "national_indicator_description.4-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-2-2",
           "status": "complete"
@@ -536,7 +536,7 @@
         {
           "id": "4-2-2-1",
           "title": "Готовность к школе (процентная доля детей, посещающих первый класс начальной школы, которые в предыдущем году посещали дошкольное образовательное учреждение)",
-          "description": "national_indicator_description.4-2-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-2-2-1",
           "status": "complete"
@@ -544,7 +544,7 @@
         {
           "id": "4-3-1-1",
           "title": "Охват молодежи типичного возраста (14-24) техническим и профессиональным образованием",
-          "description": "national_indicator_description.4-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-3-1-1",
           "status": "complete"
@@ -552,7 +552,7 @@
         {
           "id": "4-3-1-2",
           "title": "Доля граждан с техническим и профессиональным образованием в возрасте 18-28 лет в структуре занятого населения данного возраста",
-          "description": "national_indicator_description.4-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-3-1-2",
           "status": "complete"
@@ -560,7 +560,7 @@
         {
           "id": "4-3-1-3",
           "title": "Доля граждан с высшим образованием в возрасте 22-28 лет в структуре занятого населения данного возраста",
-          "description": "national_indicator_description.4-3-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-3-1-3",
           "status": "complete"
@@ -568,7 +568,7 @@
         {
           "id": "4-4-1",
           "title": "Доля молодежи/взрослых, обладающей/ обладающих навыками в области информационно-коммуникационных технологий, в разбивке по видам навыков",
-          "description": "national_indicator_description.4-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-4-1",
           "status": "complete"
@@ -576,7 +576,7 @@
         {
           "id": "4-4-1-1",
           "title": "Уровень цифровой грамотности населения в возрасте 6-74 лет в разрезе областей",
-          "description": "national_indicator_description.4-4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-4-1-1",
           "status": "complete"
@@ -584,7 +584,7 @@
         {
           "id": "4-5-1",
           "title": "Индексы равенства (женщин и мужчин, городских и сельских жителей, нижней и верхней квинтили достатка и других групп, например инвалидов, коренных народов и людей, затронутых конфликтом, в зависимости от наличия данных) по всем касающимся образования показателям в настоящем перечне, которые могут быть дезагрегированы",
-          "description": "national_indicator_description.4-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-5-1",
           "status": "complete"
@@ -592,7 +592,7 @@
         {
           "id": "4-5-1-1",
           "title": "Доля дошкольных организаций, создавших условия для воспитания и обучения детей с особыми образовательными потребностями",
-          "description": "national_indicator_description.4-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-5-1-1",
           "status": "complete"
@@ -600,7 +600,7 @@
         {
           "id": "4-5-1-2",
           "title": "Доля школ, создавших условия для инклюзивного образования",
-          "description": "national_indicator_description.4-5-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-5-1-2",
           "status": "complete"
@@ -608,7 +608,7 @@
         {
           "id": "4-5-1-3",
           "title": "Доля организаций ТиПО, создавших равные условия и безбарьерный доступ для студентов с особыми образовательными потребностями",
-          "description": "national_indicator_description.4-5-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-5-1-3",
           "status": "complete"
@@ -616,7 +616,7 @@
         {
           "id": "4-5-1-4",
           "title": "Доля организаций вузов, создавших равные условия и безбарьерный доступ для обучения студентов с особыми образовательными потребностями",
-          "description": "national_indicator_description.4-5-1-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-5-1-4",
           "status": "complete"
@@ -624,7 +624,7 @@
         {
           "id": "4-6-1",
           "title": "Доля населения в данной возрастной группе, достигшая, по меньшей мере, установленного уровня функциональной a) грамотности и b) математической грамотности, в разбивке по полу.",
-          "description": "national_indicator_description.4-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-6-1",
           "status": "complete"
@@ -632,7 +632,7 @@
         {
           "id": "4-7-1-1",
           "title": "Доля студентов вузов, вовлеченных в общественно-полезную деятельность",
-          "description": "national_indicator_description.4-7-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-7-1-1",
           "status": "complete"
@@ -640,7 +640,7 @@
         {
           "id": "4-7-1-2",
           "title": "Доля обучающихся в организациях ТиПО, вовлеченных в общественно-полезную деятельность",
-          "description": "national_indicator_description.4-7-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-7-1-2",
           "status": "complete"
@@ -648,7 +648,7 @@
         {
           "id": "4-7-1-3",
           "title": "Доля детей, охваченных обновленным содержанием образования",
-          "description": "national_indicator_description.4-7-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-7-1-3",
           "status": "complete"
@@ -656,7 +656,7 @@
         {
           "id": "4-a-1",
           "title": "Доля школ, предлагающих основные услуги, в разбивке по типу уcлуг",
-          "description": "national_indicator_description.4-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-a-1",
           "status": "complete"
@@ -664,7 +664,7 @@
         {
           "id": "4-a-1-1",
           "title": "Доля модифицированных учебных кабинетов современным оборудованием в организациях среднего образования, от их обшего количества",
-          "description": "national_indicator_description.4-a-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-a-1-1",
           "status": "complete"
@@ -672,7 +672,7 @@
         {
           "id": "4-a-1-2",
           "title": "Доля 3-х сменных школ",
-          "description": "national_indicator_description.4-a-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-a-1-2",
           "status": "complete"
@@ -680,7 +680,7 @@
         {
           "id": "4-a-1-3",
           "title": "Доля аварийных школ",
-          "description": "national_indicator_description.4-a-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-a-1-3",
           "status": "complete"
@@ -688,7 +688,7 @@
         {
           "id": "4-b-1",
           "title": "Объем официальной помощи в целях развития, направляемой на выплату стипендий, в разбивке по отраслям и видам обучения",
-          "description": "national_indicator_description.4-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-b-1",
           "status": "complete"
@@ -696,7 +696,7 @@
         {
           "id": "4-c-1",
           "title": "Доля учителей в a) дошкольных учреждениях; b) начальной школе; c) младшей средней школе; и d) старшей средней школе, прошедших до начала или во время работы по меньшей мере минимальную организованную профессиональную учительскую подготовку (например, педагогическую) на соответствующем уровне в данной стране",
-          "description": "national_indicator_description.4-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-c-1",
           "status": "complete"
@@ -704,7 +704,7 @@
         {
           "id": "4-c-1-1",
           "title": "Доля педагогических работников организаций среднего образования, прошедших повышение квалификации по обновленному содержанию от их общего количества",
-          "description": "national_indicator_description.4-c-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-c-1-1",
           "status": "notstarted"
@@ -712,7 +712,7 @@
         {
           "id": "4-c-1-2",
           "title": "Доля педагогов с квалификационным уровнем мастера-исследователя, педагог-эксперта и педагог-модератора от общего количества педагогов среднего образования",
-          "description": "national_indicator_description.4-c-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/4-c-1-2",
           "status": "complete"
@@ -728,7 +728,7 @@
         {
           "id": "5-1-1",
           "title": "Наличие нормативно-правовой базы для поощрения и обеспечения равенства и недискриминации по признаку пола и наблюдения за положением в этой области",
-          "description": "national_indicator_description.5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-1-1",
           "status": "notstarted"
@@ -736,7 +736,7 @@
         {
           "id": "5-2-1",
           "title": "Доля когда-либо имевших партнера женщин и девочек в возрасте от 15 лет, подвергавшихся физическому, сексуальному или психологическому насилию со стороны нынешнего или бывшего интимного партнера в последние 12 месяцев, в разбивке по формам насилия и возрасту",
-          "description": "national_indicator_description.5-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-2-1",
           "status": "complete"
@@ -744,7 +744,7 @@
         {
           "id": "5-2-1-1",
           "title": "Снижение зарегистрированных фактов бытового насилия в отношения женщин",
-          "description": "national_indicator_description.5-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-2-1-1",
           "status": "complete"
@@ -752,7 +752,7 @@
         {
           "id": "5-2-1-2",
           "title": "Снижение зарегистрированных фактов насилия в отношении детей",
-          "description": "national_indicator_description.5-2-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-2-1-2",
           "status": "complete"
@@ -760,7 +760,7 @@
         {
           "id": "5-2-2",
           "title": "Доля женщин и девочек в возрасте от 15 лет, подвергавшихся сексуальному насилию со стороны кого-либо, кроме интимных партнеров, в последние 12 месяцев, в разбивке по возрасту и месту происшествия",
-          "description": "national_indicator_description.5-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-2-2",
           "status": "complete"
@@ -768,7 +768,7 @@
         {
           "id": "5-3-1",
           "title": "Доля женщин в возрасте от 20 до 24 лет, вступивших в брак или союз до 15 лет и до 18 лет",
-          "description": "national_indicator_description.5-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-3-1",
           "status": "complete"
@@ -776,7 +776,7 @@
         {
           "id": "5-3-1-2",
           "title": "Доля женщин, вступивших в официальный брак до 18 лет",
-          "description": "national_indicator_description.5-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-3-1-2",
           "status": "complete"
@@ -784,7 +784,7 @@
         {
           "id": "5-3-2",
           "title": "Доля девочек и женщин в возрасте от 15 до 49 лет, подвергшихся калечащим операциям на женских половых органах/обрезанию, в разбивке по возрасту",
-          "description": "national_indicator_description.5-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-3-2",
           "status": "notapplicable"
@@ -792,7 +792,7 @@
         {
           "id": "5-4-1",
           "title": "Доля времени, затрачиваемого на неоплачиваемый труд по уходу и работу по дому, в разбивке по полу, возрасту и месту проживания",
-          "description": "national_indicator_description.5-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-4-1",
           "status": "complete"
@@ -800,7 +800,7 @@
         {
           "id": "5-5-1",
           "title": "Доля мест, занимаемых женщинами в a) национальных парламентах и b) местных органах власти",
-          "description": "national_indicator_description.5-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-5-1",
           "status": "complete"
@@ -808,7 +808,7 @@
         {
           "id": "5-5-2",
           "title": "Доля женщин на руководящих должностях",
-          "description": "national_indicator_description.5-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-5-2",
           "status": "complete"
@@ -816,7 +816,7 @@
         {
           "id": "5-6-1",
           "title": "Доля женщин в возрасте от 15 до 49 лет, самостоятельно принимающих обдуманные решения о сексуальных отношениях, применении противозачаточных средств и обращении за услугами по охране репродуктивного здоровья",
-          "description": "national_indicator_description.5-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-6-1",
           "status": "notstarted"
@@ -824,7 +824,7 @@
         {
           "id": "5-6-2",
           "title": "Число стран, где действуют законы и нормативные акты, гарантирующие женщинам и мужчинам в возрасте от 15 лет полный и равный доступ к услугам по охране сексуального и репродуктивного здоровья и информации и просвещению в этой сфере",
-          "description": "national_indicator_description.5-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-6-2",
           "status": "complete"
@@ -832,7 +832,7 @@
         {
           "id": "5-a-1",
           "title": "a) Доля людей, владеющих сельскохозяйственной землей или имеющих гарантированное право пользования ею, в общей численности населения, занимающегося сельским хозяйством, в разбивке по полу; и b) доля женщин, владеющих сельскохозяйственной землей или являющихся носителями права владения ею, в разбивке по формам землевладения",
-          "description": "national_indicator_description.5-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-a-1",
           "status": "complete"
@@ -840,7 +840,7 @@
         {
           "id": "5-a-2",
           "title": "Доля стран, в которых правовая база (в том числе обычное право) гарантирует женщинам равные права на владение и/или распоряжение землей",
-          "description": "national_indicator_description.5-a-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-a-2",
           "status": "notapplicable"
@@ -848,7 +848,7 @@
         {
           "id": "5-b-1",
           "title": "Доля людей, имеющих мобильный телефон, в разбивке по полу",
-          "description": "national_indicator_description.5-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-b-1",
           "status": "complete"
@@ -856,7 +856,7 @@
         {
           "id": "5-c-1",
           "title": "Доля стран, обладающих механизмами отслеживания государственных ассигнований на обеспечение гендерного равенства и расширение прав и возможностей женщин и обнародования данных о них",
-          "description": "national_indicator_description.5-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/5-c-1",
           "status": "notstarted"
@@ -872,7 +872,7 @@
         {
           "id": "6-1-1",
           "title": "Доля населения, пользующегося услугами водоснабжения, организованного с соблюдением требований безопасности",
-          "description": "national_indicator_description.6-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-1-1",
           "status": "complete"
@@ -880,7 +880,7 @@
         {
           "id": "6-2-1",
           "title": "Доля населения, использующего a) организованные с соблюдением требований безопасности услуги санитарии и b) устройства для мытья рук с мылом и водой",
-          "description": "national_indicator_description.6-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-2-1",
           "status": "complete"
@@ -888,7 +888,7 @@
         {
           "id": "6-3-1",
           "title": "Доля безопасно очищаемых сточных вод",
-          "description": "national_indicator_description.6-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-3-1",
           "status": "complete"
@@ -896,7 +896,7 @@
         {
           "id": "6-3-2",
           "title": "Доля водоемов с хорошим качеством воды",
-          "description": "national_indicator_description.6-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-3-2",
           "status": "complete"
@@ -904,7 +904,7 @@
         {
           "id": "6-4-1",
           "title": "Динамика изменения эффективности водопользования",
-          "description": "national_indicator_description.6-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-4-1",
           "status": "complete"
@@ -912,7 +912,7 @@
         {
           "id": "6-4-2",
           "title": "Уровень нагрузки на водные ресурсы: забор пресной воды в процентном отношении к имеющимся запасам пресной воды",
-          "description": "national_indicator_description.6-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-4-2",
           "status": "complete"
@@ -920,7 +920,7 @@
         {
           "id": "6-5-1",
           "title": "Степень внедрения комплексного управления водными ресурсами (от 0 до 100)",
-          "description": "national_indicator_description.6-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-5-1",
           "status": "complete"
@@ -928,7 +928,7 @@
         {
           "id": "6-5-2",
           "title": "Доля трансграничных водных бассейнов, охваченных действующими договоренностями о сотрудничестве в области водопользования",
-          "description": "national_indicator_description.6-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-5-2",
           "status": "complete"
@@ -936,7 +936,7 @@
         {
           "id": "6-6-1",
           "title": "Динамика изменения площади связанных с водой экосистем",
-          "description": "national_indicator_description.6-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-6-1",
           "status": "complete"
@@ -944,7 +944,7 @@
         {
           "id": "6-a-1",
           "title": "Объем официальной помощи в целях развития, выделенной на водоснабжение и санитарию в рамках координируемой государственной программы расходов",
-          "description": "national_indicator_description.6-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-a-1",
           "status": "complete"
@@ -952,7 +952,7 @@
         {
           "id": "6-b-1",
           "title": "Доля местных административных единиц, в которых действуют правила и процедуры участия граждан в управлении водными ресурсами и санитарией",
-          "description": "national_indicator_description.6-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/6-b-1",
           "status": "complete"
@@ -968,7 +968,7 @@
         {
           "id": "7-1-1",
           "title": "Доля населения, имеющего доступ к электроэнергии",
-          "description": "national_indicator_description.7-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/7-1-1",
           "status": "complete"
@@ -976,7 +976,7 @@
         {
           "id": "7-1-2",
           "title": "Доля населения, использующего в основном чистые виды топлива и технологии",
-          "description": "national_indicator_description.7-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/7-1-2",
           "status": "complete"
@@ -984,7 +984,7 @@
         {
           "id": "7-2-1",
           "title": "Доля возобновляемых источников энергии в общем объеме конечного энергопотребления",
-          "description": "national_indicator_description.7-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/7-2-1",
           "status": "complete"
@@ -992,7 +992,7 @@
         {
           "id": "7-3-1",
           "title": "Энергоемкость, рассчитываемая как отношение расхода первичной энергии к ВВП",
-          "description": "national_indicator_description.7-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/7-3-1",
           "status": "complete"
@@ -1000,7 +1000,7 @@
         {
           "id": "7-a-1",
           "title": "Объем международных финансовых потоков, поступающих в развивающиеся страны для поддержки исследований и разработок в области «чистой» энергии и развития энергетики на возобновляемых источниках, включая комбинированные системы",
-          "description": "national_indicator_description.7-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/7-a-1",
           "status": "notstarted"
@@ -1008,7 +1008,7 @@
         {
           "id": "7-b-1",
           "title": "Установленные в развивающихся странах генерирующие мощности на основе возобновляемых энергоносителей (в ваттах на душу населения)",
-          "description": "national_indicator_description.7-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/7-b-1",
           "status": "notstarted"
@@ -1016,7 +1016,7 @@
         {
           "id": "7-b-1-1",
           "title": "Доля предприятий, внедряющих систему энергоэффективности",
-          "description": "national_indicator_description.7-b-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/7-b-1-1",
           "status": "complete"
@@ -1032,7 +1032,7 @@
         {
           "id": "8-1-1",
           "title": "Ежегодный темп роста реального ВВП на душу населения",
-          "description": "national_indicator_description.8-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-1-1",
           "status": "complete"
@@ -1040,7 +1040,7 @@
         {
           "id": "8-2-1",
           "title": "Ежегодный темп роста реального ВВП на каждого занятого",
-          "description": "national_indicator_description.8-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-2-1",
           "status": "complete"
@@ -1048,7 +1048,7 @@
         {
           "id": "8-3-1",
           "title": "Доля неформальной занятости от общей занятости в разбивке по сектору и полу",
-          "description": "national_indicator_description.8-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-3-1",
           "status": "complete"
@@ -1056,7 +1056,7 @@
         {
           "id": "8-3-1-1",
           "title": "Доля непродуктивно занятых в общей численности занятых, процент",
-          "description": "national_indicator_description.8-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-3-1-1",
           "status": "complete"
@@ -1064,7 +1064,7 @@
         {
           "id": "8-5-1",
           "title": "Средний почасовой заработок работников в разбивке по полу, возрасту и роду занятий, а также признаку инвалидности",
-          "description": "national_indicator_description.8-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-5-1",
           "status": "complete"
@@ -1072,7 +1072,7 @@
         {
           "id": "8-5-2",
           "title": "Уровень безработицы в разбивке по полу, возрасту и признаку инвалидности",
-          "description": "national_indicator_description.8-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-5-2",
           "status": "complete"
@@ -1080,7 +1080,7 @@
         {
           "id": "8-6-1",
           "title": "Доля молодежи (в возрасте от 15 до 24 лет), которая не учится, не работает и не приобретает профессиональных навыков",
-          "description": "national_indicator_description.8-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-6-1",
           "status": "complete"
@@ -1088,7 +1088,7 @@
         {
           "id": "8-7-1",
           "title": "Доля и число детей в возрасте от 5 до 17 лет, занятых детским трудом, в разбивке по полу и возрасту",
-          "description": "national_indicator_description.8-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-7-1",
           "status": "complete"
@@ -1096,7 +1096,7 @@
         {
           "id": "8-8-1",
           "title": "Уровень производственного травматизма со смертельным и несмертельным исходом на 100 000 работников в разбивке по полу и миграционному статусу",
-          "description": "national_indicator_description.8-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-8-1",
           "status": "complete"
@@ -1104,7 +1104,7 @@
         {
           "id": "8-8-2",
           "title": "Уровень соблюдения государством трудовых прав (свободы объединений и заключения коллективных трудовых договоров) на основе документальных источников Международной организации труда (МОТ) и национального законодательства в разбивке по полу и миграционному статусу",
-          "description": "national_indicator_description.8-8-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-8-2",
           "status": "complete"
@@ -1112,7 +1112,7 @@
         {
           "id": "8-9-1",
           "title": "Непосредственный вклад туризма в совокупный ВВП и в темпы роста",
-          "description": "national_indicator_description.8-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-9-1",
           "status": "complete"
@@ -1120,7 +1120,7 @@
         {
           "id": "8-9-1-1",
           "title": "ИФО ВДС, создаваемая непосредственно в туризме",
-          "description": "national_indicator_description.8-9-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-9-1-1",
           "status": "complete"
@@ -1128,7 +1128,7 @@
         {
           "id": "8-10-1",
           "title": "Число а) филиалов коммерческих банков на 100 000 взрослых и б) банкоматов на 100 000 взрослых",
-          "description": "national_indicator_description.8-10-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-10-1",
           "status": "complete"
@@ -1136,7 +1136,7 @@
         {
           "id": "8-10-2",
           "title": "Доля взрослых (от 15 лет и старше), имеющих счет в банке или ином финансовом учреждении или пользующихся услугами операторов мобильных финансовых услуг, процент",
-          "description": "national_indicator_description.8-10-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-10-2",
           "status": "complete"
@@ -1144,7 +1144,7 @@
         {
           "id": "8-a-1",
           "title": "Объем обязательств и выплат в рамках инициативы «Помощь в торговле»",
-          "description": "national_indicator_description.8-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-a-1",
           "status": "complete"
@@ -1152,7 +1152,7 @@
         {
           "id": "8-b-1",
           "title": "Наличие разработанной и осуществляемой национальной стратегии молодежной занятости в качестве отдельной стратегии или в рамках национальной стратегии в области занятости",
-          "description": "national_indicator_description.8-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/8-b-1",
           "status": "complete"
@@ -1168,7 +1168,7 @@
         {
           "id": "9-1-1",
           "title": "Доля сельского населения, проживающего в пределах 2 км от всесезонной дороги",
-          "description": "national_indicator_description.9-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-1-1",
           "status": "notstarted"
@@ -1176,7 +1176,7 @@
         {
           "id": "9-1-2",
           "title": "Объем пассажирских и грузовых перевозок в разбивке по видам транспорта",
-          "description": "national_indicator_description.9-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-1-2",
           "status": "complete"
@@ -1184,7 +1184,7 @@
         {
           "id": "9-1-2-1",
           "title": "Перевезено пассажиров всеми видами транспорта",
-          "description": "national_indicator_description.9-1-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-1-2-1",
           "status": "notstarted"
@@ -1192,7 +1192,7 @@
         {
           "id": "9-2-1",
           "title": "Добавленная стоимость, создаваемая в обрабатывающей промышленности, в процентном отношении к ВВП и на душу населения",
-          "description": "national_indicator_description.9-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-2-1",
           "status": "complete"
@@ -1200,7 +1200,7 @@
         {
           "id": "9-2-1-1",
           "title": "Перевезено пассажиров всеми видами транспорта",
-          "description": "national_indicator_description.9-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-2-1-1",
           "status": "complete"
@@ -1208,7 +1208,7 @@
         {
           "id": "9-2-1-2",
           "title": "Рост объема экспорта продукции обрабатывающей промышленности",
-          "description": "national_indicator_description.9-2-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-2-1-2",
           "status": "complete"
@@ -1216,7 +1216,7 @@
         {
           "id": "9-2-2",
           "title": "Занятость в обрабатывающей промышленности в процентах от общей занятости",
-          "description": "national_indicator_description.9-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-2-2",
           "status": "complete"
@@ -1224,7 +1224,7 @@
         {
           "id": "9-3-1",
           "title": "Доля мелких предприятий в совокупном объеме чистой продукции промышленности",
-          "description": "national_indicator_description.9-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-3-1",
           "status": "complete"
@@ -1232,7 +1232,7 @@
         {
           "id": "9-3-2",
           "title": "Доля мелких предприятий, имеющих кредит или кредитную линию",
-          "description": "national_indicator_description.9-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-3-2",
           "status": "complete"
@@ -1240,7 +1240,7 @@
         {
           "id": "9-4-1",
           "title": "Выбросы CO2 на единицу добавленной стоимости",
-          "description": "national_indicator_description.9-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-4-1",
           "status": "complete"
@@ -1248,7 +1248,7 @@
         {
           "id": "9-4-1-1",
           "title": "Выбросы СО2 на душу населения",
-          "description": "national_indicator_description.9-4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-4-1-1",
           "status": "complete"
@@ -1256,7 +1256,7 @@
         {
           "id": "9-5-1",
           "title": "Доля расходов на НИОКР в ВВП",
-          "description": "national_indicator_description.9-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-5-1",
           "status": "complete"
@@ -1264,7 +1264,7 @@
         {
           "id": "9-5-1-1",
           "title": "Доля расходов бизнеса в общем объеме затрат на НИОКР",
-          "description": "national_indicator_description.9-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-5-1-1",
           "status": "complete"
@@ -1272,7 +1272,7 @@
         {
           "id": "9-5-2",
           "title": "Количество исследователей (в эквиваленте полной занятости) на миллион жителей",
-          "description": "national_indicator_description.9-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-5-2",
           "status": "complete"
@@ -1280,7 +1280,7 @@
         {
           "id": "9-a-1",
           "title": "Совокупный объем официальной международной поддержки (официальной помощи в целях развития и других потоков официального финансирования), направляемой на инфраструктуры",
-          "description": "national_indicator_description.9-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-a-1",
           "status": "complete"
@@ -1288,7 +1288,7 @@
         {
           "id": "9-b-1",
           "title": "Доля добавленной стоимости продукции среднетехнологичных и высокотехнологичных отраслей в общем объеме добавленной стоимости",
-          "description": "national_indicator_description.9-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-b-1",
           "status": "complete"
@@ -1296,7 +1296,7 @@
         {
           "id": "9-c-1",
           "title": "Доля населения, охваченного мобильными сетями, в разбивке по технологиям",
-          "description": "national_indicator_description.9-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/9-c-1",
           "status": "complete"
@@ -1312,7 +1312,7 @@
         {
           "id": "10-1-1",
           "title": "Темпы роста расходов домохозяйств или доходов на душу населения среди наименее обеспеченных 40 процентов населения и среди населения в целом",
-          "description": "national_indicator_description.10-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-1-1",
           "status": "complete"
@@ -1320,7 +1320,7 @@
         {
           "id": "10-2-1",
           "title": "Доля людей с доходом ниже 50 процентов медианного дохода в разбивке по полу, возрасту и признаку инвалидности",
-          "description": "national_indicator_description.10-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-2-1",
           "status": "notstarted"
@@ -1328,7 +1328,7 @@
         {
           "id": "10-4-1",
           "title": "Доля доходов трудящихся в ВВП, в том числе заработная плата и выплаты по линии социальной защиты",
-          "description": "national_indicator_description.10-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-4-1",
           "status": "complete"
@@ -1336,7 +1336,7 @@
         {
           "id": "10-4-2",
           "title": "Перераспределительный эффект фискальной политики",
-          "description": "national_indicator_description.10-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-4-2",
           "status": "notstarted"
@@ -1344,7 +1344,7 @@
         {
           "id": "10-5-1",
           "title": "Показатели финансовой устойчивости",
-          "description": "national_indicator_description.10-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-5-1",
           "status": "complete"
@@ -1352,7 +1352,7 @@
         {
           "id": "10-5-1-1",
           "title": "Дефицит государственного бюджета",
-          "description": "national_indicator_description.10-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-5-1-1",
           "status": "complete"
@@ -1360,7 +1360,7 @@
         {
           "id": "10-6-1",
           "title": "Доля развивающихся стран в членском составе международных организаций и удельный вес их голосов",
-          "description": "national_indicator_description.10-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-6-1",
           "status": "complete"
@@ -1368,7 +1368,7 @@
         {
           "id": "10-7-1",
           "title": "Затраты работника на трудоустройство в процентах от его месячного дохода в стране назначения",
-          "description": "national_indicator_description.10-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-7-1",
           "status": "notstarted"
@@ -1376,7 +1376,7 @@
         {
           "id": "10-7-2",
           "title": "Число стран, проводящих миграционную политику, способствующую упорядоченной, безопасной, законной и ответственной миграции и мобильности людей",
-          "description": "national_indicator_description.10-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-7-2",
           "status": "notstarted"
@@ -1384,7 +1384,7 @@
         {
           "id": "10-7-3",
           "title": "Количество людей, погибших или исчезнувших в процессе миграции в направлении международного назначения",
-          "description": "national_indicator_description.10-7-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-7-3",
           "status": "notapplicable"
@@ -1392,7 +1392,7 @@
         {
           "id": "10-7-4",
           "title": "Доля беженцев от общей численности населения в разбивке по стране происхождения",
-          "description": "national_indicator_description.10-7-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-7-4",
           "status": "notstarted"
@@ -1400,7 +1400,7 @@
         {
           "id": "10-a-1",
           "title": "Доля товарных позиций наименее развитых стран и развивающихся стран, к которым применяются нулевые тарифы",
-          "description": "national_indicator_description.10-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-a-1",
           "status": "complete"
@@ -1408,7 +1408,7 @@
         {
           "id": "10-b-1",
           "title": "Совокупный объем потоков ресурсов в целях развития в разбивке по странам-получателям и странам-донорам и видам потоков (например, официальная помощь в целях развития, прямые иностранные инвестиции и прочие финансовые потоки)",
-          "description": "national_indicator_description.10-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-b-1",
           "status": "complete"
@@ -1416,7 +1416,7 @@
         {
           "id": "10-c-1",
           "title": "Стоимость перевода в процентном отношении к переводимой сумме",
-          "description": "national_indicator_description.10-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/10-c-1",
           "status": "notstarted"
@@ -1432,7 +1432,7 @@
         {
           "id": "11-1-1",
           "title": "Доля городского населения, проживающего в трущобах, неформальных поселениях или в неудовлетворительных жилищных условиях",
-          "description": "national_indicator_description.11-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-1-1",
           "status": "complete"
@@ -1440,7 +1440,7 @@
         {
           "id": "11-2-1",
           "title": "Доля населения, имеющего удобный доступ к общественному транспорту, в разбивке по полу, возрасту и признаку инвалидности",
-          "description": "national_indicator_description.11-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-2-1",
           "status": "notstarted"
@@ -1448,7 +1448,7 @@
         {
           "id": "11-2-1-1",
           "title": "Доля дорог местного значения, находящихся в хорошем и удовлетворительном состоянии",
-          "description": "national_indicator_description.11-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-2-1-1",
           "status": "complete"
@@ -1456,7 +1456,7 @@
         {
           "id": "11-3-1",
           "title": "Соотношение темпов застройки и темпов роста населения",
-          "description": "national_indicator_description.11-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-3-1",
           "status": "complete"
@@ -1464,7 +1464,7 @@
         {
           "id": "11-3-2",
           "title": "Доля городов, в которых регулярно и на демократической основе функционируют структуры, обеспечивающие прямое участие гражданского общества в градостроительном планировании и управлении городским хозяйством",
-          "description": "national_indicator_description.11-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-3-2",
           "status": "complete"
@@ -1472,7 +1472,7 @@
         {
           "id": "11-4-1",
           "title": "Общая сумма расходов в расчете на душу населения на цели сохранения и защиты всего культурного и природного населения в разбивке по источникам финансирования (частные, государственные), типу наследия (культурное, природное) и уровню государственной подведомственности (национальный, региональный и местный/муниципальный)",
-          "description": "national_indicator_description.11-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-4-1",
           "status": "complete"
@@ -1480,7 +1480,7 @@
         {
           "id": "11-6-1",
           "title": "Доля коммунально-бытовых твердых отходов, которые собираются и удаляются на контролируемых объектах, от общей массы коммунально-бытовых твердых отходов, в разбивке по городам",
-          "description": "national_indicator_description.11-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-6-1",
           "status": "complete"
@@ -1488,7 +1488,7 @@
         {
           "id": "11-6-1-1",
           "title": "Доля переработки и утилизации твердых бытовых отходов к их образованию",
-          "description": "national_indicator_description.11-6-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-6-1-1",
           "status": "complete"
@@ -1496,7 +1496,7 @@
         {
           "id": "11-6-1-2",
           "title": "Доля полигонов, соответствующих экологическим требованиям и санитарным нормам",
-          "description": "national_indicator_description.11-6-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-6-1-2",
           "status": "complete"
@@ -1504,7 +1504,7 @@
         {
           "id": "11-6-2",
           "title": "Среднегодовой уровень содержания мелких твердых частиц (например, класса PM2.5 и PM10) в атмосфере городов (в пересчете на численность населения)",
-          "description": "national_indicator_description.11-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-6-2",
           "status": "complete"
@@ -1512,7 +1512,7 @@
         {
           "id": "11-7-1",
           "title": "Средняя доля застроенной городской территории, относящейся к открытым для всех общественным местам, с указанием доступности в разбивке по полу, возрасту и признаку инвалидности",
-          "description": "national_indicator_description.11-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-7-1",
           "status": "notstarted"
@@ -1520,7 +1520,7 @@
         {
           "id": "11-7-2",
           "title": "Доля лиц, подвергшихся физическим или сексуальным домогательствам, в разбивке по полу, возрасту, признаку инвалидности и месту происшествия за последние 12 месяцев",
-          "description": "national_indicator_description.11-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-7-2",
           "status": "notstarted"
@@ -1528,7 +1528,7 @@
         {
           "id": "11-a-1",
           "title": "Число стран, в которых приняты национальные программы развития городов или региональные планы застройки, в которых a) учитывается динамика численности населения; b) предусмотрено сбалансированное территориальное развитие; и c) расширены возможности маневра бюджетными средствами",
-          "description": "national_indicator_description.11-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-a-1",
           "status": "complete"
@@ -1536,7 +1536,7 @@
         {
           "id": "11-b-2",
           "title": "Доля местных органов власти, принявших и осуществляющих местные стратегии снижения риска бедствий в соответствии с национальными стратегиями снижения риска бедствий",
-          "description": "national_indicator_description.11-b-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/11-b-2",
           "status": "complete"
@@ -1552,7 +1552,7 @@
         {
           "id": "12-1-1",
           "title": "Число стран, имеющих национальный план действий по переходу к рациональным моделям потребления и производства или включивших рациональное потребление и производство в качестве приоритета или задачи в национальную стратегию",
-          "description": "national_indicator_description.12-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-1-1",
           "status": "notstarted"
@@ -1560,7 +1560,7 @@
         {
           "id": "12-2-1",
           "title": "Совокупные ресурсозатраты и ресурсозатраты на душу населения и в процентном отношении к ВВП",
-          "description": "national_indicator_description.12-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-2-1",
           "status": "notstarted"
@@ -1568,7 +1568,7 @@
         {
           "id": "12-2-2",
           "title": "Совокупное внутреннее материальное потребление и внутреннее материальное потребление на душу населения и в процентном отношении к ВВП",
-          "description": "national_indicator_description.12-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-2-2",
           "status": "notstarted"
@@ -1576,7 +1576,7 @@
         {
           "id": "12-3-1",
           "title": "Глобальный индекс потерь продовольствия",
-          "description": "national_indicator_description.12-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-3-1",
           "status": "notstarted"
@@ -1584,7 +1584,7 @@
         {
           "id": "12-4-1",
           "title": "Число сторон международных многосторонних экологических соглашений по опасным и иным химических веществам и отходам, выполняющих свои обязательства и обязанности по передаче информации в соответствии с требованиями каждого соглашения",
-          "description": "national_indicator_description.12-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-4-1",
           "status": "complete"
@@ -1592,7 +1592,7 @@
         {
           "id": "12-4-2",
           "title": "Образование опасных отходов на душу населения и доля обрабатываемых опасных отходов в разбивке по видам обработки",
-          "description": "national_indicator_description.12-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-4-2",
           "status": "complete"
@@ -1600,7 +1600,7 @@
         {
           "id": "12-4-2-1",
           "title": "Образование опасных отходов ('красного' и 'янтарного' уровней опасности) на душу населения",
-          "description": "national_indicator_description.12-4-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-4-2-1",
           "status": "notstarted"
@@ -1608,7 +1608,7 @@
         {
           "id": "12-5-1",
           "title": "Национальный уровень переработки отходов, масса утилизированных материалов в тоннах",
-          "description": "national_indicator_description.12-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-5-1",
           "status": "complete"
@@ -1616,7 +1616,7 @@
         {
           "id": "12-5-1-1",
           "title": "Доля переработки и утилизации твердых бытовых отходов к их образованию",
-          "description": "national_indicator_description.12-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-5-1-1",
           "status": "complete"
@@ -1624,7 +1624,7 @@
         {
           "id": "12-6-1",
           "title": "Число компаний, публикующих отчеты о рациональном использовании ресурсов",
-          "description": "national_indicator_description.12-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-6-1",
           "status": "notstarted"
@@ -1632,7 +1632,7 @@
         {
           "id": "12-7-1",
           "title": "Число стран, осуществляющих стратегии и планы действий по экологизации государственных закупок",
-          "description": "national_indicator_description.12-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-7-1",
           "status": "notstarted"
@@ -1640,7 +1640,7 @@
         {
           "id": "12-b-1",
           "title": "Число стратегий или директив и осуществляемых планов действий в области устойчивого туризма с согласованными инструментами мониторинга и оценки",
-          "description": "national_indicator_description.12-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-b-1",
           "status": "notstarted"
@@ -1648,7 +1648,7 @@
         {
           "id": "12-c-1",
           "title": "Сумма субсидий на ископаемое топливо на единицу ВВП (производство и потребление) и их доля в совокупных национальных расходах на ископаемое топливо",
-          "description": "national_indicator_description.12-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/12-c-1",
           "status": "notstarted"
@@ -1664,7 +1664,7 @@
         {
           "id": "13-1-2",
           "title": "Число стран, принявших и осуществляющих национальные стратегии снижения риска бедствий в соответствии с Сендайской рамочной программой по снижению риска бедствий на 2015–2030 годы",
-          "description": "national_indicator_description.13-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-1-2",
           "status": "complete"
@@ -1672,7 +1672,7 @@
         {
           "id": "13-2-1",
           "title": "Число стран, сообщивших о создании или введении в действие комплексной политики/ стратегии/плана, повышающих их способность адаптироваться к неблагоприятным последствиям изменения климата и содействующих развитию их потенциала противодействия климатическим изменениям и снижению выбросов парниковых газов таким образом, чтобы это не ставило под угрозу производство продовольствия (включая национальный адаптационный план, определяемый на национальном уровне вклад, национальную систему информирования населения, подготовку двухгодичного обновленного доклада или другое)",
-          "description": "national_indicator_description.13-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-2-1",
           "status": "notstarted"
@@ -1680,7 +1680,7 @@
         {
           "id": "13-3-1",
           "title": "Число стран, включивших вопросы смягчения остроты и ослабления последствий изменения климата, адаптации к ним и раннего предупреждения в учебные программы начальной и средней школы и высших учебных заведений",
-          "description": "national_indicator_description.13-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-3-1",
           "status": "complete"
@@ -1688,7 +1688,7 @@
         {
           "id": "13-3-1-1",
           "title": "Доля обучающихся в организациях ТиПО, вовлеченных в общественно-полезную деятельность, процент",
-          "description": "national_indicator_description.13-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-3-1-1",
           "status": "complete"
@@ -1696,7 +1696,7 @@
         {
           "id": "13-3-1-2",
           "title": "Доля детей, охваченных обновленным содержанием образования, процент",
-          "description": "national_indicator_description.13-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-3-1-2",
           "status": "notstarted"
@@ -1704,7 +1704,7 @@
         {
           "id": "13-3-1-3",
           "title": "Доля учащихся, продемонстрировавших высокий уровень гражданственности и патриотизма",
-          "description": "national_indicator_description.13-3-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-3-1-3",
           "status": "notstarted"
@@ -1712,7 +1712,7 @@
         {
           "id": "13-a-1",
           "title": "Сумма (в долл. США), мобилизованная за год с 2020 по 2025 год в соответствии с обязательством по мобилизации 100 млрд. долл. США",
-          "description": "national_indicator_description.13-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-a-1",
           "status": "notapplicable"
@@ -1720,7 +1720,7 @@
         {
           "id": "13-b-1",
           "title": "Число наименее развитых стран и малых островных развивающихся государств, которые получают специализированную поддержку, в том числе ориентированную на женщин, молодежь и местные и маргинализированные общины, и величина такой поддержки, включая финансирование, технологии и укрепление потенциала, предоставляемой для создания механизмов, расширяющих возможности в части планирования и управления, связанных с изменением климата",
-          "description": "national_indicator_description.13-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/13-b-1",
           "status": "notapplicable"
@@ -1736,7 +1736,7 @@
         {
           "id": "14-1-1",
           "title": "Индекс прибрежной эвтрофикации и плотность плавающего лома пластмасс",
-          "description": "national_indicator_description.14-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-1-1",
           "status": "notapplicable"
@@ -1744,7 +1744,7 @@
         {
           "id": "14-2-1",
           "title": "Доля национальных исключительных экономических зон, в управлении которыми применяются экосистемные подходы",
-          "description": "national_indicator_description.14-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-2-1",
           "status": "notapplicable"
@@ -1752,7 +1752,7 @@
         {
           "id": "14-3-1",
           "title": "Средняя кислотность (pH) морской воды, измеряемая в согласованной группе репрезентативных станций отбора проб",
-          "description": "national_indicator_description.14-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-3-1",
           "status": "complete"
@@ -1760,7 +1760,7 @@
         {
           "id": "14-5-1",
           "title": "Доля охраняемых морских районов",
-          "description": "national_indicator_description.14-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-5-1",
           "status": "complete"
@@ -1768,7 +1768,7 @@
         {
           "id": "14-7-1",
           "title": "Экологически рациональный рыбный промысел в процентах от ВВП в малых островных развивающихся государствах, в наименее развитых странах и во всех странах",
-          "description": "national_indicator_description.14-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-7-1",
           "status": "complete"
@@ -1776,7 +1776,7 @@
         {
           "id": "14-a-1",
           "title": "Доля бюджетных ассигнований на научные исследования в области морских технологий в общем объеме бюджетных ассигнований на научные исследования",
-          "description": "national_indicator_description.14-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-a-1",
           "status": "notapplicable"
@@ -1784,7 +1784,7 @@
         {
           "id": "14-b-1",
           "title": "Достигнутый странами прогресс с точки зрения степени применения нормативно-правовых/ стратегических/институциональных рамок, обеспечивающих признание и защиту прав доступа мелких рыбопромысловых предприятий",
-          "description": "national_indicator_description.14-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-b-1",
           "status": "complete"
@@ -1792,7 +1792,7 @@
         {
           "id": "14-c-1",
           "title": "Число стран, добившихся прогресса в ратификации, принятии и осуществлении, по линии правовых, стратегических и институциональных рамок, правовых документов по вопросам Мирового океана, направленных на осуществление закрепленных в Конвенции Организации Объединенных Наций по морскому праву норм международного права, касающихся сохранения и рационального использования Мирового океана и его ресурсов",
-          "description": "national_indicator_description.14-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/14-c-1",
           "status": "notapplicable"
@@ -1808,7 +1808,7 @@
         {
           "id": "15-1-1",
           "title": "Площадь лесов в процентном отношении к общей площади суши",
-          "description": "national_indicator_description.15-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-1-1",
           "status": "complete"
@@ -1816,7 +1816,7 @@
         {
           "id": "15-1-2",
           "title": "Доля важных с точки зрения биологического разнообразия районов суши и пресноводных районов, находящихся под охраной, в разбивке по видам экосистем",
-          "description": "national_indicator_description.15-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-1-2",
           "status": "complete"
@@ -1824,7 +1824,7 @@
         {
           "id": "15-2-1",
           "title": "Прогресс в переходе на неистощительное ведение лесного хозяйства",
-          "description": "national_indicator_description.15-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-2-1",
           "status": "complete"
@@ -1832,7 +1832,7 @@
         {
           "id": "15-2-1-1",
           "title": "Запасы наземной биомассы в лесах",
-          "description": "national_indicator_description.15-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-2-1-1",
           "status": "complete"
@@ -1840,7 +1840,7 @@
         {
           "id": "15-3-1",
           "title": "Площадь деградировавших земель в процентном отношении к общей площади суши",
-          "description": "national_indicator_description.15-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-3-1",
           "status": "complete"
@@ -1848,7 +1848,7 @@
         {
           "id": "15-4-1",
           "title": "Доля охраняемых районов среди важных для горного биоразнообразия участков",
-          "description": "national_indicator_description.15-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-4-1",
           "status": "complete"
@@ -1856,7 +1856,7 @@
         {
           "id": "15-4-2",
           "title": "Индекс растительного покрова гор",
-          "description": "national_indicator_description.15-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-4-2",
           "status": "complete"
@@ -1864,7 +1864,7 @@
         {
           "id": "15-5-1",
           "title": "Индекс Красного списка",
-          "description": "national_indicator_description.15-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-5-1",
           "status": "complete"
@@ -1872,7 +1872,7 @@
         {
           "id": "15-6-1",
           "title": "Число стран, принявших комплексы законодательных, административных и директивных мер, обеспечивающих справедливое и недискриминационное распределение благ",
-          "description": "national_indicator_description.15-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-6-1",
           "status": "notstarted"
@@ -1880,7 +1880,7 @@
         {
           "id": "15-7-1",
           "title": "Доля диких животных, являющихся объектом браконьерства или незаконного оборота, среди видов, которыми ведется торговля",
-          "description": "national_indicator_description.15-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-7-1",
           "status": "complete"
@@ -1888,7 +1888,7 @@
         {
           "id": "15-8-1",
           "title": "Доля стран, принимающих соответствующее национальное законодательство и выделяющих достаточные ресурсы для предотвращения проникновения или регулирования численности чужеродных инвазивных видов",
-          "description": "national_indicator_description.15-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-8-1",
           "status": "notstarted"
@@ -1896,7 +1896,7 @@
         {
           "id": "15-9-1",
           "title": "Прогресс в достижении национальных целевых показателей, установленных в соответствии с Айтинской целевой задачей 2 по биоразнообразию в рамках Стратегического плана по биоразнообразию на 2011–2020 годы",
-          "description": "national_indicator_description.15-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-9-1",
           "status": "notstarted"
@@ -1904,7 +1904,7 @@
         {
           "id": "15-a-1",
           "title": "Объем официальной помощи в целях развития и государственных средств, выделяемых на сохранение и рациональное использование биоразнообразия и экосистем",
-          "description": "national_indicator_description.15-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-a-1",
           "status": "complete"
@@ -1912,7 +1912,7 @@
         {
           "id": "15-b-1",
           "title": "Объем официальной помощи в целях развития и государственных средств, выделяемых на сохранение и рациональное использование биоразнообразия и экосистем",
-          "description": "national_indicator_description.15-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-b-1",
           "status": "notstarted"
@@ -1920,7 +1920,7 @@
         {
           "id": "15-c-1",
           "title": "Доля диких животных, являющихся объектом браконьерства или незаконного оборота, среди видов, которыми ведется торговля",
-          "description": "national_indicator_description.15-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/15-c-1",
           "status": "complete"
@@ -1936,7 +1936,7 @@
         {
           "id": "16-1-1",
           "title": "Число жертв умышленных убийств на 100 000 человек в разбивке по полу и возрасту",
-          "description": "national_indicator_description.16-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-1-1",
           "status": "complete"
@@ -1944,7 +1944,7 @@
         {
           "id": "16-1-2",
           "title": "Число связанных с конфликтами смертей на 100 000 человек в разбивке по полу, возрасту и причине",
-          "description": "national_indicator_description.16-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-1-2",
           "status": "notapplicable"
@@ -1952,7 +1952,7 @@
         {
           "id": "16-1-3",
           "title": "Доля населения, в последние 12 месяцев подвергшегося a) физическому, b) психологическому и c) сексуальному насилию",
-          "description": "national_indicator_description.16-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-1-3",
           "status": "notstarted"
@@ -1960,7 +1960,7 @@
         {
           "id": "16-1-4",
           "title": "Доля лиц, которые считают, что в их районе находиться на улице в одиночестве безопасно",
-          "description": "national_indicator_description.16-1-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-1-4",
           "status": "complete"
@@ -1968,7 +1968,7 @@
         {
           "id": "16-2-1",
           "title": "Доля детей в возрасте от 1 года до 17 лет, в последний месяц подвергшихся любому физическому наказанию и/или психологической агрессии со стороны тех, кто обеспечивает уход за ними",
-          "description": "national_indicator_description.16-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-2-1",
           "status": "complete"
@@ -1976,7 +1976,7 @@
         {
           "id": "16-2-2",
           "title": "Число жертв торговли людьми на 100 000 человек в разбивке по полу, возрасту и форме эксплуатации",
-          "description": "national_indicator_description.16-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-2-2",
           "status": "complete"
@@ -1984,7 +1984,7 @@
         {
           "id": "16-2-3",
           "title": "Доля молодых женщин и мужчин в возрасте от 18 до 29 лет, подвергшихся сексуальному насилию до достижения ими 18-летнего возраста",
-          "description": "national_indicator_description.16-2-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-2-3",
           "status": "notstarted"
@@ -1992,7 +1992,7 @@
         {
           "id": "16-3-1",
           "title": "Доля жертв насилия, которые в последние 12 месяцев подали соответствующую жалобу в компетентные органы или другие официально признанные механизмы урегулирования конфликтов",
-          "description": "national_indicator_description.16-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-3-1",
           "status": "notstarted"
@@ -2000,7 +2000,7 @@
         {
           "id": "16-3-2",
           "title": "Доля лиц, задерживаемых до вынесения приговора, в общей численности заключенных",
-          "description": "national_indicator_description.16-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-3-2",
           "status": "complete"
@@ -2008,7 +2008,7 @@
         {
           "id": "16-3-2-1",
           "title": "Число людей, получивших гарантированную государством бесплатную юридическую помощь",
-          "description": "national_indicator_description.16-3-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-3-2-1",
           "status": "complete"
@@ -2016,7 +2016,7 @@
         {
           "id": "16-3-3",
           "title": "Доля населения, участвовавшая за последние два года в споре и воспользовавшаяся официальным или неофициальным механизмом урегулирования спора, в разбивке по типу механизма",
-          "description": "national_indicator_description.16-3-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-3-3",
           "status": "complete"
@@ -2024,7 +2024,7 @@
         {
           "id": "16-3-3-1",
           "title": "Число споров, разрешенных при помощи примирительных процедур в досудебном порядке",
-          "description": "national_indicator_description.16-3-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-3-3-1",
           "status": "notstarted"
@@ -2032,7 +2032,7 @@
         {
           "id": "16-3-3-2",
           "title": "Уровень доверия к правоохранительным органам, в разбивке по органам",
-          "description": "national_indicator_description.16-3-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-3-3-2",
           "status": "complete"
@@ -2040,7 +2040,7 @@
         {
           "id": "16-4-1",
           "title": "Общий объем входящих и исходящих незаконных финансовых потоков (в долларах США в текущих ценах)",
-          "description": "national_indicator_description.16-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-4-1",
           "status": "notstarted"
@@ -2048,7 +2048,7 @@
         {
           "id": "16-4-2",
           "title": "Доля изъятого, обнаруженного или сданного оружия, незаконное происхождение или обстоятельства приобретения которого было отслежено или установлено компетентным органом в соответствии с международными документами",
-          "description": "national_indicator_description.16-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-4-2",
           "status": "notstarted"
@@ -2056,7 +2056,7 @@
         {
           "id": "16-4-2-1",
           "title": "Число преступлений, совершенных в составе организованной преступной группы (ОПГ)",
-          "description": "national_indicator_description.16-4-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-4-2-1",
           "status": "complete"
@@ -2064,7 +2064,7 @@
         {
           "id": "16-5-1",
           "title": "Доля лиц, которые в предыдущие 12 месяцев хотя бы один раз имели контакт с государственным должностным лицом и которые заплатили взятку государственному должностному лицу или от которых это государственное должностное лицо требовало взятку",
-          "description": "national_indicator_description.16-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-5-1",
           "status": "complete"
@@ -2072,7 +2072,7 @@
         {
           "id": "16-5-2",
           "title": "Доля коммерческих компаний, которые в предыдущие 12 месяцев хотя бы один раз имели контакт с государственным должностным лицом и которые заплатили взятку государственному должностному лицу или от которых это государственное должностное лицо требовало взятку",
-          "description": "national_indicator_description.16-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-5-2",
           "status": "notstarted"
@@ -2080,7 +2080,7 @@
         {
           "id": "16-5-2-1",
           "title": "Восприятие населением уровня коррупции",
-          "description": "national_indicator_description.16-5-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-5-2-1",
           "status": "complete"
@@ -2088,7 +2088,7 @@
         {
           "id": "16-6-1",
           "title": "Первичные расходы правительства в процентном отношении к первоначальному утвержденному бюджету в разбивке по секторам (по кодам бюджетной классификации или аналогичным категориям)",
-          "description": "national_indicator_description.16-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-6-1",
           "status": "complete"
@@ -2096,7 +2096,7 @@
         {
           "id": "16-6-2",
           "title": "Доля населения, удовлетворенного последним опытом использования государственных услуг",
-          "description": "national_indicator_description.16-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-6-2",
           "status": "notstarted"
@@ -2104,7 +2104,7 @@
         {
           "id": "16-6-2-1",
           "title": "Доля восстановленных прав услугополучателей по итогам выявленных в ходе проверок нарушений по обращениям",
-          "description": "national_indicator_description.16-6-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-6-2-1",
           "status": "complete"
@@ -2112,7 +2112,7 @@
         {
           "id": "16-6-2-2",
           "title": "Доля оставленных без рассмотрения заявлений и сообщений или иной информации о правонарушениях к общему количеству зарегистрированных заявлений в разбивке по видам (адм. и уголов.), процент",
-          "description": "national_indicator_description.16-6-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-6-2-2",
           "status": "notstarted"
@@ -2120,7 +2120,7 @@
         {
           "id": "16-6-2-3",
           "title": "Число граждан, привлеченных к административной ответственности, на 100 000 человек",
-          "description": "national_indicator_description.16-6-2-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-6-2-3",
           "status": "notstarted"
@@ -2128,7 +2128,7 @@
         {
           "id": "16-7-1",
           "title": "Доля должностей в национальных и местных учреждениях, в том числе a) в законодательных собраниях; b) на государственной службе; c) в судебных органах, в сравнении с национальным распределением в разбивке по возрастной группе, полу, признаку инвалидности и группе населения",
-          "description": "national_indicator_description.16-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-7-1",
           "status": "notstarted"
@@ -2136,7 +2136,7 @@
         {
           "id": "16-7-2",
           "title": "Доля населения, считающего, что процесс принятия решений является всеобъемлющим и гибким, в разбивке по полу, возрасту, признаку инвалидности и прочим группам населения",
-          "description": "national_indicator_description.16-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-7-2",
           "status": "notstarted"
@@ -2144,7 +2144,7 @@
         {
           "id": "16-9-1",
           "title": "Доля детей в возрасте до пяти лет, рождение которых было зарегистрировано в гражданских органах, в разбивке по возрасту",
-          "description": "national_indicator_description.16-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-9-1",
           "status": "complete"
@@ -2152,7 +2152,7 @@
         {
           "id": "16-10-1",
           "title": "Число подтвержденных случаев убийства, похищения, насильственного исчезновения, произвольного задержания и пыток журналистов и связанных с ними представителей средств массовой информации, профсоюзных деятелей и правозащитников в последние 12 месяцев",
-          "description": "national_indicator_description.16-10-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-10-1",
           "status": "notstarted"
@@ -2160,7 +2160,7 @@
         {
           "id": "16-10-1-1",
           "title": "Число дел, зарегистрированных по статьям 78, 456-1 КоАП РК, дела",
-          "description": "national_indicator_description.16-10-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-10-1-1",
           "status": "complete"
@@ -2168,7 +2168,7 @@
         {
           "id": "16-10-2",
           "title": "Число стран, в которых приняты и действуют конституционные, законодательные и/или политические гарантии доступа граждан к информации",
-          "description": "national_indicator_description.16-10-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-10-2",
           "status": "complete"
@@ -2176,7 +2176,7 @@
         {
           "id": "16-a-1",
           "title": "Наличие независимых национальных правозащитных институтов, действующих в соответствии с Парижскими принципами",
-          "description": "national_indicator_description.16-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-a-1",
           "status": "complete"
@@ -2184,7 +2184,7 @@
         {
           "id": "16-b-1",
           "title": "Доля лиц, сообщивших о том, что в последние 12 месяцев они лично подвергались дискриминации или преследованиям на основаниях, дискриминация по которым запрещена в соответствии с международными стандартами в области прав человека",
-          "description": "national_indicator_description.16-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/16-b-1",
           "status": "notstarted"
@@ -2200,7 +2200,7 @@
         {
           "id": "17-1-1",
           "title": "Общий объем государственных доходов в процентном отношении к ВВП в разбивке по источникам",
-          "description": "national_indicator_description.17-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-1-1",
           "status": "complete"
@@ -2208,7 +2208,7 @@
         {
           "id": "17-1-2",
           "title": "Доля национального бюджета,финансируемая за счет внутренних налогов",
-          "description": "national_indicator_description.17-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-1-2",
           "status": "complete"
@@ -2216,7 +2216,7 @@
         {
           "id": "17-2-1",
           "title": "Чистый объем официальной помощи в целях развития (как суммарной, так и выделяемой наименее развитым странам) как доля валового национального дохода доноров из числа членов Комитета содействия развитию ОЭСР",
-          "description": "national_indicator_description.17-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-2-1",
           "status": "complete"
@@ -2224,7 +2224,7 @@
         {
           "id": "17-3-1",
           "title": "Доля средств, поступающих по линии прямых иностранных инвестиций, официальной помощи в целях развития и сотрудничества Юг — Юг, от валового национального дохода",
-          "description": "national_indicator_description.17-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-3-1",
           "status": "complete"
@@ -2232,7 +2232,7 @@
         {
           "id": "17-3-1-1",
           "title": "Отношение обьема официальной помощи в целях развития и сотрудничество Юг-Юг к валовому национальному доходу",
-          "description": "national_indicator_description.17-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-3-1-1",
           "status": "complete"
@@ -2240,7 +2240,7 @@
         {
           "id": "17-3-1-2",
           "title": "Отношение валового оттока прямых инвестиций за границу от казахстанских прямых инвесторов к ВВП",
-          "description": "national_indicator_description.17-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-3-1-2",
           "status": "complete"
@@ -2248,7 +2248,7 @@
         {
           "id": "17-3-1-3",
           "title": "Отношение валового притока прямых инвестиций в Казахстан от иностранных прямых инвесторов",
-          "description": "national_indicator_description.17-3-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-3-1-3",
           "status": "complete"
@@ -2256,7 +2256,7 @@
         {
           "id": "17-3-2",
           "title": "Доля денежных переводов (в долларах США) в совокупном ВВП",
-          "description": "national_indicator_description.17-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-3-2",
           "status": "complete"
@@ -2264,7 +2264,7 @@
         {
           "id": "17-4-1",
           "title": "Доля поступлений от экспорта товаров и услуг, расходуемая на обслуживание долга",
-          "description": "national_indicator_description.17-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-4-1",
           "status": "complete"
@@ -2272,7 +2272,7 @@
         {
           "id": "17-5-1",
           "title": "Число стран, в которых приняты и действуют режимы поощрения инвестиций в интересах развивающихся стран, включая наименее развитые страны",
-          "description": "national_indicator_description.17-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-5-1",
           "status": "notstarted"
@@ -2280,7 +2280,7 @@
         {
           "id": "17-6-1",
           "title": "Число соглашений и программ научного и/или технического сотрудничества между странами в разбивке по видам сотрудничества",
-          "description": "national_indicator_description.17-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-6-1",
           "status": "complete"
@@ -2288,7 +2288,7 @@
         {
           "id": "17-6-2",
           "title": "Число стационарных абонентов широкополосного Интернета в разбивке по скорости",
-          "description": "national_indicator_description.17-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-6-2",
           "status": "complete"
@@ -2296,7 +2296,7 @@
         {
           "id": "17-7-1",
           "title": "Общая сумма утвержденного финансирования для развивающихся стран в целях содействия разработке, передаче, распространению и освоению экологически безопасных технологий",
-          "description": "national_indicator_description.17-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-7-1",
           "status": "notstarted"
@@ -2304,7 +2304,7 @@
         {
           "id": "17-8-1",
           "title": "Доля населения, пользующегося Интернетом",
-          "description": "national_indicator_description.17-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-8-1",
           "status": "complete"
@@ -2312,7 +2312,7 @@
         {
           "id": "17-9-1",
           "title": "Объем финансовой и технической помощи (в том числе по линии Север — Юг, Юг — Юг и в рамках трехстороннего сотрудничества), предоставляемой развивающимся странам (в долларах США)",
-          "description": "national_indicator_description.17-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-9-1",
           "status": "complete"
@@ -2320,7 +2320,7 @@
         {
           "id": "17-10-1",
           "title": "Средневзвешенный мировой уровень тарифов",
-          "description": "national_indicator_description.17-10-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-10-1",
           "status": "complete"
@@ -2328,7 +2328,7 @@
         {
           "id": "17-11-1",
           "title": "Доля развивающихся стран и наименее развитых стран в мировом экспорте",
-          "description": "national_indicator_description.17-11-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-11-1",
           "status": "complete"
@@ -2336,7 +2336,7 @@
         {
           "id": "17-12-1",
           "title": "Средневзвешенный уровень тарифов, применяемых в отношении развивающихся стран, наименее развитых стран и малых островных развивающихся государств",
-          "description": "national_indicator_description.17-12-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-12-1",
           "status": "complete"
@@ -2344,7 +2344,7 @@
         {
           "id": "17-13-1",
           "title": "Единый набор контрольных макроэкономических показателей",
-          "description": "national_indicator_description.17-13-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-13-1",
           "status": "notstarted"
@@ -2352,7 +2352,7 @@
         {
           "id": "17-14-1",
           "title": "Число стран, в которых созданы механизмы для повышения согласованности политики в области устойчивого развития",
-          "description": "national_indicator_description.17-14-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-14-1",
           "status": "complete"
@@ -2360,7 +2360,7 @@
         {
           "id": "17-15-1",
           "title": "Степень использования донорами из числа участников процесса развития схем результатов и инструментов планирования, разработанных самими странами",
-          "description": "national_indicator_description.17-15-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-15-1",
           "status": "notstarted"
@@ -2368,7 +2368,7 @@
         {
           "id": "17-16-1",
           "title": "Число стран, сообщающих о прогрессе в деле применения механизмов контроля за эффективностью развития с участием многих заинтересованных сторон, которые служат подспорьем в достижении целей устойчивого развития",
-          "description": "national_indicator_description.17-16-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-16-1",
           "status": "complete"
@@ -2376,7 +2376,7 @@
         {
           "id": "17-17-1",
           "title": "Сумма (в долларах США), выделяемая на государственно-частные партнерства в области инфраструктуры",
-          "description": "national_indicator_description.17-17-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-17-1",
           "status": "complete"
@@ -2384,7 +2384,7 @@
         {
           "id": "17-18-1",
           "title": "Показатель потенциала в области статистики для отслеживания хода достижения целей в области устойчивого развития",
-          "description": "national_indicator_description.17-18-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-18-1",
           "status": "notstarted"
@@ -2392,7 +2392,7 @@
         {
           "id": "17-18-2",
           "title": "Число, стран, имеющих национальное статистическое законодательство, соответствующее Основополагающим принципам официальной статистики",
-          "description": "national_indicator_description.17-18-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-18-2",
           "status": "complete"
@@ -2400,7 +2400,7 @@
         {
           "id": "17-18-3",
           "title": "Число стран, имеющих полностью финансированный и осуществляемый национальный статистический план, в разбивке по источникам финансирования",
-          "description": "national_indicator_description.17-18-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-18-3",
           "status": "complete"
@@ -2408,7 +2408,7 @@
         {
           "id": "17-19-1",
           "title": "Стоимость всех ресурсов, выделенных на наращивание потенциала развивающихся стран в области статистики (в долларах США)",
-          "description": "national_indicator_description.17-19-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-19-1",
           "status": "complete"
@@ -2416,7 +2416,7 @@
         {
           "id": "17-19-2",
           "title": "Доля стран, которые a) провели хотя бы одну перепись населения и жилищного фонда в течение последних 10 лет; и b) достигли цели регистрации рождений в 100 процентах случаев и регистрации смерти в 80 процентах случаев",
-          "description": "national_indicator_description.17-19-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/ru/17-19-2",
           "status": "complete"

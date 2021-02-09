@@ -8,7 +8,7 @@
         {
           "id": "1-1-1",
           "title": "Жынысы, жасы, жұмыспен қамтылу мәртебесі және тұрғылықты жері бойынша бөліністегі халықаралық кедейлік шегінен тыс өмір сүретін халық үлесі",
-          "description": "national_indicator_description.1-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-1-1",
           "status": "complete"
@@ -16,7 +16,7 @@
         {
           "id": "1-2-1",
           "title": "Жынысы және жасы бойынша бөлінісінеде ресми кедейлік шегінен тыс өмір сүретін халық үлесі",
-          "description": "national_indicator_description.1-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-2-1",
           "status": "complete"
@@ -24,7 +24,7 @@
         {
           "id": "1-2-2",
           "title": "Ұлттық анықтамаларға сәйкес кедейліктің барлық көріністерінде өмір сүретін еркектер, әйелдер және барлық жастағы балалар үлесі",
-          "description": "national_indicator_description.1-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-2-2",
           "status": "complete"
@@ -32,7 +32,7 @@
         {
           "id": "1-3-1",
           "title": "Балаларды, жұмыссыздарды, қарттарды, мүгедектерді, жүкті әйелдерді, жаңа туған нәрестелерді, еңбек жарақатын алған және кедей әрі қауқарсыздарды бөлумен, жынысы бойынша бөлінісінде әлеуметтік қорғаудың ең төменгі деңгейімен/ жүйесімен қамтылатын халық үлесі",
-          "description": "national_indicator_description.1-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-3-1",
           "status": "complete"
@@ -40,7 +40,7 @@
         {
           "id": "1-4-1",
           "title": "Негізгі қызметтерге қол жеткізуі бар үй шаруашылығында өмір сүретін халық үлесі",
-          "description": "national_indicator_description.1-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-4-1",
           "status": "notstarted"
@@ -48,7 +48,7 @@
         {
           "id": "1-4-2",
           "title": "Жынысы және жерді иелену нысандары бойынша бөлінісіндегі заңмен мойындалған құжаттармен расталған жер иеленудің кепілді құқықтарын иеленуші және өзінің жерге деген құқықтарын кепілдендірілген деп есептейтін ересек халықтың бірлескен үлесі.",
-          "description": "national_indicator_description.1-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-4-2",
           "status": "complete"
@@ -56,7 +56,7 @@
         {
           "id": "1-5-1",
           "title": "100 000 адамға тікелей апаттарда қаза болғандар, із-түссіз жоғалғандар және жарақат алғандар саны",
-          "description": "national_indicator_description.1-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-5-1",
           "status": "complete"
@@ -64,7 +64,7 @@
         {
           "id": "1-5-2",
           "title": "Әлемдік жалпы ішкі өнімге (ЖІӨ) пайыздық қатынастағы апаттан болған тікелей экономикалық шығасылар",
-          "description": "national_indicator_description.1-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-5-2",
           "status": "complete"
@@ -72,7 +72,7 @@
         {
           "id": "1-5-3",
           "title": "2015-2030 жылдарға арналған апаттардың пайда болу қаупін төмендету бойынша Сендай негіздемелік бағдарламасына сәйкес апаттардың қаупін төмендетудің ұлттық стратегияларын қабылдаған және жүзеге асырушы елдер саны",
-          "description": "national_indicator_description.1-5-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-5-3",
           "status": "complete"
@@ -80,7 +80,7 @@
         {
           "id": "1-5-4",
           "title": "Апаттардың қаупін төмендетудің ұлттық стратегияларына сәйкес жергілікті апаттар қаупін төмендету стратегияларын қабылдған және жүзеге асырған жергілікті билік органдарының үлесі",
-          "description": "national_indicator_description.1-5-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-5-4",
           "status": "complete"
@@ -88,7 +88,7 @@
         {
           "id": "1-a-1",
           "title": "Барлық донорлардан алынған және кедейшілікті жоюға бағытталған даму мақсатында ресми көмекке арналған субсидиялардың жиынтық көлемі алушы елдің жалпы ұлттық кірісінің үлесі ретінде",
-          "description": "national_indicator_description.1-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-a-1",
           "status": "notstarted"
@@ -96,7 +96,7 @@
         {
           "id": "1-a-2",
           "title": "Мемлекеттік шығыстардың жалпы сомасындағы негізгі қызметтерге (білім беру, денсаулық сақтау және әлеуметтік қорғау) шығыстардың үлесі",
-          "description": "national_indicator_description.1-a-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-a-2",
           "status": "complete"
@@ -104,7 +104,7 @@
         {
           "id": "1-b-1",
           "title": "Халықтың аз қамтылған жіктерінің мүддесі үшін мемлекеттік әлеуметтік шығыстар",
-          "description": "national_indicator_description.1-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/1-b-1",
           "status": "complete"
@@ -120,7 +120,7 @@
         {
           "id": "2-1-1",
           "title": "Жеткілікті тамақтанбаудың таралуы",
-          "description": "national_indicator_description.2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-1-1",
           "status": "complete"
@@ -128,7 +128,7 @@
         {
           "id": "2-1-2",
           "title": "Бірқалыпты немесе өткір халықтық азық-түліктік қауіпсіздіктің болмауының деңгейі ('Азық-түліктік қауіпсіздіктің болмауын сезіну шәкілі' бойынша)",
-          "description": "national_indicator_description.2-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-1-2",
           "status": "complete"
@@ -136,7 +136,7 @@
         {
           "id": "2-1-2-1",
           "title": "Ішкі нарықты отандық өндірістің азық-түлік тауарларымен қамтамасыз ету үлесі",
-          "description": "national_indicator_description.2-1-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-1-2-1",
           "status": "complete"
@@ -144,7 +144,7 @@
         {
           "id": "2-2-1",
           "title": "Бес жасқа дейінгі балалардың бойының өсіуіндегі кідірістің таралуы (Дүниежүзілік денсаулық сақтау ұйымы (ДДСҰ) белгілеген балалардың өсу нормаларына сәйкес бала жасына медианалық бой көрсеткішінен орташа квадраттық ауытқу, <-2)",
-          "description": "national_indicator_description.2-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-2-1",
           "status": "complete"
@@ -152,7 +152,7 @@
         {
           "id": "2-2-2",
           "title": "Түрлері бойынша (жүдеу немесе семіру) бөлінісінде бес жасқа дейінгі балалар арасында толыққанды емес таамақтанудың таралуы(ДДСҰ белгілеген балалардың өсу нормаларына сәйкес бала жасына медианалық салмақ көрсеткішінен орташа квадраттық ауытқу, >+2 немесе <-2)",
-          "description": "national_indicator_description.2-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-2-2",
           "status": "complete"
@@ -160,7 +160,7 @@
         {
           "id": "2-2-3",
           "title": "15-49 жастағы әйелдер арасында жүктілік мәртебесі бойынша бөлінуде анемияның таралуы",
-          "description": "national_indicator_description.2-2-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-2-3",
           "status": "complete"
@@ -168,7 +168,7 @@
         {
           "id": "2-3-1",
           "title": "Фермерлік шаруашылық/ мал шаруашылығы/ орман шаруашылығы кәсіпорындарының өлшемдерінің кластары бойынша бөлінісіндегі еңбек бірлігіне өндіріс көлемі.",
-          "description": "national_indicator_description.2-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-3-1",
           "status": "complete"
@@ -176,7 +176,7 @@
         {
           "id": "2-3-2",
           "title": "Жынысы және байырғы халықтарға тиесілілік мәртебесі бойынша бөліністегі ұсақ азық-түлік өнімдерін өндірушілердің орташа табысы",
-          "description": "national_indicator_description.2-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-3-2",
           "status": "notstarted"
@@ -184,7 +184,7 @@
         {
           "id": "2-4-1",
           "title": "Ауыл шаруашылығын жүргізудің өнімді және сарқылмайтын әдістері қолданылатын ауыл шаруашылық алқаптары алаңының үлесі",
-          "description": "national_indicator_description.2-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-4-1",
           "status": "complete"
@@ -192,7 +192,7 @@
         {
           "id": "2-4-1-1",
           "title": "Су үнемдеу технологиялары қолданылатын суармалы жерлер ауданы",
-          "description": "national_indicator_description.2-4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-4-1-1",
           "status": "complete"
@@ -200,7 +200,7 @@
         {
           "id": "2-5-1",
           "title": "Орташа мерзімді немесе ұзақ мерзімді арнайы сақтау объектілерінде сақталатын азық-түлік және ауылшаруашылығы өндірісіне арналғаншығу тегі өсімдік және зоологиялық болып табылатын генетикалық ресурстар саны",
-          "description": "national_indicator_description.2-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-5-1",
           "status": "complete"
@@ -208,7 +208,7 @@
         {
           "id": "2-5-2",
           "title": "Құрып кету қаупі төнген санатқа жататын жергілікті тұқымдардың үлесі",
-          "description": "national_indicator_description.2-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-5-2",
           "status": "complete"
@@ -216,7 +216,7 @@
         {
           "id": "2-a-1",
           "title": "Мемлекеттік шығыстар құрылымы бойынша анықталатын ауыл шаруашылыққа бейімделу индексі",
-          "description": "national_indicator_description.2-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-a-1",
           "status": "complete"
@@ -224,7 +224,7 @@
         {
           "id": "2-a-2",
           "title": "Ауыл шаруашылыққа ресми қаражаттың бірлескен ағыны (дамыту мақсатындағы ресми көмек және ресми қаражаттың басқа да ағындары)",
-          "description": "national_indicator_description.2-a-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-a-2",
           "status": "complete"
@@ -232,7 +232,7 @@
         {
           "id": "2-b-1",
           "title": "Ауылшаруашылығы өнімдерінің экспортын субсидиялау",
-          "description": "national_indicator_description.2-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-b-1",
           "status": "notapplicable"
@@ -240,7 +240,7 @@
         {
           "id": "2-c-1",
           "title": "Азық-түлік нарығындағы баға ауытқушылығының көрсеткіші",
-          "description": "national_indicator_description.2-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/2-c-1",
           "status": "complete"
@@ -256,7 +256,7 @@
         {
           "id": "3-1-1",
           "title": "Ана өлім-жетімінің коэффициенті",
-          "description": "national_indicator_description.3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-1-1",
           "status": "complete"
@@ -264,7 +264,7 @@
         {
           "id": "3-1-2",
           "title": "Білікті медициналық қызметкерлердің босандыру үлесі",
-          "description": "national_indicator_description.3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-1-2",
           "status": "complete"
@@ -272,7 +272,7 @@
         {
           "id": "3-2-1",
           "title": "Бес жасқа дейінгі балалар өлім-жетімінің коэффициенті",
-          "description": "national_indicator_description.3-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-2-1",
           "status": "complete"
@@ -280,7 +280,7 @@
         {
           "id": "3-2-2",
           "title": "Неонатальдық өлім-жетімінің коэффициенті",
-          "description": "national_indicator_description.3-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-2-2",
           "status": "complete"
@@ -288,7 +288,7 @@
         {
           "id": "3-3-1",
           "title": "100 000 мың адам бойынша жаңадан анықталған АИТВ мөлшері",
-          "description": "national_indicator_description.3-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-3-1",
           "status": "complete"
@@ -296,7 +296,7 @@
         {
           "id": "3-3-1-1",
           "title": "Инъекциялық есірткіні тұтынушылар арасынан қайтадан анықталған АИТВ саны",
-          "description": "national_indicator_description.3-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-3-1-1",
           "status": "complete"
@@ -304,7 +304,7 @@
         {
           "id": "3-3-2",
           "title": "100 000 адам бойынша туберкулезбен ауыру",
-          "description": "national_indicator_description.3-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-3-2",
           "status": "complete"
@@ -312,7 +312,7 @@
         {
           "id": "3-3-3",
           "title": "100 000 адам бойынша безгекпен ауыру",
-          "description": "national_indicator_description.3-3-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-3-3",
           "status": "notapplicable"
@@ -320,7 +320,7 @@
         {
           "id": "3-3-4",
           "title": "100 000 адам бойынша В гепатитімен ауыру",
-          "description": "national_indicator_description.3-3-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-3-4",
           "status": "complete"
@@ -328,7 +328,7 @@
         {
           "id": "3-3-5",
           "title": "Ұмытылған тропикалық аурулардан емделуді қажет ететін адамдар саны",
-          "description": "national_indicator_description.3-3-5",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-3-5",
           "status": "notapplicable"
@@ -336,7 +336,7 @@
         {
           "id": "3-4-1",
           "title": "Жүрек-қан тамырлары ауруларынан, қатерлі ісіктен, диабеттен, созылмалы респираторлық сырқаттардан өлім-жітім",
-          "description": "national_indicator_description.3-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-4-1",
           "status": "complete"
@@ -344,7 +344,7 @@
         {
           "id": "3-4-2",
           "title": "Өзіне өзі қол жұмсаудан өлім-жітім",
-          "description": "national_indicator_description.3-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-4-2",
           "status": "complete"
@@ -352,7 +352,7 @@
         {
           "id": "3-5-1",
           "title": "Психикалық белсенді заттарды тұтынудан болған сырқаттарды емдеу (дәрі-дәрмек, психикалық-әлеуметтік және сауықтыру қызметтері және әрі қарай күту бойынша қызметтер)",
-          "description": "national_indicator_description.3-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-5-1",
           "status": "complete"
@@ -360,7 +360,7 @@
         {
           "id": "3-5-2",
           "title": "Күнтізбелік жылына таза спирт литрі бойынша алкоголь тұтыну (15 жастан бастап жан басына шаққандағы алкоголь тұтынуының ұлттық ерекшеліктеріне сәйкес анықталады)",
-          "description": "national_indicator_description.3-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-5-2",
           "status": "notstarted"
@@ -368,7 +368,7 @@
         {
           "id": "3-6-1",
           "title": "Жол-көлік оқиғаларының нәтижесіндегі өлім-жітім",
-          "description": "national_indicator_description.3-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-6-1",
           "status": "complete"
@@ -376,7 +376,7 @@
         {
           "id": "3-7-1",
           "title": "Отбасын жоспарлау бойынша қажеттіліктері заманауи әдістермен қанағаттандырылатын репродуктивті қабілетті жастағы әйелдер үлесі (15 жастан 49 жасқа дейін)",
-          "description": "national_indicator_description.3-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-7-1",
           "status": "complete"
@@ -384,7 +384,7 @@
         {
           "id": "3-7-2",
           "title": "Берілген жас тобында 1,000 әйелге жасөспірім арасында қыздар (10 бастап 14 жасқа дейінгі; 15 бастап 19 жасқа дейін) туу көрсеткіші",
-          "description": "national_indicator_description.3-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-7-2",
           "status": "complete"
@@ -392,7 +392,7 @@
         {
           "id": "3-7-2-1",
           "title": "Жасөспірімдер арасындағы жасанды түсік саны (14 жасқа дейін, 15-18 жасқа дейін))",
-          "description": "national_indicator_description.3-7-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-7-2-1",
           "status": "complete"
@@ -400,7 +400,7 @@
         {
           "id": "3-8-1",
           "title": "Негізгі медициналық-санитарлық қызметтермен қамту (репродуктивті денсаулықты сақтау, ана мен бала денсаулығын сақтау, жұқпалы ауруларды емдеу, жұқпалы емес ауруларды емдеу және қызметтердің халықтың кең ауқымына және анағұрлым қолайсыз жағдайдағы халық топтарына қолжетімділігі кіретін қадағаланатын үрдістер бойынша негізгі қызметтерді орташа қамту ретінде анықталады)",
-          "description": "national_indicator_description.3-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-8-1",
           "status": "notstarted"
@@ -408,7 +408,7 @@
         {
           "id": "3-8-2",
           "title": "Үй шаруашылығының шығындары немесе табыстарының жалпы көлемінде медициналық көмекке кететін отбасылық шығыстардың көп үлес салмағы мен халық үлесі",
-          "description": "national_indicator_description.3-8-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-8-2",
           "status": "complete"
@@ -416,7 +416,7 @@
         {
           "id": "3-9-1",
           "title": "Тұрғын үй-жайлардағы ауаның және атмосфералық ауаның ластануынан өлім-жітім",
-          "description": "national_indicator_description.3-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-9-1",
           "status": "notstarted"
@@ -424,7 +424,7 @@
         {
           "id": "3-9-2",
           "title": "Қауіпсіз су, қауіпсіз санитария және гигиенаның болмауынан (барлығы үшін сумен қамсыздандыру, санитария және гигиена саласындағы қауіпсіз қызметтердің болмауынан (СҚСГ) өлім-жітім)",
-          "description": "national_indicator_description.3-9-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-9-2",
           "status": "complete"
@@ -432,7 +432,7 @@
         {
           "id": "3-9-3",
           "title": "Абайсыз уланудан өлім-жітім",
-          "description": "national_indicator_description.3-9-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-9-3",
           "status": "complete"
@@ -440,7 +440,7 @@
         {
           "id": "3-a-1",
           "title": "15 жастан басталатын адамдардың темекі тұтынуының жас бойынша стандартты таралуы",
-          "description": "national_indicator_description.3-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-a-1",
           "status": "complete"
@@ -448,7 +448,7 @@
         {
           "id": "3-b-1",
           "title": "Ұлттық бағдарламаларға енген барлық вакциналармен иммундаумен қамтылған халықтың нысаналы тобының үлесі",
-          "description": "national_indicator_description.3-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-b-1",
           "status": "complete"
@@ -456,7 +456,7 @@
         {
           "id": "3-b-2",
           "title": "Медициналық зерттеу және денсаулық сақтаудың негізгі салаларына бағытталған даму мақсатындағы ресми көмектің жалпы таза көлемі",
-          "description": "national_indicator_description.3-b-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-b-2",
           "status": "complete"
@@ -464,7 +464,7 @@
         {
           "id": "3-b-3",
           "title": "Үнемі негізгі қажетті және қолжетімді дәрілік заттары бар медициналық мекемелердің үлесі",
-          "description": "national_indicator_description.3-b-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-b-3",
           "status": "complete"
@@ -472,7 +472,7 @@
         {
           "id": "3-c-1",
           "title": "Бір адамға шаққандағы медициналық қзыметкерлер саны және оларды үйлестіру",
-          "description": "national_indicator_description.3-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-c-1",
           "status": "complete"
@@ -480,7 +480,7 @@
         {
           "id": "3-d-1",
           "title": "Халықаралық медициналық-санитарлық ережелерді (ХМСЕ) сақтау қабілеттілігі және қоғамдық денсаулық сақтау саласындағы төтенше жағдайларға дайын болу",
-          "description": "national_indicator_description.3-d-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-d-1",
           "status": "notstarted"
@@ -488,7 +488,7 @@
         {
           "id": "3-d-2",
           "title": "Микробқа қарсы препараттарға төзімді жекелеген ағзалар тудыратын қан ағыны инфекцияларының пайыздық үлесін қысқарту",
-          "description": "national_indicator_description.3-d-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/3-d-2",
           "status": "notstarted"
@@ -504,7 +504,7 @@
         {
           "id": "4-1-1",
           "title": "Балалар мен жастар үлесі: а) 2-ші/3-ші сыныптағы, b) бастауыш мектеп бітірушілері және с) жынысы бойынша бөлінісінде кем дегенде і) ең төменгі сауаттылыққа ие және іі) есептеу машығына ие орта мектеп бітірушілері",
-          "description": "national_indicator_description.4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-1-1",
           "status": "complete"
@@ -512,7 +512,7 @@
         {
           "id": "4-1-2",
           "title": "Аяқтау пайызы (бастауыш білім, толық емес және толық орта білім)",
-          "description": "national_indicator_description.4-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-1-2",
           "status": "notstarted"
@@ -520,7 +520,7 @@
         {
           "id": "4-2-1",
           "title": "Жынысы бойынша бөлінісінде денсаулық, оқыту және психологиялық-әлеуметтік қолайлылық тұрғысынан ауытқуларсыз дамып жатқан бес жасқа дейінгі балалардың үлесі",
-          "description": "national_indicator_description.4-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-2-1",
           "status": "complete"
@@ -528,7 +528,7 @@
         {
           "id": "4-2-2",
           "title": "Жынысы бойынша бөлінісіндегі оқытудың ұйымдастырылған түрлеріне қатысу деңгейі (мектепке баратын ресми жасқа жеткенге дейін бір жыл ішінде)",
-          "description": "national_indicator_description.4-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-2-2",
           "status": "complete"
@@ -536,7 +536,7 @@
         {
           "id": "4-2-2-1",
           "title": "Мектепке даярлық (алдыңғы жылы мектеп алды білім беру мекемелеріне қатысқан, бастауыш мектептің 1-сыныбына баратын балалардың проценттік үлесі)",
-          "description": "national_indicator_description.4-2-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-2-2-1",
           "status": "complete"
@@ -544,7 +544,7 @@
         {
           "id": "4-3-1-1",
           "title": "Техникалық және кәсіби білімі бар (14-24) типті жастағы жастардың қамтылуы",
-          "description": "national_indicator_description.4-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-3-1-1",
           "status": "complete"
@@ -552,7 +552,7 @@
         {
           "id": "4-3-1-2",
           "title": "18-28 жастағы жұмыспен қамтылған халықтың құрылымындағы осы жастағы техникалық және кәсіби білімі бар азаматтар үлесі",
-          "description": "national_indicator_description.4-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-3-1-2",
           "status": "complete"
@@ -560,7 +560,7 @@
         {
           "id": "4-3-1-3",
           "title": "22-28 жастағы жұмыспен қамтылған халықтың құрылымындағы осы жастағы жоғары білімі бар азаматтар үлесі.",
-          "description": "national_indicator_description.4-3-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-3-1-3",
           "status": "complete"
@@ -568,7 +568,7 @@
         {
           "id": "4-4-1",
           "title": "Машық түрлері бойынша бөлінісіндегі ақпараттық коммуникациялық технологиялар саласында машықтанған жастар/ ересектер үлесі",
-          "description": "national_indicator_description.4-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-4-1",
           "status": "complete"
@@ -576,7 +576,7 @@
         {
           "id": "4-4-1-1",
           "title": "6-74 жастағы халықтың цифрлық сауаттылығы, облыстары бөлінісіндегі",
-          "description": "national_indicator_description.4-4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-4-1-1",
           "status": "complete"
@@ -584,7 +584,7 @@
         {
           "id": "4-5-1",
           "title": "Осы тізбедегі білім беруге қатыстыдезагрегатталатын көрсеткіштерді құруға (әйелдер мен еркектердің, қалалық және ауылдық тұрғындардың, ауқаттылықтың жоғарғы және төменгі квантилі және басқа да топтардың, мысалы, мүгедектердің, байырғы тұрғындардың және мәліметтердің болуына байланысты жанжалға қатысы бар адамдардың) қатысты барлығы бойынша теңдік индекстері",
-          "description": "national_indicator_description.4-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-5-1",
           "status": "complete"
@@ -592,7 +592,7 @@
         {
           "id": "4-5-1-1",
           "title": "Ерекше білім беру қажеттіліктерімен балаларды тәрбиелеу және оқыту жағдайын жасаған мектеп алды ұйымдардың үлесі.",
-          "description": "national_indicator_description.4-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-5-1-1",
           "status": "complete"
@@ -600,7 +600,7 @@
         {
           "id": "4-5-1-2",
           "title": "Инклюзивті білім беру үшін жағдайлар жасаған мектептер үлесі",
-          "description": "national_indicator_description.4-5-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-5-1-2",
           "status": "complete"
@@ -608,7 +608,7 @@
         {
           "id": "4-5-1-3",
           "title": "Ерекше білім беру қажеттіліктерімен студенттер үшін кедергісіз қол жеткізуді және тең жағдай жасаған ТжКБ ұйымдарының үлесі",
-          "description": "national_indicator_description.4-5-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-5-1-3",
           "status": "complete"
@@ -616,7 +616,7 @@
         {
           "id": "4-5-1-4",
           "title": "Ерекше білім беру қажеттіліктерімен студенттерді үшін оқыту кедергісіз қол жеткізу және тең жағдай жасаған ЖОО ұйымдарының үлесі.",
-          "description": "national_indicator_description.4-5-1-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-5-1-4",
           "status": "complete"
@@ -624,7 +624,7 @@
         {
           "id": "4-6-1",
           "title": "Жынысы бойынша бөлінісіндегі осы жас тобындағы кем дегенде функционалды а) сауаттылықтың b) математикалық сауаттылықтың белгіленген деңгейіне жеткен халық үлесі. 4.6.2. жастар мен ересектердің сауаттылық деңгейі. 4.6.3. Жастар мен ересектердің сауаттылық бағдарламаларына қатысу деңгейі",
-          "description": "national_indicator_description.4-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-6-1",
           "status": "complete"
@@ -632,7 +632,7 @@
         {
           "id": "4-7-1-1",
           "title": "Қоғамға пайдалы қызметке тартылған ЖОО студенттерінің үлесі.",
-          "description": "national_indicator_description.4-7-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-7-1-1",
           "status": "complete"
@@ -640,7 +640,7 @@
         {
           "id": "4-7-1-2",
           "title": "Қоғамға пайдалы қызметке тартылған ТжКБ ұйымдарында оқитындар үлесі.",
-          "description": "national_indicator_description.4-7-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-7-1-2",
           "status": "complete"
@@ -648,7 +648,7 @@
         {
           "id": "4-7-1-3",
           "title": "Жаңартылған мазмұны білім берумен бар қамтылған балалар үлесі",
-          "description": "national_indicator_description.4-7-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-7-1-3",
           "status": "complete"
@@ -656,7 +656,7 @@
         {
           "id": "4-a-1",
           "title": "Негізгі қызметтерді ұсынатын мектептердің қызмет түрі бойынша бөлінген үлесі",
-          "description": "national_indicator_description.4-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-a-1",
           "status": "complete"
@@ -664,7 +664,7 @@
         {
           "id": "4-a-1-1",
           "title": "Орта білім беру ұйымдарында модификацияланған оқу кабинеттерінің олардың жалпы санынан қазіргі заманғы жабдықтармен қамтамасыз етілген үлесі",
-          "description": "national_indicator_description.4-a-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-a-1-1",
           "status": "complete"
@@ -672,7 +672,7 @@
         {
           "id": "4-a-1-2",
           "title": "3 ауысымды мектептердің үлесі",
-          "description": "national_indicator_description.4-a-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-a-1-2",
           "status": "complete"
@@ -680,7 +680,7 @@
         {
           "id": "4-a-1-3",
           "title": "Апатты жағдайдағы мектептердің үлесі",
-          "description": "national_indicator_description.4-a-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-a-1-3",
           "status": "complete"
@@ -688,7 +688,7 @@
         {
           "id": "4-b-1",
           "title": "Оқу бағдарламаларының секторлары мен түрлері бойынша бөлінісіндегі шәкіртақыларды төлеуге бағытталатын даму мақсатындағы ресми көмек көлемі",
-          "description": "national_indicator_description.4-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-b-1",
           "status": "complete"
@@ -696,7 +696,7 @@
         {
           "id": "4-c-1",
           "title": "Жұмысқа дейінгі немесе жұмыс барысында берілген елдегі тиісті деңгейде кем дегенде ең төменгі ұйымдастырылған кәсіби ұстаздық даярлықтан (мысалы, педагогикалық) өткен: а) мектепке дейінгі мекемелердегі; b) арн. жоғ. біл. бар бастауыш мектептегі мұғалімдерге салыстырмалы пайыз болады; 4с.2. с) төменгі және орта мектептегі; және d) жоғарғы орта мектептегі (салыстырмалы жалпы білім беру мамандығының үлесі болады) мұғалімдер үлесі",
-          "description": "national_indicator_description.4-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-c-1",
           "status": "complete"
@@ -704,7 +704,7 @@
         {
           "id": "4-c-1-1",
           "title": "Жаңартылған мазмұны бойынша біліктілігін арттырудан өткен орта білім беру ұйымдарының жалпы санынан педагог қызметкерлерінің үлесі",
-          "description": "national_indicator_description.4-c-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-c-1-1",
           "status": "notstarted"
@@ -712,7 +712,7 @@
         {
           "id": "4-c-1-2",
           "title": "Орта білім беру педагогтерінің жалпы санынан шебер-зерттеуші, педагог-сарапшы және педагог-модератор біліктілік деңгейі бар педагогтардың үлесі",
-          "description": "national_indicator_description.4-c-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/4-c-1-2",
           "status": "complete"
@@ -728,7 +728,7 @@
         {
           "id": "5-1-1",
           "title": "Жыныс белгісі бойынша теңдікті және кемсітпеуді қолдау және қамтамасыз ету үшін нормативтік-құқықтық базаның болуы және АИТВ-мен ауыратын әйелдерді, мүгедектігі бар әйелдерді қоса алғанда осы саладағы жағдайды бақылау",
-          "description": "national_indicator_description.5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-1-1",
           "status": "notstarted"
@@ -736,7 +736,7 @@
         {
           "id": "5-2-1",
           "title": "Мүгедектігі бар әйелдерді қоса алғанда, зорлық түрлері мен жасы бойынша бөлуде соңғы 12 айда қазіргі немесе бұрынғы интимдік серіктесі тарапынан физикалық, сексуалдық немесе психологиялық қысымға ұшыраған, бір кездері серіктесі болған әйелдер мен 15 жастан асқан қыздардың үлесі",
-          "description": "national_indicator_description.5-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-2-1",
           "status": "complete"
@@ -744,7 +744,7 @@
         {
           "id": "5-2-1-1",
           "title": "Әйелдерге қатысты тіркелген тұрмыстық зорлық-зомбылық оқиғаларының төмендеуі",
-          "description": "national_indicator_description.5-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-2-1-1",
           "status": "complete"
@@ -752,7 +752,7 @@
         {
           "id": "5-2-1-2",
           "title": "Балаларға қатысты тіркелген зорлық-зомбылық оқиғаларының төмендеуі",
-          "description": "national_indicator_description.5-2-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-2-1-2",
           "status": "complete"
@@ -760,7 +760,7 @@
         {
           "id": "5-2-2",
           "title": "Мүгедектігі бар әйелдерді қоса алғанда, жасы мен оқиға орны бойынша бөлуде соңғы 12 айда интимдік серіктестерінен басқа әлдекім тарапынан сексуалдық зорлық көрсетуге ұшыраған әйелдер мен 15 жастан асқан қыздар үлесі",
-          "description": "national_indicator_description.5-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-2-2",
           "status": "complete"
@@ -768,7 +768,7 @@
         {
           "id": "5-3-1",
           "title": "Мүгедектігі бар әйелдерді қоса алғанда, 15 жасқа дейін және 18 жасқа дейін некеге немесе некелік одаққа тұрған 20-дан 24 жасқа дейінгі әйелдер үлесі",
-          "description": "national_indicator_description.5-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-3-1",
           "status": "complete"
@@ -776,7 +776,7 @@
         {
           "id": "5-3-1-2",
           "title": "18 жасқа дейін ресми некеге тұрған әйелдер үлесі",
-          "description": "national_indicator_description.5-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-3-1-2",
           "status": "complete"
@@ -784,7 +784,7 @@
         {
           "id": "5-3-2",
           "title": "Жасы бойынша бөлуде әйелдердің жыныс органдарына жарымжан ететін операцияларға/кесіп тастауға ұшыраған 15-тен 49 жасқа дейінгі қыздар мен әйелдердің үлесі",
-          "description": "national_indicator_description.5-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-3-2",
           "status": "notapplicable"
@@ -792,7 +792,7 @@
         {
           "id": "5-4-1",
           "title": "Мүгедектігі бар әйелдерді қоса алғанда, жынысы, жасы және тұрғылықты жері бойынша бөлумен күтім жасау бойынша ақы төленбейтін еңбекке және үйдегі жұмысқа жұмсалатын уақыт үлесі",
-          "description": "national_indicator_description.5-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-4-1",
           "status": "complete"
@@ -800,7 +800,7 @@
         {
           "id": "5-5-1",
           "title": "Әйелдердің а) ұлттық парламенттерде және b) жергілікті билік органдарында алатын орындарының үлесі",
-          "description": "national_indicator_description.5-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-5-1",
           "status": "complete"
@@ -808,7 +808,7 @@
         {
           "id": "5-5-2",
           "title": "Басшы лауазымдардағы әйелдер үлесі",
-          "description": "national_indicator_description.5-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-5-2",
           "status": "complete"
@@ -816,7 +816,7 @@
         {
           "id": "5-6-1",
           "title": "Сексуалдық қатынастар, жүктілікке қарсы құралдарды қолдану және репродуктивті денсаулықты қорғау бойынша көрсетілетін қызметтерге жүгіну туралы шешімдерді өздігінен ойланып қабылдайтын 15-тен 49 жасқа дейінгі әйелдер үлесі",
-          "description": "national_indicator_description.5-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-6-1",
           "status": "notstarted"
@@ -824,7 +824,7 @@
         {
           "id": "5-6-2",
           "title": "15 жастан асқан әйелдер мен ерлерге сексуалды және репродуктивті денсаулықты қорғау бойынша көрсетілетін қызметтер мен ақпаратқа және осы саладағы білімге кепілдік беретін заңдар мен нормативтік актілер әрекет ететін елдер саны",
-          "description": "national_indicator_description.5-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-6-2",
           "status": "complete"
@@ -832,7 +832,7 @@
         {
           "id": "5-a-1",
           "title": "a) Жынысы бойынша бөле отырып, ауыл шаруашылығымен айналысатын халықтың жалпы санында иелігінде ауыл шаруашылығы жерлері бар немесе оны пайдалануға кепілдендірілген құқығы бар адамдар үлесі және b) жер иелену құқығы бойынша бөле отырып, иелігінде ауыл шаруашылығы жерлері бар немесе оны иелену құқығын жүргізуші болып табылатын әйелдер үлесі",
-          "description": "national_indicator_description.5-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-a-1",
           "status": "complete"
@@ -840,7 +840,7 @@
         {
           "id": "5-a-2",
           "title": "Құқықтық базасы (соның ішінде кәдімгі құқық) әйелдерге жерді иеленуге және/немесе басқаруға тең құқыққа кепілдік беретін елдер үлесі",
-          "description": "national_indicator_description.5-a-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-a-2",
           "status": "notapplicable"
@@ -848,7 +848,7 @@
         {
           "id": "5-b-1",
           "title": "Мүгедектігі бар әйелдерді қоса алғанда, жынысы бойынша бөлумен мобильді телефоны бар адамдар үлесі",
-          "description": "national_indicator_description.5-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-b-1",
           "status": "complete"
@@ -856,7 +856,7 @@
         {
           "id": "5-c-1",
           "title": "Гендерлік теңдікті және әйелдердің құқықтары мен мүмкіндіктерін кеңейтуді қамтамасыз етуге және олар туралы деректерді жариялауға жұмсалған мемлекеттен бөлінген қаржыны қадағалау механизмдері",
-          "description": "national_indicator_description.5-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/5-c-1",
           "status": "notstarted"
@@ -872,7 +872,7 @@
         {
           "id": "6-1-1",
           "title": "Қауіпсіздік талаптарын сақтай отырып ұйымдастырылған сумен қамту қызметін пайдаланатын халықтың үлесі",
-          "description": "national_indicator_description.6-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-1-1",
           "status": "complete"
@@ -880,7 +880,7 @@
         {
           "id": "6-2-1",
           "title": "Сабынмен және сумен қол жууға арналған құрылғыларды қоса алғанда, қауіпсіздік талаптарын сақтаумен ұйымдастырылған санитария қызметтерін пайдаланатын халықтың үлесі",
-          "description": "national_indicator_description.6-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-2-1",
           "status": "complete"
@@ -888,7 +888,7 @@
         {
           "id": "6-3-1",
           "title": "Қауіпсіз тазартылатын ақаба сулар үлесі",
-          "description": "national_indicator_description.6-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-3-1",
           "status": "complete"
@@ -896,7 +896,7 @@
         {
           "id": "6-3-2",
           "title": "Су сапасы жақсы су қоймаларының үлесі",
-          "description": "national_indicator_description.6-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-3-2",
           "status": "complete"
@@ -904,7 +904,7 @@
         {
           "id": "6-4-1",
           "title": "Суды пайдалану тиімділігінің өзгеру динамикасы",
-          "description": "national_indicator_description.6-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-4-1",
           "status": "complete"
@@ -912,7 +912,7 @@
         {
           "id": "6-4-2",
           "title": "Су ресурстарына жүктеме деңгейі: тұщы судың қолда бар қорларына пайыздық қатынаста тұщы суды алу",
-          "description": "national_indicator_description.6-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-4-2",
           "status": "complete"
@@ -920,7 +920,7 @@
         {
           "id": "6-5-1",
           "title": "Су ресурстарын кешенді басқаруды енгізу дәрежесі (0-ден 100-ге дейін)",
-          "description": "national_indicator_description.6-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-5-1",
           "status": "complete"
@@ -928,7 +928,7 @@
         {
           "id": "6-5-2",
           "title": "Су пайдалану саласында ынтымақтастық туралы қолданыстағы уағдаластықпен қамтылған трансшекаралық су бассейндерінің үлесі",
-          "description": "national_indicator_description.6-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-5-2",
           "status": "complete"
@@ -936,7 +936,7 @@
         {
           "id": "6-6-1",
           "title": "Сумен байланысты экожүйелер алаңының өзгеру динамикасы",
-          "description": "national_indicator_description.6-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-6-1",
           "status": "complete"
@@ -944,7 +944,7 @@
         {
           "id": "6-a-1",
           "title": "Даму мақсатында шығыстардың үйлестірілетін мемлекеттік бағдарламасы шеңберінде сумен қамтуға және санитарияға бөлінген ресми көмек көлемі",
-          "description": "national_indicator_description.6-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-a-1",
           "status": "complete"
@@ -952,7 +952,7 @@
         {
           "id": "6-b-1",
           "title": "Су ресурстары мен санитарияны басқаруға азаматтардың қатысу қағидалары мен рәсімдері әрекет ететін жергілікті әкімшілік бірліктердің үлесі",
-          "description": "national_indicator_description.6-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/6-b-1",
           "status": "complete"
@@ -968,7 +968,7 @@
         {
           "id": "7-1-1",
           "title": "Электр энергиясына қол жеткізуі бар халықтың үлесі",
-          "description": "national_indicator_description.7-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-1-1",
           "status": "complete"
@@ -976,7 +976,7 @@
         {
           "id": "7-1-2",
           "title": "Таза отын көздерін және технологияларды қолданатын халықтың үлесі",
-          "description": "national_indicator_description.7-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-1-2",
           "status": "complete"
@@ -984,7 +984,7 @@
         {
           "id": "7-2-1",
           "title": "Түпкілікті энергия тұтынудың жалпы көлемінде жаңартылатын энергия көздерінің үлесі",
-          "description": "national_indicator_description.7-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-2-1",
           "status": "complete"
@@ -992,7 +992,7 @@
         {
           "id": "7-3-1",
           "title": "Бастапқы энергия шығысының ЖІӨ-ге қатынасы ретінде есептелетін энергиялық сыйымдылық",
-          "description": "national_indicator_description.7-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-3-1",
           "status": "complete"
@@ -1000,7 +1000,7 @@
         {
           "id": "7-a-1",
           "title": "«Таза» энергия саласындағы зерттеулер мен әзірлемелерді қолдау үшін дамушы елдерге түсетін халықаралық қаржы ағымының көлемін және құрамдастырылған жүйелерді қоса алғанда, жаңартылатын көздерде энергетиканы дамыту",
-          "description": "national_indicator_description.7-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-a-1",
           "status": "notstarted"
@@ -1008,7 +1008,7 @@
         {
           "id": "7-b-1",
           "title": "Дамушы елдерде орнатылған генерациялаушы қуаттар тасығыштарының негізінде жаңартылатын энергия (жан басына шаққанда, ватт)",
-          "description": "national_indicator_description.7-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-b-1",
           "status": "notstarted"
@@ -1016,7 +1016,7 @@
         {
           "id": "7-b-1-1",
           "title": "Энергиялық тиімділік жүйесін енгізетін кәсіпорындар үлесі",
-          "description": "national_indicator_description.7-b-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/7-b-1-1",
           "status": "complete"
@@ -1032,7 +1032,7 @@
         {
           "id": "8-1-1",
           "title": "Халықтың жан басына шаққанда нақты ЖІӨ-нің жыл сайынғы өсім қарқыны",
-          "description": "national_indicator_description.8-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-1-1",
           "status": "complete"
@@ -1040,7 +1040,7 @@
         {
           "id": "8-2-1",
           "title": "Әрбір қызмет ететін адамға шаққандағы шынайы ЖІӨ жыл сайынғы өсімінің қарқыны",
-          "description": "national_indicator_description.8-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-2-1",
           "status": "complete"
@@ -1048,7 +1048,7 @@
         {
           "id": "8-3-1",
           "title": "Жынысы және секторлар бөлінісіндегі бейресми жұмыспен қамтылғандардың жалпы жұмыспен қамтылғандар санына үлесі",
-          "description": "national_indicator_description.8-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-3-1",
           "status": "complete"
@@ -1056,7 +1056,7 @@
         {
           "id": "8-3-1-1",
           "title": "Жұмыспен қамтылғандардың жалпы санындағы өнімсіз жұмыспен қамтылғандардың үлесі",
-          "description": "national_indicator_description.8-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-3-1-1",
           "status": "complete"
@@ -1064,7 +1064,7 @@
         {
           "id": "8-5-1",
           "title": "Жұмыс түрі, жасы мен мүгедектік белгілері бойынша бөлуде қызметкерлердің орташа сағаттық жалақысы",
-          "description": "national_indicator_description.8-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-5-1",
           "status": "complete"
@@ -1072,7 +1072,7 @@
         {
           "id": "8-5-2",
           "title": "Жынысы, жасы және мүгедектік белгісі бойынша жұмыссыздық деңгейі",
-          "description": "national_indicator_description.8-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-5-2",
           "status": "complete"
@@ -1080,7 +1080,7 @@
         {
           "id": "8-6-1",
           "title": "Жұмыс істемейтін, білім алмайтын және кәсіби машыққа үйренбейтін жастардың үлесі (15 бастап 24 жасқа дейінгі)",
-          "description": "national_indicator_description.8-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-6-1",
           "status": "complete"
@@ -1088,7 +1088,7 @@
         {
           "id": "8-7-1",
           "title": "Бала еңбегімен айналысатын 5 бастап 17 жасқа дейінгі балалар үлесі мен саны, жынсы мен жасы бойынша топтастыру",
-          "description": "national_indicator_description.8-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-7-1",
           "status": "complete"
@@ -1096,7 +1096,7 @@
         {
           "id": "8-8-1",
           "title": "Жынысы және көші-қон мәртебесі бойынша бөлуде нәтижесі өлімге әкелетін және әкелмейтін 100 000 адамға өндірістік жарақат алушылық",
-          "description": "national_indicator_description.8-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-8-1",
           "status": "complete"
@@ -1104,7 +1104,7 @@
         {
           "id": "8-8-2",
           "title": "Халықаралық еңбек ұйымының (ХЕҰ) құжаттық көздері және ұлттық заңнама негізінде жынысы мен көші-қон мәртебесі бойынша бөле отырып, мемлекеттің еңбек құқықтарды (бірлестіктер бостандықтары мен ұжымдық еңбек шарттарын жасасу) сақтау деңгейі",
-          "description": "national_indicator_description.8-8-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-8-2",
           "status": "complete"
@@ -1112,7 +1112,7 @@
         {
           "id": "8-9-1",
           "title": "Туризмнің жиынтық ЖІӨ-ге және өсу қарқынына тікелей үлесі",
-          "description": "national_indicator_description.8-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-9-1",
           "status": "complete"
@@ -1120,7 +1120,7 @@
         {
           "id": "8-9-1-1",
           "title": "Тікелей туризмде құрылатын ЖҚҚ НКИ",
-          "description": "national_indicator_description.8-9-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-9-1-1",
           "status": "complete"
@@ -1128,7 +1128,7 @@
         {
           "id": "8-10-1",
           "title": "a) 100 000 ересек адамға коммерциялық банктер филиалдарының және b) 100 000 ересек адамға арналған банкоматтар саны",
-          "description": "national_indicator_description.8-10-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-10-1",
           "status": "complete"
@@ -1136,7 +1136,7 @@
         {
           "id": "8-10-2",
           "title": "Банкте немесе өзге де қаржылық мекемеде шоты бар немесе мобильді қаржылық қызмет операторлары көрсететін қызметтерді пайдаланатын ересектер үлесі (15 жас және одан жоғары)",
-          "description": "national_indicator_description.8-10-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-10-2",
           "status": "complete"
@@ -1144,7 +1144,7 @@
         {
           "id": "8-a-1",
           "title": "«Саудадағы көмек» бастамасы шеңберіндегі міндеттемелер мен төлемдер көлемі",
-          "description": "national_indicator_description.8-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-a-1",
           "status": "complete"
@@ -1152,7 +1152,7 @@
         {
           "id": "8-b-1",
           "title": "Жеке стратегия ретінде жастарды жұмыспен қамтудың немесе жұмыспен қамту саласындағы ұлттық стратегия шеңберінде әзірленген және жүзеге асырылатын ұлттық стратегияның болуы",
-          "description": "national_indicator_description.8-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/8-b-1",
           "status": "complete"
@@ -1168,7 +1168,7 @@
         {
           "id": "9-1-1",
           "title": "Бүкіл маусымдылық жолдан 2 км шегінде тұратын ауыл халқының үлесі",
-          "description": "national_indicator_description.9-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-1-1",
           "status": "notstarted"
@@ -1176,7 +1176,7 @@
         {
           "id": "9-1-2",
           "title": "Көлік түрлері бойынша бөліністегі жолаушылар және жүк тасымалының көлемі",
-          "description": "national_indicator_description.9-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-1-2",
           "status": "complete"
@@ -1184,7 +1184,7 @@
         {
           "id": "9-1-2-1",
           "title": "national_indicators.9-1-2-1-title",
-          "description": "national_indicator_description.9-1-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-1-2-1",
           "status": "notstarted"
@@ -1192,7 +1192,7 @@
         {
           "id": "9-2-1",
           "title": "Өңдеуші өнеркәсіпте құрылатын қосылған құн, ЖІӨ-ге пайыздық қатынаста және халықтың жан басына шаққанда",
-          "description": "national_indicator_description.9-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-2-1",
           "status": "complete"
@@ -1200,7 +1200,7 @@
         {
           "id": "9-2-1-1",
           "title": "global_indicators.9-2-1-1-title",
-          "description": "national_indicator_description.9-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-2-1-1",
           "status": "complete"
@@ -1208,7 +1208,7 @@
         {
           "id": "9-2-1-2",
           "title": "Өндірілетін тауарлар экспорты құнының өсуі",
-          "description": "national_indicator_description.9-2-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-2-1-2",
           "status": "complete"
@@ -1216,7 +1216,7 @@
         {
           "id": "9-2-2",
           "title": "Жалпы жұмыспен қамтудан пайызбен өңдеуші өнеркәсіптегі жұмыспен қамтылу",
-          "description": "national_indicator_description.9-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-2-2",
           "status": "complete"
@@ -1224,7 +1224,7 @@
         {
           "id": "9-3-1",
           "title": "Өнеркәісіптегі таза өнімінің жиынтық көлеміндегі ұсақ кәсіпорындардың үлесі",
-          "description": "national_indicator_description.9-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-3-1",
           "status": "complete"
@@ -1232,7 +1232,7 @@
         {
           "id": "9-3-2",
           "title": "Кредиті немесе кредиттік желісі бар ұсақ кәсіпорындар үлесі",
-          "description": "national_indicator_description.9-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-3-2",
           "status": "complete"
@@ -1240,7 +1240,7 @@
         {
           "id": "9-4-1",
           "title": "Қосылған құн бірлігіне CO2 шығарындылар",
-          "description": "national_indicator_description.9-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-4-1",
           "status": "complete"
@@ -1248,7 +1248,7 @@
         {
           "id": "9-4-1-1",
           "title": "Халықтың жан басына шаққанда СО2 шығарындылары",
-          "description": "national_indicator_description.9-4-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-4-1-1",
           "status": "complete"
@@ -1256,7 +1256,7 @@
         {
           "id": "9-5-1",
           "title": "ЖІӨ-дегі ҒЗТКЖ-ға шығыстардың үлесі",
-          "description": "national_indicator_description.9-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-5-1",
           "status": "complete"
@@ -1264,7 +1264,7 @@
         {
           "id": "9-5-1-1",
           "title": "ҒЗТКЖ-ға жалпы шығындардың жалпы көлеміндегі бизнес шығыстарының үлесі",
-          "description": "national_indicator_description.9-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-5-1-1",
           "status": "complete"
@@ -1272,7 +1272,7 @@
         {
           "id": "9-5-2",
           "title": "Миллион тұрғынға шаққандағы зерттеушілер саны (толық жұмыспен қамтылу баламасында",
-          "description": "national_indicator_description.9-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-5-2",
           "status": "complete"
@@ -1280,7 +1280,7 @@
         {
           "id": "9-a-1",
           "title": "Инфрақұрылымға бағытталатын ресми халықаралық қолдаудың жиынтық көлемі (дамыту мақсатындағы ресми көмек және ресми қаржыландырудың басқа да ағындары)",
-          "description": "national_indicator_description.9-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-a-1",
           "status": "complete"
@@ -1288,7 +1288,7 @@
         {
           "id": "9-b-1",
           "title": "Қосылған құнның жалпы көлеміндегі орташа технологиялық және жоғары технологиялық салалардың өнімдеріне қосылған құн үлесі",
-          "description": "national_indicator_description.9-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-b-1",
           "status": "complete"
@@ -1296,7 +1296,7 @@
         {
           "id": "9-c-1",
           "title": "Технологиялар бойынша бөліністегі ұтқыр желілерімен қамтылған халық үлесі",
-          "description": "national_indicator_description.9-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/9-c-1",
           "status": "complete"
@@ -1312,7 +1312,7 @@
         {
           "id": "10-1-1",
           "title": "Халықтың жан басына шаққандағы ең аз қамтылған халықтың 40 пайызы мен бүкіл халық арасындағы үй шаруашылықтары шығыстарының жеке табыстарының өсу қарқыны",
-          "description": "national_indicator_description.10-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-1-1",
           "status": "complete"
@@ -1320,7 +1320,7 @@
         {
           "id": "10-2-1",
           "title": "Жасына қарай тобы, жынысы және мүгедектігі бойынша бөліністегі медианалық табыстың 50% төмен табысы бар адамдар үлесі",
-          "description": "national_indicator_description.10-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-2-1",
           "status": "notstarted"
@@ -1328,7 +1328,7 @@
         {
           "id": "10-4-1",
           "title": "ЖІӨ еңбек етушілердің табыстарының үлесі, соның ішінде жалақысы мен әлеуметтік қорғау желісі бойынша төлемдер",
-          "description": "national_indicator_description.10-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-4-1",
           "status": "complete"
@@ -1336,7 +1336,7 @@
         {
           "id": "10-4-2",
           "title": "Тыңшылық саясатты қайта бөлудің нәтижесі",
-          "description": "national_indicator_description.10-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-4-2",
           "status": "notstarted"
@@ -1344,7 +1344,7 @@
         {
           "id": "10-5-1",
           "title": "Қаржылық тұрақтылық көрсеткіштері",
-          "description": "national_indicator_description.10-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-5-1",
           "status": "complete"
@@ -1352,7 +1352,7 @@
         {
           "id": "10-5-1-1",
           "title": "Мемлекеттік бюджеттің тапшылығы",
-          "description": "national_indicator_description.10-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-5-1-1",
           "status": "complete"
@@ -1360,7 +1360,7 @@
         {
           "id": "10-6-1",
           "title": "Халықаралық ұйымдардың мүшелік құрамындағы дамушы елдердің үлесі және олардың дауыстарының үлес салмағы",
-          "description": "national_indicator_description.10-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-6-1",
           "status": "complete"
@@ -1368,7 +1368,7 @@
         {
           "id": "10-7-1",
           "title": "Қызметкердің белгіленген елдегі оның айлық табысынан жұмысқа орналасуына жұмсалатын пайызбен шығындары",
-          "description": "national_indicator_description.10-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-7-1",
           "status": "notstarted"
@@ -1376,7 +1376,7 @@
         {
           "id": "10-7-2",
           "title": "Реттелген, қауіпсіз, заңды және жауапты көші-қонға және адамдардың ұтқырлығына ықпал ететін көші-қон саясатын жүргізетін елдердің саны",
-          "description": "national_indicator_description.10-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-7-2",
           "status": "notstarted"
@@ -1384,7 +1384,7 @@
         {
           "id": "10-7-3",
           "title": "Халықаралық бағыттағы көші-қон процесінде қаза тапқан немесе жоғалып кеткен адамдардың саны",
-          "description": "national_indicator_description.10-7-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-7-3",
           "status": "notapplicable"
@@ -1392,7 +1392,7 @@
         {
           "id": "10-7-4",
           "title": "Шығу елі бөлінген халықтың жалпы санынан босқындардың үлесі",
-          "description": "national_indicator_description.10-7-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-7-4",
           "status": "notstarted"
@@ -1400,7 +1400,7 @@
         {
           "id": "10-a-1",
           "title": "Нөлдік тарифтер қолданылатын аз дамыған елдер мен дамушы елдердің тауарлық позицияларының үлесі",
-          "description": "national_indicator_description.10-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-a-1",
           "status": "complete"
@@ -1408,7 +1408,7 @@
         {
           "id": "10-b-1",
           "title": "Алушы елдер және донор елдер мен ағындар түрлерінің бөлінісінде (мысалы, даму үшін ресми көмек, тікелей шетел инвестициялары және басқа да қаржы ағындары) даму мақсаттарында ресурстар ағымының жиынтық көлемі",
-          "description": "national_indicator_description.10-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-b-1",
           "status": "complete"
@@ -1416,7 +1416,7 @@
         {
           "id": "10-c-1",
           "title": "Аударылатын сомаға пайыздық қатынастағы аудару құны",
-          "description": "national_indicator_description.10-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/10-c-1",
           "status": "notstarted"
@@ -1432,7 +1432,7 @@
         {
           "id": "11-1-1",
           "title": "Шалғай жерлерде кедей аудандарда, бейресми мекендерде немесе қанағаттанарлықсыз тұрғын үй жағдайларында тұрып жатқан қала халықының үлесі",
-          "description": "national_indicator_description.11-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-1-1",
           "status": "complete"
@@ -1440,7 +1440,7 @@
         {
           "id": "11-2-1",
           "title": "Жынысы, жасы және мүгедектік белгісі бойынша бөліністегі қоғамдық көлікке деген ыңғайлы қолжетімділікке ие халықтың үлесі",
-          "description": "national_indicator_description.11-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-2-1",
           "status": "notstarted"
@@ -1448,7 +1448,7 @@
         {
           "id": "11-2-1-1",
           "title": "Жақсы және қанағаттанарлық жағдайдағы жергілікті маңыздағы жолдар үлесі",
-          "description": "national_indicator_description.11-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-2-1-1",
           "status": "complete"
@@ -1456,7 +1456,7 @@
         {
           "id": "11-3-1",
           "title": "Құрылыс салу және халықтың өсу қарқынының ара қатынасы",
-          "description": "national_indicator_description.11-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-3-1",
           "status": "complete"
@@ -1464,7 +1464,7 @@
         {
           "id": "11-3-2",
           "title": "Азаматтық қоғамның қала құрылысын жоспарлауға және қала шаруашылығын басқаруға тікелей қатысуын қамтамасыз ететін құрылымдар жүйелі және демократиялық негізде жұмыс істейтін қалалар үлесі",
-          "description": "national_indicator_description.11-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-3-2",
           "status": "complete"
@@ -1472,7 +1472,7 @@
         {
           "id": "11-4-1",
           "title": "Қаржыландыру көздері (жеке, мемлекеттік), мұра түрі (мәдени, табиғи) және мемлекеттік ведомстволық бағыныстылық деңгейі (ұлттық, өңірлік және жергілікті / муниципалдық) бойынша бөле отырып, барлық мәдени және табиғи мұраны сақтау және қорғау мақсатында халықтың жан басына шаққандағы есептегендегі шығыстардың жалпы сомасы",
-          "description": "national_indicator_description.11-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-4-1",
           "status": "complete"
@@ -1480,7 +1480,7 @@
         {
           "id": "11-6-1",
           "title": "Қалалар бойынша бөле отырып, коммуналдық-тұрмыстық қатты қалдықтардың жалпы массасынан бақыланатын объектілерде жиналатын және шығарылатын коммуналдық-тұрмыстық қатты қалдықтардың үлесі",
-          "description": "national_indicator_description.11-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-6-1",
           "status": "complete"
@@ -1488,7 +1488,7 @@
         {
           "id": "11-6-1-1",
           "title": "Қатты тұрмыстық қалдықтарды олардың пайда болуына қайта өңдеу және кәдеге жарату үлесі",
-          "description": "national_indicator_description.11-6-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-6-1-1",
           "status": "complete"
@@ -1496,7 +1496,7 @@
         {
           "id": "11-6-1-2",
           "title": "global_indicators.11-6-1-2-title",
-          "description": "national_indicator_description.11-6-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-6-1-2",
           "status": "complete"
@@ -1504,7 +1504,7 @@
         {
           "id": "11-6-2",
           "title": "Қала атмосфераларында (халық санына есептеу бойынша) ұсақ қатты бөлшектерді (мысалы, РМ2.5 және РМ10 класты) сақтаудың орташы жылдық деңгейі",
-          "description": "national_indicator_description.11-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-6-2",
           "status": "complete"
@@ -1512,7 +1512,7 @@
         {
           "id": "11-7-1",
           "title": "Жынысы, жасы және мүгедектік белгісі бойынша бөліністегі қолжетімділігін көрсетумен, барлығы үшін ашық орындарға қатысты құрылыс салынған қалалық аумақтың орташа үлесі",
-          "description": "national_indicator_description.11-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-7-1",
           "status": "notstarted"
@@ -1520,7 +1520,7 @@
         {
           "id": "11-7-2",
           "title": "Жынысы, жасы, мүгедектік белгісі және соңғы 12 айдағы оқиға орны бойынша бөліністегі күш көрсетумен және сексуалдық мәжбүрлеуге ұшыраған адамдардың үлесі",
-          "description": "national_indicator_description.11-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-7-2",
           "status": "notstarted"
@@ -1528,7 +1528,7 @@
         {
           "id": "11-a-1",
           "title": "Қалаларды дамытудың ұлттық бағдарламалары немесе өңірлік құрылыс салу жоспарлары қабылданған елдер саны, онда А) халық санының серпіні ескеріледі; B) теңгерімді аумақтық даму көзделген; және С) бюджет қаражатымен маневр жасау мүмкіндігі кеңейтіледі",
-          "description": "national_indicator_description.11-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-a-1",
           "status": "complete"
@@ -1536,7 +1536,7 @@
         {
           "id": "11-b-2",
           "title": "Апаттардың қаупін төмендетудің ұлттық стратегияларына сәйкес жергілікті апаттардың қаупін төмендету стратегияларын қабылдаған және жүзеге асыратын жергілікті билік органдарының үлесі",
-          "description": "national_indicator_description.11-b-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/11-b-2",
           "status": "complete"
@@ -1552,7 +1552,7 @@
         {
           "id": "12-1-1",
           "title": "Тұтыну мен өндірістің оңтайлы үлгілеріне көшу бойынша іс-қимылдардың ұлттық жоспары бар немесе ұлттық стратегияға оңтайлы тұтыну мен өндірісті басымдық немесе міндет ретінде қосқан елдер саны",
-          "description": "national_indicator_description.12-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-1-1",
           "status": "notstarted"
@@ -1560,7 +1560,7 @@
         {
           "id": "12-2-1",
           "title": "Жиынтық ресурс шығындары және халықтың жан басына шаққандағы ресурс шығындары және ЖІӨ-ге пайыздық қатынаста",
-          "description": "national_indicator_description.12-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-2-1",
           "status": "notstarted"
@@ -1568,7 +1568,7 @@
         {
           "id": "12-2-2",
           "title": "Жиынтық ішкі материалдық тұтыну және халықтың жан басына шаққандағы ішкі материалдық тұтыну мен ЖІӨ-ге пайыздық қатынаста",
-          "description": "national_indicator_description.12-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-2-2",
           "status": "notstarted"
@@ -1576,7 +1576,7 @@
         {
           "id": "12-3-1",
           "title": "Азық-түлік шығындарының ғаламдық көрсеткіші",
-          "description": "national_indicator_description.12-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-3-1",
           "status": "notstarted"
@@ -1584,7 +1584,7 @@
         {
           "id": "12-4-1",
           "title": "Ақпаратты әрбір келісім талаптарына сәйкес тапсыру бойынша өз міндеттемелері мен міндеттерін орындайтын қауіпті және өзге де химиялық заттар мен қалдықтар бойынша халықаралық көпжақты экологиялық келісімдердің тараптар саны",
-          "description": "national_indicator_description.12-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-4-1",
           "status": "complete"
@@ -1592,7 +1592,7 @@
         {
           "id": "12-4-2",
           "title": "Өңдеу түрлері бойынша халықтың жан басына шаққандағы қауіпті қалдықтардың түзілуі және өңделетін қауіпті шығындардың үлесі",
-          "description": "national_indicator_description.12-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-4-2",
           "status": "complete"
@@ -1600,7 +1600,7 @@
         {
           "id": "12-4-2-1",
           "title": "Халықтың жан басына шаққанда қауіпті қалдықтардың ('қызыл' және 'янтарь' қауіптілік деңгейлерінің) пайда болуы",
-          "description": "national_indicator_description.12-4-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-4-2-1",
           "status": "notstarted"
@@ -1608,7 +1608,7 @@
         {
           "id": "12-5-1",
           "title": "Қалдықтарды қайта өңдеудің ұлттық деңгейі, тоннамен алғандағы пайдаланылған материалдардың салмағы",
-          "description": "national_indicator_description.12-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-5-1",
           "status": "complete"
@@ -1616,7 +1616,7 @@
         {
           "id": "12-5-1-1",
           "title": "Қатты тұрмыстық қатты қалдықтарды олардың пайда болуына қайта өңдеу және кәдеге жарату үлесі",
-          "description": "national_indicator_description.12-5-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-5-1-1",
           "status": "complete"
@@ -1624,7 +1624,7 @@
         {
           "id": "12-6-1",
           "title": "Ресурстарды оңтайлы пайдалану туралы есептерді жариялайтын компаниялар саны",
-          "description": "national_indicator_description.12-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-6-1",
           "status": "notstarted"
@@ -1632,7 +1632,7 @@
         {
           "id": "12-7-1",
           "title": "Мемлекеттік сатып алуларды экологияландыру бойынша стратегиялар мен жоспарларды жүзеге асыратын елдер саны",
-          "description": "national_indicator_description.12-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-7-1",
           "status": "notstarted"
@@ -1640,7 +1640,7 @@
         {
           "id": "12-b-1",
           "title": "Мониторинг және бағалаудың келісілген құралдарымен тұрақты туризм саласындағы жүзеге асырылатын стратегиялар немесе директивалар және іс-қимылдар жоспарының саны",
-          "description": "national_indicator_description.12-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-b-1",
           "status": "notstarted"
@@ -1648,7 +1648,7 @@
         {
           "id": "12-c-1",
           "title": "ЖІӨ бірлігіне шаққанда қазбалы отынға берілетін субсидиялар сомасы (өндіріс және тұтыну) және олардың қазбалы отынға жұмсалатын жиынтық ұлттық шығыстардағы үлесі",
-          "description": "national_indicator_description.12-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/12-c-1",
           "status": "notstarted"
@@ -1664,7 +1664,7 @@
         {
           "id": "13-1-2",
           "title": "2015-2030 жылдарға арналған апаттардың қауіп-қатерін төмендету бойынша Сендай негіздемелік бағдарламасына сәйкес апаттардың қауіп-қатерін төмендету ұлттық стратегияларын қабылдаған және жүзеге асыратын елдер саны",
-          "description": "national_indicator_description.13-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-1-2",
           "status": "complete"
@@ -1672,7 +1672,7 @@
         {
           "id": "13-2-1",
           "title": "Азық-түлік өндірісіне қауіп төндірмейтіндей, климаттық өзгерістің жағымсыз салдарларына бейімделу мүмкіндіктерін арттыратын және олардың климаттық өзгеріске қарсы іс-қимыл әлеуетінің дамуына және парниктік газдардың шығарындыларын төмендетуге ықпал ететін кешенді саясатты/стратегияны/жоспарды құру немесе қолданысқа енгізу туралы хабарлаған елдер саны (соның ішінде ұлттық бейімделу жоспарын, ұлттық деңгейде айқындалатын салым, халықты хабарландыру ұлттық жүйесі, екі жылдық жаңартылған баяндаманы дайындау және басқаны қоса алғанда)",
-          "description": "national_indicator_description.13-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-2-1",
           "status": "notstarted"
@@ -1680,7 +1680,7 @@
         {
           "id": "13-3-1",
           "title": "Климат өзгерісінің қауіптілігін жеңілдету және салдарларын әлсірету, оларға бейімделу және ерте ескерту мәселелерін бастауыш және орта мектеп және жоғары оқу орындарының оқу бағдарламасына енгізген елдер саны",
-          "description": "national_indicator_description.13-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-3-1",
           "status": "complete"
@@ -1688,7 +1688,7 @@
         {
           "id": "13-3-1-1",
           "title": "Қоғамдық пайдалы қызметке тартылған ТжКБ ұйымдарындағы білім алушылардың үлесі, пайыз",
-          "description": "national_indicator_description.13-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-3-1-1",
           "status": "complete"
@@ -1696,7 +1696,7 @@
         {
           "id": "13-3-1-2",
           "title": "Жаңартылған білім беру мазмұнымен қамтылған балалардың үлесі, пайыз",
-          "description": "national_indicator_description.13-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-3-1-2",
           "status": "notstarted"
@@ -1704,7 +1704,7 @@
         {
           "id": "13-3-1-3",
           "title": "Азаматтылық пен патриотизмнің жоғары деңгейін көрсеткен оқушылардың үлесі",
-          "description": "national_indicator_description.13-3-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-3-1-3",
           "status": "notstarted"
@@ -1712,7 +1712,7 @@
         {
           "id": "13-a-1",
           "title": "100 млрд. АҚШ долл. жұмылдыру бойынша міндеттемеге сәйкес 2020 жылдан бастап 2025 жылға дейін жұмылдырылған сома (АҚШ долл.)",
-          "description": "national_indicator_description.13-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-a-1",
           "status": "notapplicable"
@@ -1720,7 +1720,7 @@
         {
           "id": "13-b-1",
           "title": "Мамандандырылған көмекті, соның ішінде әйелдерге, жастарға және жергілікті және марганилданған қауымдарға бағдарланған мамандандырылған көмек алатын аз дамыған елдер мен шағын аралдық дамушы мемлекеттер саны және климаттың өзгеруімен байланысты жоспарлау және басқару бөлігіндегі мүмкіндіктерді кеңейту тетіктерін құруға ұсынылатын қаржыландыруды, технологияларды және әлеуетті күшейтуді қосқандағы осындай қолдаудың шамасы",
-          "description": "national_indicator_description.13-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/13-b-1",
           "status": "notapplicable"
@@ -1736,7 +1736,7 @@
         {
           "id": "14-1-1",
           "title": "Жағалаудағы эвтрофикация индексі және қалқып тұрған пластмасса кесегінің тығыздығы",
-          "description": "national_indicator_description.14-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-1-1",
           "status": "notapplicable"
@@ -1744,7 +1744,7 @@
         {
           "id": "14-2-1",
           "title": "Басқаруда экожүйелік тәсілдер қолданылатын ұлттық айрықша экономикалық аймақтардың үлесі",
-          "description": "national_indicator_description.14-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-2-1",
           "status": "notapplicable"
@@ -1752,7 +1752,7 @@
         {
           "id": "14-3-1",
           "title": "Сынамаларды алу репрезентативті станциялардың келісілген тобында өлшенетін теңіз суының сутегі көрсеткішінің орташа мәні (pH)",
-          "description": "national_indicator_description.14-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-3-1",
           "status": "complete"
@@ -1760,7 +1760,7 @@
         {
           "id": "14-5-1",
           "title": "Күзетілетін теңіз аудандарының үлесі",
-          "description": "national_indicator_description.14-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-5-1",
           "status": "complete"
@@ -1768,7 +1768,7 @@
         {
           "id": "14-7-1",
           "title": "Шағын аралдық дамушы мемлекеттерде, онша дамымаған елдерде және барлық елдердегі экологиялық тиімді балық аулау кәсібі, ЖІӨ-ден пайызбен",
-          "description": "national_indicator_description.14-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-7-1",
           "status": "complete"
@@ -1776,7 +1776,7 @@
         {
           "id": "14-a-1",
           "title": "Ғылыми зерттеулерге бюджеттен бөлінетін қаржының жалпы көлеміндегі теңіз технологиялары саласындағы ғылыми зерттеулерге бюджеттен бөлінетін қаржының үлесі",
-          "description": "national_indicator_description.14-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-a-1",
           "status": "notapplicable"
@@ -1784,7 +1784,7 @@
         {
           "id": "14-b-1",
           "title": "Ұсақ балық аулау кәсібі кәсіпорындарының құқықтарын тану мен қорғауды қамтамасыз ететін нормативтік-құқықтық/стратегиялық/институционалдық шектеулерді қолдану дәрежесі тұрғысынан елдер қол жеткізген ілгерілеу",
-          "description": "national_indicator_description.14-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-b-1",
           "status": "complete"
@@ -1792,7 +1792,7 @@
         {
           "id": "14-c-1",
           "title": "Әлемдік мұхитты және оның ресурстарын сақтау мен тиімді пайдалануға қатысты Біріккен Ұлттар Ұйымының Теңіз құқығы жөніндегі конвенциясында бекітілген халықаралық құқық нормаларын жүзеге асыруға бағытталған құқықтық, стратегиялық және институционалдық шектеулер желісі бойынша Әлемдік мұхит мәселелері бойынша құқықтық құжаттарды ратификациялау, қабылдау және жүзеге асыруда ілгерілеуге қол жеткізген елдер саны",
-          "description": "national_indicator_description.14-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/14-c-1",
           "status": "notapplicable"
@@ -1808,7 +1808,7 @@
         {
           "id": "15-1-1",
           "title": "Құрлықтың жалпы алаңында пайыздық қатынастағы ормандар алаңы",
-          "description": "national_indicator_description.15-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-1-1",
           "status": "complete"
@@ -1816,7 +1816,7 @@
         {
           "id": "15-1-2",
           "title": "Экожүйелердің түрлері бойынша бөліністе күзетілетін құрлықтың және тұщы сулар аудандарының биологиялық алуан түрлілігі тұрғысынан маңызды аудандар үлесі",
-          "description": "national_indicator_description.15-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-1-2",
           "status": "complete"
@@ -1824,7 +1824,7 @@
         {
           "id": "15-2-1",
           "title": "Орман шаруашылығын тауысып алмай жүргізуге көшудегі ілгерілеу",
-          "description": "national_indicator_description.15-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-2-1",
           "status": "complete"
@@ -1832,7 +1832,7 @@
         {
           "id": "15-2-1-1",
           "title": "Ормандарда жердегі биомасса қоры",
-          "description": "national_indicator_description.15-2-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-2-1-1",
           "status": "complete"
@@ -1840,7 +1840,7 @@
         {
           "id": "15-3-1",
           "title": "Деградацияға ұшыраған жерлер ауданының құрлықтың жалпы ауданына пайыздық қатынаста",
-          "description": "national_indicator_description.15-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-3-1",
           "status": "complete"
@@ -1848,7 +1848,7 @@
         {
           "id": "15-4-1",
           "title": "Таулы биологиялық алуан түрлілік үшін маңызды учаскелер арасында күзетілетін аудандар үлесі",
-          "description": "national_indicator_description.15-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-4-1",
           "status": "complete"
@@ -1856,7 +1856,7 @@
         {
           "id": "15-4-2",
           "title": "Таудың өсімдік жамылғысы индексі",
-          "description": "national_indicator_description.15-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-4-2",
           "status": "complete"
@@ -1864,7 +1864,7 @@
         {
           "id": "15-5-1",
           "title": "Қызыл тізім индексі",
-          "description": "national_indicator_description.15-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-5-1",
           "status": "complete"
@@ -1872,7 +1872,7 @@
         {
           "id": "15-6-1",
           "title": "Игіліктерді әділетті және кемсітусіз бөлуді қамтамасыз ететін заңнамалық, әкімшілік және директивалық шаралар кешенін қабылдаған елдер саны",
-          "description": "national_indicator_description.15-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-6-1",
           "status": "notstarted"
@@ -1880,7 +1880,7 @@
         {
           "id": "15-7-1",
           "title": "Сауда жүргізілетін түрлер арасындағы браконьерлік немесе заңсыз айналым объектісі болып табылатын жабайы аңдар үлесі",
-          "description": "national_indicator_description.15-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-7-1",
           "status": "complete"
@@ -1888,7 +1888,7 @@
         {
           "id": "15-8-1",
           "title": "Бөгде инвазивті түрлер санының енуінің алдын алу немесе реттеу үшін тиісті ұлттық заңнама қабылдайтын және жеткілікті ресурстар бөлетін елдер үлесі",
-          "description": "national_indicator_description.15-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-8-1",
           "status": "notstarted"
@@ -1896,7 +1896,7 @@
         {
           "id": "15-9-1",
           "title": "2011-2020 жылдарға биологиялық алуан түрлілік бойынша стратегиялық жоспар шеңберінде 2 Биологиялық алуан түрлілік бойынша Айтиндік нысаналы міндетке сәйкес белгіленген ұлттық нысаналы көрсеткіштерге жетудегі ілгерілеу",
-          "description": "national_indicator_description.15-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-9-1",
           "status": "notstarted"
@@ -1904,7 +1904,7 @@
         {
           "id": "15-a-1",
           "title": "Дамыту мақсатындағы ресми көмек пен биологиялық алуан түрлілік және экожүйелерді сақтау және тиімді пайдалануға бөлінетін мемлекеттік қаражат көлемі",
-          "description": "national_indicator_description.15-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-a-1",
           "status": "complete"
@@ -1912,7 +1912,7 @@
         {
           "id": "15-b-1",
           "title": "Дамыту мақсатындағы ресми көмек және биологиялық алуан түрлілік және экожүйелерді сақтау және оңтайлы пайдалануға бөлінетін мемлекеттік қаражат көлемі",
-          "description": "national_indicator_description.15-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-b-1",
           "status": "notstarted"
@@ -1920,7 +1920,7 @@
         {
           "id": "15-c-1",
           "title": "Саудаға түсетін түрлері арасындағы браконьерлік немесе заңсыз айналым объектісі болып табылатын, жабайы аңдар үлесі",
-          "description": "national_indicator_description.15-c-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/15-c-1",
           "status": "complete"
@@ -1936,7 +1936,7 @@
         {
           "id": "16-1-1",
           "title": "Жынысы және жас топтары бойынша бөлінісіндегі 100 000 адамға шаққандағы қасақана адам өлтіру құрбандарының саны",
-          "description": "national_indicator_description.16-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-1-1",
           "status": "complete"
@@ -1944,7 +1944,7 @@
         {
           "id": "16-1-2",
           "title": "100 000 адамға шаққандағы жанжалмен байланысты өлімдер саны (жас топтары, жынысы және себебі бойынша бөлінісінде)",
-          "description": "national_indicator_description.16-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-1-2",
           "status": "notapplicable"
@@ -1952,7 +1952,7 @@
         {
           "id": "16-1-3",
           "title": "Соңғы 12 ай ішінде физикалық, психологиялық немесе сексуалдық зорлыққа ұшыраған халық үлесі",
-          "description": "national_indicator_description.16-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-1-3",
           "status": "notstarted"
@@ -1960,7 +1960,7 @@
         {
           "id": "16-1-4",
           "title": "Өз ауданында көшеде жалғыз кетіп бара жатқанда өздерін қауіпсіз сезінетін адамдар үлесі",
-          "description": "national_indicator_description.16-1-4",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-1-4",
           "status": "complete"
@@ -1968,7 +1968,7 @@
         {
           "id": "16-2-1",
           "title": "Соңғы айда олардың күтімін қамтамасыз ететін адамдардың тарапынан кез келген физикалық жаза қолдану және/немесе психологиялық агрессияға ұшыраған 1 жастан 17 жасқа дейінгі балалар, соның ішінде мүмкіндіктері шектеулі және мүгедек балалардың үлесі",
-          "description": "national_indicator_description.16-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-2-1",
           "status": "complete"
@@ -1976,7 +1976,7 @@
         {
           "id": "16-2-2",
           "title": "Жынысы, жасы бойынша бөлінісіндегі 100 000 адамға шаққандағы адам саудасы құрбандарының саны",
-          "description": "national_indicator_description.16-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-2-2",
           "status": "complete"
@@ -1984,7 +1984,7 @@
         {
           "id": "16-2-3",
           "title": "18 жасқа жеткенше сексуалдық зорлыққа ұшыраған 18 жастан 29 жасқа дейінгі жас әйелдер мен еркектер үлесі",
-          "description": "national_indicator_description.16-2-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-2-3",
           "status": "notstarted"
@@ -1992,7 +1992,7 @@
         {
           "id": "16-3-1",
           "title": "Соңғы 12 айда құзырлы органдарға немесе ресми мойындалған жанжалдарды реттеу механизмдерге тиісті шағым түсірген зорлық құрбандарының үлесі",
-          "description": "national_indicator_description.16-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-3-1",
           "status": "notstarted"
@@ -2000,7 +2000,7 @@
         {
           "id": "16-3-2",
           "title": "Қамаудағылардың жалпы санындағы үкім шығарылғанға дейін ұсталынатын адамдардың үлесі",
-          "description": "national_indicator_description.16-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-3-2",
           "status": "complete"
@@ -2008,7 +2008,7 @@
         {
           "id": "16-3-2-1",
           "title": "Мемлекеттен тегін кепілді заң көмегін алған адамдар саны",
-          "description": "national_indicator_description.16-3-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-3-2-1",
           "status": "complete"
@@ -2016,7 +2016,7 @@
         {
           "id": "16-3-3",
           "title": "Соңғы екі жыл ішінде дауға қатысқан және дауларды шешудің формальды немесе бейресми тетіктерін қолданған халықтың тетігі түріне қарай бөлінген үлесі",
-          "description": "national_indicator_description.16-3-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-3-3",
           "status": "complete"
@@ -2024,7 +2024,7 @@
         {
           "id": "16-3-3-1",
           "title": "Сотқа дейінгі тәртіпте татуластыру рәсімдері арқылы шешілетін даулардың саны",
-          "description": "national_indicator_description.16-3-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-3-3-1",
           "status": "notstarted"
@@ -2032,7 +2032,7 @@
         {
           "id": "16-3-3-2",
           "title": "Құқық қорғау органдарына сенім деңгейі, орган арқылы",
-          "description": "national_indicator_description.16-3-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-3-3-2",
           "status": "complete"
@@ -2040,7 +2040,7 @@
         {
           "id": "16-4-1",
           "title": "Заңсыз кіріс және шығыс қаржылық ағындардың жалпы көлемі (ағымдағы бағада АҚШ долларында)",
-          "description": "national_indicator_description.16-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-4-1",
           "status": "notstarted"
@@ -2048,7 +2048,7 @@
         {
           "id": "16-4-2",
           "title": "Шығу тегі немесе иелену жағдайлары заңсыз екендігін халықаралық құжаттарға сәйкес құзырлы орган қадағалап немесе анықталған тартып алынған, тауып алынған немесе өткізілген қару үлесі",
-          "description": "national_indicator_description.16-4-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-4-2",
           "status": "notstarted"
@@ -2056,7 +2056,7 @@
         {
           "id": "16-4-2-1",
           "title": "Ұйымдасқан қылмыстық топтың (ҰҚТ) құрамында жасалған қылмыстар саны",
-          "description": "national_indicator_description.16-4-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-4-2-1",
           "status": "complete"
@@ -2064,7 +2064,7 @@
         {
           "id": "16-5-1",
           "title": "Алдыңғы 12 айда кем дегенде бір рет мемлекеттік лауазымды тұлғамен байланысқан және мемлекеттік лауазымды тұлғаға пара берген немесе олардан осы мемлекеттік лауазымды тұлға пара талап еткен адамдар үлесі",
-          "description": "national_indicator_description.16-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-5-1",
           "status": "complete"
@@ -2072,7 +2072,7 @@
         {
           "id": "16-5-2",
           "title": "Алдыңғы 12 айда кем дегенде бір рет мемлекеттік лауазымды тұлғамен байланысқан және мемлекеттік лауазымды тұлғаға пара берген немесе олардан осы мемлекеттік лауазымды тұлға пара талап еткен коммерциялық компаниялар үлесі",
-          "description": "national_indicator_description.16-5-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-5-2",
           "status": "notstarted"
@@ -2080,7 +2080,7 @@
         {
           "id": "16-5-2-1",
           "title": "Халықтың сыбайлас жемқорлық деңгейін сезінуі",
-          "description": "national_indicator_description.16-5-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-5-2-1",
           "status": "complete"
@@ -2088,7 +2088,7 @@
         {
           "id": "16-6-1",
           "title": "Секторлар бойынша бөлінісінде бастапқыда бекітілген бюджетке пайыздық қатынаста үкіметтің бастапқы шығыстары (бюджеттік жіктелім немесе ұқсас санаттар бойынша)",
-          "description": "national_indicator_description.16-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-6-1",
           "status": "complete"
@@ -2096,7 +2096,7 @@
         {
           "id": "16-6-2",
           "title": "Көрсетілген қызметтер сапасын қосқанда мемлекеттік қызметтерді пайдаланудың соңғы тәжірибесімен қанағаттанған халық үлесі",
-          "description": "national_indicator_description.16-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-6-2",
           "status": "notstarted"
@@ -2104,7 +2104,7 @@
         {
           "id": "16-6-2-1",
           "title": "Өтініштер бойынша тексеру кезінде анықталған бұзушылықтардың қорытындылары бойынша қызметті алушылардың қалпына келтірілген құқықтарының үлесі",
-          "description": "national_indicator_description.16-6-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-6-2-1",
           "status": "complete"
@@ -2112,7 +2112,7 @@
         {
           "id": "16-6-2-2",
           "title": "Өтініштер мен хабарламалардың немесе құқық бұзушылықтар туралы басқа мәліметтердің түрі бойынша тіркелген өтініштердің жалпы санына (адм және қылмыстық) қаралмай қалған үлесі, пайыз",
-          "description": "national_indicator_description.16-6-2-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-6-2-2",
           "status": "notstarted"
@@ -2120,7 +2120,7 @@
         {
           "id": "16-6-2-3",
           "title": "Әкімшілік жауапкершілікке тартылған азаматтар саны, 100 000 адамдарға",
-          "description": "national_indicator_description.16-6-2-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-6-2-3",
           "status": "notstarted"
@@ -2128,7 +2128,7 @@
         {
           "id": "16-7-1",
           "title": "Ұлттық және жергілікті мекемелердегі лауазымдар үлесі, оның ішінде: a) заңнамалық жиналыстарда; b) мемлекеттік қызметте; с) сот органдарында, халықтың жас тобы, жынысы, мүгедектік белгісі және тобы бойынша бөлумен салыстырғанда",
-          "description": "national_indicator_description.16-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-7-1",
           "status": "notstarted"
@@ -2136,7 +2136,7 @@
         {
           "id": "16-7-2",
           "title": "Шешім қабылдау процесі жынысы, жасы, мүгедектік белгісі және халықтың басқа да топтары бойынша бөле отырып, жан-жақты және икемді болып табылады деп есептейтін халықтың үлесі",
-          "description": "national_indicator_description.16-7-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-7-2",
           "status": "notstarted"
@@ -2144,7 +2144,7 @@
         {
           "id": "16-9-1",
           "title": "Жасы бойынша бөлінісіндегі тууы азаматтық органдарда тіркелген бес жасқа дейінгі балалар үлесі",
-          "description": "national_indicator_description.16-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-9-1",
           "status": "complete"
@@ -2152,7 +2152,7 @@
         {
           "id": "16-10-1",
           "title": "Соңғы 12 ай ішінде журналисттер мен олармен байланысты бұқаралық ақпарат құралдары өкілдерінің, кәсіподақ қызметкерлерінің және құқық қорғаушыларын өлтіру, ұрлау, зорлап жоғалту, еркінше ұстау және азаптау оқиғаларының расталған саны",
-          "description": "national_indicator_description.16-10-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-10-1",
           "status": "notstarted"
@@ -2160,7 +2160,7 @@
         {
           "id": "16-10-1-1",
           "title": "ҚР ӘҚБК 78, 456-1-баптары, істер бойынша тіркелген істердің саны",
-          "description": "national_indicator_description.16-10-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-10-1-1",
           "status": "complete"
@@ -2168,7 +2168,7 @@
         {
           "id": "16-10-2",
           "title": "Азаматтардың ақпаратқа қолжетімділігінің қолданыстағы конституциялық, заңнамалық және/немесе саяси кепілдіктері",
-          "description": "national_indicator_description.16-10-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-10-2",
           "status": "complete"
@@ -2176,7 +2176,7 @@
         {
           "id": "16-a-1",
           "title": "Париждік қағидаларға сәйкес әрекет ететін тәуелсіз ұлттық құқық қорғау институттарының болуы",
-          "description": "national_indicator_description.16-a-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-a-1",
           "status": "complete"
@@ -2184,7 +2184,7 @@
         {
           "id": "16-b-1",
           "title": "Соңғы 12 айда олар адам құқықтары саласындағы халықаралық стандарттарға сәйкес кемсітушілікке тыйым салынған негіздерде кемсітушілікке немесе қудалауға жеке ұшырағаны туралы хабарлаған адамдардың үлесі",
-          "description": "national_indicator_description.16-b-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/16-b-1",
           "status": "notstarted"
@@ -2200,7 +2200,7 @@
         {
           "id": "17-1-1",
           "title": "Көздер бойынша бөліністегі ЖІӨ-ге пайыздық қатынастағы мемлекеттік кірістердің жалпы көлемі",
-          "description": "national_indicator_description.17-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-1-1",
           "status": "complete"
@@ -2208,7 +2208,7 @@
         {
           "id": "17-1-2",
           "title": "Ішкі салықтармен қаржыландырылатын ұлттық бюджет үлесі",
-          "description": "national_indicator_description.17-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-1-2",
           "status": "complete"
@@ -2216,7 +2216,7 @@
         {
           "id": "17-2-1",
           "title": "Донорлардың – ЭЫДҰ дамуына Комитеті мүшелерінің жалпы ұлттық табысына пайыздық қатынастағы даму мақсатындағы ресми көмектің (жиынтық, сондай-ақ аз дамыған елдерге бөлінетін) таза көлемі",
-          "description": "national_indicator_description.17-2-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-2-1",
           "status": "complete"
@@ -2224,7 +2224,7 @@
         {
           "id": "17-3-1",
           "title": "Оңтүстік — Оңтүстік дамыту және ынтымақтастық мақсатында тікелей шетелдік инвестициялар, ресми көмек желісі бойынша түсетін қаражаттың жалпы ұлттық кірістен үлесі",
-          "description": "national_indicator_description.17-3-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-3-1",
           "status": "complete"
@@ -2232,7 +2232,7 @@
         {
           "id": "17-3-1-1",
           "title": "Оңтүстік-Оңтүстік ынтымақтастық және даму мақсатындағы ресми көмек көлемінің жалпы ұлттық табысқа қатынасы",
-          "description": "national_indicator_description.17-3-1-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-3-1-1",
           "status": "complete"
@@ -2240,7 +2240,7 @@
         {
           "id": "17-3-1-2",
           "title": "Шетелге тікелей инвестициялардың қазақстандық тікелей инвесторлардан жалпы ағымының ЖІӨ-ге қатынасы",
-          "description": "national_indicator_description.17-3-1-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-3-1-2",
           "status": "complete"
@@ -2248,7 +2248,7 @@
         {
           "id": "17-3-1-3",
           "title": "Шетелдік тікелей инвесторлардан Қазақстанға тікелей инвестициялардың жалпы ағынының қатынасы",
-          "description": "national_indicator_description.17-3-1-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-3-1-3",
           "status": "complete"
@@ -2256,7 +2256,7 @@
         {
           "id": "17-3-2",
           "title": "Жиынтық ЖІӨ-дегі ақша аударымдарының үлесі (АҚШ долларымен)",
-          "description": "national_indicator_description.17-3-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-3-2",
           "status": "complete"
@@ -2264,7 +2264,7 @@
         {
           "id": "17-4-1",
           "title": "Борышқа қызмет көрсетуге жұмсалатын тауарлар мен қызметтер экспортынан түсетін түсімдердің үлесі",
-          "description": "national_indicator_description.17-4-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-4-1",
           "status": "complete"
@@ -2272,7 +2272,7 @@
         {
           "id": "17-5-1",
           "title": "Аз дамыған елдерді қоса алғанда, дамушы елдердің мүддесінде инвестицияларды көтермелеу режимдері қабылданған және әрекет ететін елдердің саны",
-          "description": "national_indicator_description.17-5-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-5-1",
           "status": "notstarted"
@@ -2280,7 +2280,7 @@
         {
           "id": "17-6-1",
           "title": "Ынтымақтастық түрлерінің бөлінісіндегі елдер арасындағы келісімдер мен ғылыми және/немесе техникалық ынтымақтастық бағдарламаларының саны",
-          "description": "national_indicator_description.17-6-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-6-1",
           "status": "complete"
@@ -2288,7 +2288,7 @@
         {
           "id": "17-6-2",
           "title": "Кең жолақты Ғаламтордың стандартты абоненттерінің саны, жылдамдық бойынша топтастыру",
-          "description": "national_indicator_description.17-6-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-6-2",
           "status": "complete"
@@ -2296,7 +2296,7 @@
         {
           "id": "17-7-1",
           "title": "Экологиялық қауіпсіз технологияларды әзірлеу, тапсыру, тарату және меңгеруге жәрдемдесу мақсатында дамушы елдерге бекітілген қаржыландырудың жалпы сомасы",
-          "description": "national_indicator_description.17-7-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-7-1",
           "status": "notstarted"
@@ -2304,7 +2304,7 @@
         {
           "id": "17-8-1",
           "title": "Интернетті пайдаланатын халық үлесі",
-          "description": "national_indicator_description.17-8-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-8-1",
           "status": "complete"
@@ -2312,7 +2312,7 @@
         {
           "id": "17-9-1",
           "title": "Дамушы елдерге берілетін қаржылық және техникалық көмектің көлемі (оның ішінде солтүстік — оңтүстік, оңтүстік — оңтүстік желісі бойынша және үшжақты ынтымақтастық шеңберінде) (АҚШ долларымен)",
-          "description": "national_indicator_description.17-9-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-9-1",
           "status": "complete"
@@ -2320,7 +2320,7 @@
         {
           "id": "17-10-1",
           "title": "Тарифтердің әлемдік орташа салмақталған деңгейі",
-          "description": "national_indicator_description.17-10-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-10-1",
           "status": "complete"
@@ -2328,7 +2328,7 @@
         {
           "id": "17-11-1",
           "title": "Әлемдік экспорттағы дамушы елдердің және аз дамыған елдердің үлесі",
-          "description": "national_indicator_description.17-11-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-11-1",
           "status": "complete"
@@ -2336,7 +2336,7 @@
         {
           "id": "17-12-1",
           "title": "Дамушы елдерге, аз дамыған елдерге және шағын аралдық дамушы мемлекеттерге қатысты қолданылатын тарифтердің орташа өлшемді деңгейі",
-          "description": "national_indicator_description.17-12-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-12-1",
           "status": "complete"
@@ -2344,7 +2344,7 @@
         {
           "id": "17-13-1",
           "title": "Макроэкономикалық көрсеткіштер панелі",
-          "description": "national_indicator_description.17-13-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-13-1",
           "status": "notstarted"
@@ -2352,7 +2352,7 @@
         {
           "id": "17-14-1",
           "title": "Тұрақты даму саласында саясаттың келісушілігін көтеруге арналған механизмдер",
-          "description": "national_indicator_description.17-14-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-14-1",
           "status": "complete"
@@ -2360,7 +2360,7 @@
         {
           "id": "17-15-1",
           "title": "Даму процесіне қатысушылар қатарынан донорлардың елдердің өздері әзірлеген нәтижелер схемалары мен жоспарлау құралдарын пайдалану дәрежесі",
-          "description": "national_indicator_description.17-15-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-15-1",
           "status": "notstarted"
@@ -2368,7 +2368,7 @@
         {
           "id": "17-16-1",
           "title": "Тұрақты даму мақсаттарына жетудегі демеуші болып табылатын көптеген мүдделі тараптардың қатысуымен даму тиімділігін бақылау механзмдерін қолдану ісіндегі прогресс туралы хабарлайтын елдер саны",
-          "description": "national_indicator_description.17-16-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-16-1",
           "status": "complete"
@@ -2376,7 +2376,7 @@
         {
           "id": "17-17-1",
           "title": "Инфрақұрылым саласындағы мемлекеттік-жеке меншік әріптестікке бөлінетін сома (АҚШ долларымен)",
-          "description": "national_indicator_description.17-17-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-17-1",
           "status": "complete"
@@ -2384,7 +2384,7 @@
         {
           "id": "17-18-1",
           "title": "Тұрақты даму саласындағы мақсаттарға қол жеткізу барысын қадағалау үшін статистика саласындағы әлеует көрсеткіші",
-          "description": "national_indicator_description.17-18-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-18-1",
           "status": "notstarted"
@@ -2392,7 +2392,7 @@
         {
           "id": "17-18-2",
           "title": "Ресми статистиканың негізін қалайтын қағидаттарға сәйкес келетін ұлттық статистикалық заңнамасы бар елдер саны",
-          "description": "national_indicator_description.17-18-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-18-2",
           "status": "complete"
@@ -2400,7 +2400,7 @@
         {
           "id": "17-18-3",
           "title": "Қаржыландыру көздері бойынша бөлінісіндегі толығымен қаржыландырылған және ұлттық статистикалық жоспарды жүзеге асыратын елдер саны",
-          "description": "national_indicator_description.17-18-3",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-18-3",
           "status": "complete"
@@ -2408,7 +2408,7 @@
         {
           "id": "17-19-1",
           "title": "Статистика саласындағы дамушы елдердің әлеуетін арттыруға бөлінген барлық ресурстардың құны (АҚШ долларымен))",
-          "description": "national_indicator_description.17-19-1",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-19-1",
           "status": "complete"
@@ -2416,7 +2416,7 @@
         {
           "id": "17-19-2",
           "title": "Соңғы 10 жыл ішінде кем дегенде бір халық және тұрғын қорының санағын өткізген және b) оқиғалардың 100 пайызында тууды тіркеу және олардың 80 пайызында өлімді тіркеу мақсаттарына жеткен елдер үлесі",
-          "description": "national_indicator_description.17-19-2",
+          "description": "",
           "keywords": "",
           "href": "/sdg-site-kazstat/17-19-2",
           "status": "complete"
