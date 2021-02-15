@@ -81,13 +81,24 @@ header:
 header_language_toggle: dropdown
 hide_empty_metadata: false
 indicator_config_form:
-  dropdowns: []
+  dropdowns:
+    - jsonschema: reporting_status
+      values:
+        - complete
+        - notstarted
+        - notapplicable
+      labels:
+        - Опубликован
+        - В процессе разработки
+        - Непригодный
   repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/indicator-config'
-  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]'
+  translation_link: >-
+    https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
 indicator_metadata_form:
   dropdowns: []
   repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/meta'
-  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]'
+  translation_link: >-
+    https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
   language: ru
   scopes:
     - global
@@ -172,6 +183,7 @@ sharethis_property: ''
 site_config_form:
   dropdowns: []
   repository_link: 'https://github.com/kazstat/sdg-site-kazstat/tree/develop/_data'
-  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]'
+  translation_link: >-
+    https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
 validate_indicator_config: false
 validate_site_config: false
