@@ -6,9 +6,9 @@
     <div class="site-intro spacer medium">
         <h1>{{ site.frontpage_introduction_banner.title | t }}</h1>
         <p class="lead-copy">{{ site.frontpage_introduction_banner.description | t }}</p>
-        {% if site.frontpage_introduction_banner.sidebar %}
+        {% if site.frontpage_sidebar %}
         <div class="site-intro-sidebar">
-            {{ site.frontpage_introduction_banner.sidebar | t }}
+            {{ site.frontpage_sidebar | t }}
         </div>
         {% endif %}
     </div>

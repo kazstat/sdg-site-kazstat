@@ -20,7 +20,7 @@ create_pages:
   - filename: ''
     folder: /
     layout: frontpage
-    title: general.site_title
+    title: ''
   - filename: ''
     folder: /reporting-status
     layout: reportingstatus
@@ -67,7 +67,6 @@ frontpage_instructions: custom.frontpage_instructions
 frontpage_introduction_banner:
   title: custom.frontpage_intro_title
   description: custom.frontpage_intro_description
-  sidebar: custom.frontpage_intro_sidebar
 goal_image_base: 'https://open-sdg.github.io/sdg-translations/assets/img/goals'
 goal_image_extension: ''
 goals_page:
