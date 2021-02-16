@@ -2466,6 +2466,9 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   font-weight: bold; }
 .layout-config-builder .config-required {
   color: #a94442; }
+.layout-config-builder .translation-link {
+  margin-top: 0;
+  margin-bottom: 20px; }
 .layout-config-builder.contrast-high .config-widgets {
   background-color: black; }
 .layout-config-builder.contrast-high div[data-schemapath="root"] > .well > div > div > .row {
