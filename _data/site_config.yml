@@ -9,8 +9,6 @@ breadcrumbs:
 country:
   name: Kazakhstan
   adjective: Kazakh
-create_config_forms:
-  layout: config-builder
 create_goals:
   layout: goal-by-target
   goals: []
@@ -80,6 +78,7 @@ header:
 header_language_toggle: dropdown
 hide_empty_metadata: false
 indicator_config_form:
+  enabled: true
   dropdowns:
     - jsonschema: reporting_status
       values:
@@ -94,6 +93,7 @@ indicator_config_form:
   translation_link: >-
     https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
 indicator_metadata_form:
+  enabled: true
   dropdowns: []
   repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/meta'
   translation_link: >-
@@ -180,6 +180,7 @@ search_index_extra_fields:
 series_toggle: true
 sharethis_property: ''
 site_config_form:
+  enabled: true
   dropdowns: []
   repository_link: 'https://github.com/kazstat/sdg-site-kazstat/tree/develop/_data'
   translation_link: >-
