@@ -107,7 +107,7 @@ var translations = {
         
         Показатель 1.2.1 -
         
-        Доля населения страны, живущего за официальной чертой бедности, в разбивке по полу и возрасту - general.site_title
+        Доля населения страны, живущего за официальной чертой бедности, в разбивке по полу и возрасту - Показатели Целей устойчивого развития
     </title>
 
 
@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210220224651">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210220233057">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -440,16 +440,16 @@ var translations = {
   data-id="1-2-1"
   data-country="Казахстан"
   data-charttitle="Доля населения, имеющего доходы ниже величины прожиточного минимума"
-  data-charttitles="null"
+  data-charttitles="[]"
   data-measurementunit="процент"
   data-showdata="true"
   data-graphtype="line"
   data-geocoderegex=""
   data-showmap="true"
-  data-startvalues="null"
-  data-graphlimits="null"
+  data-startvalues="[]"
+  data-graphlimits="[]"
   data-stackeddisaggregation=""
-  data-graphannotations="null"
+  data-graphannotations="[]"
   data-indicatordownloads="null"
   data-compositebreakdownlabel=""
   data-precision="null"
@@ -674,6 +674,8 @@ var translations = {
     
     <p>Единица измерения: процент</p>
     
+    
+    <p>Сноска: </p>
     
   </div>
 
@@ -1061,6 +1063,19 @@ opensdg.chartConfigAlter(function(config, info) {
 
 
   </div>
+  <div role="tabpanel" class="tab-pane" id="embeddedmapview" class="embedded-map">
+    <div class="row">
+  <div class="col-xs-12">
+    
+    
+    
+    <div class="embedded-map" id="embeddedmapframe">
+    
+  </div>
+</div>
+
+  </div>
+  
 </div>
 
 
@@ -2048,6 +2063,8 @@ data-event-label="Change to Sources tab"
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js" integrity="sha512-9hzM/Gfa9KP1hSBlq3/zyNF/dfbcjAYwUTBWYX+xi8fzfAPHL3ILwS1ci0CTVeuXTGkRAWgRMZZwtSNV7P+nfw==" crossorigin="anonymous"></script>
+
 
 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
@@ -2067,12 +2084,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Поиск';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210220224651'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210220233057'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210220224651"></script><script>
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210220233057"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
