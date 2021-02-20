@@ -110,6 +110,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     this.mapLayers = [];
     this.indicatorId = options.indicatorId;
+    this._precision = options.precision;
+    this._decimalSeparator = options.decimalSeparator;
     this.currentDisaggregation = 0;
 
     // Require at least one geoLayer.
@@ -149,7 +151,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       var tooltipContent = feature.properties.name;
       var tooltipData = this.getData(feature.properties);
       if (tooltipData) {
-        tooltipContent += ': ' + tooltipData;
+        tooltipContent += ': ' + this.alterData(tooltipData);
       }
       return tooltipContent;
     },
@@ -242,6 +244,20 @@ opensdg.autotrack = function(preset, category, action, label) {
       this.selectionLegend.selections.forEach(function(selection) {
         plugin.updateTooltip(selection);
       });
+    },
+
+    // Alter data before displaying it.
+    alterData: function(value) {
+      opensdg.dataDisplayAlterations.forEach(function(callback) {
+        value = callback(value);
+      });
+      if (this._precision || this._precision === 0) {
+        value = Number.parseFloat(value).toFixed(this._precision);
+      }
+      if (this._decimalSeparator) {
+        value = value.toString().replace('.', this._decimalSeparator);
+      }
+      return value;
     },
 
     // Get the data from a feature's properties, according to the current year.
@@ -714,7 +730,7 @@ Chart.plugins.register({
             $(this.chart.canvas)
                 .attr('role', 'application')
                 .attr('aria-describedby', 'chart-keyboard ' + describedBy)
-                .text('Chart. ' + keyboardInstructions)
+                .html('<span class="hide-during-image-download">Chart. ' + keyboardInstructions + '</span>')
         }
     },
     afterDatasetsDraw: function() {
@@ -952,6 +968,7 @@ var accessibilitySwitcher = function() {
 
 
   function imageFix(contrast) {
+    
     if (contrast == 'high')  {
       _.each($('img:not([src*=high-contrast])'), function(goalImage){
         if ($(goalImage).attr('src').slice(0, 35) != "https://platform-cdn.sharethis.com/") {
@@ -963,6 +980,7 @@ var accessibilitySwitcher = function() {
         $(goalImage).attr('src', $(goalImage).attr('src').replace('high-contrast/', ''));
       })
     }
+    
   };
 
 };
@@ -1089,6 +1107,44 @@ function nonFieldColumns() {
     columns.push(SERIES_COLUMN);
   }
   return columns;
+}
+
+/**
+ * @param {Array} items Objects optionally containing 'unit' and/or 'series'
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {object|false} The first match given the selected unit/series, or false
+ */
+function getMatchByUnitSeries(items, selectedUnit, selectedSeries) {
+  if (!items || items.length < 0) {
+    return false;
+  }
+  if (!selectedUnit && !selectedSeries) {
+    return items[0];
+  }
+  var match = items.find(function(item) {
+    if (selectedUnit && selectedSeries) {
+      return item.unit === selectedUnit && item.series === selectedSeries;
+    }
+    else if (selectedUnit) {
+      return item.unit === selectedUnit;
+    }
+    else if (selectedSeries) {
+      return item.series === selectedSeries;
+    }
+  });
+  if (!match) {
+    // If no match was found, allow for a partial match (eg, unit only).
+    match = items.find(function(item) {
+      if (selectedUnit) {
+        return item.unit === selectedUnit;
+      }
+      else if (selectedSeries) {
+        return item.series === selectedSeries;
+      }
+    });
+  }
+  return match || false;
 }
 
 /**
@@ -1727,27 +1783,19 @@ function getDataBySelectedFields(rows, selectedFields) {
  * @return {String} Updated title
  */
 function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
-  var newTitle = currentTitle;
-  if (allTitles && allTitles.length > 0) {
-    var matchedTitle;
-    if (selectedUnit && selectedSeries) {
-      matchedTitle = allTitles.find(function(title) {
-        return title.unit === selectedUnit && title.series === selectedSeries;
-      });
-    }
-    if (!matchedTitle && selectedSeries) {
-      matchedTitle = allTitles.find(function(title) {
-        return title.series === selectedSeries;
-      });
-    }
-    if (!matchedTitle && selectedUnit) {
-      matchedTitle = allTitles.find(function(title) {
-        return title.unit === selectedUnit;
-      });
-    }
-    newTitle = (matchedTitle) ? matchedTitle.title : allTitles[0].title;
-  }
-  return newTitle;
+  var match = getMatchByUnitSeries(allTitles, selectedUnit, selectedSeries);
+  return (match) ? match.title : currentTitle;
+}
+
+/**
+ * @param {Array} graphLimits Objects containing 'unit' and 'title'
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Object|false} Graph limit object, if any
+ */
+function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(graphLimits, selectedUnit, selectedSeries);
+  return (match) ? match : false;
 }
 
 /**
@@ -2188,6 +2236,17 @@ function sortData(rows, selectedUnit) {
   return _.sortBy(rows, column);
 }
 
+/**
+ * @param {Array} precisions Objects containing 'unit' and 'title'
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {int|false} number of decimal places, if any
+ */
+function getPrecision(precisions, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(precisions, selectedUnit, selectedSeries);
+  return (match) ? match.decimals : false;
+}
+
 
   function deprecated(name) {
     return function() {
@@ -2235,6 +2294,8 @@ function sortData(rows, selectedUnit) {
     getCombinationData: getCombinationData,
     getDatasets: getDatasets,
     tableDataFromDatasets: tableDataFromDatasets,
+    getPrecision: getPrecision,
+    getGraphLimits: getGraphLimits,
     getColumnsFromData: getColumnsFromData,
     // Backwards compatibility.
     footerFields: deprecated('helpers.footerFields'),
@@ -2284,6 +2345,7 @@ function sortData(rows, selectedUnit) {
   this.graphAnnotations = options.graphAnnotations;
   this.indicatorDownloads = options.indicatorDownloads;
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
+  this.precision = options.precision;
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
@@ -2499,6 +2561,7 @@ function sortData(rows, selectedUnit) {
         hasGeoData: this.hasGeoData,
         indicatorId: this.indicatorId,
         showMap: this.showMap,
+        precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
       });
     }
 
@@ -2544,11 +2607,12 @@ function sortData(rows, selectedUnit) {
       shortIndicatorId: this.shortIndicatorId,
       selectedUnit: this.selectedUnit,
       selectedSeries: this.selectedSeries,
-      graphLimits: this.graphLimits,
+      graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: this.graphAnnotations,
       chartTitle: this.chartTitle,
       indicatorDownloads: this.indicatorDownloads,
+      precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
     });
   };
 };
@@ -2567,12 +2631,14 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(indicatorId) {
+  this.initialise = function(indicatorId, precision, decimalSeparator) {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
       mapOptions: {"minZoom":3,"maxZoom":10,"tileURL":"https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg","attribution":"<a href=\"https://www.mapbox.com\">Mapbox</a>"},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":"5,5"}},
       mapLayers: [{"subfolder":"","label":"REF_AREA.REF_AREA","min_zoom":3,"max_zoom":10,"staticBorders":false}],
+      precision: precision,
+      decimalSeparator: decimalSeparator,
     });
   };
 };
@@ -2588,6 +2654,8 @@ var indicatorView = function (model, options) {
   this._tableColumnDefs = options.tableColumnDefs;
   this._mapView = undefined;
   this._legendElement = options.legendElement;
+  this._precision = undefined;
+  this._decimalSeparator = options.decimalSeparator;
 
   var chartHeight = screen.height < options.maxChartHeight ? screen.height : options.maxChartHeight;
 
@@ -2628,6 +2696,8 @@ var indicatorView = function (model, options) {
 
   this._model.onDataComplete.attach(function (sender, args) {
 
+    view_obj._precision = args.precision;
+
     if(view_obj._model.showData) {
 
       $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
@@ -2649,7 +2719,7 @@ var indicatorView = function (model, options) {
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.indicatorId);
+      view_obj._mapView.initialise(args.indicatorId, args.precision, view_obj._decimalSeparator);
     }
   });
 
@@ -2910,6 +2980,36 @@ var indicatorView = function (model, options) {
     });
   };
 
+  this.alterDataDisplay = function(value, info, context) {
+    // If value is empty, we will not alter it.
+    if (value == null) {
+      return value;
+    }
+    // Before passing to user-defined dataDisplayAlterations, let's
+    // do our best to ensure that it starts out as a number.
+    var altered = value;
+    if (typeof altered !== 'number') {
+      altered = Number(value);
+    }
+    // If that gave us a non-number, return original.
+    if (Number.isNaN(altered)) {
+      return value;
+    }
+    // Now go ahead with user-defined alterations.
+    opensdg.dataDisplayAlterations.forEach(function(callback) {
+      altered = callback(altered, info, context);
+    });
+    // Now apply our custom precision control if needed.
+    if (view_obj._precision || view_obj._precision === 0) {
+      altered = Number.parseFloat(altered).toFixed(view_obj._precision);
+    }
+    // Now apply our custom decimal separator if needed.
+    if (view_obj._decimalSeparator) {
+      altered = altered.toString().replace('.', view_obj._decimalSeparator);
+    }
+    return altered;
+  }
+
   this.updateChartTitle = function(chartTitle) {
     if (typeof chartTitle !== 'undefined') {
       $('.chart-title').text(chartTitle);
@@ -2981,6 +3081,9 @@ var indicatorView = function (model, options) {
             ticks: {
               suggestedMin: 0,
               fontColor: tickColor,
+              callback: function(value) {
+                return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
+              },
             },
             scaleLabel: {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
@@ -3008,6 +3111,13 @@ var indicatorView = function (model, options) {
         },
         title: {
           display: false
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItems, data) {
+              return tooltipItems.label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
+            },
+          },
         },
         plugins: {
           scaler: {}
@@ -3198,13 +3308,25 @@ var indicatorView = function (model, options) {
   };
 
   var initialiseDataTable = function(el, info) {
+    var nonYearColumns = [];
+    for (var i = 1; i < info.table.headings.length; i++) {
+      nonYearColumns.push(i);
+    }
     var datatables_options = options.datatables_options || {
       paging: false,
       bInfo: false,
       bAutoWidth: false,
       searching: false,
       responsive: false,
-      order: [[0, 'asc']]
+      order: [[0, 'asc']],
+      columnDefs: [
+        {
+          targets: nonYearColumns,
+          createdCell: function(td, cellData, rowData, row, col) {
+            $(td).text(view_obj.alterDataDisplay(cellData, rowData, 'table cell'));
+          },
+        },
+      ],
     }, table = $(el).find('table');
 
     datatables_options.aaSorting = [];
@@ -3932,8 +4054,8 @@ $(function() {
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
       div.innerHTML = L.Util.template(controlTpl, {
-        lowValue: opensdg.dataRounding(this.plugin.valueRange[0]),
-        highValue: opensdg.dataRounding(this.plugin.valueRange[1]),
+        lowValue: this.plugin.alterData(opensdg.dataRounding(this.plugin.valueRange[0])),
+        highValue: this.plugin.alterData(opensdg.dataRounding(this.plugin.valueRange[1])),
         legendSwatches: swatches,
       });
       return div;
@@ -3967,7 +4089,7 @@ $(function() {
           name: selection.feature.properties.name,
           valueStatus: valueStatus,
           percentage: percentage,
-          value: value,
+          value: plugin.alterData(opensdg.dataRounding(value)),
         });
       }).join('');
 
