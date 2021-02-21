@@ -1,7 +1,7 @@
 ---
-title: Frequently Asked Questions (FAQ)
+title: pages.faq_title
 permalink: /ru/faq/
 language: ru
 layout: page
 ---
-{{ page.t.pages.faq | markdownify }}
+pages.faq

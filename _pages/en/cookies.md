@@ -1,7 +1,7 @@
 ---
 layout: page
 language: en
-title: Cookies and privacy
+title: pages.cookies_title
 permalink: /en/about/cookies-and-privacy/
 ---
-{{ page.t.pages.cookies | markdownify }}
+pages.cookies
