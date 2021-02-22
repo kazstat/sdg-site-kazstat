@@ -9,8 +9,6 @@ breadcrumbs:
 country:
   name: Kazakhstan
   adjective: Kazakh
-create_config_forms:
-  layout: config-builder
 create_goals:
   layout: goal-by-target
   goals: []
@@ -20,7 +18,7 @@ create_pages:
   - filename: ''
     folder: /
     layout: frontpage
-    title: general.site_title
+    title: ''
   - filename: ''
     folder: /reporting-status
     layout: reportingstatus
@@ -67,7 +65,6 @@ frontpage_instructions: custom.frontpage_instructions
 frontpage_introduction_banner:
   title: custom.frontpage_intro_title
   description: custom.frontpage_intro_description
-  sidebar: custom.frontpage_intro_sidebar
 goal_image_base: 'https://open-sdg.github.io/sdg-translations/assets/img/goals'
 goal_image_extension: ''
 goals_page:
@@ -81,13 +78,26 @@ header:
 header_language_toggle: dropdown
 hide_empty_metadata: false
 indicator_config_form:
-  dropdowns: []
+  enabled: true
+  dropdowns:
+    - jsonschema: reporting_status
+      values:
+        - complete
+        - notstarted
+        - notapplicable
+      labels:
+        - Опубликован
+        - В процессе разработки
+        - Непригодный
   repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/indicator-config'
-  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]'
+  translation_link: >-
+    https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
 indicator_metadata_form:
+  enabled: true
   dropdowns: []
   repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/meta'
-  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]'
+  translation_link: >-
+    https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
   language: ru
   scopes:
     - global
@@ -170,8 +180,10 @@ search_index_extra_fields:
 series_toggle: true
 sharethis_property: ''
 site_config_form:
+  enabled: true
   dropdowns: []
   repository_link: 'https://github.com/kazstat/sdg-site-kazstat/tree/develop/_data'
-  translation_link: 'https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]'
+  translation_link: >-
+    https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
 validate_indicator_config: false
 validate_site_config: false

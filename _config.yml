@@ -1,7 +1,9 @@
 # Jekyll configuration for Open SDG platform
 
+frontpage_sidebar: custom.frontpage_intro_sidebar
+
 remote_theme: brockfanning/open-sdg@kazakhstan-feature-set
-title: Indicators For The Sustainable Development Goals
+title: general.site_title
 baseurl: "/sdg-site-kazstat"
 url: ""
 
