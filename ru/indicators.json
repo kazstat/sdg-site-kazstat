@@ -1622,6 +1622,14 @@
           "status": "notstarted"
         },
         {
+          "id": "13-2-2",
+          "title": "global_indicators.13-2-2-title",
+          "description": "national_indicator_description.13-2-2",
+          "keywords": "",
+          "href": "/sdg-site-kazstat/ru/13-2-2",
+          "status": "notstarted"
+        },
+        {
           "id": "13-3-1",
           "title": "Число стран, включивших вопросы смягчения остроты и ослабления последствий изменения климата, адаптации к ним и раннего предупреждения в учебные программы начальной и средней школы и высших учебных заведений",
           "description": "",

@@ -1622,6 +1622,14 @@
           "status": "notstarted"
         },
         {
+          "id": "13-2-2",
+          "title": "global_indicators.13-2-2-title",
+          "description": "national_indicator_description.13-2-2",
+          "keywords": "",
+          "href": "/sdg-site-kazstat/13-2-2",
+          "status": "notstarted"
+        },
+        {
           "id": "13-3-1",
           "title": "Климат өзгерісінің қауіптілігін жеңілдету және салдарларын әлсірету, оларға бейімделу және ерте ескерту мәселелерін бастауыш және орта мектеп және жоғары оқу орындарының оқу бағдарламасына енгізген елдер саны",
           "description": "",
