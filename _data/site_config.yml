@@ -102,6 +102,7 @@ indicator_metadata_form:
   scopes:
     - global
     - national
+    - source_1
   exclude_fields:
     - national_metadata_update_url
     - national_metadata_update_url_text
