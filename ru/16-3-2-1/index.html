@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210409171802">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210409183144">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -153,7 +153,7 @@ var translations = {
 <!-- <div class="container"> -->
 
 
-<script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","high_contrast":"высокий контраст","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир"};</script>
+<script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","high_contrast":"высокий контраст","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир","toggle_menu":"Переключайте меню. Нажмите, чтобы развернуть или свернуть меню.","toggle_search":"Поисковая переключатель. Нажмите, чтобы развернуть или свернуть панель поиска."};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
@@ -200,7 +200,7 @@ var translations = {
     <nav class="navbar navbar-default" id="main-nav">
       <ul class="top-level">
     <li id="menuToggle"
-        aria-label=""
+        aria-label="Переключайте меню. Нажмите, чтобы развернуть или свернуть меню."
         aria-haspopup="true">
         <button data-target="menu-mobile" aria-expanded="false">Меню</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
@@ -241,7 +241,7 @@ var translations = {
 
     </li>
     <li id="searchToggle"
-        aria-label=""
+        aria-label="Поисковая переключатель. Нажмите, чтобы развернуть или свернуть панель поиска."
         aria-haspopup="true">
         <button data-target="search-mobile" aria-expanded="false">Поиск</button>
         <div id="search-mobile" class="menu-target">
@@ -317,7 +317,7 @@ var translations = {
       >
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %><h6><% } else { %><h5><% } %>
           <span aria-hidden="true"><%=translations.t(fieldItem.label)%><i class="fa fa-chevron-down"></i></span>
-          <span class="sr-only"> <%=translations.t(fieldItem.label)%></span>
+          <span class="sr-only">Показать подкатегории: <%=translations.t(fieldItem.label)%></span>
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %></h6><% } else { %></h5><% } %>
       </button>
       <div class="bar">
@@ -376,7 +376,7 @@ var translations = {
   <% } %>
 </script>
 
-<script>translations['indicator'] = {"chart":"График","clear_all":"Очистить всё","clear_selections":"Очистить выделенное","data_not_available":"Эти данные не доступны. Пожалуйста, выберите альтернативные данные для отображения.","dataset_size_warning":"В таблице слишком много данных, чтобы показать в графике. Чтобы увидеть все, удалите выделенное.","download_chart":"Скачать график CSV","download_chart_image":"Загрузить изображение диаграммы","download_chart_image_title":"Скачать диаграмму как изображение","download_csv":"Скачать CSV","download_csv_title":"Скачать в формате CSV","download_geojson":"Скачать GeoJSON","download_geojson_title":"Скачать в формате GeoJSON","download_headline":"Скачать заголовки CSV","download_headline_title":"Скачать данные заголовков в формате CSV","download_source":"Скачать исходные CSV","download_source_sdmx":"Скачать исходные SDMX","download_source_sdmx_title":"Скачать исходные данные в формате SDMX","download_source_title":"Скачать исходные данные в формате CSV","download_table":"Скачать табличные CSV","edit":"Редактировать","edit_configuration":"Редактировать Конфигурация","edit_data":"Редактировать данные","edit_metadata":"Редактировать метаданные","footnote":"Сноска","geographical_area":"Географический район","global_metadata":"Глобальные метаданные","global_metadata_blurb":"В этой таблице представлена информация для метаданных показателей ЦУР, определенных Статистической комиссией ООН. Полные глобальные метаданные представлены Статистическим отделом ООН.","legend_help":"Нажмите на легенду, чтобы убрать линии из графика.","loading":"Загрузка","loading_map":"Загрузка карты","map":"Карта","national_metadata":"Национальные метаданные","national_metadata_blurb":"В этой таблице представлены метаданные для фактического показателя, доступного из статистики ближайшей к соответствующему глобальному индикатору ЦУР. Обратите внимание, что даже если глобальный индикатор ЦУР полностью доступен из статистики, по этой таблице следует проконсультироваться для получения информации о национальной методологии и других специфичных метаданных.","no_data_hint":"Нет имеющихся вариантов из-за фильтров наверху.","select_all":"Выделить всё","series":"Серии","series_help":"Выберите категории из выпадающего меню внизу, чтобы увидеть разные разбивки данных. Несколько не будет доступно, пока более высокий уровень не выбран. ","source":"Источник","sources":"Источники","sub_categories":"Субкатегории","table":"Таблица","unit_of_measurement":"Единица измерения","units_type":"Вид единиц","variable_hint":"Доступно, когда выбрано","view_indicator_list":"Посмотреть список индикаторов этой цели"};</script>
+<script>translations['indicator'] = {"annotation_2030_target":"2030 год Цель","announce_data_added":"Обновлены диаграмма и таблица для включения данных.","announce_data_not_available":"Диаграмма и таблица не содержат данных.","announce_data_removed":"Обновлены диаграмма и таблица для исключения данных.","chart":"График","chart_annotation":"Диаграмма аннотация","clear_all":"Очистить всё","clear_selections":"Очистить выделенное","data_keyboard_navigation":"Нажмите клавишу Enter для просмотра точек данных с помощью клавиш со стрелками вправо и влево.","data_not_available":"Эти данные не доступны. Пожалуйста, выберите альтернативные данные для отображения.","data_tabular_alternative":"Альтернативный вариант табличных данных см. в таблице табличных данных.","dataset_size_warning":"В таблице слишком много данных, чтобы показать в графике. Чтобы увидеть все, удалите выделенное.","download_chart":"Скачать график CSV","download_chart_image":"Загрузить изображение диаграммы","download_chart_image_title":"Скачать диаграмму как изображение","download_csv":"Скачать CSV","download_csv_title":"Скачать в формате CSV","download_geojson":"Скачать GeoJSON","download_geojson_title":"Скачать в формате GeoJSON","download_headline":"Скачать заголовки CSV","download_headline_title":"Скачать данные заголовков в формате CSV","download_source":"Скачать исходные CSV","download_source_sdmx":"Скачать исходные SDMX","download_source_sdmx_title":"Скачать исходные данные в формате SDMX","download_source_title":"Скачать исходные данные в формате CSV","download_table":"Скачать табличные CSV","edit":"Редактировать","edit_configuration":"Редактировать Конфигурация","edit_data":"Редактировать данные","edit_metadata":"Редактировать метаданные","footnote":"Сноска","geographical_area":"Географический район","global_metadata":"Глобальные метаданные","global_metadata_blurb":"В этой таблице представлена информация для метаданных показателей ЦУР, определенных Статистической комиссией ООН. Полные глобальные метаданные представлены Статистическим отделом ООН.","legend_help":"Нажмите на легенду, чтобы убрать линии из графика.","loading":"Загрузка","loading_map":"Загрузка карты","map":"Карта","map_search":"Поиск","map_search_hide":"Скрыть поиск","map_search_show":"Показать поиск","map_year_slider":"Годовой слайдер","national_metadata":"Национальные метаданные","national_metadata_blurb":"В этой таблице представлены метаданные для фактического показателя, доступного из статистики ближайшей к соответствующему глобальному индикатору ЦУР. Обратите внимание, что даже если глобальный индикатор ЦУР полностью доступен из статистики, по этой таблице следует проконсультироваться для получения информации о национальной методологии и других специфичных метаданных.","next":"Следующий индикатор","no_data_hint":"Нет имеющихся вариантов из-за фильтров наверху.","plot_legend_description":"Легенда сюжета: список линий, включенных в график","previous":"Предыдущий показатель","select_all":"Выделить всё","series":"Серии","series_help":"Выберите категории из выпадающего меню внизу, чтобы увидеть разные разбивки данных. Несколько не будет доступно, пока более высокий уровень не выбран. ","source":"Источник","sources":"Источники","status":"Состояние индикатора","sub_categories":"Субкатегории","sub_categories_show":"Показать подкатегории:","table":"Таблица","table_column_sort":"Нажмите, чтобы отсортировать по этой колонке","tags":"Теги","unit":"Единица","unit_of_measurement":"Единица измерения","units_type":"Вид единиц","variable_hint":"Доступно, когда выбрано","view_indicator_list":"Посмотреть список индикаторов этой цели"};</script>
 
 <script>translations['data'] = null;</script>
 
@@ -617,7 +617,7 @@ var translations = {
   <div class="async-loaded spacer medium" style="display:none;">
 
     <div style="display: none;">
-  <span id="table-alternative"></span>
+  <span id="table-alternative">Альтернативный вариант табличных данных см. в таблице табличных данных.</span>
 </div>
 <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
   <li role="presentation" class="nav-item active">
@@ -640,7 +640,7 @@ data-event-label="Change to Table tab"
     
 
     <div id="dataset-size-warning" style="display:none" role="alert">
-      <i class="fa fa-bolt"><span class="sr-only"></span></i>
+      <i class="fa fa-bolt"><span class="sr-only">Предупреждение:</span></i>
       В таблице слишком много данных, чтобы показать в графике. Чтобы увидеть все, удалите выделенное.
     </div>
 
@@ -662,7 +662,7 @@ data-event-label="Change to Table tab"
 <script>
 // Add a chart alteration to support the chart_graph_limits metadata field.
 opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphLimits) {
+  if (info.graphLimits && info.graphLimits.length > 0) {
     var overrides = {
       options: {
         scales: {
@@ -737,18 +737,8 @@ opensdg.annotationPresets = {
 // Add a chart alteration to support the chart_annotations metadata field.
 opensdg.chartConfigAlter(function(config, info) {
     if (info.graphAnnotations && info.graphAnnotations.length > 0) {
-        var annotations = info.graphAnnotations.filter(function(annotation) {
-            var match = true;
-            if (match && info.selectedUnit) {
-                match = (info.selectedUnit === annotation.unit);
-            }
-            if (match && info.selectedSeries) {
-                match = (info.selectedSeries === annotation.series);
-            }
-            return match;
-        });
         // Apply some helpers/fixes to the annotations.
-        annotations = annotations.map(function(annotation) {
+        var annotations = info.graphAnnotations.map(function(annotation) {
             // Apply the "common" preset.
             if (opensdg.annotationPresets.common) {
                 annotation = $.extend(true, {}, opensdg.annotationPresets.common, annotation);
@@ -841,6 +831,9 @@ opensdg.chartConfigAlter(function(config, info) {
             }
         }
     }
+    else if (config.options && config.options.annotation) {
+        delete config.options.annotation;
+    }
 });
 </script>
 
@@ -869,7 +862,8 @@ opensdg.chartConfigAlter(function(config, info) {
                     ctx.moveTo(x, topY);
                     ctx.lineTo(x, bottomY);
                     ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#07C';
+                    ctx.strokeStyle = '#757575';
+                    ctx.setLineDash([5, 2]);
                     ctx.stroke();
                     ctx.restore();
                 }
@@ -919,7 +913,7 @@ opensdg.chartConfigAlter(function(config, info) {
   </div>
   <div role="tabpanel" class="tab-pane" id="tableview">
     <div style="display: none;">
-      <span id="column-sort-info"></span>
+      <span id="column-sort-info">Нажмите, чтобы отсортировать по этой колонке</span>
     </div>
     <div id="selectionsTable"></div>
 
@@ -1353,7 +1347,7 @@ data-event-label="Change to Sources tab"
 
 
 
-  <div class="row no-gutters">
+  <div class="row">
   
     
     
@@ -1535,7 +1529,7 @@ data-event-label="Change to Sources tab"
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -1549,12 +1543,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Поиск';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210409171802'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210409183144'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210409171802"></script><script>
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210409183144"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

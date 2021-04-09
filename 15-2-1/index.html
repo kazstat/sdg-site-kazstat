@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210409171802">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20210409183144">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -153,7 +153,7 @@ var translations = {
 <!-- <div class="container"> -->
 
 
-<script>translations['header'] = {"alpha":"Альфа","default_contrast":"әдепкі контраст","disable_high_contrast":"Жоғары контрастты ажыратыңыз","disclaimer":"Бұл сайт әзірленуде. Біз сіздердің пікірлеріңізге қуаныштымыз","enable_high_contrast":"Жоғары контрастты қосыңыз","high_contrast":"жоғары контраст","skip_link":"Басты мазмұнына өту","tag_line":"Біздің өмірді көркейту үшін 17 мақсат"};</script>
+<script>translations['header'] = {"alpha":"Альфа","default_contrast":"әдепкі контраст","disable_high_contrast":"Жоғары контрастты ажыратыңыз","disclaimer":"Бұл сайт әзірленуде. Біз сіздердің пікірлеріңізге қуаныштымыз","enable_high_contrast":"Жоғары контрастты қосыңыз","high_contrast":"жоғары контраст","skip_link":"Басты мазмұнына өту","tag_line":"Біздің өмірді көркейту үшін 17 мақсат","toggle_menu":"Мәзірді ауыстырып қосу. Мәзірді кеңейту немесе тасалау үшін басыңыз.","toggle_search":"Іздеу қосқышы. Іздеу жолағын кеңейту немесе тасалау үшін басыңыз."};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Басты мазмұнына өту</a>
 <div id="disclaimer">
@@ -200,7 +200,7 @@ var translations = {
     <nav class="navbar navbar-default" id="main-nav">
       <ul class="top-level">
     <li id="menuToggle"
-        aria-label=""
+        aria-label="Мәзірді ауыстырып қосу. Мәзірді кеңейту немесе тасалау үшін басыңыз."
         aria-haspopup="true">
         <button data-target="menu-mobile" aria-expanded="false">Меню</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
@@ -241,7 +241,7 @@ var translations = {
 
     </li>
     <li id="searchToggle"
-        aria-label=""
+        aria-label="Іздеу қосқышы. Іздеу жолағын кеңейту немесе тасалау үшін басыңыз."
         aria-haspopup="true">
         <button data-target="search-mobile" aria-expanded="false">Іздеу</button>
         <div id="search-mobile" class="menu-target">
@@ -317,7 +317,7 @@ var translations = {
       >
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %><h6><% } else { %><h5><% } %>
           <span aria-hidden="true"><%=translations.t(fieldItem.label)%><i class="fa fa-chevron-down"></i></span>
-          <span class="sr-only"> <%=translations.t(fieldItem.label)%></span>
+          <span class="sr-only">Ішкі санаттарды көрсету: <%=translations.t(fieldItem.label)%></span>
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %></h6><% } else { %></h5><% } %>
       </button>
       <div class="bar">
@@ -376,7 +376,7 @@ var translations = {
   <% } %>
 </script>
 
-<script>translations['indicator'] = {"chart":"График","clear_all":"Барлығын тазарту","clear_selections":"Белгіленгенді тазарту","data_not_available":"Бұл деректер қолжетімсіз. Көрсету үшін балама деректерді таңдаңыз","dataset_size_warning":"Графикте көрсету үшін, кестеде тым көп деректер. Барлығын көру ушін белгіленгенді жойыңыздар","download_chart":"CSV графигін жүктеу","download_chart_image":"Диаграмма суретін жүктеу","download_chart_image_title":"Диаграмманы сурет ретінде жүктеңіз","download_csv":"CSV жүктеу","download_csv_title":"CSV нысанында жүктеу","download_geojson":"GeoJSON жүктеу","download_geojson_title":"GeoJSON нысанында жүктеу","download_headline":"CSV тақырыптарын жүктеу","download_headline_title":"CSV тақырыптарының деректерін жүктеу","download_source":"Бастапқы CSV жүктеу","download_source_sdmx":"Бастапқы SDMX жүктеу","download_source_sdmx_title":"Бастапқы деректерді SDMX нысанында жүктеу","download_source_title":"Бастапқы деректерді CSV нысанында жүктеу","download_table":"Кестелік CSV жүктеу","edit":"Редакциялау","edit_configuration":"Конфигурацияны өңдеу","edit_data":"Деректерді редакциялау","edit_metadata":"Метадеректерді редакциялау","footnote":"Ескерту","geographical_area":"Географиялық аудан","global_metadata":"Жаһандық метадеректер","global_metadata_blurb":"Бұл кестеде БҰҰ Статистикалық комиссиясымен белгіленген ТДМ көрсеткіштерінің метадеректері үшін ақпарат ұсынылған. Толық жаһандық метадеректер БҰҰ Статистикалық бөлімімен ұсынылған.","legend_help":"Графиктен жолдарды алып тастау үшін легендаға басыңыз","loading":"Жүктелуде","loading_map":"Картаны жүктеу","map":"Карта","national_metadata":"Ұлттық метадеректер","national_metadata_blurb":"Бұл кестеде статистикада бар, ТДМ-ң тиісті жаһандық көрсеткішіне ен жақын, нақты көрсеткіш үшін метадеректер ұсынылған. Жаһандық көрсеткіш толығымен қолжетімді болған жағдайда бұл кесте бойынша ұлттық әдіснама және спецификалық метадеректер туралы ақпаратты алу үшін консультация жүргізу керек екеніне көңіл бөлу керек","no_data_hint":"Жоғарыда фильтрлар бар болғандықтан нұсқалар жоқ","select_all":"Барлығын белгілеу","series":"Қатар","series_help":"Деректерді түрлі бөліністерді көру үшін , төмендегі түсетін менюдан категорияларды таңдаңыз. Бірнешесі қолжетімді болмайды, одан жоғары деңгейді таңдамағанша","source":"Көз","sources":"Көздер","sub_categories":"Субкатегориялар","table":"Кесте","unit_of_measurement":"Өлшем бірлігі","units_type":"Бірліктер түрі","variable_hint":"Таңдаған кезде қолжетімді","view_indicator_list":"Осы мақсаттың көрсеткіштерінің тізімін көру"};</script>
+<script>translations['indicator'] = {"annotation_2030_target":"2030 мақсат","announce_data_added":"Диаграмма мен кесте деректерді қосу үшін жаңартылды.","announce_data_not_available":"Диаграмма мен кестеде деректер жоқ.","announce_data_removed":"Диаграмма мен кесте деректерді болдырмау үшін жаңартылды.","chart":"График","chart_annotation":"Диаграмма аннотациясы","clear_all":"Барлығын тазарту","clear_selections":"Белгіленгенді тазарту","data_keyboard_navigation":"Мәліметтер нүктелерін сол және оң жақ көрсеткі пернелерімен шолу үшін enter пернесін басыңыз.","data_not_available":"Бұл деректер қолжетімсіз. Көрсету үшін балама деректерді таңдаңыз","data_tabular_alternative":"Кестелік мәліметтердің балама нұсқасын Кесте қойындысынан қараңыз.","dataset_size_warning":"Графикте көрсету үшін, кестеде тым көп деректер. Барлығын көру ушін белгіленгенді жойыңыздар","download_chart":"CSV графигін жүктеу","download_chart_image":"Диаграмма суретін жүктеу","download_chart_image_title":"Диаграмманы сурет ретінде жүктеңіз","download_csv":"CSV жүктеу","download_csv_title":"CSV нысанында жүктеу","download_geojson":"GeoJSON жүктеу","download_geojson_title":"GeoJSON нысанында жүктеу","download_headline":"CSV тақырыптарын жүктеу","download_headline_title":"CSV тақырыптарының деректерін жүктеу","download_source":"Бастапқы CSV жүктеу","download_source_sdmx":"Бастапқы SDMX жүктеу","download_source_sdmx_title":"Бастапқы деректерді SDMX нысанында жүктеу","download_source_title":"Бастапқы деректерді CSV нысанында жүктеу","download_table":"Кестелік CSV жүктеу","edit":"Редакциялау","edit_configuration":"Конфигурацияны өңдеу","edit_data":"Деректерді редакциялау","edit_metadata":"Метадеректерді редакциялау","footnote":"Ескерту","geographical_area":"Географиялық аудан","global_metadata":"Жаһандық метадеректер","global_metadata_blurb":"Бұл кестеде БҰҰ Статистикалық комиссиясымен белгіленген ТДМ көрсеткіштерінің метадеректері үшін ақпарат ұсынылған. Толық жаһандық метадеректер БҰҰ Статистикалық бөлімімен ұсынылған.","legend_help":"Графиктен жолдарды алып тастау үшін легендаға басыңыз","loading":"Жүктелуде","loading_map":"Картаны жүктеу","map":"Карта","map_search":"Izdeý","map_search_hide":"Іздеуді жасыру","map_search_show":"Іздеуді көрсету","map_year_slider":"Жылжымалы жүгірткі","national_metadata":"Ұлттық метадеректер","national_metadata_blurb":"Бұл кестеде статистикада бар, ТДМ-ң тиісті жаһандық көрсеткішіне ен жақын, нақты көрсеткіш үшін метадеректер ұсынылған. Жаһандық көрсеткіш толығымен қолжетімді болған жағдайда бұл кесте бойынша ұлттық әдіснама және спецификалық метадеректер туралы ақпаратты алу үшін консультация жүргізу керек екеніне көңіл бөлу керек","next":"Келесі көрсеткіш","no_data_hint":"Жоғарыда фильтрлар бар болғандықтан нұсқалар жоқ","plot_legend_description":"Сюжет аңызы: диаграммаға енгізілген жолдар тізімі","previous":"Алдыңғы индикатор","select_all":"Барлығын белгілеу","series":"Қатар","series_help":"Деректерді түрлі бөліністерді көру үшін , төмендегі түсетін менюдан категорияларды таңдаңыз. Бірнешесі қолжетімді болмайды, одан жоғары деңгейді таңдамағанша","source":"Көз","sources":"Көздер","status":"Көрсеткіш күйі","sub_categories":"Субкатегориялар","sub_categories_show":"Ішкі санаттарды көрсету:","table":"Кесте","table_column_sort":"Осы баған бойынша сұрыптау үшін басыңыз","tags":"Тегтер","unit":"Бірлік","unit_of_measurement":"Өлшем бірлігі","units_type":"Бірліктер түрі","variable_hint":"Таңдаған кезде қолжетімді","view_indicator_list":"Осы мақсаттың көрсеткіштерінің тізімін көру"};</script>
 
 <script>translations['data'] = null;</script>
 
@@ -1531,7 +1531,7 @@ var translations = {
   <div class="async-loaded spacer medium" style="display:none;">
 
     <div style="display: none;">
-  <span id="table-alternative"></span>
+  <span id="table-alternative">Кестелік мәліметтердің балама нұсқасын Кесте қойындысынан қараңыз.</span>
 </div>
 <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
   <li role="presentation" class="nav-item active">
@@ -1560,7 +1560,7 @@ data-event-label="Change to Map tab"
     
 
     <div id="dataset-size-warning" style="display:none" role="alert">
-      <i class="fa fa-bolt"><span class="sr-only"></span></i>
+      <i class="fa fa-bolt"><span class="sr-only">Ескерту:</span></i>
       Графикте көрсету үшін, кестеде тым көп деректер. Барлығын көру ушін белгіленгенді жойыңыздар
     </div>
 
@@ -1582,7 +1582,7 @@ data-event-label="Change to Map tab"
 <script>
 // Add a chart alteration to support the chart_graph_limits metadata field.
 opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphLimits) {
+  if (info.graphLimits && info.graphLimits.length > 0) {
     var overrides = {
       options: {
         scales: {
@@ -1657,18 +1657,8 @@ opensdg.annotationPresets = {
 // Add a chart alteration to support the chart_annotations metadata field.
 opensdg.chartConfigAlter(function(config, info) {
     if (info.graphAnnotations && info.graphAnnotations.length > 0) {
-        var annotations = info.graphAnnotations.filter(function(annotation) {
-            var match = true;
-            if (match && info.selectedUnit) {
-                match = (info.selectedUnit === annotation.unit);
-            }
-            if (match && info.selectedSeries) {
-                match = (info.selectedSeries === annotation.series);
-            }
-            return match;
-        });
         // Apply some helpers/fixes to the annotations.
-        annotations = annotations.map(function(annotation) {
+        var annotations = info.graphAnnotations.map(function(annotation) {
             // Apply the "common" preset.
             if (opensdg.annotationPresets.common) {
                 annotation = $.extend(true, {}, opensdg.annotationPresets.common, annotation);
@@ -1761,6 +1751,9 @@ opensdg.chartConfigAlter(function(config, info) {
             }
         }
     }
+    else if (config.options && config.options.annotation) {
+        delete config.options.annotation;
+    }
 });
 </script>
 
@@ -1789,7 +1782,8 @@ opensdg.chartConfigAlter(function(config, info) {
                     ctx.moveTo(x, topY);
                     ctx.lineTo(x, bottomY);
                     ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#07C';
+                    ctx.strokeStyle = '#757575';
+                    ctx.setLineDash([5, 2]);
                     ctx.stroke();
                     ctx.restore();
                 }
@@ -1842,7 +1836,7 @@ opensdg.chartConfigAlter(function(config, info) {
   </div>
   <div role="tabpanel" class="tab-pane" id="tableview">
     <div style="display: none;">
-      <span id="column-sort-info"></span>
+      <span id="column-sort-info">Осы баған бойынша сұрыптау үшін басыңыз</span>
     </div>
     <div id="selectionsTable"></div>
 
@@ -2323,7 +2317,7 @@ data-event-label="Change to Sources tab"
 
 
 
-  <div class="row no-gutters">
+  <div class="row">
   
     
     
@@ -2505,7 +2499,7 @@ data-event-label="Change to Sources tab"
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -2528,12 +2522,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Іздеу';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210409171802'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20210409183144'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210409171802"></script><script>
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20210409183144"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
