@@ -1,7 +1,11 @@
 // Customize the data rounding function.
 opensdg.dataRounding = function(value) {
-  return value;
-  //return Math.round(value * 100) / 100;
+ if (value == null) {
+    return value
+  }
+  else {
+    return Number(value.toPrecision(2))
+  }
 };
 
 opensdg.chartConfigAlter(function(config, info) {
