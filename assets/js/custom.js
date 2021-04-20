@@ -4,7 +4,7 @@ opensdg.dataRounding = function(value) {
     return value
   }
   else {
-    return Number(value.toPrecision(5))
+    return Number(value.toPrecision(3))
   }
 };
 
