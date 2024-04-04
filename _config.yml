@@ -2,7 +2,7 @@
 
 frontpage_sidebar: custom.frontpage_intro_sidebar
 
-remote_theme: brockfanning/open-sdg@kazakhstan-feature-set
+remote_theme: open-sdg/open-sdg@2.0.0
 title: general.site_title
 baseurl: "/sdg-site-kazstat"
 url: ""
