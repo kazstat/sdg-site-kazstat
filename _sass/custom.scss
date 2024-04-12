@@ -37,7 +37,8 @@ body.layout-frontpage {
       }
     }
 
-    .homepage-goal-grid {
+    .frontpage-goals-grid {
+      border-top: none;
       position: relative;
       padding: 70px;
       &::before {
@@ -64,7 +65,7 @@ body.layout-frontpage {
     background: black;
 
     @media only screen and (min-width: 768px) {
-      .homepage-goal-grid::before {
+      .frontpage-goals-grid::before {
         background:
           url(../img/high-contrast/frame-upper-left.png) left 0px top 0px no-repeat,
           url(../img/high-contrast/frame-upper-right.png) right 0px top 0px no-repeat,
