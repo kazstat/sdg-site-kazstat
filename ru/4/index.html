@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -26,8 +26,9 @@ var opensdg = {
   },
 
   // A hook which can be replaced to alter whether/how the values that are
-  // displayed on indicator tables/graphs get rounded.
-  dataRounding: function(value) {
+  // displayed on indicator tables/graphs get rounded. A "context" parameter
+  // is also passed which contains additional information.
+  dataRounding: function(value, context) {
     // Alterations go here.
     return value;
   },
@@ -38,12 +39,25 @@ var opensdg = {
     this.dataDisplayAlterations.push(callback);
   },
 
-  language: 'ru',
-};
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
 
-// For backwards compatibility, some of these might need to be global.
-// @TODO: Remove these eventually.
-var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
+  language: 'ru',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
+};
 
 </script>
 
@@ -103,109 +117,112 @@ var translations = {
         ================================================== -->
 
         
+    
     <title>Цель 4 - Качественное образование - Показатели Целей устойчивого развития</title>
+    
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
-        
-        <link rel="canonical" href="/">
-
         
 
         <!--[if IE 9]>
         <script src="/sdg-site-kazstat/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        <!-- Favicons ================================================== -->
-        <!-- 128x128 -->
-        <link rel="shortcut icon" type="image/ico" href="/sdg-site-kazstat/assets/img/favicons/favicon.ico">
-        <link rel="icon" type="image/png" href="/sdg-site-kazstat/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
-        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
-        -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/sdg-site-kazstat/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/sdg-site-kazstat/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/sdg-site-kazstat/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/sdg-site-kazstat/assets/img/favicons/favicon.ico" />
 
         
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20231215014512">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20240416145452">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
+
+        
+
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/ie.css">
+        <![endif]-->
+
+        
 
     </head>
-<body class="language-ru layout-goal-by-target">
+<body class="language-ru
+layout-goal
+">
 <!-- <div class="container"> -->
 
+<script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","hide_menu":"Скрыть навигационное меню","high_contrast":"высокий контраст","internet_explorer_message":"Мы обнаружили, что для посещения этого сайта вы используете Internet Explorer. В настоящее время компания Microsoft постепенно отказывается от использования Internet Explorer. В результате этот сайт больше не поддерживает ни одну из версий Internet Explorer. Некоторые функции на этом сайте не будут работать. Вам следует использовать современный браузер, такой как Edge, Chrome, Firefox или Safari. Если у вас возникли трудности с установкой или доступом к другому браузеру, обратитесь в службу ИТ-поддержки.","internet_explorer_message_title":"Этот интернет-браузер больше не поддерживается","logo_title":"Перейти на главную страницу","show_menu":"Показать навигационное меню","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир","toggle_menu":"Переключайте меню. Нажмите, чтобы развернуть или свернуть меню.","toggle_search":"Поисковая переключатель. Нажмите, чтобы развернуть или свернуть панель поиска."};</script>
 
-<script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","high_contrast":"высокий контраст","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир","toggle_menu":"Переключайте меню. Нажмите, чтобы развернуть или свернуть меню.","toggle_search":"Поисковая переключатель. Нажмите, чтобы развернуть или свернуть панель поиска."};</script>
-
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">Этот интернет-браузер больше не поддерживается</h2>
+    <p class="internet-explorer-message-body">Мы обнаружили, что для посещения этого сайта вы используете Internet Explorer. В настоящее время компания Microsoft постепенно отказывается от использования Internet Explorer. В результате этот сайт больше не поддерживает ни одну из версий Internet Explorer. Некоторые функции на этом сайте не будут работать. Вам следует использовать современный браузер, такой как Edge, Chrome, Firefox или Safari. Если у вас возникли трудности с установкой или доступом к другому браузеру, обратитесь в службу ИТ-поддержки.</p>
+</div>
 <div id="disclaimer">
-  <div class="container">
+    
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Альфа</strong>
     
     Это сайт находится в разработке. Мы рады вашим отзывам.
+    
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="header-default">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-site-kazstat/ru/" id="home">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/sdg-site-kazstat/ru/" id="home" aria-label="Перейти на главную страницу" title="Перейти на главную страницу">
     <img src="/sdg-site-kazstat/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
 </a>
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
-      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/sdg-site-kazstat/4/">
-              Қазақ
-            </a>
-          </li><li>
-            <a href="/sdg-site-kazstat/en/4/">
-              English
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Показать навигационное меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-kazstat/ru/reporting-status">Состояние отчётности</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-kazstat/ru/about">О нас</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-kazstat/ru/faq">Часто задаваемые вопросы</a>
+</li></ul>
+    
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/sdg-site-kazstat/ru/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Поиск</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Поиск">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Поиск по сайту" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
     </div>
+</form>
 
-    <nav class="navbar navbar-default" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label="Переключайте меню. Нажмите, чтобы развернуть или свернуть меню."
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Меню</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-site-kazstat/ru/reporting-status">Состояние отчётности</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-kazstat/ru/about">О нас</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-kazstat/ru/faq">Часто задаваемые вопросы</a>
-</li><li class="language-toggle-menu-header">
-    
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
@@ -213,16 +230,17 @@ var translations = {
 
   <div class="language-toggle-container">
   
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
-      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Pусский
+    </button>
     <ul class="dropdown-menu"><li>
-            <a href="/sdg-site-kazstat/4/">
+            <a class="dropdown-item" href="/sdg-site-kazstat/4/">
               Қазақ
             </a>
           </li><li>
-            <a href="/sdg-site-kazstat/en/4/">
+            <a class="dropdown-item" href="/sdg-site-kazstat/en/4/">
               English
             </a>
           </li></ul>
@@ -231,949 +249,1180 @@ var translations = {
 
 
 
-</li>
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label="Поисковая переключатель. Нажмите, чтобы развернуть или свернуть панель поиска."
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Поиск</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/sdg-site-kazstat/ru/search">
-    <label class="sr-only" for="indicator_search-mobile">Поиск</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Поиск" /><!--
-    --><button aria-label="Поиск" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <div id="search" class="menu-target">
-  <form action="/sdg-site-kazstat/ru/search">
-    <label class="sr-only" for="indicator_search">Поиск</label>
-    <input type="text" name="q" id="indicator_search" title="Поиск" /><!--
-    --><button aria-label="Поиск" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sdg-site-kazstat/ru/reporting-status">Состояние отчётности</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-kazstat/ru/about">О нас</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-kazstat/ru/faq">Часто задаваемые вопросы</a>
-</li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
-      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
-            <a href="/sdg-site-kazstat/4/">
-              Қазақ
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-kk list-inline-item">
+            <a class="language-toggle-link" href="/sdg-site-kazstat/4/">
+                Қазақ
             </a>
-          </li><li>
-            <a href="/sdg-site-kazstat/en/4/">
-              English
+        </li><li class="language-option-ru list-inline-item">
+            <span class="language-toggle-active-language">
+                Pусский
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/sdg-site-kazstat/en/4/">
+                English
             </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-</li>
-</ul>
-
-    </nav>
-  </div>
-
+        </li></ul>
+</div></span><a title="Включить высокую контрастность" aria-label="Включить высокую контрастность"
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
 
 
 
-
 <div class="container">
-  <ol class="breadcrumb">
-  
-  
-  
-</ol>
-
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/sdg-site-kazstat/ru/">Главная</a>
+        </li>
+        <li class="breadcrumb-item active">Цель 4</li>
+        
+    </ol>
+</nav>
   
 </div>
 
 <div class="heading goal-banner goal-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/4.png" alt="Качественное образование - Цель 4" id="goal-4" class="goal-icon-image goal-icon-image-" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Цель 4: </span>Обеспечение всеохватного и справедливого качественного образования и поощрение возможности обучения на протяжении всей жизни для всех
-        </h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/ru/4.png" alt="Качественное образование - Цель 4" id="goal-4" class="goal-icon-image goal-icon-image-" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 goal-details">
+                <h1>
+                    
+                        Обеспечение всеохватного и справедливого качественного образования и поощрение возможности обучения на протяжении всей жизни для всех
+                    
+                </h1>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
-<div id="main-content" class="container goal-indicators goal-4 goal-by-target" role="main">
+
+
+
+
+<div id="main-content" class="container" role="main">
 
   
 
 
 
-  <div class="visible-md-block visible-lg-block">
-    <div class="col-md-6">
-      <h2>Задачи</h2>
+  <div class="container g-0 ">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading">Цели и индикаторы</h2>
+      </div>
+      
     </div>
-    <div class="col-md-6">
-      <h2>Показатели</h2>
-    </div>
-  </div>
-
-  
-  
+    <hr class="goal-page-column-header-rule">
     
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.1
-      </span>
-      К 2030 году обеспечить, чтобы все девочки и мальчики завершали получение бесплатного, равноправного и качественного начального и среднего образования, позволяющего добиться востребованных и эффективных результатов обучения
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
       
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.1.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.1</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить, чтобы все девочки и мальчики завершали получение бесплатного, равноправного и качественного начального и среднего образования, позволяющего добиться востребованных и эффективных результатов обучения</span>
+          </div>
           
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-1-1/">Доля детей и молодежи, приходящаяся на a) учащихся 2/3 классов; b) выпускников начальной школы; и c) выпускников младшей средней школы, которые достигли по меньшей мере минимального уровня владения навыками i) чтения и ii) математики</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-1-1">
-          Доля детей и молодежи, приходящаяся на a) учащихся 2/3 классов; b) выпускников начальной школы; и c) выпускников младшей средней школы, которые достигли по меньшей мере минимального уровня владения навыками i) чтения и ii) математики
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.1.2
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.1.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-1-2/">Процент завершения (начальное образование, неполное и полное среднее образование)</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status notstarted">
-    В процессе разработки
+    <span class="status-inner">В процессе разработки</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-1-2">
-          Процент завершения (начальное образование, неполное и полное среднее образование)
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.2</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить всем девочкам и мальчикам доступ к качественным системам развития, ухода и дошкольного обучения детей младшего возраста, с тем чтобы они были готовы к получению начального образования</span>
+          </div>
+          
+      </div>
         
 
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.2
-      </span>
-      К 2030 году обеспечить всем девочкам и мальчикам доступ к качественным системам развития, ухода и дошкольного обучения детей младшего возраста, с тем чтобы они были готовы к получению начального образования
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.2.1
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.2.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-2-1/">Доля детей в возрасте до пяти лет, которые развиваются без отклонений в плане здоровья, обучения и психосоциального благополучия, в разбивке по полу</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-2-1">
-          Доля детей в возрасте до пяти лет, которые развиваются без отклонений в плане здоровья, обучения и психосоциального благополучия, в разбивке по полу
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.2.2
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.2.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-2-2/">Уровень участия в организованных видах обучения (за один год до достижения официального возраста поступления в школу) в разбивке по полу</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-2-2">
-          Уровень участия в организованных видах обучения (за один год до достижения официального возраста поступления в школу) в разбивке по полу
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.2.2.1
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.2.2.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-2-2-1/">Готовность к школе (процентная доля детей, посещающих первый класс начальной школы, которые в предыдущем году посещали дошкольное образовательное учреждение)</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-2-2-1">
-          Готовность к школе (процентная доля детей, посещающих первый класс начальной школы, которые в предыдущем году посещали дошкольное образовательное учреждение)
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
+        <hr class="goal-page-target-rule" />
     
-    </span>
-
-
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.3
-      </span>
-      К 2030 году обеспечить для всех женщин и мужчин равный доступ к недорогому и качественному профессионально-техническому и высшему образованию, в том числе университетскому образованию
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
       
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.3.1.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.3</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить для всех женщин и мужчин равный доступ к недорогому и качественному профессионально-техническому и высшему образованию, в том числе университетскому образованию</span>
+          </div>
           
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.3.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-3-1-1/">Охват молодежи типичного возраста (14-24) техническим и профессиональным образованием</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-3-1-1">
-          Охват молодежи типичного возраста (14-24) техническим и профессиональным образованием
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
+        <hr class="goal-page-target-rule" />
     
-    </span>
-
-
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.4
-      </span>
-      К 2030 году существенно увеличить число молодых и взрослых людей, обладающих востребованными навыками, в том числе профессионально-техническими навыками, для трудоустройства, получения достойной работы и занятий предпринимательской деятельностью
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
       
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.4.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.4</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году существенно увеличить число молодых и взрослых людей, обладающих востребованными навыками, в том числе профессионально-техническими навыками, для трудоустройства, получения достойной работы и занятий предпринимательской деятельностью</span>
+          </div>
           
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.4.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-4-1/">Доля молодежи/взрослых, обладающей/ обладающих навыками в области информационно-коммуникационных технологий, в разбивке по видам навыков</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-4-1">
-          Доля молодежи/взрослых, обладающей/ обладающих навыками в области информационно-коммуникационных технологий, в разбивке по видам навыков
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.4.1.1
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.4.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-4-1-1/">Уровень цифровой грамотности населения в возрасте 6-74 лет в разрезе областей</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-4-1-1">
-          Уровень цифровой грамотности населения в возрасте 6-74 лет в разрезе областей
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
+        <hr class="goal-page-target-rule" />
     
-    </span>
-
-
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.5
-      </span>
-      К 2030 году ликвидировать гендерное неравенство в сфере образования и обеспечить равный доступ к образованию и профессионально-технической подготовке всех уровней для уязвимых групп населения, в том числе инвалидов, представителей коренных народов и детей, находящихся в уязвимом положении
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
       
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.5.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.5</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году ликвидировать гендерное неравенство в сфере образования и обеспечить равный доступ к образованию и профессионально-технической подготовке всех уровней для уязвимых групп населения, в том числе инвалидов, представителей коренных народов и детей, находящихся в уязвимом положении</span>
+          </div>
           
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.5.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-5-1/">Индексы равенства (женщин и мужчин, городских и сельских жителей, нижней и верхней квинтили достатка и других групп, например инвалидов, коренных народов и людей, затронутых конфликтом, в зависимости от наличия данных) по всем касающимся образования показателям в настоящем перечне, которые могут быть дезагрегированы</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-5-1">
-          Индексы равенства (женщин и мужчин, городских и сельских жителей, нижней и верхней квинтили достатка и других групп, например инвалидов, коренных народов и людей, затронутых конфликтом, в зависимости от наличия данных) по всем касающимся образования показателям в настоящем перечне, которые могут быть дезагрегированы
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.5.1.1
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.5.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-5-1-1/">Доля дошкольных организаций, создавших условия для воспитания и обучения детей с особыми образовательными потребностями</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-5-1-1">
-          Доля дошкольных организаций, создавших условия для воспитания и обучения детей с особыми образовательными потребностями
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.5.1.2
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.5.1.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-5-1-2/">Доля школ, создавших условия для инклюзивного образования</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-5-1-2">
-          Доля школ, создавших условия для инклюзивного образования
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.5.1.3
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.5.1.3</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-5-1-3/">Доля организаций ТиПО, создавших равные условия и безбарьерный доступ для студентов с особыми образовательными потребностями</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-5-1-3">
-          Доля организаций ТиПО, создавших равные условия и безбарьерный доступ для студентов с особыми образовательными потребностями
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.5.1.4
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.5.1.4</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-5-1-4/">Доля организаций вузов, создавших равные условия и безбарьерный доступ для обучения студентов с особыми образовательными потребностями</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-5-1-4">
-          Доля организаций вузов, создавших равные условия и безбарьерный доступ для обучения студентов с особыми образовательными потребностями
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
+        <hr class="goal-page-target-rule" />
     
-    </span>
-
-
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.6
-      </span>
-      К 2030 году обеспечить, чтобы все молодые люди и значительная доля взрослого населения, как мужчин, так и женщин, умели читать, писать и считать
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
       
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.6.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.6</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить, чтобы все молодые люди и значительная доля взрослого населения, как мужчин, так и женщин, умели читать, писать и считать</span>
+          </div>
           
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.6.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-6-1/">Доля населения в данной возрастной группе, достигшая, по меньшей мере, установленного уровня функциональной a) грамотности и b) математической грамотности, в разбивке по полу.</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-6-1">
-          Доля населения в данной возрастной группе, достигшая, по меньшей мере, установленного уровня функциональной a) грамотности и b) математической грамотности, в разбивке по полу.
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
+        <hr class="goal-page-target-rule" />
     
-    </span>
-
-
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.a
-      </span>
-      Создавать и совершенствовать учебные заведения, учитывающие интересы детей, особые нужды инвалидов и гендерные аспекты, и обеспечить безопасную, свободную от насилия и социальных барьеров и эффективную среду обучения для всех
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
       
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.a.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.a</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Создавать и совершенствовать учебные заведения, учитывающие интересы детей, особые нужды инвалидов и гендерные аспекты, и обеспечить безопасную, свободную от насилия и социальных барьеров и эффективную среду обучения для всех</span>
+          </div>
           
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.a.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-a-1/">Доля школ, предлагающих основные услуги, в разбивке по типу уcлуг</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-a-1">
-          Доля школ, предлагающих основные услуги, в разбивке по типу уcлуг
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.a.1.1
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.a.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-a-1-1/">Доля модифицированных учебных кабинетов современным оборудованием в организациях среднего образования, от их обшего количества</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-a-1-1">
-          Доля модифицированных учебных кабинетов современным оборудованием в организациях среднего образования, от их обшего количества
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
 
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.a.1.2
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.a.1.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-a-1-2/">Доля 3-х сменных школ</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-a-1-2">
-          Доля 3-х сменных школ
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
 
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.a.1.3
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.a.1.3</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-a-1-3/">Доля аварийных школ</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-a-1-3">
-          Доля аварийных школ
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.b</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2020 году значительно увеличить во всем мире количество стипендий, предоставляемых развивающимся странам, особенно наименее развитым странам, малым островным развивающимся государствам и африканским странам, для получения высшего образования, включая профессионально-техническое образование и обучение по вопросам информационно-коммуникационных технологий, технические, инженерные и научные программы, в развитых странах и других развивающихся странах</span>
+          </div>
+          
+      </div>
         
 
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.b
-      </span>
-      К 2020 году значительно увеличить во всем мире количество стипендий, предоставляемых развивающимся странам, особенно наименее развитым странам, малым островным развивающимся государствам и африканским странам, для получения высшего образования, включая профессионально-техническое образование и обучение по вопросам информационно-коммуникационных технологий, технические, инженерные и научные программы, в развитых странах и других развивающихся странах
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.b.1
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.b.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-b-1/">Объем официальной помощи в целях развития, направляемой на выплату стипендий, в разбивке по отраслям и видам обучения</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-b-1">
-          Объем официальной помощи в целях развития, направляемой на выплату стипендий, в разбивке по отраслям и видам обучения
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
+        <hr class="goal-page-target-rule" />
     
-    </span>
-
-
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Задача</label>
-        4.c
-      </span>
-      К 2030 году значительно увеличить число квалифицированных учителей, в том числе посредством международного сотрудничества в подготовке учителей в развивающихся странах, особенно в наименее развитых странах и малых островных развивающихся государствах
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
       
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.c.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.c</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году значительно увеличить число квалифицированных учителей, в том числе посредством международного сотрудничества в подготовке учителей в развивающихся странах, особенно в наименее развитых странах и малых островных развивающихся государствах</span>
+          </div>
           
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.c.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-c-1/">Доля учителей в a) дошкольных учреждениях; b) начальной школе; c) младшей средней школе; и d) старшей средней школе, прошедших до начала или во время работы по меньшей мере минимальную организованную профессиональную учительскую подготовку (например, педагогическую) на соответствующем уровне в данной стране</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-c-1">
-          Доля учителей в a) дошкольных учреждениях; b) начальной школе; c) младшей средней школе; и d) старшей средней школе, прошедших до начала или во время работы по меньшей мере минимальную организованную профессиональную учительскую подготовку (например, педагогическую) на соответствующем уровне в данной стране
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
-    <span class="sr-only">Теги</span>
-    <span class="tags">
-    
-    </span>
 
-
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.c.1.1
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.c.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-c-1-1/">Доля педагогических работников организаций среднего образования, прошедших повышение квалификации по обновленному содержанию от их общего количества</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-c-1-1">
-          Доля педагогических работников организаций среднего образования, прошедших повышение квалификации по обновленному содержанию от их общего количества
-        </a>
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
         
 
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        <span class="indicator-card-number">
-          4.c.1.2
           
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.c.1.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/sdg-site-kazstat/ru/4-c-1-2/">Доля педагогов с квалификационным уровнем мастера-исследователя, педагог-эксперта и педагог-модератора от общего количества педагогов среднего образования</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
+        
+
 
 
 <span class="status complete">
-    Опубликован
+    <span class="status-inner">Опубликован</span>
 </span>
 
-        </span>
-        <a href="/sdg-site-kazstat/ru/4-c-1-2">
-          Доля педагогов с квалификационным уровнем мастера-исследователя, педагог-эксперта и педагог-модератора от общего количества педагогов среднего образования
-        </a>
-        
 
-      </div>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
-    </div>
-  
+  </div>
+  <a href="#top">Наверх</a>
 </div>
 
+
 <footer role="contentinfo">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Построен с использованием Open SDG</a></li>
-            
-              <li>
-                
-                  <a href="mailto:ai.dosanova@economy.gov.kz" target="_blank">Свяжитесь с нами</a>
-                
-                </li>
-              <li>
-                
-                  <a href="https://facebook.com/statgov.kz" target="_blank">Facebook</a>
-                
-                </li>
-              <li>
-                <a href="/sdg-site-kazstat/ru/about/cookies-and-privacy/">Cookies</a>
-                
-                </li>
-              
-            
-            
-            <li><a href="/sdg-site-kazstat/ru/config">Configuration</a></li>
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Построен с использованием Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            
+                            <a href="mailto:ai.dosanova@economy.gov.kz" target="_blank">Свяжитесь с нами</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/statgov.kz" target="_blank">Facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-site-kazstat/ru/about/cookies-and-privacy/">Cookies</a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/sdg-site-kazstat/ru/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
         </div>
-      </div>
+        
     </div>
-  </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
 <script>translations['general'] = translations['general'] || {};
     translations['general']['hide'] = 'скрывать';</script>
 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Поиск';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20231215014512'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20240416145452'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20231215014512"></script><script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              graphAnnotations: domData.graphannotations,
-              indicatorDownloads: domData.indicatordownloads,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: '',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20240416145452"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
-
-
 
 
 </body>
 </html>
-
