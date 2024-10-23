@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20241022203406">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20241023025601">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -314,7 +314,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Год&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;UNIT_MEASURE&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;-13.0&quot;,&quot;1433.0&quot;,&quot;122.0&quot;,&quot;9222.0&quot;,&quot;1673.0&quot;,&quot;41.0&quot;,&quot;94.0&quot;,&quot;335.0&quot;,&quot;285.0&quot;,&quot;1612.0&quot;,&quot;368.0&quot;,&quot;6.0&quot;,&quot;128.0&quot;,&quot;2601.0&quot;,&quot;705.0&quot;,&quot;4958.0&quot;,&quot;105.0&quot;,&quot;37.0&quot;,&quot;113.0&quot;,&quot;-22.0&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Регионы&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Год&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;KZAKM&quot;,&quot;KZAKT&quot;,&quot;KZALM&quot;,&quot;KZATY&quot;,&quot;KZZHA&quot;,&quot;KZKAR&quot;,&quot;KZKUS&quot;,&quot;KZKZY&quot;,&quot;KZMAN&quot;,&quot;KZPAV&quot;,&quot;KZSEV&quot;,&quot;YUZ&quot;,&quot;VOS&quot;,&quot;NS&quot;,&quot;ALA&quot;,&quot;SHY&quot;,&quot;ABY&quot;,&quot;ZHS&quot;,&quot;ULU&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;-13.0&quot;,&quot;1433.0&quot;,&quot;122.0&quot;,&quot;9222.0&quot;,&quot;1673.0&quot;,&quot;41.0&quot;,&quot;94.0&quot;,&quot;335.0&quot;,&quot;285.0&quot;,&quot;1612.0&quot;,&quot;368.0&quot;,&quot;6.0&quot;,&quot;128.0&quot;,&quot;2601.0&quot;,&quot;705.0&quot;,&quot;4958.0&quot;,&quot;105.0&quot;,&quot;37.0&quot;,&quot;113.0&quot;,&quot;-22.0&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Регионы&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -370,11 +370,7 @@ layout-indicator-iframe
         
         
         
-        <th scope="col">GeoCode</th>
-        
-        
-        
-        <th scope="col" class="table-value">UNIT_MEASURE</th>
+        <th scope="col" class="table-value">GeoCode</th>
         
         
       </thead>
@@ -388,10 +384,6 @@ layout-indicator-iframe
           
           
           <td>15.0</td>
-          
-          
-          
-          <td></td>
           
           
           
@@ -411,10 +403,6 @@ layout-indicator-iframe
           
           
           
-          <td></td>
-          
-          
-          
           <td class="table-value"></td>
           
           
@@ -428,10 +416,6 @@ layout-indicator-iframe
           
           
           <td>13.9</td>
-          
-          
-          
-          <td></td>
           
           
           
@@ -451,10 +435,6 @@ layout-indicator-iframe
           
           
           
-          <td></td>
-          
-          
-          
           <td class="table-value"></td>
           
           
@@ -468,10 +448,6 @@ layout-indicator-iframe
           
           
           <td>10.8</td>
-          
-          
-          
-          <td></td>
           
           
           
@@ -491,10 +467,6 @@ layout-indicator-iframe
           
           
           
-          <td></td>
-          
-          
-          
           <td class="table-value"></td>
           
           
@@ -508,10 +480,6 @@ layout-indicator-iframe
           
           
           <td>15.6</td>
-          
-          
-          
-          <td></td>
           
           
           
@@ -531,10 +499,6 @@ layout-indicator-iframe
           
           
           
-          <td></td>
-          
-          
-          
           <td class="table-value"></td>
           
           
@@ -551,10 +515,6 @@ layout-indicator-iframe
           
           
           
-          <td></td>
-          
-          
-          
           <td class="table-value"></td>
           
           
@@ -568,10 +528,6 @@ layout-indicator-iframe
           
           
           <td>13.5</td>
-          
-          
-          
-          <td></td>
           
           
           
@@ -591,10 +547,6 @@ layout-indicator-iframe
           
           
           
-          <td></td>
-          
-          
-          
           <td class="table-value"></td>
           
           
@@ -608,10 +560,6 @@ layout-indicator-iframe
           
           
           <td>12.1</td>
-          
-          
-          
-          <td></td>
           
           
           
@@ -631,10 +579,6 @@ layout-indicator-iframe
           
           
           
-          <td></td>
-          
-          
-          
           <td class="table-value"></td>
           
           
@@ -648,10 +592,6 @@ layout-indicator-iframe
           
           
           <td>9.0</td>
-          
-          
-          
-          <td></td>
           
           
           
@@ -1487,12 +1427,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Поиск';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20241022203406'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20241023025601'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20241022203406"></script><script>
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20241023025601"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
