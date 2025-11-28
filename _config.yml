@@ -35,3 +35,6 @@ exclude:
   - README.md
   - LICENSE
   - .sass-cache
+  - .idea/
+  - .vscode/
+  - node_modules/
