@@ -3,6 +3,12 @@ header {
     margin-bottom: 40px;
 }
 
+@media (max-width: 600px) {
+    header {
+        padding-bottom: 20px;
+    }
+}
+
 .navbar {
     padding-bottom: 0;
     position: relative;
@@ -71,11 +77,13 @@ header {
     border-radius: 8px;
 }
 
-.header-toggles {
-    position: absolute;
-    top: 30px;
-    right: 0;
-    width: auto;
+@media only screen and (min-width: 992px) {
+    .header-toggles {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: auto;
+    }
 }
 
 @media only screen and (min-width: 768px) {
