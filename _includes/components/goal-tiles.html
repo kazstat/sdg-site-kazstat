@@ -1,0 +1,15 @@
+<div class="goal-tiles">
+    <div class="card-block">
+        {% for goal in page.goals %}
+            <a href="{{ goal.url }}" class="card-item goal-{{ goal.number }}">
+                <div class="card-item--number">{{ goal.number }}</div>
+                <div class="card-item--title">{{ goal.short | escape }}</div>
+                <div class="card-item--icon">
+                    <img
+                            src="{{ '/assets/img/goals/icon-' | append: goal.number | append: '.svg' | relative_url }}"
+                            alt="{{ page.t.general.goal }} {{ goal.number }} - {{ goal.short | escape }}">
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
