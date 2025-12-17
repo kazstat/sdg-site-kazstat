@@ -5,7 +5,7 @@ frontpage_sidebar: custom.frontpage_intro_sidebar
 remote_theme: open-sdg/open-sdg@2.3.2
 title: general.site_title
 baseurl: "/sdg-site-kazstat"
-url: ""
+url: "https://sdgdata.stat.gov.kz"
 
 # Pages
 collections:
