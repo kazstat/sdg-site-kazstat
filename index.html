@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20251215120313">
+        <link rel="stylesheet" href="/sdg-site-kazstat/assets/css/style.css?v=20251217080921">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -148,7 +148,7 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/sdg-site-kazstat/assets/css/custom.css?v=20251217080921">
         
 
         
@@ -175,15 +175,6 @@ layout-frontpage
 </div>
 <div id="disclaimer">
     
-<div class="container">
-  <div class="disclaimer-alert">
-    <strong class="phase-tag">Альфа</strong>
-    
-    Бұл сайт әзірленуде. Біз сіздердің пікірлеріңізге қуаныштымыз
-    
-  </div>
-</div>
-
 </div>
 
 <header role="banner" class="">
@@ -328,109 +319,177 @@ data-event-label="high"
         
 
         <div class="goal-tiles">
-    <div class="row g-2">
+    <div class="card-block">
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/1/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/1.png" id="goal-1" alt="Мақсат 1 - Кедейлікті жою" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/1/" class="card-item goal-1">
+                <div class="card-item--number">1</div>
+                <div class="card-item--title">Кедейлікті жою</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-1.svg"
+                            alt="Мақсат 1 - Кедейлікті жою">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/2/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/2.png" id="goal-2" alt="Мақсат 2 - Аштықты жою" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/2/" class="card-item goal-2">
+                <div class="card-item--number">2</div>
+                <div class="card-item--title">Аштықты жою</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-2.svg"
+                            alt="Мақсат 2 - Аштықты жою">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/3/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/3.png" id="goal-3" alt="Мақсат 3 - Денсаулық пен амандық" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/3/" class="card-item goal-3">
+                <div class="card-item--number">3</div>
+                <div class="card-item--title">Денсаулық пен амандық</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-3.svg"
+                            alt="Мақсат 3 - Денсаулық пен амандық">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/4/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/4.png" id="goal-4" alt="Мақсат 4 - Сапалы білім беру" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/4/" class="card-item goal-4">
+                <div class="card-item--number">4</div>
+                <div class="card-item--title">Сапалы білім беру</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-4.svg"
+                            alt="Мақсат 4 - Сапалы білім беру">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/5/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/5.png" id="goal-5" alt="Мақсат 5 - Гендерлік теңдік" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/5/" class="card-item goal-5">
+                <div class="card-item--number">5</div>
+                <div class="card-item--title">Гендерлік теңдік</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-5.svg"
+                            alt="Мақсат 5 - Гендерлік теңдік">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/6/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/6.png" id="goal-6" alt="Мақсат 6 - Таза су мен санитария" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/6/" class="card-item goal-6">
+                <div class="card-item--number">6</div>
+                <div class="card-item--title">Таза су мен санитария</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-6.svg"
+                            alt="Мақсат 6 - Таза су мен санитария">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/7/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/7.png" id="goal-7" alt="Мақсат 7 - Қолжетімді әрі таза энергия" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/7/" class="card-item goal-7">
+                <div class="card-item--number">7</div>
+                <div class="card-item--title">Қолжетімді әрі таза энергия</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-7.svg"
+                            alt="Мақсат 7 - Қолжетімді әрі таза энергия">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/8/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/8.png" id="goal-8" alt="Мақсат 8 - Лайықты жұмыс пен экономикалық өсу" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/8/" class="card-item goal-8">
+                <div class="card-item--number">8</div>
+                <div class="card-item--title">Лайықты жұмыс пен экономикалық өсу</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-8.svg"
+                            alt="Мақсат 8 - Лайықты жұмыс пен экономикалық өсу">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/9/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/9.png" id="goal-9" alt="Мақсат 9 - Индустриализация, инновациялар мен инфрақұрылым" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/9/" class="card-item goal-9">
+                <div class="card-item--number">9</div>
+                <div class="card-item--title">Индустриализация, инновациялар мен инфрақұрылым</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-9.svg"
+                            alt="Мақсат 9 - Индустриализация, инновациялар мен инфрақұрылым">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/10/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/10.png" id="goal-10" alt="Мақсат 10 - Теңсіздікті қысқарту" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/10/" class="card-item goal-10">
+                <div class="card-item--number">10</div>
+                <div class="card-item--title">Теңсіздікті қысқарту</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-10.svg"
+                            alt="Мақсат 10 - Теңсіздікті қысқарту">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/11/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/11.png" id="goal-11" alt="Мақсат 11 - Тұрақты қалалар мен елді мекендер" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/11/" class="card-item goal-11">
+                <div class="card-item--number">11</div>
+                <div class="card-item--title">Тұрақты қалалар мен елді мекендер</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-11.svg"
+                            alt="Мақсат 11 - Тұрақты қалалар мен елді мекендер">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/12/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/12.png" id="goal-12" alt="Мақсат 12 - Жауапты тұтыну мен өндіру" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/12/" class="card-item goal-12">
+                <div class="card-item--number">12</div>
+                <div class="card-item--title">Жауапты тұтыну мен өндіру</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-12.svg"
+                            alt="Мақсат 12 - Жауапты тұтыну мен өндіру">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/13/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/13.png" id="goal-13" alt="Мақсат 13 - Климаттың өзгеруіне қарсы күрес" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/13/" class="card-item goal-13">
+                <div class="card-item--number">13</div>
+                <div class="card-item--title">Климаттың өзгеруіне қарсы күрес</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-13.svg"
+                            alt="Мақсат 13 - Климаттың өзгеруіне қарсы күрес">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/14/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/14.png" id="goal-14" alt="Мақсат 14 - Мұхит экожүйелерін қорғау" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/14/" class="card-item goal-14">
+                <div class="card-item--number">14</div>
+                <div class="card-item--title">Мұхит экожүйелерін қорғау</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-14.svg"
+                            alt="Мақсат 14 - Мұхит экожүйелерін қорғау">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/15/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/15.png" id="goal-15" alt="Мақсат 15 - Құрлық экожүйелерін қорғау" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/15/" class="card-item goal-15">
+                <div class="card-item--number">15</div>
+                <div class="card-item--title">Құрлық экожүйелерін қорғау</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-15.svg"
+                            alt="Мақсат 15 - Құрлық экожүйелерін қорғау">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/16/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/16.png" id="goal-16" alt="Мақсат 16 - Бейбітшілік, сот әділдігі мен мен мықты институттар" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/16/" class="card-item goal-16">
+                <div class="card-item--number">16</div>
+                <div class="card-item--title">Бейбітшілік, сот әділдігі мен мен мықты институттар</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-16.svg"
+                            alt="Мақсат 16 - Бейбітшілік, сот әділдігі мен мен мықты институттар">
+                </div>
             </a>
-        </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/sdg-site-kazstat/17/">
-                <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/kk/17.png" id="goal-17" alt="Мақсат 17 - Тұрақты даму мүдделеріндегі әріптестіктер" class="goal-icon-image goal-icon-image-"/>
+            <a href="/sdg-site-kazstat/17/" class="card-item goal-17">
+                <div class="card-item--number">17</div>
+                <div class="card-item--title">Тұрақты даму мүдделеріндегі әріптестіктер</div>
+                <div class="card-item--icon">
+                    <img
+                            src="/sdg-site-kazstat/assets/img/goals/icon-17.svg"
+                            alt="Мақсат 17 - Тұрақты даму мүдделеріндегі әріптестіктер">
+                </div>
             </a>
-        </div>
         
     </div>
 </div>
@@ -446,22 +505,16 @@ data-event-label="high"
         <div class="row">
         
 
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-12">
     <div class="card">
-    <div class="card-body">
+        <div class="card-body">
 
-    
-    <h2 class="card-title"
-        
-        style="border-color: ;"
-        
-    >Барлық деректерді жүктеп алыңыз</h2>
-    
-  
-    
-  
-    
-      <div class="zip-download-container">
+            
+
+            
+
+            
+                <div class="zip-download-container">
     <a href="https://kazstat.github.io/sdg-data-kazstat/kk/zip/all_indicators.zip"
        role="button"
        class="btn btn-primary btn-download" aria-describedby="zip-download-info">
@@ -476,15 +529,15 @@ data-event-label="high"
     </div>
 </div>
 
-    
-  
-    
+            
+
+            
+
+        </div>
 
     </div>
-  
-  </div>
-  
-  </div>
+
+</div>
 
         
         </div>
@@ -558,12 +611,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Іздеу';</script>
 
-<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20251215120313'></script>
+<script src='/sdg-site-kazstat/assets/js/sdg.js?v=20251217080921'></script>
 
 
     
     
-    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20251215120313"></script><script>
+    <script src="/sdg-site-kazstat/assets/js/custom.js?v=20251217080921"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
