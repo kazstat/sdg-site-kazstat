@@ -1,0 +1,13 @@
+{% assign lang = page.language | default: page.lang | default: site.lang | default: "en" %}
+{% assign downloads = site.data.indicator_downloads[page.indicator] %}
+
+{% if downloads %}
+  {% for d in downloads %}
+    {% if d.path contains lang %}
+      <a class="btn btn-primary" href="{{ d.path }}" target="_blank">
+        {{ d.label }}
+      </a>
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
