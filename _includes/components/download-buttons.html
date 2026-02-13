@@ -1,8 +1,10 @@
 {% assign lang = page.language | default: page.lang | default: site.lang | default: "en" %}
+{% assign lang = lang | slice: 0,2 %}
+
 {% assign downloads = site.data.indicator_downloads[page.indicator] %}
 
 {% if downloads %}
-  {%- assign wanted_folder = "data-metadata-pdf-" | append: lang -%}
+  {% assign wanted_folder = "data-metadata-pdf-" | append: lang %}
 
   {% for d in downloads %}
     {% if d.path contains wanted_folder %}
