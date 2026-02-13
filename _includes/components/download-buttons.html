@@ -2,9 +2,11 @@
 {% assign downloads = site.data.indicator_downloads[page.indicator] %}
 
 {% if downloads %}
+  {%- assign wanted_folder = "data-metadata-pdf-" | append: lang -%}
+
   {% for d in downloads %}
-    {% if d.path contains lang %}
-      <a class="btn btn-primary" href="{{ d.path }}" target="_blank">
+    {% if d.path contains wanted_folder %}
+      <a class="btn btn-primary" href="{{ d.path }}" target="_blank" rel="noopener">
         {{ d.label }}
       </a>
       {% break %}
