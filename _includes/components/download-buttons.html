@@ -7,11 +7,11 @@
   {% assign wanted_folder = "data-metadata-pdf-" | append: lang %}
 
   {% for d in downloads %}
+  {% unless d.path contains "metadata-pdf" %}
     {% if d.path contains wanted_folder %}
       <a class="btn btn-primary" href="{{ d.path }}" target="_blank" rel="noopener">
         {{ d.label }}
       </a>
-      {% break %}
     {% endif %}
-  {% endfor %}
-{% endif %}
+  {% endunless %}
+{% endfor %}
