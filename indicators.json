@@ -687,7 +687,7 @@
         },
         {
           "id": "5-2-1-1",
-          "title": "Әйелдерге қатысты тіркелген тұрмыстық зорлық-зомбылық оқиғаларының төмендеуі",
+          "title": "Әйелдерге қатысты тіркелген зорлық-зомбылық оқиғаларының төмендеуі",
           "description": "",
           "keywords": "",
           "href": "/5-2-1-1/",
@@ -1055,7 +1055,7 @@
         },
         {
           "id": "8-9-1-1",
-          "title": "Тікелей туризмде құрылатын ЖҚҚ НКИ",
+          "title": "Туризмде жұмыспен қамтылғандардың жалпы санындағы үлес",
           "description": "",
           "keywords": "",
           "href": "/8-9-1-1/",
@@ -1507,7 +1507,7 @@
           "description": "",
           "keywords": "",
           "href": "/12-3-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "12-4-1",
@@ -1547,7 +1547,7 @@
           "description": "",
           "keywords": "",
           "href": "/12-6-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "12-7-1",
@@ -1603,7 +1603,7 @@
           "description": "national_indicator_description.13-2-2",
           "keywords": "",
           "href": "/13-2-2/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "13-3-1",
@@ -1683,7 +1683,7 @@
           "description": "national_indicator_description.14-4-1",
           "keywords": "",
           "href": "/14-4-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "14-5-1",

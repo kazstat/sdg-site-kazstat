@@ -687,7 +687,7 @@
         },
         {
           "id": "5-2-1-1",
-          "title": "Снижение зарегистрированных фактов бытового насилия в отношения женщин",
+          "title": "Снижение зарегистрированных фактов насилия в отношения женщин",
           "description": "",
           "keywords": "",
           "href": "/ru/5-2-1-1/",
@@ -1055,7 +1055,7 @@
         },
         {
           "id": "8-9-1-1",
-          "title": "ИФО ВДС, создаваемая непосредственно в туризме",
+          "title": "Доля занятых в туризме в общей численности занятых",
           "description": "",
           "keywords": "",
           "href": "/ru/8-9-1-1/",
@@ -1507,7 +1507,7 @@
           "description": "",
           "keywords": "",
           "href": "/ru/12-3-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "12-4-1",
@@ -1547,7 +1547,7 @@
           "description": "",
           "keywords": "",
           "href": "/ru/12-6-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "12-7-1",
@@ -1603,7 +1603,7 @@
           "description": "national_indicator_description.13-2-2",
           "keywords": "",
           "href": "/ru/13-2-2/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "13-3-1",
@@ -1683,7 +1683,7 @@
           "description": "national_indicator_description.14-4-1",
           "keywords": "",
           "href": "/ru/14-4-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "14-5-1",
