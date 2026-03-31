@@ -225,6 +225,9 @@ reporting_status:
     - value: notapplicable
       label: status.not_applicable
       hide_on_goal_pages: false
+    - value: not accepted
+      label: status.not_accepted
+      hide_on_goal_pages: false
 repository_url_data: ''
 repository_url_site: ''
 search_index_boost:
