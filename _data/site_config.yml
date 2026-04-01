@@ -100,12 +100,12 @@ indicator_config_form:
     - jsonschema: reporting_status
       values:
         - complete
-        - notstarted
+        - not_in_use
         - notapplicable
-        - not accepted
+        - not_accepted
       labels:
         - Опубликован
-        - В процессе разработки
+        - Не используется
         - Непригодный
         - Не принят
   repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/indicator-config'
@@ -219,13 +219,13 @@ reporting_status:
     - value: complete
       label: status.reported_online
       hide_on_goal_pages: false
-    - value: notstarted
-      label: status.exploring_data_sources
+    - value: not_in_use
+      label: status.not_in_use
       hide_on_goal_pages: false
     - value: notapplicable
       label: status.not_applicable
       hide_on_goal_pages: false
-    - value: not accepted
+    - value: not_accepted
       label: status.not_accepted
       hide_on_goal_pages: false
 repository_url_data: ''
