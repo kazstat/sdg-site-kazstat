@@ -1,13 +1,24 @@
 {% assign lang = page.language | default: page.lang | default: site.lang | default: "en" %}
-{% assign lang = lang | slice: 0,2 %}
+{% assign lang = lang | slice: 0, 2 %}
 
 {% assign downloads = site.data.indicator_downloads[page.indicator] %}
 
+{% case lang %}
+  {% when 'ru' %}
+    {% assign metadata_label = 'Скачать метаданные' %}
+  {% when 'kk' %}
+    {% assign metadata_label = 'Метадеректерді жүктеу' %}
+  {% else %}
+    {% assign metadata_label = 'Download metadata' %}
+{% endcase %}
+
 {% if downloads %}
+  {% assign wanted_folder = "data-metadata-pdf-" | append: lang %}
+
   {% for d in downloads %}
-    {% if d.language == lang %}
+    {% if d.path contains wanted_folder %}
       <a class="btn btn-primary" href="{{ d.path }}" target="_blank" rel="noopener">
-        {{ d.label }}
+        {{ metadata_label }}
       </a>
     {% endif %}
   {% endfor %}
