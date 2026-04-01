@@ -102,7 +102,7 @@ indicator_config_form:
         - complete
         - notstarted
         - notapplicable
-        - not accepted
+        - notaccepted
       labels:
         - Опубликован
         - В процессе разработки
@@ -225,7 +225,7 @@ reporting_status:
     - value: notapplicable
       label: status.not_applicable
       hide_on_goal_pages: false
-    - value: not accepted
+    - value: notaccepted
       label: status.not_accepted
       hide_on_goal_pages: false
 repository_url_data: ''
