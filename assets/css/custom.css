@@ -328,7 +328,7 @@ header {
     background-color: rgba(2, 125, 188, 0.2);
 }
 
-.layout-reportingstatus #main-content .statuses > div .status.notstarted .status-inner, .status.notstarted .status-inner {
+.layout-reportingstatus #main-content .statuses > div .status.notaccepted .status-inner, .status.notaccepted .status-inner {
     background-color: transparent;
     background: none;
 }
