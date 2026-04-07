@@ -1,24 +1,17 @@
-{% assign lang = page.language | default: page.lang | default: site.lang | default: "en" %}
-{% assign lang = lang | slice: 0, 2 %}
-
+{% assign lang = page.language | default: page.lang | default: site.lang | default: "en" | slice: 0, 2 %}
 {% assign downloads = site.data.indicator_downloads[page.indicator] %}
 
-{% case lang %}
-  {% when 'ru' %}
-    {% assign metadata_label = 'Скачать метаданные' %}
-  {% when 'kk' %}
-    {% assign metadata_label = 'Метадеректерді жүктеу' %}
-  {% else %}
-    {% assign metadata_label = 'Download metadata' %}
-{% endcase %}
-
 {% if downloads %}
-  {% assign wanted_folder = "data-metadata-pdf-" | append: lang %}
-
   {% for d in downloads %}
-    {% if d.path contains wanted_folder %}
-      <a class="btn btn-primary" href="{{ d.path }}" target="_blank" rel="noopener">
-        {{ metadata_label }}
+    {% comment %}
+      Проверяем, относится ли эта загрузка к текущему языку. 
+      Если в config_data.yml вы указали 'language: ru', 
+      то sdg-build добавит это поле в данные.
+    {% endcomment %}
+    
+    {% if d.language == lang %}
+      <a class="btn btn-primary" href="{{ d.path | relative_url }}" target="_blank" rel="noopener">
+        {{ d.label }}
       </a>
     {% endif %}
   {% endfor %}
