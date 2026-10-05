@@ -102,12 +102,10 @@ indicator_config_form:
         - complete
         - notstarted
         - notapplicable
-        - not accepted
       labels:
         - Опубликован
         - В процессе разработки
         - Непригодный
-        - Не принят
   repository_link: 'https://github.com/kazstat/sdg-data-kazstat/tree/develop/indicator-config'
   translation_link: >-
     https://hosted.weblate.org/search/sdgs-kazakhstan/[group]/?q=+context%3A%3D[key]
@@ -224,9 +222,6 @@ reporting_status:
       hide_on_goal_pages: false
     - value: notapplicable
       label: status.not_applicable
-      hide_on_goal_pages: false
-    - value: not accepted
-      label: status.not_accepted
       hide_on_goal_pages: false
 repository_url_data: ''
 repository_url_site: ''
