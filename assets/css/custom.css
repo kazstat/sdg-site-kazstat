@@ -322,16 +322,6 @@ header {
     background: none;
 }
 
-.layout-reportingstatus #main-content .statuses > div .status.notaccepted, .status.notaccepted {
-    color: rgba(41, 65, 105, 1);
-    border: 1px solid rgba(2, 125, 188, 0.2);
-    background-color: rgba(2, 125, 188, 0.2);
-}
-
-.layout-reportingstatus #main-content .statuses > div .status.notaccepted .status-inner, .status.notaccepted .status-inner {
-    background-color: transparent;
-    background: none;
-}
 /* END Badges */
 
 /* Progress bar*/
@@ -349,10 +339,6 @@ header {
     background-color: rgba(203, 148, 47, 0.2);
     background: rgba(203, 148, 47, 0.2);
 }
-
-.layout-reportingstatus #main-content .goal-stats .notaccepted {
-    background-color: rgba(2, 125, 188, 0.2);
-    background: rgba(2, 125, 188, 0.2);
 
 .layout-reportingstatus #main-content .goal-stats {
     border: 1px solid #ccc;
